@@ -28,6 +28,7 @@
     "parse:sharpless": "node parsers/sharpless.mjs",
     "parse:lbn": "node parsers/lbn.mjs",
     "parse:extras": "node parsers/extras.mjs",
-    "parse:cf4": "node parsers/cf4-laniakea.mjs"
+    "parse:cf4": "node parsers/cf4-laniakea.mjs",
+    "build:cf4-mobile": "node bin/build-cf4-mobile.mjs"
   }
 }
