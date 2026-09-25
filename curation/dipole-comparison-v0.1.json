@@ -1,0 +1,49 @@
+{
+  "version": "0.1.0",
+  "principle": "Directions may share a coordinate frame; amplitudes remain in native observable units and are never visually compared as if commensurate.",
+  "layers": [
+    {
+      "id": "cmb-kinematic",
+      "label": "CMB kinematic dipole",
+      "kind": "observation",
+      "frame": "galactic",
+      "native_units": "km/s equivalent observer velocity",
+      "render": "direction-cone",
+      "status": "enabled_when_bound",
+      "provenance": "Planck/COBE CMB dipole"
+    },
+    {
+      "id": "gaia-acceleration",
+      "label": "Gaia quasar acceleration dipole",
+      "kind": "observation",
+      "frame": "ICRS",
+      "native_units": "microarcsec/yr",
+      "render": "direction-cone",
+      "status": "enabled_when_bound",
+      "provenance": "Gaia quasar proper-motion acceleration"
+    },
+    {
+      "id": "quasar-count",
+      "label": "Quasar number-count dipole",
+      "kind": "paper_result",
+      "frame": "ICRS",
+      "native_units": "dimensionless count amplitude",
+      "render": "direction-cone",
+      "status": "pending_dataset_binding"
+    },
+    {
+      "id": "radio-count",
+      "label": "Radio-source count dipole",
+      "kind": "paper_result",
+      "frame": "ICRS",
+      "native_units": "dimensionless count amplitude",
+      "render": "direction-cone",
+      "status": "pending_dataset_binding"
+    }
+  ],
+  "rules": [
+    "Convert directions into a common display frame only with a documented transform.",
+    "Never scale arrow lengths across these layers using their native amplitudes.",
+    "Show confidence/uncertainty cones where the source provides them."
+  ]
+}

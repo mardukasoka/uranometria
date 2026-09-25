@@ -27,6 +27,9 @@
     "parse:deepsky": "node parsers/deepsky.mjs",
     "parse:sharpless": "node parsers/sharpless.mjs",
     "parse:lbn": "node parsers/lbn.mjs",
-    "parse:extras": "node parsers/extras.mjs"
+    "parse:extras": "node parsers/extras.mjs",
+    "parse:cf4": "node parsers/cf4-laniakea.mjs",
+    "build:cf4-mobile": "node bin/build-cf4-mobile.mjs",
+    "build:cf4-scene": "node bin/build-cf4-scene.mjs"
   }
 }

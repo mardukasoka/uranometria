@@ -1,0 +1,49 @@
+{
+  "version": "0.1.0",
+  "adapter": "cf4-laniakea",
+  "upstream": "manlius/laniakea",
+  "frame": {
+    "coordinates": "supergalactic",
+    "position_units": "Mpc"
+  },
+  "inputs": {
+    "galaxies": {
+      "file": "CF4_galaxies_with_basin_id.csv",
+      "required_columns": [
+        "SGX",
+        "SGY",
+        "SGZ",
+        "basin_id"
+      ],
+      "optional_columns": [
+        "pgc",
+        "D_Mpc"
+      ]
+    },
+    "streamlines": {
+      "file": "CF4_streams_streamlines.csv",
+      "required_columns": [
+        "streamline_id",
+        "basin_id",
+        "vertex_idx",
+        "SGX",
+        "SGY",
+        "SGZ"
+      ]
+    }
+  },
+  "outputs": {
+    "galaxies": "data/cf4/galaxies.json",
+    "streamlines": "data/cf4/streamlines.json"
+  },
+  "epistemic_status": {
+    "galaxies": "catalogue positions enriched with reconstructed basin membership",
+    "streamlines": "reconstruction; RK4 topology through reconstructed CF4 velocity field"
+  },
+  "caveats": [
+    "Do not interpret streamline vertex spacing as peculiar-velocity amplitude; upstream integration normalizes the vector field.",
+    "Do not commit large upstream FITS/NPY/CSV products to Uranometria.",
+    "Verify upstream axis ordering and coordinate transforms against CF4 reference products before scientific release.",
+    "Carry original CF4/EDD and watershed publication citations into production metadata."
+  ]
+}

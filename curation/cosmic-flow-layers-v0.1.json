@@ -1,0 +1,86 @@
+{
+  "version": "0.1.0",
+  "frame": "supergalactic",
+  "principle": "Keep measured dipoles, reconstructed flows, and inferred attractor/repeller structure independently switchable.",
+  "layers": [
+    {
+      "id": "cmb_dipole",
+      "label": "CMB dipole",
+      "kind": "observation",
+      "default": true,
+      "native_units": true
+    },
+    {
+      "id": "gaia_acceleration",
+      "label": "Gaia quasar acceleration dipole",
+      "kind": "observation",
+      "default": true,
+      "native_units": true
+    },
+    {
+      "id": "quasar_count_dipole",
+      "label": "Quasar number-count dipole",
+      "kind": "paper_result",
+      "default": false,
+      "native_units": true
+    },
+    {
+      "id": "radio_count_dipole",
+      "label": "Radio-source count dipole",
+      "kind": "paper_result",
+      "default": false,
+      "native_units": true
+    },
+    {
+      "id": "cf4_velocity",
+      "label": "CF4 peculiar-velocity field",
+      "kind": "reconstruction",
+      "default": true
+    },
+    {
+      "id": "cf4_streamlines",
+      "label": "CF4 streamlines",
+      "kind": "reconstruction",
+      "default": true
+    },
+    {
+      "id": "basins",
+      "label": "Basins of attraction",
+      "kind": "reconstruction",
+      "default": true
+    },
+    {
+      "id": "structures",
+      "label": "Named structures",
+      "kind": "catalogue",
+      "default": true,
+      "examples": [
+        "Virgo",
+        "Laniakea",
+        "Great Attractor",
+        "Shapley",
+        "Vela",
+        "Local Void",
+        "Dipole Repeller"
+      ]
+    },
+    {
+      "id": "uncertainty",
+      "label": "Uncertainty / covariance",
+      "kind": "inference",
+      "default": true
+    }
+  ],
+  "scale_shells_mpc_h": [
+    50,
+    100,
+    200,
+    300
+  ],
+  "rules": [
+    "Never normalize unlike dipole amplitudes to a common arrow length without an explicit visual-only label.",
+    "Bulk flow is not Dark Flow; disputed Dark Flow claims require a separate historical/evidence layer.",
+    "Attractors and repellers are field/reconstruction features, not isolated point masses.",
+    "Survey masks, window functions, covariance and reconstruction uncertainty travel with each layer."
+  ]
+}
