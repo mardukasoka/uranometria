@@ -21,7 +21,7 @@ const num=(v)=>{const n=Number(v); return Number.isFinite(n)?n:null};
 function write(file,obj){fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,JSON.stringify(obj));}
 
 const a=args(process.argv), out=a.out ?? "data/cf4";\nconst lengthUnit=a["length-unit"] ?? "Mpc/h";\nif(!["Mpc","Mpc/h"].includes(lengthUnit)) throw new Error("--length-unit must be Mpc or Mpc/h");
-if(!a.galaxies && !a.streamlines) throw new Error("provide --galaxies and/or --streamlines");
+if(!a.galaxies && !a.streamlines && !a.velocity) throw new Error("provide --galaxies, --streamlines and/or --velocity");
 
 const provenance={
  source_type:"derived",
@@ -54,4 +54,15 @@ if(a.streamlines){
  const objects=[...by.values()].map(s=>({...s,points:s.points.sort((a,b)=>a[0]-b[0]).map(p=>p.slice(1))}));
  write(`${out}/streamlines.json`,{version:"0.1.0",kind:"reconstruction",frame:{coordinates:"supergalactic",units:lengthUnit},provenance:{...provenance,note:"RK4 streamline topology derived from reconstructed CF4 velocity field; point spacing is not velocity magnitude."},objects});
  console.log(`CF4 streamlines: ${objects.length}`);
+}
+
+if(a.velocity){
+ const rows=csv(fs.readFileSync(a.velocity,"utf8"));
+ const objects=rows.map((r,i)=>({
+   id:r.id ?? String(i),
+   position:[num(r.SGX),num(r.SGY),num(r.SGZ)],
+   velocity:[num(r.SG_Vx ?? r.Vx ?? r.vx),num(r.SG_Vy ?? r.Vy ?? r.vy),num(r.SG_Vz ?? r.Vz ?? r.vz)]
+ })).filter(r=>r.position.every(Number.isFinite)&&r.velocity.every(Number.isFinite));
+ write(`${out}/velocity-samples.json`,{version:"0.1.0",kind:"reconstruction",frame:{coordinates:"supergalactic",position_units:lengthUnit,velocity_units:"km/s"},provenance:{...provenance,note:"Peculiar-velocity vector samples. Preserve exact upstream reconstruction/version metadata."},objects});
+ console.log(`CF4 velocity samples: ${objects.length}`);
 }
