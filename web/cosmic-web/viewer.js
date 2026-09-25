@@ -1,6 +1,8 @@
+import {cartesianToLonLat,lonLatToCartesian,equatorialToFrame} from "../../lib/coordinate-frames.mjs";
 const canvas=document.querySelector("#sky"),ctx=canvas.getContext("2d",{alpha:false});let scene=null,showG=true,showF=false,showA=false;
 let yaw=.55,pitch=.28,zoom=1.7,drag=null,showS=false,showV=false,showD=false,activeShell=300,displayFrame="galactic";
 let velocitySamples=[];
+function displayPosition(p){if(displayFrame==="supergalactic")return p;/* Current scene is SG Cartesian. Exact SG→EQ inverse binding follows source validation; do not fake rotation. */return p;}
 const shellRadii=[50,100,160,200,300];
 const anchors=[
  {id:"origin",label:"Milky Way / observer",position:[0,0,0],status:"reference"},
@@ -14,6 +16,7 @@ function project(p){let[x,y,z]=p;const cy=Math.cos(yaw),sy=Math.sin(yaw);[x,y]=[
 function drawReferenceFrame(){if(!showA)return;
 const frameLabels={
  galactic:[{p:[0,0,260],l:"Galactic North"},{p:[0,0,-260],l:"Galactic South"},{p:[260,0,0],l:"Galactic Centre"},{p:[-260,0,0],l:"Galactic Anticentre"},{p:[0,260,0],l:"l = 90°"},{p:[0,-260,0],l:"l = 270°"}],
+ ecliptic:[{p:[0,0,260],l:"North Ecliptic Pole"},{p:[0,0,-260],l:"South Ecliptic Pole"},{p:[260,0,0],l:"Vernal Equinox · λ 0°"},{p:[-260,0,0],l:"λ 180°"},{p:[0,260,0],l:"λ 90°"},{p:[0,-260,0],l:"λ 270°"}],
  equatorial:[{p:[0,0,260],l:"North Celestial Pole"},{p:[0,0,-260],l:"South Celestial Pole"},{p:[260,0,0],l:"Vernal Equinox · RA 0h"},{p:[-260,0,0],l:"RA 12h"},{p:[0,260,0],l:"RA 6h"},{p:[0,-260,0],l:"RA 18h"}],
  supergalactic:[{p:[0,0,260],l:"SG North"},{p:[0,0,-260],l:"SG South"},{p:[260,0,0],l:"SGX +"},{p:[-260,0,0],l:"SGX −"},{p:[0,260,0],l:"SGY +"},{p:[0,-260,0],l:"SGY −"}]
 };const refs=frameLabels[displayFrame]||frameLabels.galactic;/* display-reference orientation; catalogue transform follows */ const unused=[
@@ -25,7 +28,7 @@ function draw(){requestAnimationFrame(draw);ctx.fillStyle="#02040a";ctx.fillRect
 if(showS){ctx.strokeStyle="#ffffff18";ctx.lineWidth=.7;for(const r of shellRadii){ctx.beginPath();for(let i=0;i<=96;i++){const a=i/96*Math.PI*2,q=project([r*Math.cos(a),r*Math.sin(a),0]);i?ctx.lineTo(q[0],q[1]):ctx.moveTo(q[0],q[1])}ctx.stroke();const lab=project([r,0,0]);ctx.fillStyle="#ffffff55";ctx.font="9px system-ui";ctx.fillText(r+" h⁻¹ Mpc",lab[0]+3,lab[1]);}}
 drawReferenceFrame();
 if(showD){const dirs=[[0,-1,.35],[.15,-1,.25],[-.18,-1,.2]];ctx.lineWidth=1.2;dirs.forEach((d,i)=>{const a=project([0,0,0]),b=project(d.map(x=>x*180));ctx.strokeStyle=["#ffffffaa","#ffffff66","#ffffff44"][i];ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke()});}
-if(showV&&velocitySamples.length){ctx.strokeStyle="#9fc2ff88";ctx.lineWidth=.7;for(const v of velocitySamples){const r=Math.hypot(...v.position);if(r>activeShell)continue;const a=project(v.position),m=Math.hypot(...v.velocity);if(!m)continue;const k=Math.min(18,m/70);const end=[v.position[0]+v.velocity[0]/m*k,v.position[1]+v.velocity[1]/m*k,v.position[2]+v.velocity[2]/m*k],b=project(end);ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke();}}
+if(showV&&velocitySamples.length){ctx.strokeStyle="#9fc2ff88";ctx.lineWidth=.7;for(const v of velocitySamples){const r=Math.hypot(...v.position);if(r>activeShell)continue;const vp=displayPosition(v.position),a=project(vp),m=Math.hypot(...v.velocity);if(!m)continue;const k=Math.min(18,m/70);const end=[v.position[0]+v.velocity[0]/m*k,v.position[1]+v.velocity[1]/m*k,v.position[2]+v.velocity[2]/m*k],b=project(end);ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke();}}
 if(showF){ctx.strokeStyle="#7aa7ff26";ctx.lineWidth=.55;for(const l of f){ctx.beginPath();l.points.forEach((p,i)=>{const q=project(p);i?ctx.lineTo(q[0],q[1]):ctx.moveTo(q[0],q[1])});ctx.stroke()}}
 if(showG){for(const o of g){const q=project(o.position);const alpha=Math.max(.18,1-Math.abs(q[2])/700);ctx.fillStyle=`rgba(225,235,255,${alpha})`;ctx.fillRect(q[0],q[1],1.35,1.35)}}
 ctx.font="11px system-ui";ctx.textBaseline="middle";for(const a of anchors){const q=project(a.position);ctx.fillStyle="#fff";ctx.beginPath();ctx.arc(q[0],q[1],a.id==="origin"?3:2,0,Math.PI*2);ctx.fill();ctx.fillStyle="#d9e5ff";ctx.fillText(a.label,q[0]+6,q[1]);}
@@ -36,4 +39,4 @@ let pinch=null;canvas.addEventListener("touchmove",e=>{if(e.touches.length===2){
 for(const[id,key]of [["galaxies","G"],["flows","F"],["vectors","V"],["shells","S"],["axes","A"],["dipoles","D"]])document.querySelector("#"+id).onclick=e=>{if(key==="G")showG=!showG;if(key==="F")showF=!showF;if(key==="A")showA=!showA;if(key==="S")showS=!showS;if(key==="V")showV=!showV;if(key==="D")showD=!showD;e.currentTarget.classList.toggle("on")};document.querySelector("#home").onclick=()=>{yaw=.55;pitch=.28;zoom=1.7};
 document.querySelector("#shell").onchange=e=>{activeShell=Number(e.target.value);zoom=Math.max(.75,Math.min(6,510/activeShell));showS=true;document.querySelector("#shells").classList.add("on")};
 
-document.querySelector("#frame").onchange=e=>{displayFrame=e.target.value;showA=true;document.querySelector("#axes").classList.add("on");document.querySelector("#scale").textContent=e.target.options[e.target.selectedIndex].text+" reference · data currently Supergalactic"};
+document.querySelector("#frame").onchange=e=>{displayFrame=e.target.value;showA=true;document.querySelector("#axes").classList.add("on");document.querySelector("#scale").textContent=e.target.options[e.target.selectedIndex].text+" reference · CF4 data native Supergalactic"};
