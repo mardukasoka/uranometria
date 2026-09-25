@@ -1,0 +1,71 @@
+{
+  "version": "0.1.0",
+  "frame": {
+    "coordinates": "supergalactic",
+    "units": "Mpc/h"
+  },
+  "warning": "Anchor coordinates are source-specific reconstruction/reference positions, not exact point-mass locations or universal centres.",
+  "anchors": [
+    {
+      "id": "milky-way",
+      "label": "Milky Way / observer",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "kind": "reference",
+      "confidence": "high"
+    },
+    {
+      "id": "laniakea-centre",
+      "label": "Laniakea centre",
+      "position": [
+        -47,
+        13,
+        -5
+      ],
+      "kind": "reconstruction_reference",
+      "confidence": "moderate",
+      "citation": "Sorce et al., Cosmicflows Constrained Local UniversE Simulations (2026)"
+    },
+    {
+      "id": "great-attractor",
+      "label": "Great Attractor",
+      "position": [
+        -40,
+        5,
+        0
+      ],
+      "kind": "reconstruction_peak",
+      "confidence": "moderate",
+      "citation": "WALLABY Pilot Survey + CF4 reconstruction"
+    },
+    {
+      "id": "vela",
+      "label": "Vela",
+      "position": [
+        -130,
+        40,
+        -140
+      ],
+      "kind": "reconstruction_peak",
+      "confidence": "moderate",
+      "citation": "WALLABY Pilot Survey + CF4 reconstruction"
+    }
+  ],
+  "pending": [
+    {
+      "id": "shapley",
+      "reason": "Bind to a single documented CF4 reconstruction coordinate before rendering."
+    },
+    {
+      "id": "local-void",
+      "reason": "Render as a volume/field feature rather than inventing a point centre."
+    },
+    {
+      "id": "dipole-repeller",
+      "reason": "Render from reconstruction field/probability product rather than a decorative point."
+    }
+  ]
+}
