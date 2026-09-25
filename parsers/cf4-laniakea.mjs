@@ -20,7 +20,7 @@ function csv(text) {
 const num=(v)=>{const n=Number(v); return Number.isFinite(n)?n:null};
 function write(file,obj){fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,JSON.stringify(obj));}
 
-const a=args(process.argv), out=a.out ?? "data/cf4";
+const a=args(process.argv), out=a.out ?? "data/cf4";\nconst lengthUnit=a["length-unit"] ?? "Mpc/h";\nif(!["Mpc","Mpc/h"].includes(lengthUnit)) throw new Error("--length-unit must be Mpc or Mpc/h");
 if(!a.galaxies && !a.streamlines) throw new Error("provide --galaxies and/or --streamlines");
 
 const provenance={
@@ -28,7 +28,7 @@ const provenance={
  citation:"manlius/laniakea CF4 Cosmography Pipeline; underlying Cosmicflows-4 / EDD products",
  dataset:"Cosmicflows-4",
  frame:"supergalactic",
- note:"Reconstruction product. Not a direct observation. Preserve upstream CF4/EDD citations when publishing."
+ note:"Reconstruction product. Not a direct observation. Length unit is explicit and must match the exact upstream source product."
 };
 
 if(a.galaxies){
@@ -39,7 +39,7 @@ if(a.galaxies){
    distance_mpc:num(r.D_Mpc),
    basin_id:num(r.basin_id)
  })).filter(r=>r.position.every(Number.isFinite));
- write(`${out}/galaxies.json`,{version:"0.1.0",kind:"catalogue",frame:{coordinates:"supergalactic",units:"Mpc"},provenance,objects});
+ write(`${out}/galaxies.json`,{version:"0.1.0",kind:"catalogue",frame:{coordinates:"supergalactic",units:lengthUnit},provenance,objects});
  console.log(`CF4 galaxies: ${objects.length}`);
 }
 if(a.streamlines){
@@ -52,6 +52,6 @@ if(a.streamlines){
    by.get(id).points.push([num(r.vertex_idx),...p]);
  }
  const objects=[...by.values()].map(s=>({...s,points:s.points.sort((a,b)=>a[0]-b[0]).map(p=>p.slice(1))}));
- write(`${out}/streamlines.json`,{version:"0.1.0",kind:"reconstruction",frame:{coordinates:"supergalactic",units:"Mpc"},provenance:{...provenance,note:"RK4 streamline topology derived from reconstructed CF4 velocity field; point spacing is not velocity magnitude."},objects});
+ write(`${out}/streamlines.json`,{version:"0.1.0",kind:"reconstruction",frame:{coordinates:"supergalactic",units:lengthUnit},provenance:{...provenance,note:"RK4 streamline topology derived from reconstructed CF4 velocity field; point spacing is not velocity magnitude."},objects});
  console.log(`CF4 streamlines: ${objects.length}`);
 }
