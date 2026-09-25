@@ -1,5 +1,5 @@
 const canvas=document.querySelector("#sky"),ctx=canvas.getContext("2d",{alpha:false});let scene=null,showG=true,showF=false,showA=false;
-let yaw=.55,pitch=.28,zoom=1.7,drag=null,showS=false,showV=false,showD=false,activeShell=300;
+let yaw=.55,pitch=.28,zoom=1.7,drag=null,showS=false,showV=false,showD=false,activeShell=300,displayFrame="galactic";
 let velocitySamples=[];
 const shellRadii=[50,100,160,200,300];
 const anchors=[
@@ -11,10 +11,13 @@ const anchors=[
 const demo={coordinateFrame:{coordinates:"supergalactic",units:"Mpc/h"},layers:[{id:"galaxies",data:[]},{id:"streamlines",data:[]}]};
 function resize(){const d=Math.min(devicePixelRatio||1,2);canvas.width=innerWidth*d;canvas.height=innerHeight*d;ctx.setTransform(d,0,0,d,0,0)}addEventListener("resize",resize);resize();
 function project(p){let[x,y,z]=p;const cy=Math.cos(yaw),sy=Math.sin(yaw);[x,y]=[x*cy-y*sy,x*sy+y*cy];const cp=Math.cos(pitch),sp=Math.sin(pitch);[y,z]=[y*cp-z*sp,y*sp+z*cp];const s=Math.min(innerWidth,innerHeight)*.00145*zoom;return[innerWidth/2+x*s,innerHeight/2-z*s,y]}
-function drawReferenceFrame(){if(!showA)return;const refs=[
- {p:[0,0,260],l:"SG North"},{p:[0,0,-260],l:"SG South"},
- {p:[260,0,0],l:"SGX +"},{p:[-260,0,0],l:"SGX −"},
- {p:[0,260,0],l:"SGY +"},{p:[0,-260,0],l:"SGY −"}];
+function drawReferenceFrame(){if(!showA)return;
+const frameLabels={
+ galactic:[{p:[0,0,260],l:"Galactic North"},{p:[0,0,-260],l:"Galactic South"},{p:[260,0,0],l:"Galactic Centre"},{p:[-260,0,0],l:"Galactic Anticentre"},{p:[0,260,0],l:"l = 90°"},{p:[0,-260,0],l:"l = 270°"}],
+ equatorial:[{p:[0,0,260],l:"North Celestial Pole"},{p:[0,0,-260],l:"South Celestial Pole"},{p:[260,0,0],l:"Vernal Equinox · RA 0h"},{p:[-260,0,0],l:"RA 12h"},{p:[0,260,0],l:"RA 6h"},{p:[0,-260,0],l:"RA 18h"}],
+ supergalactic:[{p:[0,0,260],l:"SG North"},{p:[0,0,-260],l:"SG South"},{p:[260,0,0],l:"SGX +"},{p:[-260,0,0],l:"SGX −"},{p:[0,260,0],l:"SGY +"},{p:[0,-260,0],l:"SGY −"}]
+};const refs=frameLabels[displayFrame]||frameLabels.galactic;/* display-reference orientation; catalogue transform follows */ const unused=[
+ ];
  ctx.strokeStyle="#ffffff30";ctx.lineWidth=.7;
  for(const seg of [[[ -300,0,0],[300,0,0]],[[0,-300,0],[0,300,0]],[[0,0,-300],[0,0,300]]]){const a=project(seg[0]),b=project(seg[1]);ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke()}
  ctx.fillStyle="#dbe6ff";ctx.font="10px system-ui";for(const r of refs){const q=project(r.p);ctx.fillText(r.l,q[0]+4,q[1])}}
@@ -32,3 +35,5 @@ canvas.onpointerdown=e=>{drag=[e.clientX,e.clientY];canvas.setPointerCapture(e.p
 let pinch=null;canvas.addEventListener("touchmove",e=>{if(e.touches.length===2){const d=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);if(pinch)zoom=Math.max(.3,Math.min(8,zoom*d/pinch));pinch=d}},{passive:true});canvas.addEventListener("touchend",()=>pinch=null);
 for(const[id,key]of [["galaxies","G"],["flows","F"],["vectors","V"],["shells","S"],["axes","A"],["dipoles","D"]])document.querySelector("#"+id).onclick=e=>{if(key==="G")showG=!showG;if(key==="F")showF=!showF;if(key==="A")showA=!showA;if(key==="S")showS=!showS;if(key==="V")showV=!showV;if(key==="D")showD=!showD;e.currentTarget.classList.toggle("on")};document.querySelector("#home").onclick=()=>{yaw=.55;pitch=.28;zoom=1.7};
 document.querySelector("#shell").onchange=e=>{activeShell=Number(e.target.value);zoom=Math.max(.75,Math.min(6,510/activeShell));showS=true;document.querySelector("#shells").classList.add("on")};
+
+document.querySelector("#frame").onchange=e=>{displayFrame=e.target.value;showA=true;document.querySelector("#axes").classList.add("on");document.querySelector("#scale").textContent=e.target.options[e.target.selectedIndex].text+" reference · data currently Supergalactic"};
