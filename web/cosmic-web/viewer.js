@@ -8,7 +8,9 @@ const anchors=[
  {id:"origin",label:"Milky Way / observer",position:[0,0,0],status:"reference"},
  {id:"laniakea",label:"Laniakea centre",position:[-47,13,-5],status:"published CF reconstruction",source:"Sorce et al. constrained Local Universe simulations"},
  {id:"great-attractor",label:"Great Attractor",position:[-40,5,0],status:"CF4/WALLABY reconstruction",source:"WALLABY pilot + CF4"},
- {id:"vela",label:"Vela",position:[-130,40,-140],status:"CF4/WALLABY reconstruction",source:"WALLABY pilot + CF4"}
+ {id:"vela",label:"Vela",position:[-130,40,-140],status:"CF4/WALLABY reconstruction",source:"WALLABY pilot + CF4"},
+ {id:"dipole-repeller",label:"Dipole Repeller",position:[95,-46,88],status:"CF3 reconstructed potential minimum",source:"Courtois et al. 2017, ApJL 847 L6"},
+ {id:"cold-spot-repeller",label:"Cold Spot Repeller",position:[65,-218,-61],status:"CF3 reconstructed potential minimum",source:"Courtois et al. 2017, ApJL 847 L6"}
 ];
 const demo={coordinateFrame:{coordinates:"supergalactic",units:"Mpc/h"},layers:[{id:"galaxies",data:[]},{id:"streamlines",data:[]}]};
 function resize(){const d=Math.min(devicePixelRatio||1,2);canvas.width=innerWidth*d;canvas.height=innerHeight*d;ctx.setTransform(d,0,0,d,0,0)}addEventListener("resize",resize);resize();
