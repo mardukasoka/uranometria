@@ -24,7 +24,9 @@ const frameLabels={
  ctx.strokeStyle="#ffffff30";ctx.lineWidth=.7;
  for(const seg of [[[ -300,0,0],[300,0,0]],[[0,-300,0],[0,300,0]],[[0,0,-300],[0,0,300]]]){const a=project(displayPosition(seg[0])),b=project(displayPosition(seg[1]));ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke()}
  ctx.fillStyle="#dbe6ff";ctx.font="10px system-ui";for(const r of refs){const q=project(displayPosition(r.p));ctx.fillText(r.l,q[0]+4,q[1])}}
-function comovingDistanceMpc(z){if(!(z>0))return 0;const H0=67.4,Om=.315,Ol=.685,c=299792.458,n=160,h=z/n;let s=0;for(let i=0;i<=n;i++){const x=i*h,e=1/Math.sqrt(Om*Math.pow(1+x,3)+Ol);s+=(i===0||i===n?1:i%2?4:2)*e}return c/H0*h*s/3}\nfunction deepRadiusFromZ(z){const d=comovingDistanceMpc(z);return 105+Math.min(205,d/10500*205)}\nfunction deepPoint(o,r=null){if(o.ra_deg==null||o.dec_deg==null)return null;const rr=r??(o.z?deepRadiusFromZ(o.z):255),eq=lonLatToCartesianLocal(o.ra_deg,o.dec_deg,rr),p=displayFrame==="equatorial"?eq:transformCartesian(eq,"equatorial",displayFrame);return project(p)}
+function comovingDistanceMpc(z){if(!(z>0))return 0;const H0=67.4,Om=.315,Ol=.685,c=299792.458,n=160,h=z/n;let s=0;for(let i=0;i<=n;i++){const x=i*h,e=1/Math.sqrt(Om*Math.pow(1+x,3)+Ol);s+=(i===0||i===n?1:i%2?4:2)*e}return c/H0*h*s/3}
+function deepRadiusFromZ(z){const d=comovingDistanceMpc(z);return 105+Math.min(205,d/10500*205)}
+function deepPoint(o,r=null){if(o.ra_deg==null||o.dec_deg==null)return null;const rr=r??(o.z?deepRadiusFromZ(o.z):255),eq=lonLatToCartesianLocal(o.ra_deg,o.dec_deg,rr),p=displayFrame==="equatorial"?eq:transformCartesian(eq,"equatorial",displayFrame);return project(p)}
 function lonLatToCartesianLocal(lon,lat,r=1){const L=lon*Math.PI/180,B=lat*Math.PI/180,c=Math.cos(B);return[r*c*Math.cos(L),r*c*Math.sin(L),r*Math.sin(B)]}
 function drawDeepUniverse(){if(!deepMode||!deepData)return;ctx.font="10px system-ui";ctx.textBaseline="middle";
  if(showDistant){for(const o of deepData.most_distant||[]){const q=deepPoint(o);if(!q)continue;ctx.fillStyle="#ffca78";ctx.beginPath();ctx.arc(q[0],q[1],3,0,Math.PI*2);ctx.fill();ctx.fillStyle="#ffe1a8";ctx.fillText(o.id+" · z "+o.z,q[0]+6,q[1]);}}
@@ -48,6 +50,7 @@ document.querySelector("#shell").onchange=e=>{const v=e.target.value;deepMode=v.
 document.querySelector("#lrd").onclick=e=>{showLRD=!showLRD;e.currentTarget.classList.toggle("on",showLRD)};
 document.querySelector("#distant").onclick=e=>{showDistant=!showDistant;e.currentTarget.classList.toggle("on",showDistant)};
 fetch("../data/deep-universe/review-seed.json",{cache:"no-store"}).then(r=>r.json()).then(d=>deepData=d).catch(()=>{});
-fetch("../data/deep-universe/rubies-lrds.json",{cache:"no-store"}).then(r=>r.json()).then(d=>lrdData=d).catch(()=>{});\nfetch("../data/deep-universe/lrd-catalogue-919.json",{cache:"no-store"}).then(r=>r.json()).then(d=>lrdPopulation=d).catch(()=>{});
+fetch("../data/deep-universe/rubies-lrds.json",{cache:"no-store"}).then(r=>r.json()).then(d=>lrdData=d).catch(()=>{});
+fetch("../data/deep-universe/lrd-catalogue-919.json",{cache:"no-store"}).then(r=>r.json()).then(d=>lrdPopulation=d).catch(()=>{});
 canvas.addEventListener("click",e=>{if(!deepMode||!showLRD)return;const r=canvas.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;let hit=null,best=12;for(const h of lrdHits){const d=Math.hypot(h.x-x,h.y-y);if(d<best){best=d;hit=h}}if(hit){const o=hit.o;const url="https://cdsportal.u-strasbg.fr/?target="+encodeURIComponent(o.ra_deg+" "+o.dec_deg);window.open(url,"_blank","noopener");}});
 document.querySelector("#frame").onchange=e=>{displayFrame=e.target.value;showA=true;document.querySelector("#axes").classList.add("on");document.querySelector("#scale").textContent=e.target.options[e.target.selectedIndex].text+" reference · CF4 data native Supergalactic"};
