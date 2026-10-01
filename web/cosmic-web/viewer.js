@@ -24,8 +24,8 @@ const frameLabels={
 };const refs=frameLabels[displayFrame]||frameLabels.galactic;/* display-reference orientation; catalogue transform follows */ const unused=[
  ];
  ctx.strokeStyle="#ffffff30";ctx.lineWidth=.7;
- for(const seg of [[[ -300,0,0],[300,0,0]],[[0,-300,0],[0,300,0]],[[0,0,-300],[0,0,300]]]){const a=project(displayPosition(seg[0])),b=project(displayPosition(seg[1]));ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke()}
- ctx.fillStyle="#dbe6ff";ctx.font="10px system-ui";for(const r of refs){const q=project(displayPosition(r.p));ctx.fillText(r.l,q[0]+4,q[1])}}
+ for(const seg of [[[ -300,0,0],[300,0,0]],[[0,-300,0],[0,300,0]],[[0,0,-300],[0,0,300]]]){const a=project(seg[0]),b=project(seg[1]);ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke()}
+ ctx.fillStyle="#dbe6ff";ctx.font="10px system-ui";for(const r of refs){const q=project(r.p);ctx.fillText(r.l,q[0]+4,q[1])}}
 function comovingDistanceMpc(z){if(!(z>0))return 0;const H0=67.4,Om=.315,Ol=.685,c=299792.458,n=160,h=z/n;let s=0;for(let i=0;i<=n;i++){const x=i*h,e=1/Math.sqrt(Om*Math.pow(1+x,3)+Ol);s+=(i===0||i===n?1:i%2?4:2)*e}return c/H0*h*s/3}
 function deepRadiusFromZ(z){const d=comovingDistanceMpc(z);return 105+Math.min(205,d/10500*205)}
 function deepPoint(o,r=null){if(o.ra_deg==null||o.dec_deg==null)return null;const rr=r??(o.z?deepRadiusFromZ(o.z):255),eq=lonLatToCartesianLocal(o.ra_deg,o.dec_deg,rr),p=displayFrame==="equatorial"?eq:transformCartesian(eq,"equatorial",displayFrame);return project(p)}
