@@ -1,7 +1,7 @@
 import {transformCartesian} from "../../lib/coordinate-frames.mjs";
 const canvas=document.querySelector("#sky"),ctx=canvas.getContext("2d",{alpha:false});let scene=null,showG=true,showF=false,showA=false;
 let yaw=.55,pitch=.28,zoom=1.7,drag=null,showS=false,showV=false,showD=false,activeShell=300,displayFrame="galactic";
-let velocitySamples=[],deepData=null,showLRD=false,showDistant=false,deepMode=false;
+let velocitySamples=[],deepData=null,lrdData=null,showLRD=false,showDistant=false,deepMode=false,lrdHits=[];
 function displayPosition(p){return transformCartesian(p,"supergalactic",displayFrame);}
 const shellRadii=[50,100,160,200,300];
 const anchors=[
@@ -28,7 +28,7 @@ function deepPoint(o,r=255){if(o.ra_deg==null||o.dec_deg==null)return null;const
 function lonLatToCartesianLocal(lon,lat,r=1){const L=lon*Math.PI/180,B=lat*Math.PI/180,c=Math.cos(B);return[r*c*Math.cos(L),r*c*Math.sin(L),r*Math.sin(B)]}
 function drawDeepUniverse(){if(!deepMode||!deepData)return;ctx.font="10px system-ui";ctx.textBaseline="middle";
  if(showDistant){for(const o of deepData.most_distant||[]){const q=deepPoint(o);if(!q)continue;ctx.fillStyle="#ffca78";ctx.beginPath();ctx.arc(q[0],q[1],3,0,Math.PI*2);ctx.fill();ctx.fillStyle="#ffe1a8";ctx.fillText(o.id+" · z "+o.z,q[0]+6,q[1]);}}
- if(showLRD){ctx.fillStyle="#ff5b5b";ctx.font="11px system-ui";ctx.fillText("Little Red Dots: redshift-only review records; RA/Dec pending catalogue binding",12,92);}
+ if(showLRD&&lrdData){lrdHits=[];for(const o of lrdData.objects||[]){const q=deepPoint(o);if(!q)continue;ctx.fillStyle="#ff3b3b";ctx.beginPath();ctx.arc(q[0],q[1],2.6,0,Math.PI*2);ctx.fill();lrdHits.push({x:q[0],y:q[1],o});}ctx.fillStyle="#ff8b8b";ctx.font="11px system-ui";ctx.fillText((lrdData.objects||[]).length+" spectroscopic RUBIES LRDs · tap a red dot for CDS",12,92);}
 }
 function draw(){requestAnimationFrame(draw);ctx.fillStyle="#02040a";ctx.fillRect(0,0,innerWidth,innerHeight);if(!scene)return;const g=(scene.layers.find(x=>x.id==="galaxies")?.data||[]).filter(o=>Math.hypot(...o.position)<=activeShell),f=scene.layers.find(x=>x.id==="streamlines")?.data||[];
 if(showS){ctx.strokeStyle="#ffffff18";ctx.lineWidth=.7;for(const r of shellRadii){ctx.beginPath();for(let i=0;i<=96;i++){const a=i/96*Math.PI*2,q=project(displayPosition([r*Math.cos(a),r*Math.sin(a),0]));i?ctx.lineTo(q[0],q[1]):ctx.moveTo(q[0],q[1])}ctx.stroke();const lab=project(displayPosition([r,0,0]));ctx.fillStyle="#ffffff55";ctx.font="9px system-ui";ctx.fillText(r+" h⁻¹ Mpc",lab[0]+3,lab[1]);}}
@@ -48,4 +48,6 @@ document.querySelector("#shell").onchange=e=>{const v=e.target.value;deepMode=v.
 document.querySelector("#lrd").onclick=e=>{showLRD=!showLRD;e.currentTarget.classList.toggle("on",showLRD)};
 document.querySelector("#distant").onclick=e=>{showDistant=!showDistant;e.currentTarget.classList.toggle("on",showDistant)};
 fetch("../data/deep-universe/review-seed.json",{cache:"no-store"}).then(r=>r.json()).then(d=>deepData=d).catch(()=>{});
+fetch("../data/deep-universe/rubies-lrds.json",{cache:"no-store"}).then(r=>r.json()).then(d=>lrdData=d).catch(()=>{});
+canvas.addEventListener("click",e=>{if(!deepMode||!showLRD)return;const r=canvas.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;let hit=null,best=12;for(const h of lrdHits){const d=Math.hypot(h.x-x,h.y-y);if(d<best){best=d;hit=h}}if(hit){const o=hit.o;const url="https://cdsportal.u-strasbg.fr/?target="+encodeURIComponent(o.ra_deg+" "+o.dec_deg);window.open(url,"_blank","noopener");}});
 document.querySelector("#frame").onchange=e=>{displayFrame=e.target.value;showA=true;document.querySelector("#axes").classList.add("on");document.querySelector("#scale").textContent=e.target.options[e.target.selectedIndex].text+" reference · CF4 data native Supergalactic"};
