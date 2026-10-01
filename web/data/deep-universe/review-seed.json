@@ -1,0 +1,70 @@
+{
+  "version": "0.1.0",
+  "updated": "2026-10-01",
+  "note": "Curated review seed. Redshift is observational; display radius is normalized and is not a linear CF4 distance.",
+  "little_red_dots": [
+    {
+      "id": "CEERS-14448",
+      "z": 4.75,
+      "survey": "CEERS"
+    },
+    {
+      "id": "NGDEEP-4321",
+      "z": 8.92,
+      "survey": "NGDEEP"
+    },
+    {
+      "id": "PRIMER-COS-10539",
+      "z": 7.48,
+      "survey": "PRIMER"
+    },
+    {
+      "id": "CEERS-20320",
+      "z": 5.27,
+      "survey": "CEERS"
+    },
+    {
+      "id": "JADES-9186",
+      "z": 4.99,
+      "survey": "JADES"
+    },
+    {
+      "id": "PRIMER-UDS-17818",
+      "z": 6.4,
+      "survey": "PRIMER"
+    }
+  ],
+  "most_distant": [
+    {
+      "id": "MoM-z14",
+      "z": 14.44,
+      "status": "spectroscopically confirmed"
+    },
+    {
+      "id": "JADES-GS-z14-0",
+      "z": 14.32,
+      "ra_deg": 53.1537083,
+      "dec_deg": -27.7803694,
+      "status": "spectroscopically confirmed"
+    },
+    {
+      "id": "JADES-GS-z13-1",
+      "z": 13,
+      "status": "spectroscopically confirmed"
+    }
+  ],
+  "provenance": [
+    {
+      "source": "NASA Webb Early Universe",
+      "url": "https://science.nasa.gov/mission/webb/early-universe/"
+    },
+    {
+      "source": "NASA Little Red Dots NIRCam image",
+      "url": "https://science.nasa.gov/asset/webb/little-red-dots-nircam-image/"
+    },
+    {
+      "source": "NASA JADES-GS-z14-0 NIRSpec",
+      "url": "https://science.nasa.gov/asset/webb/galaxy-jades-gs-z14-0-spectrum-nirspec/"
+    }
+  ]
+}
