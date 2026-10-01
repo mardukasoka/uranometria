@@ -1,0 +1,18 @@
+{
+  "version": "0.1.0",
+  "principle": "Observation is not reconstruction; reconstruction is not simulation; simulation is not inference.",
+  "layers": [
+    {"id":"observations","label":"Observations","examples":["Gaia","CMB","JWST","DESI","CosmicFlows"],"render":"measured"},
+    {"id":"reconstructions","label":"Reconstructions","examples":["density field","peculiar velocity field","basins","dipole fit"],"render":"derived"},
+    {"id":"models","label":"Physical models","examples":["Lambda-CDM","MOND/QUMOND","f(R)","w0-wa"],"render":"simulated"},
+    {"id":"evidence","label":"Paper evidence","examples":["H0 constraints","early-galaxy abundance","bulk-flow estimates"],"render":"comparison"}
+  ],
+  "domains": {
+    "h0":{"observables":["H0","rs","BAO","SN distances"],"candidate_engine":"Cobaya + CLASS/CAMB"},
+    "jwst_early_universe":{"observables":["z","UV luminosity","stellar mass","BH mass","number density"],"candidate_engine":"forward inference pipeline"},
+    "dipoles":{"observables":["direction","amplitude","mask","multipoles"],"candidate_engine":"catalogue spherical-harmonic fit"},
+    "bulk_flow":{"observables":["vx","vy","vz","scale","covariance"],"candidate_engine":"CosmicFlows/Laniakea"},
+    "gravity":{"observables":["density","velocity","P(k)","force law"],"candidate_engine":"PySCo"},
+    "cosmic_web":{"observables":["density","velocity","streamlines","basins"],"candidate_engine":"Laniakea/CF4"}
+  }
+}
