@@ -31,6 +31,8 @@
     "parse:cf4": "node parsers/cf4-laniakea.mjs",
     "build:cf4-mobile": "node bin/build-cf4-mobile.mjs",
     "build:cf4-scene": "node bin/build-cf4-scene.mjs",
-    "test:coordinates": "node test/coordinate-frames.test.mjs"
+    "test:coordinates": "node test/coordinate-frames.test.mjs",
+    "test:scale-domains": "node test/scale-domains.test.mjs",
+    "test:atlas-frames": "node test/coordinate-frames.test.mjs && node test/scale-domains.test.mjs"
   }
 }
