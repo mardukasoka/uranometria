@@ -1,0 +1,18 @@
+{
+  "schema":"uranometria.solar-system.p0.v1",
+  "status":"integration-fixture",
+  "coordinate_frame":"J2000 ecliptic heliocentric",
+  "units":"AU",
+  "source_policy":{"elements":"JPL SBDB/Horizons","note":"Populate orbital elements only from an epoch-stamped authoritative solution; do not treat osculating ellipses as permanent trajectories."},
+  "scale_markers":[30,50,100,173.144632674,346.289265348],
+  "objects":[
+    {"id":"sun","label":"Sun","kind":"star"},
+    {"id":"899","label":"Neptune","kind":"planet","source":"JPL Horizons"},
+    {"id":"134340","label":"Pluto","kind":"dwarf-planet","source":"JPL Horizons"},
+    {"id":"136199","label":"Eris","kind":"dwarf-planet","source":"JPL SBDB/Horizons"},
+    {"id":"2018 VG18","label":"Farout","kind":"extreme-tno","source":"JPL SBDB/Horizons"},
+    {"id":"2018 AG37","label":"Farfarout","kind":"extreme-tno","source":"JPL SBDB/Horizons"},
+    {"id":"90377","label":"Sedna","kind":"sednoid","source":"JPL SBDB/Horizons"},
+    {"id":"541132","designation":"2015 TG387","label":"Leleākūhonua","kind":"sednoid","source":"JPL SBDB/Horizons"}
+  ]
+}
