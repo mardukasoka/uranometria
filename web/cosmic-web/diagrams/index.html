@@ -17,6 +17,8 @@
 <p id="note" class="note">Epoch labels are conventional approximate ranges. Time conversion uses a flat ΛCDM reference cosmology (H₀ 67.4 km/s/Mpc, Ωm 0.315); provenance and uncertainty will be added in the Atlas cosmology service.</p>
 </section></main>
 <script>
+// build e714d1a mobile SVG diagnostics
+
 (()=>{const svg=document.querySelector('#chart'),title=document.querySelector('#title'),controls=document.querySelector('#controls'),note=document.querySelector('#note'),tabs=[...document.querySelectorAll('.tabs button')];let view='redshift';
 const S=(n,a={})=>{let e=document.createElementNS('http://www.w3.org/2000/svg',n);Object.entries(a).forEach(([k,v])=>e.setAttribute(k,v));return e};
 function txt(x,y,t,c='label'){let e=S('text',{x,y,class:c});e.textContent=t;svg.append(e)}
