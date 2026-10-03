@@ -1,0 +1,28 @@
+name: JPL P0 ingest
+on:
+  workflow_dispatch:
+  push:
+    branches: [ integration/atlas-space-outer-solar-system ]
+    paths:
+      - scripts/fetch_jpl_p0.py
+      - .github/workflows/jpl-p0-ingest.yml
+permissions:
+  contents: write
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Fetch JPL SBDB solutions
+        run: python scripts/fetch_jpl_p0.py
+      - name: Commit authoritative catalogue
+        run: |
+          if git diff --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add web/data/solar-system/p0-outer-solar-system.json
+          git commit -m "Ingest authoritative JPL P0 orbital elements"
+          git push
