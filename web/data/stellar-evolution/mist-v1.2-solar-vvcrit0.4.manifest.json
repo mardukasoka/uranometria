@@ -1,0 +1,54 @@
+{
+  "schema": "uranometria.stellar-track-provider.v0.1",
+  "provider": "MIST",
+  "release": "v1.2",
+  "model": "EEP evolutionary tracks",
+  "composition": {
+    "feh": 0,
+    "afe": 0
+  },
+  "rotation": {
+    "vvcrit": 0.4
+  },
+  "source": {
+    "model_grids": "https://mist.science/model_grids.html",
+    "interpolator": "https://mist.science/interp_tracks.html",
+    "columns": "https://mist.science/README_tables.pdf"
+  },
+  "requested_initial_masses_msun": [
+    0.1,
+    0.5,
+    0.8,
+    1,
+    2,
+    5,
+    8,
+    15,
+    25,
+    50,
+    100
+  ],
+  "fields": [
+    "eep",
+    "star_age_yr",
+    "initial_mass_msun",
+    "star_mass_msun",
+    "log_L_Lsun",
+    "log_Teff_K",
+    "log_R_Rsun",
+    "log_g_cgs",
+    "phase"
+  ],
+  "phase_codes": {
+    "0": "MS",
+    "2": "SGB+RGB",
+    "3": "CHeB",
+    "4": "EAGB",
+    "5": "TPAGB",
+    "6": "post-AGB",
+    "9": "WR",
+    "-1": "PMS"
+  },
+  "status": "provider-contract-only",
+  "note": "No synthetic track coordinates belong in this file. Track arrays are added only from retrieved MIST EEP output."
+}
