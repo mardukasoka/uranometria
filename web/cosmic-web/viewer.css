@@ -3,3 +3,5 @@
 nav{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none}nav::-webkit-scrollbar{display:none}.controls{display:flex;gap:8px;min-width:max-content;padding:0 10px}.controls button,.controls select{flex:0 0 auto}#note{pointer-events:none;max-width:min(330px,78vw)}
 
 @media(max-width:600px){nav{left:0;right:0;transform:none;width:100%;max-width:100%;bottom:max(8px,env(safe-area-inset-bottom));border-radius:0;padding:6px 0;scroll-padding:0 12px}.controls{padding:0 12px}.controls:before,.controls:after{content:"";flex:0 0 1px}#home{min-width:44px}}
+
+.navbtn{display:flex;align-items:center;justify-content:center;flex:0 0 auto;border:0;border-radius:11px;padding:10px 12px;background:#ffffff0d;color:#dbe6ff;text-decoration:none;min-height:38px;white-space:nowrap}.navbtn:active{background:#ffffff26}
