@@ -83,3 +83,20 @@ Frame/Origin Transform
 Domain Renderer + Data Stream
 
 This is the contract linking existing atom models, Tree of Life/Earth layers and Uranometria rather than forcing them into one renderer.
+
+
+## Scale-source precedence and gap filling
+Uranometria and the Atlas use domain-specialist renderers where an implemented Atlas domain exists. The global Powers-of-Ten scale spine does not replace a specialist domain's native zoom, camera, coordinates, evidence model or LOD policy.
+
+Where no Atlas domain exists yet, the Universe Atlas may provide the provisional scale representation. Such representations are explicitly provenance-labelled and are superseded when an Atlas specialist domain becomes available.
+
+Precedence:
+1. Atlas/Uranometria specialist domain and evidence.
+2. Imported specialist datasets integrated into that domain (for example small-body/orbital data).
+3. Universe Atlas provisional gap representation.
+
+The Atlas of Space Solar-System renderer is not embedded as a second Solar-System experience. Its useful small-body/orbital data and techniques may be integrated into Uranometria's existing Solar-System domain.
+
+## Upstream references
+- Universe Atlas — Chris Zetterstrom, https://github.com/chrisjz/universe — Powers-of-Ten scale/navigation reference and provisional representations for currently unimplemented scale domains.
+- Atlas of Space — Gordon Hart; project fork https://github.com/mardukasoka/atlasof.space — Solar-System/small-body orbital reference; selected data/techniques feed Uranometria rather than replacing its renderer.
