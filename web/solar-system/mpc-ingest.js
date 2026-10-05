@@ -32,14 +32,14 @@ export function normalizeMpcOrb(entityId, raw, provenance={}) {
     source_orbit_class:raw.orbit_class ?? raw.classification ?? null,
     mpc_cartesian:{
       x:car.x,y:car.y,z:car.z,
-      vx:car.xdot ?? car.vx,vy:car.ydot ?? car.vy,vz:car.zdot ?? car.vz
+      vx:car.vx ?? car.xdot,vy:car.vy ?? car.ydot,vz:car.vz ?? car.zdot
     },
-    provenance:{...provenance,authority:"MPC",designation_data:raw.designation_data ?? null}
+    system_data:raw.system_data ?? null,\n    provenance:{...provenance,authority:"MPC",designation_data:raw.designation_data ?? null}
   };
   for(const k of ["epoch_mjd_tt","semimajor_axis_au","eccentricity","inclination_deg","ascending_node_deg","argument_perihelion_deg","mean_anomaly_deg"]) {
     if(!Number.isFinite(snapshot[k])) throw new TypeError(`invalid normalized MPC field: ${k}`);
   }
-  return snapshot;
+  for(const k of ["x","y","z","vx","vy","vz"]) {\n    if(!Number.isFinite(Number(snapshot.mpc_cartesian[k]))) throw new TypeError(`invalid MPC Cartesian field: ${k}`);\n  }\n  return snapshot;
 }
 
 export function cartesianResidualAu(calculated,mpcCartesian) {
