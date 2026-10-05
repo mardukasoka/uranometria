@@ -7,6 +7,10 @@ export const SOLAR_ENTITY_KINDS=Object.freeze([
   "spacecraft","artificial-satellite","dynamical-point"
 ]);
 
+export const ORIGIN_STATUS=Object.freeze(["native","confirmed-interstellar","capture-candidate","unknown"]);
+export const ORBIT_FACETS=Object.freeze(["prograde","retrograde","polar-high-i","hyperbolic","resonant","co-orbital","sun-grazing","mercury-interior"]);
+export const PHYSICAL_FACETS=Object.freeze(["fast-rotator","contact-binary","binary","active-asteroid","ringed","metal-rich"]);
+
 export const PROPAGATION_AUTHORITIES=Object.freeze({
   MPC_ELEMENTS:"mpc-elements",
   JPL_HORIZONS:"jpl-horizons",
@@ -21,7 +25,11 @@ export function normalizeSolarEntity(raw){
   if(!raw?.kind) throw new TypeError("kind required");
   if(!SOLAR_ENTITY_KINDS.includes(raw.kind)) throw new RangeError(`unsupported solar entity kind: ${raw.kind}`);
   if(!raw?.name) throw new TypeError("name required");
-  const sources=Array.isArray(raw.sources)?raw.sources.filter(Boolean):[];
+  const sources=[...new Set(Array.isArray(raw.sources)?raw.sources.filter(Boolean):[])];
+  const origin_status=raw.origin_status??"unknown";
+  if(!ORIGIN_STATUS.includes(origin_status)) throw new RangeError(`unsupported origin status: ${origin_status}`);
+  const uniq=v=>[...new Set(Array.isArray(v)?v.filter(Boolean):[])];
+  const claims=(raw.claims??[]).map(c=>Object.freeze({claim:String(c.claim),status:c.status??"candidate",confidence:c.confidence??null,source:c.source??null,note:c.note??null}));
   return Object.freeze({
     entity_id:String(raw.entity_id),
     name:String(raw.name),
@@ -30,6 +38,10 @@ export function normalizeSolarEntity(raw){
     parent_id:raw.parent_id??"sun",
     population:raw.population??null,
     status:raw.status??"catalogued",
+    origin_status,
+    orbit_facets:Object.freeze(uniq(raw.orbit_facets)),
+    physical_facets:Object.freeze(uniq(raw.physical_facets)),
+    claims:Object.freeze(claims),
     propagation_authority:raw.propagation_authority??null,
     source_record_id:raw.source_record_id??null,
     epoch:raw.epoch??null,
@@ -65,6 +77,9 @@ export function mergeSolarEntityEvidence(base,patch){
   return normalizeSolarEntity({
     ...a,...patch,entity_id:a.entity_id,
     metadata:{...a.metadata,...patch.metadata},
+    orbit_facets:[...a.orbit_facets,...(patch.orbit_facets??[])],
+    physical_facets:[...a.physical_facets,...(patch.physical_facets??[])],
+    claims:[...a.claims,...(patch.claims??[])],
     sources:[...a.sources,...(patch.sources??[])].filter((v,i,x)=>x.indexOf(v)===i)
   });
 }
