@@ -47,13 +47,16 @@ Trans-Neptunian / outer:
 - 541132 Leleakuhonua (2015 TG387)
 
 Earth co-orbital validation set (kept as a dynamical/resonance layer separate from MPC orbit class):
-- 3753 Cruithne — horseshoe/co-orbital
+- 3753 Cruithne — compound/transient horseshoe co-orbital
+- 2002 AA29 — Earth horseshoe co-orbital with documented horseshoe ↔ quasi-satellite transitions
 - 469219 Kamoʻoalewa (2016 HO3) — quasi-satellite/co-orbital
 - 85770 1998 UP1 — Aten; near-1:1 Earth co-orbital/companion
 - 2010 TK7 — Earth Trojan
 - 614689 2020 XL5 — Earth Trojan
 
 These objects are first validated heliocentrically, then in an Earth-rotating frame. An object's MPC class (e.g. Aten/Apollo) must not be overwritten by its dynamical co-orbital state.
+
+Co-orbital state is time-dependent metadata, not immutable identity. The Earth-relative renderer must support at least horseshoe, quasi-satellite, L4 tadpole, L5 tadpole and transition/compound states. For objects such as 2002 AA29, the displayed state must be tied to the integration/epoch interval and provenance rather than permanently encoded in the object record.
 
 ## Required validation
 1. Parse all six Keplerian elements and epoch.
