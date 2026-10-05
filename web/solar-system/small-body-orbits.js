@@ -115,3 +115,42 @@ export function requireCommonEpoch(states) {
   const target = Math.max(...epochs);
   return {target_epoch_mjd_tt:target, requires_propagation:epochs.some(e=>e!==target)};
 }
+
+
+// Gaussian gravitational constant: rad/day when a is in AU.
+export const GAUSSIAN_K = 0.01720209895;
+
+export function meanMotionRadPerDay(semimajorAxisAu) {
+  const a=Number(semimajorAxisAu);
+  if (!(a>0)) throw new RangeError("semimajor axis must be positive");
+  return GAUSSIAN_K / Math.pow(a,1.5);
+}
+
+export function propagateTwoBody(elements, targetEpochMjdTt) {
+  const epoch=Number(elements.epoch_mjd_tt ?? elements.epoch);
+  const target=Number(targetEpochMjdTt);
+  if (!Number.isFinite(epoch)||!Number.isFinite(target)) throw new TypeError("finite source and target epochs required");
+  const e=Number(elements.eccentricity);
+  if (!(e>=0&&e<1)) throw new RangeError("two-body v0.1 supports bound elliptical orbits only");
+  const M0=Number(elements.mean_anomaly_deg)*DEG;
+  const M=wrapRadians(M0 + meanMotionRadPerDay(elements.semimajor_axis_au)*(target-epoch));
+  return {
+    ...elements,
+    source_epoch_mjd_tt:epoch,
+    epoch_mjd_tt:target,
+    mean_anomaly_deg:M/DEG,
+    propagation_model:"two-body-kepler",
+    propagation_precision:"visualization",
+    perturbations_included:false
+  };
+}
+
+export function propagateCollectionToEpoch(records,targetEpochMjdTt) {
+  return records.map(r=>propagateTwoBody(r,targetEpochMjdTt));
+}
+
+export function heliocentricToPlanetRotatingFrame(objectPos, planetPos, planetLongitudeRad) {
+  const dx=objectPos.x-planetPos.x, dy=objectPos.y-planetPos.y, dz=objectPos.z-planetPos.z;
+  const c=Math.cos(-planetLongitudeRad), s=Math.sin(-planetLongitudeRad);
+  return {x:c*dx-s*dy,y:s*dx+c*dy,z:dz};
+}
