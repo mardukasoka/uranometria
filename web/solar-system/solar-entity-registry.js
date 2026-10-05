@@ -56,8 +56,9 @@ export function choosePropagationAuthority(entity){
   if(e.propagation_authority) return e.propagation_authority;
   if(e.kind==="spacecraft") return PROPAGATION_AUTHORITIES.JPL_HORIZONS;
   if(e.kind==="artificial-satellite") return PROPAGATION_AUTHORITIES.TLE;
-  if(["asteroid","centaur","tno","comet","interstellar-object"].includes(e.kind))
+  if(["asteroid","centaur","tno","comet"].includes(e.kind))
     return PROPAGATION_AUTHORITIES.MPC_ELEMENTS;
+  if(e.kind==="interstellar-object") return null;
   return PROPAGATION_AUTHORITIES.JPL_HORIZONS;
 }
 
