@@ -1,0 +1,202 @@
+{
+  "schema": "uranometria.solar-system.p0.v1",
+  "status": "jpl-sbdb-ingested",
+  "coordinate_frame": "J2000 ecliptic heliocentric",
+  "units": "AU",
+  "source_policy": {
+    "elements": "JPL SBDB/Horizons",
+    "note": "Populate orbital elements only from an epoch-stamped authoritative solution; do not treat osculating ellipses as permanent trajectories."
+  },
+  "scale_markers": [
+    30,
+    50,
+    100,
+    173.144632674,
+    346.289265348
+  ],
+  "objects": [
+    {
+      "id": "sun",
+      "label": "Sun",
+      "kind": "star"
+    },
+    {
+      "id": "899",
+      "label": "Neptune",
+      "kind": "planet",
+      "source": "JPL Horizons"
+    },
+    {
+      "id": "134340",
+      "label": "Pluto",
+      "kind": "dwarf-planet",
+      "source": "JPL Horizons"
+    },
+    {
+      "id": "136199",
+      "label": "Eris",
+      "kind": "dwarf-planet",
+      "source": "JPL SBDB/Horizons",
+      "elements": {
+        "a_au": 67.93394687853566,
+        "e": 0.4382385347971672,
+        "i_deg": 43.9258279471791,
+        "node_deg": 36.00477044417249,
+        "argp_deg": 150.7949235840312,
+        "M_deg": 211.774434275007,
+        "epoch_jd": 2461200.5
+      },
+      "uncertainty_1sigma": {
+        "a_au": 0.0002545,
+        "e": 3.4663e-06,
+        "i_deg": 3.1852e-05,
+        "node_deg": 1.4831e-05,
+        "argp_deg": 0.0021022,
+        "M_deg": 0.0048207
+      },
+      "provenance": {
+        "provider": "NASA/JPL Solar System Dynamics",
+        "service": "SBDB API",
+        "query": "136199",
+        "orbit_solution_date": "2026-06-06 21:06:42",
+        "condition_code": "3",
+        "data_arc_days": "26089",
+        "n_obs_used": 4064,
+        "retrieval_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=136199&full-prec=true&cov=mat"
+      }
+    },
+    {
+      "id": "2018 VG18",
+      "label": "Farout",
+      "kind": "extreme-tno",
+      "source": "JPL SBDB/Horizons",
+      "elements": {
+        "a_au": 81.90720797654177,
+        "e": 0.5244822275778944,
+        "i_deg": 24.17146148892078,
+        "node_deg": 245.2729813534031,
+        "argp_deg": 16.86247974986922,
+        "M_deg": 161.3294098759746,
+        "epoch_jd": 2461200.5
+      },
+      "uncertainty_1sigma": {
+        "a_au": 0.026871,
+        "e": 0.00039577,
+        "i_deg": 0.0018314,
+        "node_deg": 0.00064438,
+        "argp_deg": 0.1722,
+        "M_deg": 0.47648
+      },
+      "provenance": {
+        "provider": "NASA/JPL Solar System Dynamics",
+        "service": "SBDB API",
+        "query": "2018 VG18",
+        "orbit_solution_date": "2022-03-09 02:29:54",
+        "condition_code": "6",
+        "data_arc_days": "5900",
+        "n_obs_used": 34,
+        "retrieval_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2018+VG18&full-prec=true&cov=mat"
+      }
+    },
+    {
+      "id": "2018 AG37",
+      "label": "Farfarout",
+      "kind": "extreme-tno",
+      "source": "JPL SBDB/Horizons",
+      "elements": {
+        "a_au": 80.17822081868476,
+        "e": 0.6554456568605362,
+        "i_deg": 18.6748970559512,
+        "node_deg": 68.35649695206988,
+        "argp_deg": 231.7213808486059,
+        "M_deg": 187.4250004482886,
+        "epoch_jd": 2458539.5
+      },
+      "uncertainty_1sigma": {
+        "a_au": 4.7954,
+        "e": 0.023044,
+        "i_deg": 0.12446,
+        "node_deg": 0.53155,
+        "argp_deg": 59.967,
+        "M_deg": 219.28
+      },
+      "provenance": {
+        "provider": "NASA/JPL Solar System Dynamics",
+        "service": "SBDB API",
+        "query": "2018 AG37",
+        "orbit_solution_date": "2026-03-11 20:16:28",
+        "condition_code": "9",
+        "data_arc_days": "740",
+        "n_obs_used": 11,
+        "retrieval_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2018+AG37&full-prec=true&cov=mat"
+      }
+    },
+    {
+      "id": "90377",
+      "label": "Sedna",
+      "kind": "sednoid",
+      "source": "JPL SBDB/Horizons",
+      "elements": {
+        "a_au": 543.7195289104732,
+        "e": 0.8598824585187618,
+        "i_deg": 11.92527582847476,
+        "node_deg": 144.5061662673739,
+        "argp_deg": 311.0987725939751,
+        "M_deg": 358.5956944005428,
+        "epoch_jd": 2461200.5
+      },
+      "uncertainty_1sigma": {
+        "a_au": 0.1459,
+        "e": 3.7251e-05,
+        "i_deg": 3.3169e-06,
+        "node_deg": 0.00026058,
+        "argp_deg": 0.0019143,
+        "M_deg": 0.0005731
+      },
+      "provenance": {
+        "provider": "NASA/JPL Solar System Dynamics",
+        "service": "SBDB API",
+        "query": "90377",
+        "orbit_solution_date": "2026-06-06 14:12:24",
+        "condition_code": "1",
+        "data_arc_days": "12939",
+        "n_obs_used": 671,
+        "retrieval_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=90377&full-prec=true&cov=mat"
+      }
+    },
+    {
+      "id": "541132",
+      "designation": "2015 TG387",
+      "label": "Leleākūhonua",
+      "kind": "sednoid",
+      "source": "JPL SBDB/Horizons",
+      "elements": {
+        "a_au": 1345.9746784971,
+        "e": 0.9519448010157889,
+        "i_deg": 11.67889561905244,
+        "node_deg": 301.1346719755806,
+        "argp_deg": 118.2317322688105,
+        "M_deg": 359.6190139698275,
+        "epoch_jd": 2461200.5
+      },
+      "uncertainty_1sigma": {
+        "a_au": 10.094,
+        "e": 0.00035882,
+        "i_deg": 0.00016023,
+        "node_deg": 0.0018761,
+        "argp_deg": 0.009741,
+        "M_deg": 0.0043212
+      },
+      "provenance": {
+        "provider": "NASA/JPL Solar System Dynamics",
+        "service": "SBDB API",
+        "query": "541132",
+        "orbit_solution_date": "2026-05-26 08:25:22",
+        "condition_code": "2",
+        "data_arc_days": "7022",
+        "n_obs_used": 44,
+        "retrieval_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=541132&full-prec=true&cov=mat"
+      }
+    }
+  ]
+}
