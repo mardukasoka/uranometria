@@ -45,3 +45,18 @@ export function normalizeMpcOrb(entityId, raw, provenance={}) {
 export function cartesianResidualAu(calculated,mpcCartesian) {
   return Math.hypot(calculated.x-mpcCartesian.x,calculated.y-mpcCartesian.y,calculated.z-mpcCartesian.z);
 }
+
+
+export function validateKeplerAgainstMpcCartesian(snapshot,{toleranceAu=1e-7,positionFromElements}={}) {
+  if(typeof positionFromElements!=="function") throw new TypeError("positionFromElements callback required");
+  const calculated=positionFromElements(snapshot);
+  const residual_au=cartesianResidualAu(calculated,snapshot.mpc_cartesian);
+  return {
+    ok:residual_au<=toleranceAu,
+    residual_au,
+    tolerance_au:toleranceAu,
+    epoch_mjd_tt:snapshot.epoch_mjd_tt,
+    frame:"heliocentric-ecliptic-ICRF-aligned",
+    comparison:"same-epoch-kepler-vs-MPC-CAR"
+  };
+}
