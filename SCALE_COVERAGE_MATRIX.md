@@ -21,7 +21,7 @@ Native zoom inside a specialist domain remains independent of the global Powers-
 | 10^24–10^22 m | cosmic web / galaxies / Milky Way | Uranometria | Atlas-owned |
 | 10^22–10^16 m | Milky Way → stellar neighbourhood | Uranometria | Atlas-owned |
 | 10^16–10^13 m | outer stellar/Solar neighbourhood → Solar System | Uranometria; Universe reference only where duplicate | Atlas-owned |
-| 10^13–10^8 m | Solar System → Earth | Uranometria; Atlas of Space/MPC small-body data may enrich Uranometria | Atlas-owned/enriched |
+| 10^13–10^8 m | Solar System → Earth | Uranometria; Atlas of Space/MPC small-body data may enrich Uranometria, including NEOs, main belt/families, Trojans, Centaurs, TNOs, scattered/detached objects and notable co-orbitals/quasi-satellites | Atlas-owned/enriched |
 | 10^8–10^1 m | Earth → human/macroscopic | Universe Atlas provisional representation until Earth/Atlas specialist layers cover the requested focus | gap-fill |
 | 10^1–10^-9 m | human → biological/molecular | Universe Atlas provisional representation except where Tree of Life/Atlas specialist representations exist | mixed/gap-fill |
 | ~10^-10 m | atom | Matter Atlas specialist atom/exotic-atom representations take precedence | Matter-owned |
@@ -57,3 +57,24 @@ Every scale-domain route should eventually expose:
 
 - Universe Atlas — Chris Zaharia (Chris Zetterstrom/chrisjz GitHub identity), https://github.com/chrisjz/universe — MIT; global scale engine and provisional gap representations.
 - Atlas of Space — Gordon Hart, fork https://github.com/mardukasoka/atlasof.space — Solar-System/small-body orbital reference and integration source.
+
+
+## Small-body population contract
+
+Centaurs are a first-class selectable population in the Uranometria Solar-System domain, not folded invisibly into TNOs or a generic asteroid layer.
+
+Default operational taxonomy follows the Minor Planet Center orbit-type classification and records the classifier/source with each derived class. The UI/data model must permit alternate dynamical classifications where definitions differ in the literature.
+
+Minimum population filters for the enrichment pass:
+- Atira / Aten / Apollo / Amor and other near-Earth/co-orbital objects
+- Mars crossers
+- Main belt and useful dynamical families
+- Jupiter Trojans
+- Jupiter-coupled objects
+- Centaurs
+- Neptune Trojans
+- TNOs, with resonant/classical/scattered/detached subdivisions where supported by the source data
+- notable quasi-satellites and other co-orbitals
+- long-period / unusual outer-system objects where appropriate
+
+Centaurs occupy the visual/dynamical bridge between the giant-planet region and trans-Neptunian populations. Their rendered identity must remain distinct even where a source groups Centaurs with scattered objects.
