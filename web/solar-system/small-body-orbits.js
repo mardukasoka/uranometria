@@ -17,7 +17,7 @@ export function wrapRadians(x) {
   return x < 0 ? x + TAU : x;
 }
 
-export function classifyMpcElements({a,e,q,Q,tisserandJupiter}) {
+export function classifyMpcElements({a,e,q,Q,tisserandJupiter,inclination_deg=0}) {
   // Mirrors the public MPC element-cut taxonomy where enough fields exist.
   if (e > 1) return 30;
   if (e === 1) return 31;
@@ -26,7 +26,7 @@ export function classifyMpcElements({a,e,q,Q,tisserandJupiter}) {
   if (a >= 1 && q < 1.017) return 2;
   if (a >= 1 && q >= 1.017 && q < 1.3) return 3;
   if (a >= 1 && a < 3.2 && q > 1.3 && q < 1.666) return 10;
-  if (a >= 1 && a < 3.27831 && (arguments[0].inclination_deg ?? 0) < 75) return 11;
+  if (a >= 1 && a < 3.27831 && inclination_deg < 75) return 11;
   if (a > 4.8 && a < 5.4 && e < 0.3) return 12;
   if (a >= 1 && tisserandJupiter > 2 && tisserandJupiter < 3) return 20;
   if (a > 29.8 && a < 30.4) return 21;
@@ -91,4 +91,27 @@ export function populationChunk(population) {
   if (/mars|main belt|trojan|hilda|jupiter/.test(p)) return "middle";
   if (/centaur|neptune|tno|scattered|detached|classical|resonant/.test(p)) return "outer";
   return "special";
+}
+
+
+export function normalizeMpcCartesian(mpcOrb) {
+  const car = mpcOrb?.CAR?.coefficient_values;
+  const epoch = mpcOrb?.epoch_data?.epoch;
+  if (!Array.isArray(car) || car.length < 6 || !Number.isFinite(Number(epoch))) {
+    throw new TypeError("MPC orbit requires CAR[6] and epoch_data.epoch");
+  }
+  return {
+    epoch_mjd_tt: Number(epoch),
+    frame: "heliocentric-ecliptic-ICRF-aligned",
+    units: {position:"AU", velocity:"AU/day"},
+    position_au: car.slice(0,3).map(Number),
+    velocity_au_per_day: car.slice(3,6).map(Number)
+  };
+}
+
+export function requireCommonEpoch(states) {
+  const epochs = states.map(s=>Number(s.epoch_mjd_tt));
+  if (!epochs.length || epochs.some(e=>!Number.isFinite(e))) throw new TypeError("invalid epoch set");
+  const target = Math.max(...epochs);
+  return {target_epoch_mjd_tt:target, requires_propagation:epochs.some(e=>e!==target)};
 }
