@@ -46,7 +46,14 @@ Trans-Neptunian / outer:
 - 2018 AG37 (Farfarout)
 - 541132 Leleakuhonua (2015 TG387)
 
-Co-orbital / quasi-satellite validation objects are added as a separate Earth-relative test set once the heliocentric geometry passes.
+Earth co-orbital validation set (kept as a dynamical/resonance layer separate from MPC orbit class):
+- 3753 Cruithne — horseshoe/co-orbital
+- 469219 Kamoʻoalewa (2016 HO3) — quasi-satellite/co-orbital
+- 85770 1998 UP1 — Aten; near-1:1 Earth co-orbital/companion
+- 2010 TK7 — Earth Trojan
+- 614689 2020 XL5 — Earth Trojan
+
+These objects are first validated heliocentrically, then in an Earth-rotating frame. An object's MPC class (e.g. Aten/Apollo) must not be overwritten by its dynamical co-orbital state.
 
 ## Required validation
 1. Parse all six Keplerian elements and epoch.
