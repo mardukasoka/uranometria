@@ -23,7 +23,7 @@ export function lod0SolarEntities(){
     orbit_facets:o.resonance?["resonant",...(o.population==="Earth co-orbital"?["co-orbital"]:[])]:[],
     propagation_authority:"two-body-kepler",
     sources:["MPC"],
-    metadata:{mpc_class:o.mpcClass??null,resonance:o.resonance??null,lod:0}
+    metadata:{mpc_class:o.mpcClass??null,resonance:o.resonance??null,dynamical_class:o.dynamicalClass??null,provisional_designation:o.provisionalDesignation??null,lod:0}
   }));
 }
 
