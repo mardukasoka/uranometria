@@ -9,7 +9,7 @@ export const LOD0_OBJECTS = Object.freeze([
   {id:"mpc:3200",designation:"3200",name:"Phaethon",population:"Apollo"},
 
   // Extreme inner-Solar-System validators. Do not conflate perihelion inside Mercury with an orbit wholly inside Mercury.
-  {id:"mpc:2021PH27",designation:"2021 PH27",name:"2021 PH27",population:"Atira",dynamicalClass:"extreme-perihelion",orbitFacets:["mercury-interior"]},
+  {id:"mpc:2021PH27",designation:"2021 PH27",name:"2021 PH27",population:"Atira",dynamicalClass:"extreme-perihelion",orbitFacets:["perihelion-inside-mercury"]},
   {id:"mpc:2020AV2",designation:"2020 AV2",name:"2020 AV2",population:"Vatira",dynamicalClass:"venus-interior"},
   {id:"comet:322P",designation:"322P",name:"322P/SOHO",population:"near-Sun comet",dynamicalClass:"sungrazer-transition",physicalFacets:["active-asteroid"],claims:[{claim:"comet-asteroid transition or extinct-comet-like nature",status:"candidate"}]},
   {id:"mpc:1",designation:"1",name:"Ceres",population:"Main Belt"},
