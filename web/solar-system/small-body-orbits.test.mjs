@@ -1,7 +1,8 @@
 import {
   solveEccentricAnomaly, orbitalPositionAu, sampleOrbitAu,
   perihelionAphelionAu, populationChunk, classifyMpcElements,
-  meanMotionRadPerDay, propagateTwoBody, heliocentricToPlanetRotatingFrame
+  meanMotionRadPerDay, propagateTwoBody, heliocentricToPlanetRotatingFrame,
+  heliocentricToPlanetCorotatingFrame, relativeLongitudeDeg
 } from "./small-body-orbits.js";
 
 const near=(a,b,eps=1e-9)=>Math.abs(a-b)<=eps;
@@ -59,3 +60,15 @@ rel=heliocentricToPlanetRotatingFrame({x:2,y:0,z:0},{x:1,y:0,z:0},Math.PI/2);
 assert(near(rel.x,0,1e-8)&&near(rel.y,-1,1e-8),"rotating frame orientation");
 
 console.log("propagation + rotating-frame invariants: PASS");
+
+
+// Sun-centred pinned/co-rotating frame invariants.
+const planet={x:0,y:2,z:0}; // longitude +90 deg
+let cor=heliocentricToPlanetCorotatingFrame(planet,planet);
+assert(near(cor.x,2,1e-8)&&near(cor.y,0,1e-8),"planet pinned to +x in Sun-centred co-rotating frame");
+cor=heliocentricToPlanetCorotatingFrame({x:-2,y:0,z:0},planet);
+assert(near(cor.x,0,1e-8)&&near(cor.y,2,1e-8),"co-rotating rotation sign");
+assert(near(relativeLongitudeDeg({x:0,y:1,z:0},{x:1,y:0,z:0}),90,1e-8),"relative longitude +90");
+assert(near(relativeLongitudeDeg({x:0,y:-1,z:0},{x:1,y:0,z:0}),-90,1e-8),"relative longitude -90");
+
+console.log("Sun-centred co-rotating frame invariants: PASS");
