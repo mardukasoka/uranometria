@@ -26,7 +26,7 @@ export function classifyMpcElements({a,e,q,Q,tisserandJupiter}) {
   if (a >= 1 && q < 1.017) return 2;
   if (a >= 1 && q >= 1.017 && q < 1.3) return 3;
   if (a >= 1 && a < 3.2 && q > 1.3 && q < 1.666) return 10;
-  if (a >= 1 && a < 3.27831) return 11;
+  if (a >= 1 && a < 3.27831 && (arguments[0].inclination_deg ?? 0) < 75) return 11;
   if (a > 4.8 && a < 5.4 && e < 0.3) return 12;
   if (a >= 1 && tisserandJupiter > 2 && tisserandJupiter < 3) return 20;
   if (a > 29.8 && a < 30.4) return 21;
