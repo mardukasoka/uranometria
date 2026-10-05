@@ -1,0 +1,70 @@
+// Uranometria Solar-System entity contract.
+// Scientific identity/evidence is separate from disposable render state.
+
+export const SOLAR_ENTITY_KINDS=Object.freeze([
+  "planet","dwarf-planet","natural-satellite","ring",
+  "asteroid","centaur","tno","comet","interstellar-object",
+  "spacecraft","artificial-satellite","dynamical-point"
+]);
+
+export const PROPAGATION_AUTHORITIES=Object.freeze({
+  MPC_ELEMENTS:"mpc-elements",
+  JPL_HORIZONS:"jpl-horizons",
+  SPICE_SPK:"spice-spk",
+  TWO_BODY:"two-body-kepler",
+  TLE:"tle",
+  STATIC:"static"
+});
+
+export function normalizeSolarEntity(raw){
+  if(!raw?.entity_id) throw new TypeError("entity_id required");
+  if(!raw?.kind) throw new TypeError("kind required");
+  if(!SOLAR_ENTITY_KINDS.includes(raw.kind)) throw new RangeError(`unsupported solar entity kind: ${raw.kind}`);
+  if(!raw?.name) throw new TypeError("name required");
+  const sources=Array.isArray(raw.sources)?raw.sources.filter(Boolean):[];
+  return Object.freeze({
+    entity_id:String(raw.entity_id),
+    name:String(raw.name),
+    kind:raw.kind,
+    designation:raw.designation??null,
+    parent_id:raw.parent_id??"sun",
+    population:raw.population??null,
+    status:raw.status??"catalogued",
+    propagation_authority:raw.propagation_authority??null,
+    source_record_id:raw.source_record_id??null,
+    epoch:raw.epoch??null,
+    uncertainty:raw.uncertainty??null,
+    sources,
+    metadata:Object.freeze({...raw.metadata})
+  });
+}
+
+export function choosePropagationAuthority(entity){
+  const e=normalizeSolarEntity(entity);
+  if(e.propagation_authority) return e.propagation_authority;
+  if(e.kind==="spacecraft") return PROPAGATION_AUTHORITIES.JPL_HORIZONS;
+  if(e.kind==="artificial-satellite") return PROPAGATION_AUTHORITIES.TLE;
+  if(["asteroid","centaur","tno","comet","interstellar-object"].includes(e.kind))
+    return PROPAGATION_AUTHORITIES.MPC_ELEMENTS;
+  return PROPAGATION_AUTHORITIES.JPL_HORIZONS;
+}
+
+export function buildSolarEntityIndex(records){
+  const map=new Map();
+  for(const raw of records){
+    const e=normalizeSolarEntity(raw);
+    if(map.has(e.entity_id)) throw new Error(`duplicate solar entity_id: ${e.entity_id}`);
+    map.set(e.entity_id,e);
+  }
+  return map;
+}
+
+export function mergeSolarEntityEvidence(base,patch){
+  const a=normalizeSolarEntity(base);
+  if(patch.entity_id && String(patch.entity_id)!==a.entity_id) throw new Error("entity_id is immutable");
+  return normalizeSolarEntity({
+    ...a,...patch,entity_id:a.entity_id,
+    metadata:{...a.metadata,...patch.metadata},
+    sources:[...a.sources,...(patch.sources??[])].filter((v,i,x)=>x.indexOf(v)===i)
+  });
+}
