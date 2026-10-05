@@ -20,7 +20,9 @@ export function lod0SolarEntities(){
     kind:kindFor(o),
     parent_id:"sun",
     population:o.population,
-    orbit_facets:o.resonance?["resonant",...(o.population==="Earth co-orbital"?["co-orbital"]:[])]:[],
+    orbit_facets:[...(o.orbitFacets??[]),...(o.resonance?["resonant",...(o.population==="Earth co-orbital"?["co-orbital"]:[])]:[])],
+    physical_facets:o.physicalFacets??[],
+    claims:o.claims??[],
     propagation_authority:"two-body-kepler",
     sources:["MPC"],
     metadata:{mpc_class:o.mpcClass??null,resonance:o.resonance??null,dynamical_class:o.dynamicalClass??null,provisional_designation:o.provisionalDesignation??null,lod:0}
