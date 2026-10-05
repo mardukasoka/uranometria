@@ -5,7 +5,8 @@
   "units": "AU",
   "source_policy": {
     "elements": "JPL SBDB/Horizons",
-    "note": "Populate orbital elements only from an epoch-stamped authoritative solution; do not treat osculating ellipses as permanent trajectories."
+    "note": "Populate orbital elements only from an epoch-stamped authoritative solution; do not treat osculating ellipses as permanent trajectories.",
+    "planetary_visualization": "JPL Approximate Positions of the Planets, Table 1; J2000 elements used as visualization baseline. High-precision work remains Horizons/SPICE authority."
   },
   "scale_markers": [
     30,
@@ -21,10 +22,180 @@
       "kind": "star"
     },
     {
+      "id": "199",
+      "label": "Mercury",
+      "kind": "planet",
+      "source": "JPL approximate planetary positions (1800–2050 fit)",
+      "elements": {
+        "a_au": 0.38709927,
+        "e": 0.20563593,
+        "i_deg": 7.00497902,
+        "node_deg": 48.33076593,
+        "argp_deg": 29.12703035,
+        "M_deg": 174.79252722,
+        "epoch_jd": 2451545
+      },
+      "provenance": {
+        "provider": "NASA/JPL Solar System Dynamics",
+        "service": "Approximate Positions of the Planets",
+        "reference_frame": "mean ecliptic and equinox of J2000",
+        "validity": "1800 AD–2050 AD",
+        "precision_class": "visualization"
+      }
+    },
+    {
+      "id": "299",
+      "label": "Venus",
+      "kind": "planet",
+      "source": "JPL approximate planetary positions (1800–2050 fit)",
+      "elements": {
+        "a_au": 0.72333566,
+        "e": 0.00677672,
+        "i_deg": 3.39467605,
+        "node_deg": 76.67984255,
+        "argp_deg": 54.92262462999999,
+        "M_deg": 50.37663232,
+        "epoch_jd": 2451545
+      },
+      "provenance": {
+        "provider": "NASA/JPL Solar System Dynamics",
+        "service": "Approximate Positions of the Planets",
+        "reference_frame": "mean ecliptic and equinox of J2000",
+        "validity": "1800 AD–2050 AD",
+        "precision_class": "visualization"
+      }
+    },
+    {
+      "id": "3",
+      "label": "Earth",
+      "kind": "planet",
+      "source": "JPL approximate planetary positions (1800–2050 fit)",
+      "elements": {
+        "a_au": 1.00000261,
+        "e": 0.01671123,
+        "i_deg": -0.00001531,
+        "node_deg": 0,
+        "argp_deg": 102.93768193,
+        "M_deg": -2.4731102699999923,
+        "epoch_jd": 2451545
+      },
+      "provenance": {
+        "provider": "NASA/JPL Solar System Dynamics",
+        "service": "Approximate Positions of the Planets",
+        "reference_frame": "mean ecliptic and equinox of J2000",
+        "validity": "1800 AD–2050 AD",
+        "precision_class": "visualization"
+      }
+    },
+    {
+      "id": "499",
+      "label": "Mars",
+      "kind": "planet",
+      "source": "JPL approximate planetary positions (1800–2050 fit)",
+      "elements": {
+        "a_au": 1.52371034,
+        "e": 0.0933941,
+        "i_deg": 1.84969142,
+        "node_deg": 49.55953891,
+        "argp_deg": -73.5031685,
+        "M_deg": 19.390197540000003,
+        "epoch_jd": 2451545
+      },
+      "provenance": {
+        "provider": "NASA/JPL Solar System Dynamics",
+        "service": "Approximate Positions of the Planets",
+        "reference_frame": "mean ecliptic and equinox of J2000",
+        "validity": "1800 AD–2050 AD",
+        "precision_class": "visualization"
+      }
+    },
+    {
+      "id": "599",
+      "label": "Jupiter",
+      "kind": "planet",
+      "source": "JPL approximate planetary positions (1800–2050 fit)",
+      "elements": {
+        "a_au": 5.202887,
+        "e": 0.04838624,
+        "i_deg": 1.30439695,
+        "node_deg": 100.47390909,
+        "argp_deg": -85.74542926000001,
+        "M_deg": 19.66796068,
+        "epoch_jd": 2451545
+      },
+      "provenance": {
+        "provider": "NASA/JPL Solar System Dynamics",
+        "service": "Approximate Positions of the Planets",
+        "reference_frame": "mean ecliptic and equinox of J2000",
+        "validity": "1800 AD–2050 AD",
+        "precision_class": "visualization"
+      }
+    },
+    {
+      "id": "699",
+      "label": "Saturn",
+      "kind": "planet",
+      "source": "JPL approximate planetary positions (1800–2050 fit)",
+      "elements": {
+        "a_au": 9.53667594,
+        "e": 0.05386179,
+        "i_deg": 2.48599187,
+        "node_deg": 113.66242448,
+        "argp_deg": -21.063546169999995,
+        "M_deg": -42.64463408,
+        "epoch_jd": 2451545
+      },
+      "provenance": {
+        "provider": "NASA/JPL Solar System Dynamics",
+        "service": "Approximate Positions of the Planets",
+        "reference_frame": "mean ecliptic and equinox of J2000",
+        "validity": "1800 AD–2050 AD",
+        "precision_class": "visualization"
+      }
+    },
+    {
+      "id": "799",
+      "label": "Uranus",
+      "kind": "planet",
+      "source": "JPL approximate planetary positions (1800–2050 fit)",
+      "elements": {
+        "a_au": 19.18916464,
+        "e": 0.04725744,
+        "i_deg": 0.77263783,
+        "node_deg": 74.01692503,
+        "argp_deg": 96.93735127000001,
+        "M_deg": 142.28382821000002,
+        "epoch_jd": 2451545
+      },
+      "provenance": {
+        "provider": "NASA/JPL Solar System Dynamics",
+        "service": "Approximate Positions of the Planets",
+        "reference_frame": "mean ecliptic and equinox of J2000",
+        "validity": "1800 AD–2050 AD",
+        "precision_class": "visualization"
+      }
+    },
+    {
       "id": "899",
       "label": "Neptune",
       "kind": "planet",
-      "source": "JPL Horizons"
+      "source": "JPL approximate planetary positions (1800–2050 fit)",
+      "elements": {
+        "a_au": 30.06992276,
+        "e": 0.00859048,
+        "i_deg": 1.77004347,
+        "node_deg": 131.78422574,
+        "argp_deg": -86.81946347000002,
+        "M_deg": -100.08479196,
+        "epoch_jd": 2451545
+      },
+      "provenance": {
+        "provider": "NASA/JPL Solar System Dynamics",
+        "service": "Approximate Positions of the Planets",
+        "reference_frame": "mean ecliptic and equinox of J2000",
+        "validity": "1800 AD–2050 AD",
+        "precision_class": "visualization"
+      }
     },
     {
       "id": "134340",
@@ -48,9 +219,9 @@
       },
       "uncertainty_1sigma": {
         "a_au": 0.0002545,
-        "e": 3.4663e-06,
-        "i_deg": 3.1852e-05,
-        "node_deg": 1.4831e-05,
+        "e": 0.0000034663,
+        "i_deg": 0.000031852,
+        "node_deg": 0.000014831,
         "argp_deg": 0.0021022,
         "M_deg": 0.0048207
       },
@@ -147,8 +318,8 @@
       },
       "uncertainty_1sigma": {
         "a_au": 0.1459,
-        "e": 3.7251e-05,
-        "i_deg": 3.3169e-06,
+        "e": 0.000037251,
+        "i_deg": 0.0000033169,
         "node_deg": 0.00026058,
         "argp_deg": 0.0019143,
         "M_deg": 0.0005731
@@ -198,5 +369,15 @@
         "retrieval_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=541132&full-prec=true&cov=mat"
       }
     }
+  ],
+  "inner_scale_markers": [
+    0.387,
+    0.723,
+    1,
+    1.524,
+    5.203,
+    9.537,
+    19.189,
+    30.07
   ]
 }
