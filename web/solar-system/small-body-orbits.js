@@ -154,3 +154,24 @@ export function heliocentricToPlanetRotatingFrame(objectPos, planetPos, planetLo
   const c=Math.cos(-planetLongitudeRad), s=Math.sin(-planetLongitudeRad);
   return {x:c*dx-s*dy,y:s*dx+c*dy,z:dz};
 }
+
+
+// Sun-centred frame co-rotating with a planet's instantaneous heliocentric longitude.
+// Use for 1:1 and other resonance structure. This is NOT planet-centred.
+export function heliocentricToPlanetCorotatingFrame(objectPos, planetPos) {
+  const theta=Math.atan2(planetPos.y,planetPos.x);
+  const ct=Math.cos(theta), st=Math.sin(theta);
+  return {
+    x: ct*objectPos.x + st*objectPos.y,
+    y:-st*objectPos.x + ct*objectPos.y,
+    z: objectPos.z
+  };
+}
+
+export function relativeLongitudeDeg(objectPos,planetPos) {
+  const lo=Math.atan2(objectPos.y,objectPos.x);
+  const lp=Math.atan2(planetPos.y,planetPos.x);
+  let d=(lo-lp)/DEG;
+  d=((d+180)%360+360)%360-180;
+  return d;
+}
