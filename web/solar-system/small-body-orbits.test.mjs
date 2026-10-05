@@ -1,6 +1,7 @@
 import {
   solveEccentricAnomaly, orbitalPositionAu, sampleOrbitAu,
-  perihelionAphelionAu, populationChunk, classifyMpcElements
+  perihelionAphelionAu, populationChunk, classifyMpcElements,
+  meanMotionRadPerDay, propagateTwoBody, heliocentricToPlanetRotatingFrame
 } from "./small-body-orbits.js";
 
 const near=(a,b,eps=1e-9)=>Math.abs(a-b)<=eps;
@@ -34,3 +35,27 @@ assert(classifyMpcElements({a:20,e:0.2,q:16,Q:24,tisserandJupiter:3.5})===22,"MP
 assert(classifyMpcElements({a:40,e:0.2,q:32,Q:48,tisserandJupiter:3.5})===23,"MPC helper TNO");
 
 console.log("small-body-orbits: PASS");
+
+
+// Propagation invariants.
+const epochOrbit={...circular,epoch_mjd_tt:60000};
+const n1=meanMotionRadPerDay(1);
+assert(near(n1,0.01720209895,1e-14),"Gaussian mean motion at 1 AU");
+const siderealPeriodDays=2*Math.PI/n1;
+const oneYear=propagateTwoBody(epochOrbit,60000+siderealPeriodDays);
+assert(near(oneYear.mean_anomaly_deg,0,1e-8)||near(oneYear.mean_anomaly_deg,360,1e-8),"1 AU two-body orbit closes after Gaussian period");
+assert(oneYear.perturbations_included===false,"propagator labels omitted perturbations");
+assert(oneYear.propagation_precision==="visualization","propagator precision label");
+
+const quarter=propagateTwoBody(epochOrbit,60000+siderealPeriodDays/4);
+assert(near(quarter.mean_anomaly_deg,90,1e-8),"quarter-period mean anomaly");
+const back=propagateTwoBody(quarter,60000);
+assert(near(back.mean_anomaly_deg,0,1e-8)||near(back.mean_anomaly_deg,360,1e-8),"two-body propagation reversible");
+
+// Rotating-frame invariants: coincident body is origin; fixed inertial offset rotates oppositely.
+let rel=heliocentricToPlanetRotatingFrame({x:1,y:0,z:0},{x:1,y:0,z:0},Math.PI/3);
+assert(near(mag(rel),0),"coincident planet/object maps to rotating origin");
+rel=heliocentricToPlanetRotatingFrame({x:2,y:0,z:0},{x:1,y:0,z:0},Math.PI/2);
+assert(near(rel.x,0,1e-8)&&near(rel.y,-1,1e-8),"rotating frame orientation");
+
+console.log("propagation + rotating-frame invariants: PASS");
