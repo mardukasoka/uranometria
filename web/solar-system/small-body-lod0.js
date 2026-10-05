@@ -18,10 +18,10 @@ export const LOD0_OBJECTS = Object.freeze([
   {id:"mpc:136199",designation:"136199",name:"Eris",population:"detached TNO"},
   {id:"mpc:136108",designation:"136108",name:"Haumea",population:"TNO"},
   {id:"mpc:136472",designation:"136472",name:"Makemake",population:"TNO"},
-  {id:"mpc:90377",designation:"90377",name:"Sedna",population:"detached TNO"},
+  {id:"mpc:90377",designation:"90377",name:"Sedna",population:"detached TNO",dynamicalClass:"sednoid"},
   {id:"mpc:2018VG18",designation:"2018 VG18",name:"Farout",population:"TNO"},
   {id:"mpc:2018AG37",designation:"2018 AG37",name:"Farfarout",population:"TNO"},
-  {id:"mpc:541132",designation:"541132",name:"Leleakuhonua",population:"detached TNO"},
+  {id:"mpc:541132",designation:"541132",name:"Leleākūhonua",population:"detached TNO",dynamicalClass:"sednoid",provisionalDesignation:"2015 TG387"},
 
   // Earth co-orbital validation group. Resonant state is not the MPC orbit class.
   {id:"mpc:3753",designation:"3753",name:"Cruithne",population:"Earth co-orbital",resonance:"horseshoe/compound"},
