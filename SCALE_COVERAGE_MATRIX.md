@@ -78,3 +78,48 @@ Minimum population filters for the enrichment pass:
 - long-period / unusual outer-system objects where appropriate
 
 Centaurs occupy the visual/dynamical bridge between the giant-planet region and trans-Neptunian populations. Their rendered identity must remain distinct even where a source groups Centaurs with scattered objects.
+
+
+## Small-body normalized record v0.1
+
+Small-body ingestion must normalize source records before rendering. Minimum fields:
+
+```text
+entity_id
+primary_designation
+name
+source
+source_record_id
+epoch
+frame
+semimajor_axis_au
+eccentricity
+inclination_deg
+ascending_node_deg
+argument_perihelion_deg
+mean_anomaly_deg
+absolute_magnitude_h
+orbit_uncertainty
+observation_count
+observation_arc_or_oppositions
+source_orbit_class
+derived_population
+classification_authority
+classification_version
+classification_confidence
+provenance_url
+```
+
+Rules:
+- orbital elements are physical/data state; population labels are derived metadata;
+- never overwrite source classification with an Atlas-derived class;
+- Centaur remains independently filterable even if another taxonomy groups it with scattered/distant objects;
+- uncertain/insecure dynamical subclasses remain visibly uncertain;
+- renderer positions are generated from the normalized orbital state and epoch, not stored as authoritative coordinates;
+- mobile views load population/LOD chunks rather than one monolithic point catalogue.
+
+### Initial renderer filters
+Inner: Atira, Aten, Apollo, Amor, other NEO/co-orbital, Mars-crosser.
+Middle: main belt, useful families/resonances, Jupiter Trojans and Jupiter-coupled.
+Outer: Centaurs, Neptune Trojans, TNOs; TNO subclasses may include resonant, classical, scattering and detached when supported by a stronger dynamical-classification source.
+Special: hyperbolic/interstellar candidates, comets and notable unusual objects as separate overlays.
