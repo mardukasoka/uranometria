@@ -6,9 +6,10 @@ import {composeSolarRenderSet} from "./solar-render-bridge.js";
 
 function kindFor(o){
   const p=(o.population||"").toLowerCase();
+  if(["Pluto","Eris","Haumea","Makemake","Ceres"].includes(o.name)) return "dwarf-planet";
+  if(o.name==="322P/SOHO") return "comet";
   if(p.includes("centaur")) return "centaur";
   if(p.includes("tno")) return "tno";
-  if(["Pluto","Eris","Haumea","Makemake","Ceres"].includes(o.name)) return "dwarf-planet";
   return "asteroid";
 }
 
