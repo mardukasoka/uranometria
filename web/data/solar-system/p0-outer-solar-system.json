@@ -368,6 +368,128 @@
         "n_obs_used": 44,
         "retrieval_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=541132&full-prec=true&cov=mat"
       }
+    },
+    {
+      "id": "1",
+      "label": "Ceres",
+      "kind": "dwarf-planet",
+      "population": "Main Belt",
+      "source": "JPL SBDB/Horizons",
+      "render_status": "awaiting-validated-orbital-state"
+    },
+    {
+      "id": "4",
+      "label": "Vesta",
+      "kind": "asteroid",
+      "population": "Main Belt",
+      "source": "JPL SBDB/Horizons",
+      "render_status": "awaiting-validated-orbital-state"
+    },
+    {
+      "id": "2",
+      "label": "Pallas",
+      "kind": "asteroid",
+      "population": "Main Belt",
+      "source": "JPL SBDB/Horizons",
+      "render_status": "awaiting-validated-orbital-state"
+    },
+    {
+      "id": "433",
+      "label": "Eros",
+      "kind": "asteroid",
+      "population": "Amor",
+      "source": "JPL SBDB/Horizons",
+      "render_status": "awaiting-validated-orbital-state"
+    },
+    {
+      "id": "99942",
+      "label": "Apophis",
+      "kind": "asteroid",
+      "population": "Apollo",
+      "source": "JPL SBDB/Horizons",
+      "render_status": "awaiting-validated-orbital-state"
+    },
+    {
+      "id": "3200",
+      "label": "Phaethon",
+      "kind": "asteroid",
+      "population": "Apollo",
+      "source": "JPL SBDB/Horizons",
+      "render_status": "awaiting-validated-orbital-state"
+    },
+    {
+      "id": "3753",
+      "label": "Cruithne",
+      "kind": "asteroid",
+      "population": "Earth co-orbital",
+      "resonance": "horseshoe/compound",
+      "source": "JPL SBDB/Horizons",
+      "render_status": "awaiting-validated-orbital-state"
+    },
+    {
+      "id": "2002 AA29",
+      "label": "2002 AA29",
+      "kind": "asteroid",
+      "population": "Earth co-orbital",
+      "resonance": "horseshoe/quasi-satellite transition",
+      "source": "JPL SBDB/Horizons",
+      "render_status": "awaiting-validated-orbital-state"
+    },
+    {
+      "id": "469219",
+      "label": "Kamoʻoalewa",
+      "kind": "asteroid",
+      "population": "Earth co-orbital",
+      "resonance": "quasi-satellite",
+      "source": "JPL SBDB/Horizons",
+      "render_status": "awaiting-validated-orbital-state"
+    },
+    {
+      "id": "2010 TK7",
+      "label": "2010 TK7",
+      "kind": "asteroid",
+      "population": "Earth co-orbital",
+      "resonance": "L4 Trojan",
+      "source": "JPL SBDB/Horizons",
+      "render_status": "awaiting-validated-orbital-state"
+    },
+    {
+      "id": "614689",
+      "label": "2020 XL5",
+      "kind": "asteroid",
+      "population": "Earth co-orbital",
+      "resonance": "L4 Trojan",
+      "source": "JPL SBDB/Horizons",
+      "render_status": "awaiting-validated-orbital-state"
+    },
+    {
+      "id": "2021 PH27",
+      "label": "2021 PH27",
+      "kind": "asteroid",
+      "population": "Atira",
+      "orbit_facets": [
+        "perihelion-inside-mercury"
+      ],
+      "source": "JPL SBDB/Horizons",
+      "render_status": "awaiting-validated-orbital-state"
+    },
+    {
+      "id": "2020 AV2",
+      "label": "2020 AV2",
+      "kind": "asteroid",
+      "population": "Vatira",
+      "dynamical_class": "venus-interior",
+      "source": "JPL SBDB/Horizons",
+      "render_status": "awaiting-validated-orbital-state"
+    },
+    {
+      "id": "322P",
+      "label": "322P/SOHO",
+      "kind": "comet",
+      "population": "near-Sun comet",
+      "dynamical_class": "sungrazer-transition",
+      "source": "JPL SBDB/Horizons",
+      "render_status": "awaiting-validated-orbital-state"
     }
   ],
   "inner_scale_markers": [
@@ -385,5 +507,10 @@
     "uncertainty": "preserve-source-uncertainty",
     "orbit_lines": "visualization-only unless backed by higher-fidelity propagation",
     "principle": "Known identity does not imply a known render position."
+  },
+  "catalogue_policy": {
+    "identity_source": "JPL SBDB/MPC",
+    "render_gate": "epoch-stamped validated orbital state required",
+    "note": "Representative objects may exist in the catalogue without being rendered. This is intentional fail-closed behavior."
   }
 }
