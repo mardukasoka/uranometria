@@ -3,6 +3,7 @@
 
 import {LOD0_OBJECTS,buildLod0RenderSet} from "./small-body-lod0.js";
 import {composeSolarRenderSet} from "./solar-render-bridge.js";
+import {bestPositionFor} from "./best-position-policy.js";
 
 function kindFor(o){
   const p=(o.population||"").toLowerCase();
@@ -24,9 +25,9 @@ export function lod0SolarEntities(){
     orbit_facets:[...(o.orbitFacets??[]),...(o.resonance?["resonant",...(o.population==="Earth co-orbital"?["co-orbital"]:[])]:[])],
     physical_facets:o.physicalFacets??[],
     claims:o.claims??[],
-    propagation_authority:"two-body-kepler",
-    sources:["MPC"],
-    metadata:{mpc_class:o.mpcClass??null,resonance:o.resonance??null,dynamical_class:o.dynamicalClass??null,provisional_designation:o.provisionalDesignation??null,lod:0}
+    propagation_authority:null,
+    sources:["MPC","JPL"],
+    metadata:{mpc_class:o.mpcClass??null,resonance:o.resonance??null,dynamical_class:o.dynamicalClass??null,provisional_designation:o.provisionalDesignation??null,lod:0,position_policy:"best-available"}
   }));
 }
 
