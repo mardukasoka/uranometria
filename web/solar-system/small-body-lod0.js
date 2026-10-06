@@ -90,7 +90,7 @@ export const LOD0_OBJECTS = Object.freeze([
   {id:"mpc:229762",designation:"229762",name:"Gǃkúnǁʼhòmdímà",population:"TNO",physicalFacets:["binary"],metadata:{satellites:["Gǃòʼé ǃHú"]}},
   {id:"mpc:15760",designation:"15760",name:"Albion",population:"classical TNO"},
   {id:"mpc:486958",designation:"486958",name:"Arrokoth",population:"classical TNO",physicalFacets:["contact-binary","spacecraft-visited"],metadata:{missions:["New Horizons"],encounters:["flyby"],imageEvidence:{preferred:"mission-resolved",agency:"NASA",lazy:true}}},
-  {id:"mpc:47171",designation:"47171",name:"Lempo",population:"resonant TNO",resonance:"3:2 with Neptune",physicalFacets:["triple"],metadata:{satellites:["Hiisi","Paha"],system:"hierarchical triple"}}
+  {id:"mpc:47171",designation:"47171",name:"Lempo",population:"resonant TNO",resonance:"3:2 with Neptune",physicalFacets:["triple"],metadata:{satellites:["Hiisi","Paha"],system:"hierarchical triple"}},
 
   // Earth co-orbital validation group. Resonant state is not the MPC orbit class.
   {id:"mpc:3753",designation:"3753",name:"Cruithne",population:"Earth co-orbital",resonance:"horseshoe/compound"},
