@@ -558,7 +558,9 @@
           -0.471599,
           -0.94387,
           0.00555
-        ]
+        ],
+        "resonance": "1:1 Earth",
+        "resonance_state": "quasi-satellite"
       },
       {
         "id": "3753",
@@ -568,7 +570,9 @@
           1.441537,
           -0.276973,
           -0.36003
-        ]
+        ],
+        "resonance": "1:1 Earth",
+        "resonance_state": "horseshoe/compound"
       },
       {
         "id": "614689",
@@ -578,7 +582,9 @@
           1.106163,
           0.248616,
           -0.176201
-        ]
+        ],
+        "resonance": "1:1 Earth",
+        "resonance_state": "L4 Trojan"
       }
     ],
     "caveat": "Common-epoch positions are authoritative tutorial outputs; long-term resonance trails require N-body integration."
@@ -594,5 +600,36 @@
       "render": "region-only"
     },
     "note": "Do not classify perihelion-inside-Mercury objects as wholly Mercury-interior."
+  },
+  "inner_size_layers": {
+    "scope": "inner-solar-system asteroids excluding main belt",
+    "thresholds_km": [
+      1,
+      5
+    ],
+    "diameter_policy": "prefer measured/catalogued diameter; do not silently promote H/albedo estimates to measured diameter",
+    "render_gate": "validated orbit plus qualifying diameter evidence",
+    "excluded_populations": [
+      "main belt"
+    ]
+  },
+  "earth_1to1_resonance": {
+    "relation": "1:1 mean-motion resonance with Earth",
+    "states": [
+      "L4 Trojan",
+      "L5 Trojan",
+      "horseshoe",
+      "quasi-satellite",
+      "compound/transition"
+    ],
+    "state_policy": "time-dependent; long-term classification requires dynamical integration",
+    "priority_targets": [
+      "1998 UP1",
+      "2002 AA29",
+      "Kamoʻoalewa",
+      "Cruithne",
+      "2010 TK7",
+      "2020 XL5"
+    ]
   }
 }
