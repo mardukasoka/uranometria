@@ -375,7 +375,23 @@
       "kind": "dwarf-planet",
       "population": "Main Belt",
       "source": "JPL SBDB/Horizons",
-      "render_status": "awaiting-validated-orbital-state"
+      "render_status": "validated-jpl-table-sample",
+      "elements": {
+        "a_au": 2.7653485,
+        "e": 0.07913825,
+        "i_deg": 10.58682,
+        "argp_deg": 72.58981,
+        "node_deg": 80.3932,
+        "M_deg": 113.4104434,
+        "epoch_jd": 2455400.5
+      },
+      "provenance": {
+        "provider": "NASA/JPL Solar System Dynamics",
+        "service": "Small-Body Element Tables",
+        "epoch_timescale": "TDB",
+        "reference": "JPL 30",
+        "note": "Values reproduced from JPL's published numbered-asteroid sample table."
+      }
     },
     {
       "id": "4",
@@ -391,7 +407,23 @@
       "kind": "asteroid",
       "population": "Main Belt",
       "source": "JPL SBDB/Horizons",
-      "render_status": "awaiting-validated-orbital-state"
+      "render_status": "validated-jpl-table-sample",
+      "elements": {
+        "a_au": 2.7721532,
+        "e": 0.23099956,
+        "i_deg": 34.8409,
+        "argp_deg": 310.15094,
+        "node_deg": 173.1295,
+        "M_deg": 96.148266,
+        "epoch_jd": 2455400.5
+      },
+      "provenance": {
+        "provider": "NASA/JPL Solar System Dynamics",
+        "service": "Small-Body Element Tables",
+        "epoch_timescale": "TDB",
+        "reference": "JPL 25",
+        "note": "Values reproduced from JPL's published numbered-asteroid sample table."
+      }
     },
     {
       "id": "433",
