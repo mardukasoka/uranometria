@@ -85,5 +85,61 @@
     "RUBIES",
     "LRD catalogues"
   ],
-  "principle": "Survey colour is a display convention; survey footprint, selection, redshift provenance and quality are scientific data."
+  "principle": "Survey colour is a display convention; survey footprint, selection, redshift provenance and quality are scientific data.",
+  "visual_encoding": {
+    "wavelength_colour": {
+      "mode": "physical-spectrum-family",
+      "bands": [
+        {
+          "id": "radio",
+          "range": "radio",
+          "display": "long-wavelength spectral endpoint"
+        },
+        {
+          "id": "microwave",
+          "range": "microwave",
+          "display": "microwave"
+        },
+        {
+          "id": "infrared",
+          "range": "infrared",
+          "display": "beyond-visible red / IR"
+        },
+        {
+          "id": "visible",
+          "range": "380–700 nm",
+          "display": "spectral colour by effective wavelength"
+        },
+        {
+          "id": "ultraviolet",
+          "range": "ultraviolet",
+          "display": "beyond-visible violet / UV"
+        },
+        {
+          "id": "xray",
+          "range": "X-ray",
+          "display": "short-wavelength endpoint"
+        }
+      ],
+      "rule": "For broadband observations retain filter/band metadata; never assign a fictitious single wavelength."
+    },
+    "survey_controls": {
+      "mode": "multi-toggle",
+      "independent": true,
+      "compare": true
+    },
+    "overlap": {
+      "rule": "An astrophysical object cross-matched in >=2 currently enabled surveys renders white.",
+      "minimum_enabled_surveys": 2,
+      "display": "white",
+      "retain_memberships_on_select": true
+    },
+    "crossmatch": {
+      "identity": "canonical astrophysical object id plus coordinate/redshift-aware catalogue crossmatch",
+      "never": "match by display label alone"
+    },
+    "accessibility": {
+      "wavelength": "also encode band/filter text; colour is not the sole carrier of wavelength information"
+    }
+  }
 }
