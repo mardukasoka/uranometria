@@ -631,5 +631,37 @@
       "2010 TK7",
       "2020 XL5"
     ]
+  },
+  "small_body_ring_systems": {
+    "facet": "ringed",
+    "render_policy": "render ring plane only when geometry is supported; preserve evidence status and do not use symbolic oversized halos",
+    "objects": [
+      {
+        "name": "10199 Chariklo",
+        "population": "Centaur",
+        "status": "confirmed",
+        "note": "First ring system discovered around a small body."
+      },
+      {
+        "name": "2060 Chiron",
+        "population": "Centaur",
+        "status": "observationally-supported evolving system",
+        "note": "2023 multi-chord occultation and comparison with earlier events support persistent rings plus evolving circum-body material."
+      },
+      {
+        "name": "Haumea",
+        "population": "TNO / dwarf planet",
+        "status": "confirmed",
+        "note": "Ring detected by stellar occultation."
+      },
+      {
+        "name": "50000 Quaoar",
+        "population": "TNO",
+        "status": "confirmed",
+        "rings_reported": 2,
+        "note": "Ring material observed outside the classical Roche limit; second ring also reported."
+      }
+    ],
+    "evidence_policy": "confirmed, observationally-supported, candidate and disputed claims remain distinct"
   }
 }
