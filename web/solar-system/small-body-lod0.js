@@ -4,6 +4,9 @@
 import { orbitalPositionAu, propagateTwoBody, populationChunk } from "./small-body-orbits.js";
 
 export const LOD0_OBJECTS = Object.freeze([
+  // Dark-comet anchors: morphology/activity evidence is independent of orbital population.
+  {id:"mpc:2003RM",designation:"2003 RM",name:"2003 RM",population:"outer dark-comet candidate",physicalFacets:["dark-comet-candidate","nongravitational-acceleration"],claims:[{claim:"significant nongravitational acceleration consistent with volatile outgassing; no detected coma in defining studies",status:"observationally-supported"}],metadata:{darkCometPopulation:"outer",evidenceModel:"orbital acceleration"}},
+  {id:"mpc:139359",designation:"139359",name:"2001 ME1",population:"outer dark comet",physicalFacets:["dark-comet-candidate","nongravitational-acceleration"],claims:[{claim:"cometary activity detected in archival SOHO imagery near perihelion",status:"confirmed"}],metadata:{darkCometPopulation:"outer",note:"2026 activity detection strengthens cometary interpretation"}},
   // Comet taxonomy anchors: dynamical family and solar-encounter behaviour are independent facets.
   {id:"comet:2P",designation:"2P",name:"Encke",population:"Encke-type comet",orbitFacets:["sunskirter"],metadata:{cometClass:"ETc"}},
   {id:"comet:55P",designation:"55P",name:"Tempel–Tuttle",population:"Halley-type comet",metadata:{cometClass:"HTC"}},
