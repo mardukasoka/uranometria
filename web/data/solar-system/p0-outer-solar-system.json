@@ -663,5 +663,11 @@
       }
     ],
     "evidence_policy": "confirmed, observationally-supported, candidate and disputed claims remain distinct"
+  },
+  "milestone": {
+    "name": "solar-system-v0.1",
+    "status": "frozen-baseline",
+    "principle": "accuracy over meaningless fill",
+    "remaining_enrichment": "additive authoritative ingestion; no redesign required"
   }
 }
