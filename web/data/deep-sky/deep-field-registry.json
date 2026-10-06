@@ -1,0 +1,149 @@
+{
+  "schema": "uranometria.deep-field-registry.v0.1",
+  "scope": "extensible registry; Wikipedia list is discovery seed, primary survey archives are authority",
+  "coordinate_frame": "ICRS",
+  "fields": [
+    {
+      "id": "hdf-n",
+      "label": "Hubble Deep Field North",
+      "type": "blank",
+      "footprint_status": "to-normalize-from-primary-source"
+    },
+    {
+      "id": "hdf-s",
+      "label": "Hubble Deep Field South",
+      "type": "blank",
+      "footprint_status": "to-normalize-from-primary-source"
+    },
+    {
+      "id": "cdf-s",
+      "label": "Chandra Deep Field South",
+      "type": "blank",
+      "footprint_status": "to-normalize-from-primary-source"
+    },
+    {
+      "id": "hudf",
+      "label": "Hubble Ultra Deep Field",
+      "type": "blank",
+      "footprint_status": "to-normalize-from-primary-source"
+    },
+    {
+      "id": "egs",
+      "label": "Extended Groth Strip",
+      "type": "blank",
+      "footprint_status": "to-normalize-from-primary-source"
+    },
+    {
+      "id": "xdf",
+      "label": "Hubble eXtreme Deep Field",
+      "type": "blank",
+      "footprint_status": "to-normalize-from-primary-source"
+    },
+    {
+      "id": "goods-n",
+      "label": "GOODS-N",
+      "type": "blank",
+      "footprint_status": "to-normalize-from-primary-source"
+    },
+    {
+      "id": "goods-s",
+      "label": "GOODS-S",
+      "type": "blank",
+      "footprint_status": "to-normalize-from-primary-source"
+    },
+    {
+      "id": "cosmos",
+      "label": "COSMOS",
+      "type": "blank",
+      "footprint_status": "to-normalize-from-primary-source"
+    },
+    {
+      "id": "uds",
+      "label": "UDS",
+      "type": "blank",
+      "footprint_status": "to-normalize-from-primary-source"
+    },
+    {
+      "id": "hff-a2744",
+      "label": "Hubble Frontier Field: Abell 2744",
+      "type": "lensing",
+      "footprint_status": "to-normalize-from-primary-source"
+    },
+    {
+      "id": "hff-macs0416",
+      "label": "Hubble Frontier Field: MACS J0416.1-2403",
+      "type": "lensing",
+      "footprint_status": "to-normalize-from-primary-source"
+    },
+    {
+      "id": "hff-macs0717",
+      "label": "Hubble Frontier Field: MACS J0717.5+3745",
+      "type": "lensing",
+      "footprint_status": "to-normalize-from-primary-source"
+    },
+    {
+      "id": "hff-macs1149",
+      "label": "Hubble Frontier Field: MACS J1149.5+2223",
+      "type": "lensing",
+      "footprint_status": "to-normalize-from-primary-source"
+    },
+    {
+      "id": "hff-as1063",
+      "label": "Hubble Frontier Field: Abell S1063",
+      "type": "lensing",
+      "footprint_status": "to-normalize-from-primary-source"
+    },
+    {
+      "id": "hff-a370",
+      "label": "Hubble Frontier Field: Abell 370",
+      "type": "lensing",
+      "footprint_status": "to-normalize-from-primary-source"
+    },
+    {
+      "id": "smacs0723",
+      "label": "SMACS J0723.3-7327 / Webb First Deep Field",
+      "type": "lensing",
+      "footprint_status": "to-normalize-from-primary-source"
+    },
+    {
+      "id": "edf-n",
+      "label": "Euclid Deep Field North",
+      "type": "wide-deep",
+      "footprint_status": "to-normalize-from-primary-source"
+    },
+    {
+      "id": "edf-s",
+      "label": "Euclid Deep Field South",
+      "type": "wide-deep",
+      "footprint_status": "to-normalize-from-primary-source"
+    },
+    {
+      "id": "edf-f",
+      "label": "Euclid Deep Field Fornax",
+      "type": "wide-deep",
+      "footprint_status": "to-normalize-from-primary-source"
+    }
+  ],
+  "programs": [
+    "CANDELS",
+    "HDUV",
+    "Hubble Legacy Field",
+    "JADES",
+    "CEERS",
+    "PRIMER",
+    "UNCOVER",
+    "COSMOS-Web",
+    "FRESCO",
+    "WDEEP",
+    "RUBIES"
+  ],
+  "relationship_policy": "Fields, programs, instruments and catalogues are many-to-many; do not duplicate a sky field merely because another observatory revisited it.",
+  "render_policy": {
+    "show_footprint": true,
+    "show_depth": true,
+    "show_wavelength_coverage": true,
+    "show_redshift_method": true,
+    "lensing_fields": "mark magnification/selection effects",
+    "unobserved_sky": "never infer absence of galaxies"
+  }
+}
