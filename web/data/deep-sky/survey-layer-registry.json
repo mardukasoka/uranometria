@@ -1,0 +1,34 @@
+{
+  "schema":"uranometria.deep-sky-survey-layer.v0.1",
+  "purpose":"Bridge the local 2MASS/2MRS universe to deep-field and LRD observations without implying isotropic observational coverage.",
+  "coordinate_frame":"ICRS",
+  "radial_coordinate":{"preferred":"cosmological comoving distance","observed_quantity":"redshift","retain_observed_redshift":true},
+  "render_policy":{
+    "footprints_are_data":true,
+    "preserve_selection_function":true,
+    "preserve_redshift_quality":true,
+    "do_not_fill_unobserved_sky":true,
+    "mobile":"stream/chunk by survey, sky tile and redshift bin"
+  },
+  "survey_layers":[
+    {"id":"2mrs","label":"2MASS Redshift Survey","role":"nearby all-sky scaffold","legacy_colour":"base","spectroscopic":true},
+    {"id":"6dfgs","label":"6dF Galaxy Survey","legacy_colour":"yellow","spectroscopic":true},
+    {"id":"2dfgrs","label":"2dF Galaxy Redshift Survey","legacy_colour":"red","spectroscopic":true},
+    {"id":"sdss","label":"Sloan Digital Sky Survey","legacy_colour":"purple","spectroscopic":true},
+    {"id":"gama","label":"Galaxy And Mass Assembly","legacy_colour":"green","spectroscopic":true},
+    {"id":"wigglez","label":"WiggleZ Dark Energy Survey","legacy_colour":"blue","spectroscopic":true},
+    {"id":"ozdes","label":"OzDES / DES spectroscopy","legacy_colour":"orange","spectroscopic":true}
+  ],
+  "next_depth_tiers":[
+    "COSMOS / COSMOS-Web",
+    "Hubble Ultra Deep Field / XDF",
+    "CANDELS",
+    "CEERS",
+    "JADES",
+    "UNCOVER",
+    "PRIMER",
+    "RUBIES",
+    "LRD catalogues"
+  ],
+  "principle":"Survey colour is a display convention; survey footprint, selection, redshift provenance and quality are scientific data."
+}
