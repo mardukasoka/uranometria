@@ -45,74 +45,74 @@
       },
       "model_parameters": [
         {
-          "value": "-1.507858660004565E-10",
           "desc": "non-gravitational radial acceleration parameter",
+          "name": "A1",
           "n": 1,
           "title": "non-grav. radial accel.",
           "kind": "EST",
           "sigma": "6.376E-11",
           "units": "au/d^2",
-          "name": "A1"
+          "value": "-1.507858660004565E-10"
         },
         {
           "name": "A2",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "n": 2,
+          "title": "non-grav. transverse accel.",
+          "kind": "EST",
           "units": "au/d^2",
           "sigma": "3.38E-13",
-          "kind": "EST",
-          "title": "non-grav. transverse accel.",
-          "n": 2,
-          "value": "5.656670616384763E-13",
-          "desc": "non-gravitational transverse acceleration parameter"
+          "value": "5.656670616384763E-13"
         },
         {
-          "value": "-9.216767541466917E-11",
-          "desc": "non-gravitational normal acceleration parameter",
-          "n": 3,
+          "kind": "EST",
           "title": "non-grav. normal accel.",
-          "kind": "EST",
+          "value": "-9.216767541466917E-11",
+          "sigma": "9.207E-12",
           "units": "au/d^2",
+          "n": 3,
           "name": "A3",
-          "sigma": "9.207E-12"
+          "desc": "non-gravitational normal acceleration parameter"
         },
         {
-          "name": "ALN",
+          "title": "normalizing factor",
+          "kind": "SET",
           "units": null,
           "sigma": null,
-          "kind": "SET",
-          "n": 0,
-          "title": "normalizing factor",
           "value": "1.",
-          "desc": "normalizing factor [default 0.1112620426]"
+          "desc": "normalizing factor [default 0.1112620426]",
+          "name": "ALN",
+          "n": 0
         },
         {
-          "n": 0,
           "title": "non-grav. model exp. k",
-          "desc": "non-grav. model constant, exponent k [default 4.6142]",
+          "kind": "SET",
+          "sigma": null,
+          "units": null,
           "value": "0.",
           "name": "NK",
-          "units": null,
-          "sigma": null,
-          "kind": "SET"
+          "desc": "non-grav. model constant, exponent k [default 4.6142]",
+          "n": 0
         },
         {
-          "sigma": null,
-          "units": null,
-          "name": "NM",
-          "kind": "SET",
-          "n": 0,
           "title": "non-grav. model exp. m",
+          "kind": "SET",
+          "sigma": null,
+          "units": null,
+          "value": "2.",
+          "name": "NM",
           "desc": "non-grav. model constant, exponent m [default 2.15]",
-          "value": "2."
+          "n": 0
         },
         {
+          "name": "R0",
+          "desc": "normalizing distance, au [default 2.808 au]",
+          "n": 0,
+          "title": "normalizing distance",
           "kind": "SET",
           "sigma": null,
           "units": "au",
-          "name": "R0",
-          "value": "1.",
-          "desc": "normalizing distance, au [default 2.808 au]",
-          "n": 0,
-          "title": "normalizing distance"
+          "value": "1."
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2013+XY20&full-prec=true&cd-epoch=true"
@@ -160,74 +160,74 @@
       },
       "model_parameters": [
         {
-          "desc": "non-gravitational radial acceleration parameter",
           "name": "A1",
+          "desc": "non-gravitational radial acceleration parameter",
           "n": 1,
           "units": "au/d^2",
-          "title": "non-grav. radial accel.",
-          "value": "3.812772795208656E-11",
           "sigma": "7.179E-11",
+          "value": "3.812772795208656E-11",
+          "title": "non-grav. radial accel.",
           "kind": "EST"
         },
         {
-          "kind": "EST",
-          "n": 2,
-          "units": "au/d^2",
-          "title": "non-grav. transverse accel.",
-          "sigma": "1.764E-14",
           "value": "-1.702054023944971E-13",
+          "units": "au/d^2",
+          "sigma": "1.764E-14",
+          "kind": "EST",
+          "title": "non-grav. transverse accel.",
+          "n": 2,
           "desc": "non-gravitational transverse acceleration parameter",
           "name": "A2"
         },
         {
-          "kind": "EST",
-          "desc": "non-gravitational normal acceleration parameter",
-          "name": "A3",
-          "value": "3.470103124427388E-11",
           "sigma": "6.633E-12",
-          "n": 3,
           "units": "au/d^2",
-          "title": "non-grav. normal accel."
+          "value": "3.470103124427388E-11",
+          "title": "non-grav. normal accel.",
+          "kind": "EST",
+          "name": "A3",
+          "desc": "non-gravitational normal acceleration parameter",
+          "n": 3
         },
         {
-          "value": "1.",
-          "sigma": null,
           "n": 0,
-          "title": "normalizing factor",
-          "units": null,
-          "desc": "normalizing factor [default 0.1112620426]",
           "name": "ALN",
-          "kind": "SET"
+          "desc": "normalizing factor [default 0.1112620426]",
+          "kind": "SET",
+          "title": "normalizing factor",
+          "value": "1.",
+          "units": null,
+          "sigma": null
         },
         {
-          "n": 0,
-          "units": null,
           "title": "non-grav. model exp. k",
-          "value": "0.",
+          "kind": "SET",
+          "units": null,
           "sigma": null,
-          "desc": "non-grav. model constant, exponent k [default 4.6142]",
+          "value": "0.",
           "name": "NK",
-          "kind": "SET"
+          "desc": "non-grav. model constant, exponent k [default 4.6142]",
+          "n": 0
         },
         {
-          "name": "NM",
-          "desc": "non-grav. model constant, exponent m [default 2.15]",
-          "n": 0,
-          "title": "non-grav. model exp. m",
-          "units": null,
           "value": "2.",
           "sigma": null,
-          "kind": "SET"
+          "units": null,
+          "kind": "SET",
+          "title": "non-grav. model exp. m",
+          "n": 0,
+          "name": "NM",
+          "desc": "non-grav. model constant, exponent m [default 2.15]"
         },
         {
-          "value": "1.",
-          "sigma": null,
+          "desc": "normalizing distance, au [default 2.808 au]",
+          "name": "R0",
           "n": 0,
           "title": "normalizing distance",
+          "kind": "SET",
           "units": "au",
-          "name": "R0",
-          "desc": "normalizing distance, au [default 2.808 au]",
-          "kind": "SET"
+          "sigma": null,
+          "value": "1."
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2016+GW221&full-prec=true&cd-epoch=true"
@@ -275,84 +275,84 @@
       },
       "model_parameters": [
         {
-          "sigma": "7.995E-12",
-          "name": "A1",
-          "title": "non-grav. radial accel.",
-          "kind": "EST",
           "n": 1,
+          "title": "non-grav. radial accel.",
           "desc": "non-gravitational radial acceleration parameter",
+          "value": "1.424887854561484E-10",
+          "sigma": "7.995E-12",
           "units": "au/d^2",
-          "value": "1.424887854561484E-10"
+          "name": "A1",
+          "kind": "EST"
         },
         {
           "kind": "EST",
-          "n": 2,
-          "title": "non-grav. transverse accel.",
           "name": "A2",
+          "units": "au/d^2",
           "sigma": "6.901E-12",
           "value": "-4.616415596097852E-11",
-          "units": "au/d^2",
-          "desc": "non-gravitational transverse acceleration parameter"
+          "desc": "non-gravitational transverse acceleration parameter",
+          "n": 2,
+          "title": "non-grav. transverse accel."
         },
         {
-          "units": "au/d^2",
+          "n": 3,
+          "title": "non-grav. normal accel.",
           "value": "-1.181462801710624E-11",
           "desc": "non-gravitational normal acceleration parameter",
-          "title": "non-grav. normal accel.",
-          "kind": "EST",
-          "n": 3,
           "sigma": "3.431E-12",
-          "name": "A3"
+          "name": "A3",
+          "units": "au/d^2",
+          "kind": "EST"
         },
         {
           "desc": "normalizing factor [default 0.1112620426]",
           "value": "1.",
-          "units": null,
-          "sigma": null,
-          "name": "ALN",
           "n": 0,
+          "title": "normalizing factor",
           "kind": "SET",
-          "title": "normalizing factor"
+          "sigma": null,
+          "units": null,
+          "name": "ALN"
         },
         {
-          "units": null,
-          "value": "0.",
-          "desc": "non-grav. model constant, exponent k [default 4.6142]",
           "title": "non-grav. model exp. k",
-          "kind": "SET",
           "n": 0,
-          "sigma": null,
-          "name": "NK"
-        },
-        {
-          "desc": "non-grav. model constant, exponent m [default 2.15]",
-          "units": null,
-          "value": "2.",
-          "sigma": null,
-          "name": "NM",
-          "title": "non-grav. model exp. m",
-          "kind": "SET",
-          "n": 0
-        },
-        {
-          "desc": "non-grav. model constant, exponent n [default 5.093]",
-          "units": null,
+          "desc": "non-grav. model constant, exponent k [default 4.6142]",
           "value": "0.",
-          "name": "NN",
+          "units": null,
+          "name": "NK",
           "sigma": null,
-          "title": "non-grav. model exp. n",
-          "kind": "SET",
-          "n": 0
+          "kind": "SET"
         },
         {
+          "value": "2.",
+          "desc": "non-grav. model constant, exponent m [default 2.15]",
+          "title": "non-grav. model exp. m",
           "n": 0,
           "kind": "SET",
-          "title": "normalizing distance",
+          "units": null,
+          "name": "NM",
+          "sigma": null
+        },
+        {
           "sigma": null,
-          "name": "R0",
+          "units": null,
+          "name": "NN",
+          "kind": "SET",
+          "n": 0,
+          "title": "non-grav. model exp. n",
+          "desc": "non-grav. model constant, exponent n [default 5.093]",
+          "value": "0."
+        },
+        {
+          "desc": "normalizing distance, au [default 2.808 au]",
           "value": "1.",
+          "n": 0,
+          "title": "normalizing distance",
+          "kind": "SET",
+          "sigma": null,
           "units": "au",
-          "desc": "normalizing distance, au [default 2.808 au]"
+          "name": "R0"
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2006+RH120&full-prec=true&cd-epoch=true"
@@ -400,74 +400,74 @@
       },
       "model_parameters": [
         {
-          "desc": "non-gravitational radial acceleration parameter",
-          "units": "au/d^2",
-          "value": "2.461350513587601E-10",
-          "name": "A1",
-          "sigma": "1.842E-9",
-          "title": "non-grav. radial accel.",
           "n": 1,
-          "kind": "EST"
+          "name": "A1",
+          "value": "2.461350513587601E-10",
+          "title": "non-grav. radial accel.",
+          "sigma": "1.842E-9",
+          "kind": "EST",
+          "units": "au/d^2",
+          "desc": "non-gravitational radial acceleration parameter"
         },
         {
-          "units": "au/d^2",
-          "value": "3.645685115778328E-13",
-          "desc": "non-gravitational transverse acceleration parameter",
-          "title": "non-grav. transverse accel.",
-          "kind": "EST",
           "n": 2,
           "name": "A2",
-          "sigma": "4.571E-13"
+          "value": "3.645685115778328E-13",
+          "kind": "EST",
+          "sigma": "4.571E-13",
+          "units": "au/d^2",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "title": "non-grav. transverse accel."
         },
         {
           "name": "A3",
-          "sigma": "5.303E-12",
-          "n": 3,
-          "kind": "EST",
-          "title": "non-grav. normal accel.",
-          "desc": "non-gravitational normal acceleration parameter",
           "value": "1.916800638650594E-11",
-          "units": "au/d^2"
+          "n": 3,
+          "title": "non-grav. normal accel.",
+          "units": "au/d^2",
+          "desc": "non-gravitational normal acceleration parameter",
+          "kind": "EST",
+          "sigma": "5.303E-12"
         },
         {
-          "value": "1.",
           "units": null,
           "desc": "normalizing factor [default 0.1112620426]",
-          "n": 0,
+          "sigma": null,
           "kind": "SET",
           "title": "normalizing factor",
+          "value": "1.",
           "name": "ALN",
-          "sigma": null
+          "n": 0
         },
         {
-          "units": null,
           "value": "0.",
-          "desc": "non-grav. model constant, exponent k [default 4.6142]",
-          "title": "non-grav. model exp. k",
-          "kind": "SET",
+          "name": "NK",
           "n": 0,
+          "units": null,
+          "desc": "non-grav. model constant, exponent k [default 4.6142]",
+          "kind": "SET",
           "sigma": null,
-          "name": "NK"
+          "title": "non-grav. model exp. k"
         },
         {
-          "sigma": null,
-          "name": "NM",
-          "title": "non-grav. model exp. m",
           "n": 0,
+          "name": "NM",
+          "value": "2.",
+          "title": "non-grav. model exp. m",
+          "sigma": null,
           "kind": "SET",
           "desc": "non-grav. model constant, exponent m [default 2.15]",
-          "units": null,
-          "value": "2."
+          "units": null
         },
         {
-          "name": "R0",
-          "sigma": null,
           "n": 0,
-          "kind": "SET",
-          "title": "normalizing distance",
-          "desc": "normalizing distance, au [default 2.808 au]",
           "value": "1.",
-          "units": "au"
+          "name": "R0",
+          "title": "normalizing distance",
+          "kind": "SET",
+          "sigma": null,
+          "units": "au",
+          "desc": "normalizing distance, au [default 2.808 au]"
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2013+BA74&full-prec=true&cd-epoch=true"
@@ -559,84 +559,84 @@
       },
       "model_parameters": [
         {
-          "sigma": "2.928E-10",
           "kind": "EST",
-          "desc": "non-gravitational radial acceleration parameter",
+          "sigma": "2.928E-10",
           "units": "au/d^2",
-          "title": "non-grav. radial accel.",
-          "n": 1,
+          "name": "A1",
           "value": "9.475402454443151E-10",
-          "name": "A1"
+          "desc": "non-gravitational radial acceleration parameter",
+          "title": "non-grav. radial accel.",
+          "n": 1
         },
         {
-          "value": "-5.486101259217607E-13",
-          "name": "A2",
-          "n": 2,
-          "title": "non-grav. transverse accel.",
-          "units": "au/d^2",
           "desc": "non-gravitational transverse acceleration parameter",
+          "value": "-5.486101259217607E-13",
+          "title": "non-grav. transverse accel.",
+          "n": 2,
           "kind": "EST",
+          "units": "au/d^2",
+          "name": "A2",
           "sigma": "1.909E-13"
         },
         {
-          "value": "8.484934726920783E-11",
-          "name": "A3",
-          "n": 3,
-          "title": "non-grav. normal accel.",
+          "kind": "EST",
           "units": "au/d^2",
-          "desc": "non-gravitational normal acceleration parameter",
+          "name": "A3",
           "sigma": "1.621E-11",
-          "kind": "EST"
+          "value": "8.484934726920783E-11",
+          "desc": "non-gravitational normal acceleration parameter",
+          "n": 3,
+          "title": "non-grav. normal accel."
         },
         {
-          "value": "1.",
-          "name": "ALN",
           "n": 0,
-          "units": null,
+          "title": "normalizing factor",
           "desc": "normalizing factor [default 0.1112620426]",
-          "kind": "SET",
-          "sigma": null,
-          "title": "normalizing factor"
-        },
-        {
-          "title": "non-grav. model exp. k",
-          "units": null,
-          "desc": "non-grav. model constant, exponent k [default 4.6142]",
-          "kind": "SET",
-          "sigma": null,
-          "name": "NK",
-          "value": "0.",
-          "n": 0
-        },
-        {
-          "kind": "SET",
-          "sigma": null,
-          "units": null,
-          "desc": "non-grav. model constant, exponent m [default 2.15]",
-          "title": "non-grav. model exp. m",
-          "n": 0,
-          "value": "2.",
-          "name": "NM"
-        },
-        {
-          "n": 0,
-          "name": "NN",
-          "value": "0.",
-          "title": "non-grav. model exp. n",
-          "sigma": null,
-          "kind": "SET",
-          "units": null,
-          "desc": "non-grav. model constant, exponent n [default 5.093]"
-        },
-        {
-          "title": "normalizing distance",
-          "sigma": null,
-          "kind": "SET",
-          "desc": "normalizing distance, au [default 2.808 au]",
-          "units": "au",
-          "n": 0,
           "value": "1.",
-          "name": "R0"
+          "sigma": null,
+          "units": null,
+          "name": "ALN",
+          "kind": "SET"
+        },
+        {
+          "sigma": null,
+          "units": null,
+          "name": "NK",
+          "kind": "SET",
+          "title": "non-grav. model exp. k",
+          "n": 0,
+          "value": "0.",
+          "desc": "non-grav. model constant, exponent k [default 4.6142]"
+        },
+        {
+          "n": 0,
+          "title": "non-grav. model exp. m",
+          "desc": "non-grav. model constant, exponent m [default 2.15]",
+          "value": "2.",
+          "name": "NM",
+          "units": null,
+          "sigma": null,
+          "kind": "SET"
+        },
+        {
+          "n": 0,
+          "title": "non-grav. model exp. n",
+          "value": "0.",
+          "desc": "non-grav. model constant, exponent n [default 5.093]",
+          "sigma": null,
+          "units": null,
+          "name": "NN",
+          "kind": "SET"
+        },
+        {
+          "value": "1.",
+          "desc": "normalizing distance, au [default 2.808 au]",
+          "title": "normalizing distance",
+          "n": 0,
+          "kind": "SET",
+          "sigma": null,
+          "name": "R0",
+          "units": "au"
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2016+NJ33&full-prec=true&cd-epoch=true"
@@ -685,82 +685,82 @@
       "model_parameters": [
         {
           "kind": "EST",
-          "title": "non-grav. radial accel.",
-          "value": "3.655395414270661E-11",
-          "units": "au/d^2",
           "sigma": "3.867E-11",
-          "n": 1,
+          "units": "au/d^2",
+          "name": "A1",
           "desc": "non-gravitational radial acceleration parameter",
-          "name": "A1"
+          "value": "3.655395414270661E-11",
+          "n": 1,
+          "title": "non-grav. radial accel."
         },
         {
           "title": "non-grav. transverse accel.",
-          "kind": "EST",
+          "n": 2,
+          "desc": "non-gravitational transverse acceleration parameter",
+          "value": "-2.196384257496804E-13",
           "sigma": "4.866E-14",
           "units": "au/d^2",
-          "value": "-2.196384257496804E-13",
-          "desc": "non-gravitational transverse acceleration parameter",
           "name": "A2",
-          "n": 2
+          "kind": "EST"
         },
         {
-          "n": 3,
-          "name": "A3",
-          "desc": "non-gravitational normal acceleration parameter",
-          "kind": "EST",
-          "title": "non-grav. normal accel.",
           "value": "1.686333710048786E-12",
-          "sigma": "1.121E-12",
-          "units": "au/d^2"
+          "desc": "non-gravitational normal acceleration parameter",
+          "title": "non-grav. normal accel.",
+          "n": 3,
+          "kind": "EST",
+          "units": "au/d^2",
+          "name": "A3",
+          "sigma": "1.121E-12"
         },
         {
-          "kind": "SET",
-          "title": "normalizing factor",
           "value": "1.",
-          "units": null,
-          "sigma": null,
-          "n": 0,
           "desc": "normalizing factor [default 0.1112620426]",
+          "n": 0,
+          "title": "normalizing factor",
+          "kind": "SET",
+          "sigma": null,
+          "units": null,
           "name": "ALN"
         },
         {
-          "kind": "SET",
+          "n": 0,
           "title": "non-grav. model exp. k",
           "value": "0.",
-          "units": null,
-          "sigma": null,
-          "n": 0,
           "desc": "non-grav. model constant, exponent k [default 4.6142]",
-          "name": "NK"
-        },
-        {
-          "desc": "non-grav. model constant, exponent m [default 2.15]",
-          "name": "NM",
-          "n": 0,
-          "sigma": null,
           "units": null,
-          "value": "2.",
-          "title": "non-grav. model exp. m",
+          "name": "NK",
+          "sigma": null,
           "kind": "SET"
         },
         {
           "kind": "SET",
-          "title": "non-grav. model exp. n",
-          "value": "0.",
           "sigma": null,
+          "name": "NM",
           "units": null,
+          "value": "2.",
+          "desc": "non-grav. model constant, exponent m [default 2.15]",
           "n": 0,
-          "name": "NN",
-          "desc": "non-grav. model constant, exponent n [default 5.093]"
+          "title": "non-grav. model exp. m"
         },
         {
-          "desc": "normalizing distance, au [default 2.808 au]",
-          "name": "R0",
-          "n": 0,
-          "units": "au",
+          "kind": "SET",
           "sigma": null,
-          "value": "1.",
+          "units": null,
+          "name": "NN",
+          "value": "0.",
+          "desc": "non-grav. model constant, exponent n [default 5.093]",
+          "n": 0,
+          "title": "non-grav. model exp. n"
+        },
+        {
+          "n": 0,
           "title": "normalizing distance",
+          "desc": "normalizing distance, au [default 2.808 au]",
+          "value": "1.",
+          "sigma": null,
+          "units": "au",
+          "name": "R0",
           "kind": "SET"
         }
       ],
@@ -809,84 +809,84 @@
       },
       "model_parameters": [
         {
-          "desc": "non-gravitational radial acceleration parameter",
-          "name": "A1",
-          "n": 1,
+          "kind": "EST",
           "units": "au/d^2",
+          "n": 1,
           "title": "non-grav. radial accel.",
-          "value": "3.410408812498951E-11",
           "sigma": "5.822E-11",
-          "kind": "EST"
+          "value": "3.410408812498951E-11",
+          "name": "A1",
+          "desc": "non-gravitational radial acceleration parameter"
         },
         {
           "kind": "EST",
-          "title": "non-grav. transverse accel.",
           "n": 2,
           "units": "au/d^2",
-          "value": "-2.121587352247006E-13",
+          "title": "non-grav. transverse accel.",
           "sigma": "2.125E-13",
+          "value": "-2.121587352247006E-13",
           "name": "A2",
           "desc": "non-gravitational transverse acceleration parameter"
         },
         {
+          "kind": "EST",
           "desc": "non-gravitational normal acceleration parameter",
           "name": "A3",
           "value": "-1.507549026996071E-11",
           "sigma": "1.415E-12",
           "n": 3,
-          "units": "au/d^2",
           "title": "non-grav. normal accel.",
-          "kind": "EST"
+          "units": "au/d^2"
         },
         {
           "kind": "SET",
-          "n": 0,
-          "units": null,
-          "title": "normalizing factor",
           "value": "1.",
           "sigma": null,
+          "units": null,
+          "n": 0,
+          "title": "normalizing factor",
           "name": "ALN",
           "desc": "normalizing factor [default 0.1112620426]"
         },
         {
-          "name": "NK",
-          "desc": "non-grav. model constant, exponent k [default 4.6142]",
+          "kind": "SET",
           "value": "0.",
           "sigma": null,
           "title": "non-grav. model exp. k",
           "n": 0,
           "units": null,
+          "desc": "non-grav. model constant, exponent k [default 4.6142]",
+          "name": "NK"
+        },
+        {
+          "name": "NM",
+          "desc": "non-grav. model constant, exponent m [default 2.15]",
+          "title": "non-grav. model exp. m",
+          "n": 0,
+          "units": null,
+          "sigma": null,
+          "value": "2.",
           "kind": "SET"
         },
         {
           "kind": "SET",
-          "units": null,
-          "n": 0,
-          "title": "non-grav. model exp. m",
-          "value": "2.",
-          "sigma": null,
-          "name": "NM",
-          "desc": "non-grav. model constant, exponent m [default 2.15]"
-        },
-        {
+          "desc": "non-grav. model constant, exponent n [default 5.093]",
+          "name": "NN",
           "value": "0.",
           "sigma": null,
           "n": 0,
-          "title": "non-grav. model exp. n",
           "units": null,
-          "desc": "non-grav. model constant, exponent n [default 5.093]",
-          "name": "NN",
-          "kind": "SET"
+          "title": "non-grav. model exp. n"
         },
         {
-          "kind": "SET",
           "value": "1.",
           "sigma": null,
-          "units": "au",
           "n": 0,
           "title": "normalizing distance",
+          "units": "au",
           "desc": "normalizing distance, au [default 2.808 au]",
-          "name": "R0"
+          "name": "R0",
+          "kind": "SET"
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2010+RF12&full-prec=true&cd-epoch=true"
@@ -934,84 +934,84 @@
       },
       "model_parameters": [
         {
-          "value": "-8.298571098423042E-10",
           "desc": "non-gravitational radial acceleration parameter",
-          "title": "non-grav. radial accel.",
-          "n": 1,
-          "kind": "EST",
+          "value": "-8.298571098423042E-10",
+          "units": "au/d^2",
           "sigma": "7.589E-10",
-          "units": "au/d^2",
-          "name": "A1"
-        },
-        {
-          "desc": "non-gravitational transverse acceleration parameter",
-          "value": "-8.320601552689281E-13",
-          "title": "non-grav. transverse accel.",
-          "n": 2,
+          "name": "A1",
           "kind": "EST",
-          "name": "A2",
-          "units": "au/d^2",
-          "sigma": "5.612E-13"
+          "n": 1,
+          "title": "non-grav. radial accel."
         },
         {
-          "n": 3,
-          "title": "non-grav. normal accel.",
+          "units": "au/d^2",
+          "value": "-8.320601552689281E-13",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "title": "non-grav. transverse accel.",
+          "kind": "EST",
+          "n": 2,
+          "sigma": "5.612E-13",
+          "name": "A2"
+        },
+        {
+          "units": "au/d^2",
           "value": "-2.41448873986245E-11",
           "desc": "non-gravitational normal acceleration parameter",
-          "units": "au/d^2",
+          "title": "non-grav. normal accel.",
+          "kind": "EST",
+          "n": 3,
           "name": "A3",
-          "sigma": "3.947E-12",
-          "kind": "EST"
+          "sigma": "3.947E-12"
         },
         {
-          "desc": "normalizing factor [default 0.1112620426]",
-          "value": "1.",
+          "kind": "SET",
+          "n": 0,
           "title": "normalizing factor",
+          "sigma": null,
+          "name": "ALN",
+          "value": "1.",
+          "units": null,
+          "desc": "normalizing factor [default 0.1112620426]"
+        },
+        {
+          "units": null,
+          "value": "0.",
+          "desc": "non-grav. model constant, exponent k [default 4.6142]",
+          "title": "non-grav. model exp. k",
           "n": 0,
           "kind": "SET",
-          "units": null,
-          "name": "ALN",
-          "sigma": null
-        },
-        {
-          "n": 0,
-          "title": "non-grav. model exp. k",
-          "desc": "non-grav. model constant, exponent k [default 4.6142]",
-          "value": "0.",
-          "sigma": null,
-          "units": null,
           "name": "NK",
-          "kind": "SET"
+          "sigma": null
         },
         {
           "title": "non-grav. model exp. m",
           "n": 0,
-          "desc": "non-grav. model constant, exponent m [default 2.15]",
-          "value": "2.",
-          "units": null,
+          "kind": "SET",
           "name": "NM",
           "sigma": null,
-          "kind": "SET"
+          "units": null,
+          "value": "2.",
+          "desc": "non-grav. model constant, exponent m [default 2.15]"
         },
         {
-          "kind": "SET",
-          "name": "NN",
-          "units": null,
-          "sigma": null,
-          "value": "0.",
           "desc": "non-grav. model constant, exponent n [default 5.093]",
+          "value": "0.",
+          "units": null,
+          "name": "NN",
+          "sigma": null,
+          "kind": "SET",
           "n": 0,
           "title": "non-grav. model exp. n"
         },
         {
-          "units": "au",
-          "name": "R0",
           "sigma": null,
+          "name": "R0",
           "kind": "SET",
-          "title": "normalizing distance",
           "n": 0,
+          "title": "normalizing distance",
           "desc": "normalizing distance, au [default 2.808 au]",
-          "value": "1."
+          "value": "1.",
+          "units": "au"
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2005+VL1&full-prec=true&cd-epoch=true"
@@ -1059,13 +1059,13 @@
       },
       "model_parameters": [
         {
-          "desc": "non-gravitational transverse acceleration parameter",
-          "name": "A2",
-          "n": 1,
-          "title": "non-grav. transverse accel.",
-          "kind": "EST",
           "sigma": "6.06E-14",
           "units": "au/d^2",
+          "name": "A2",
+          "kind": "EST",
+          "n": 1,
+          "title": "non-grav. transverse accel.",
+          "desc": "non-gravitational transverse acceleration parameter",
           "value": "-7.202400309280564E-12"
         }
       ],
@@ -1114,13 +1114,13 @@
       },
       "model_parameters": [
         {
-          "desc": "non-gravitational transverse acceleration parameter",
-          "units": "au/d^2",
           "value": "2.599982121116447E-13",
-          "sigma": "5.801E-14",
           "name": "A2",
-          "title": "non-grav. transverse accel.",
           "n": 1,
+          "title": "non-grav. transverse accel.",
+          "units": "au/d^2",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "sigma": "5.801E-14",
           "kind": "EST"
         }
       ],
@@ -1169,14 +1169,14 @@
       },
       "model_parameters": [
         {
-          "kind": "EST",
           "name": "A2",
-          "desc": "non-gravitational transverse acceleration parameter",
           "sigma": "4.775E-14",
-          "value": "-5.381352489049309E-13",
-          "units": "au/d^2",
+          "title": "non-grav. transverse accel.",
           "n": 1,
-          "title": "non-grav. transverse accel."
+          "kind": "EST",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "units": "au/d^2",
+          "value": "-5.381352489049309E-13"
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2005+UY6&full-prec=true&cd-epoch=true"
@@ -1224,12 +1224,12 @@
       },
       "model_parameters": [
         {
-          "kind": "EST",
           "n": 1,
-          "title": "non-grav. transverse accel.",
-          "sigma": "2.983E-14",
           "name": "A2",
           "value": "3.286870537542536E-12",
+          "title": "non-grav. transverse accel.",
+          "sigma": "2.983E-14",
+          "kind": "EST",
           "units": "au/d^2",
           "desc": "non-gravitational transverse acceleration parameter"
         }
@@ -1279,14 +1279,14 @@
       },
       "model_parameters": [
         {
-          "n": 1,
-          "value": "-2.375397559329012E-13",
-          "name": "A2",
-          "sigma": "1.944E-14",
+          "title": "non-grav. transverse accel.",
           "kind": "EST",
+          "sigma": "1.944E-14",
           "units": "au/d^2",
           "desc": "non-gravitational transverse acceleration parameter",
-          "title": "non-grav. transverse accel."
+          "n": 1,
+          "name": "A2",
+          "value": "-2.375397559329012E-13"
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=139359&full-prec=true&cd-epoch=true"
@@ -1335,23 +1335,23 @@
       "model_parameters": [
         {
           "desc": "non-gravitational radial acceleration parameter",
-          "units": "au/d^2",
           "value": "2.041002161404434E-10",
-          "name": "A1",
+          "units": "au/d^2",
           "sigma": "5.735E-11",
-          "title": "non-grav. radial accel.",
+          "name": "A1",
           "kind": "EST",
-          "n": 1
+          "n": 1,
+          "title": "non-grav. radial accel."
         },
         {
-          "n": 2,
-          "kind": "EST",
-          "title": "non-grav. transverse accel.",
-          "sigma": "5.255E-13",
-          "name": "A2",
+          "desc": "non-gravitational transverse acceleration parameter",
           "value": "2.635817945270534E-12",
           "units": "au/d^2",
-          "desc": "non-gravitational transverse acceleration parameter"
+          "name": "A2",
+          "sigma": "5.255E-13",
+          "n": 2,
+          "kind": "EST",
+          "title": "non-grav. transverse accel."
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2P&full-prec=true&cd-epoch=true"
@@ -1401,21 +1401,21 @@
         {
           "n": 1,
           "title": "non-grav. radial accel.",
-          "desc": "non-gravitational radial acceleration parameter",
-          "value": "1.580981480640338E-9",
-          "sigma": "3.486E-10",
           "units": "au/d^2",
+          "sigma": "3.486E-10",
+          "value": "1.580981480640338E-9",
           "name": "A1",
+          "desc": "non-gravitational radial acceleration parameter",
           "kind": "EST"
         },
         {
-          "n": 2,
-          "title": "non-grav. transverse accel.",
-          "value": "9.186415654543854E-11",
-          "desc": "non-gravitational transverse acceleration parameter",
-          "sigma": "1.974E-13",
-          "units": "au/d^2",
           "name": "A2",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "title": "non-grav. transverse accel.",
+          "n": 2,
+          "units": "au/d^2",
+          "sigma": "1.974E-13",
+          "value": "9.186415654543854E-11",
           "kind": "EST"
         }
       ],
@@ -1508,44 +1508,44 @@
       },
       "model_parameters": [
         {
+          "desc": "non-gravitational radial acceleration parameter",
+          "value": "4.215027125368865E-10",
           "units": "au/d^2",
           "name": "A1",
           "sigma": "4.261E-11",
-          "kind": "EST",
-          "title": "non-grav. radial accel.",
           "n": 1,
-          "desc": "non-gravitational radial acceleration parameter",
-          "value": "4.215027125368865E-10"
+          "kind": "EST",
+          "title": "non-grav. radial accel."
         },
         {
-          "kind": "EST",
           "name": "A2",
-          "units": "au/d^2",
           "sigma": "1.531E-11",
+          "kind": "EST",
+          "n": 2,
+          "title": "non-grav. transverse accel.",
           "desc": "non-gravitational transverse acceleration parameter",
           "value": "-1.735480698418667E-11",
-          "title": "non-grav. transverse accel.",
-          "n": 2
+          "units": "au/d^2"
         },
         {
-          "desc": "non-gravitational normal acceleration parameter",
-          "value": "-4.638590130371208E-11",
+          "name": "A3",
+          "sigma": "6.555E-11",
+          "kind": "EST",
           "n": 3,
           "title": "non-grav. normal accel.",
-          "kind": "EST",
-          "units": "au/d^2",
-          "name": "A3",
-          "sigma": "6.555E-11"
+          "desc": "non-gravitational normal acceleration parameter",
+          "value": "-4.638590130371208E-11",
+          "units": "au/d^2"
         },
         {
-          "sigma": "12.83",
           "units": "d",
-          "name": "DT",
+          "value": "67.49843041665493",
+          "desc": "non-gravitational perihelion-maximum offset",
+          "title": "non-grav. perihelion offset",
           "kind": "EST",
           "n": 4,
-          "title": "non-grav. perihelion offset",
-          "value": "67.49843041665493",
-          "desc": "non-gravitational perihelion-maximum offset"
+          "name": "DT",
+          "sigma": "12.83"
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=8P&full-prec=true&cd-epoch=true"
@@ -1593,44 +1593,44 @@
       },
       "model_parameters": [
         {
-          "desc": "non-gravitational radial acceleration parameter",
           "value": "4.096574451232726E-9",
+          "units": "au/d^2",
+          "sigma": "4.624E-11",
+          "kind": "EST",
           "title": "non-grav. radial accel.",
           "n": 1,
-          "kind": "EST",
-          "units": "au/d^2",
           "name": "A1",
-          "sigma": "4.624E-11"
+          "desc": "non-gravitational radial acceleration parameter"
         },
         {
-          "desc": "non-gravitational transverse acceleration parameter",
           "value": "-1.246898187648724E-9",
+          "units": "au/d^2",
+          "sigma": "3.526E-11",
+          "kind": "EST",
           "title": "non-grav. transverse accel.",
           "n": 2,
-          "kind": "EST",
-          "sigma": "3.526E-11",
-          "units": "au/d^2",
-          "name": "A2"
+          "name": "A2",
+          "desc": "non-gravitational transverse acceleration parameter"
         },
         {
-          "value": "6.905971929654713E-10",
-          "desc": "non-gravitational normal acceleration parameter",
+          "kind": "EST",
           "title": "non-grav. normal accel.",
-          "n": 3,
-          "kind": "EST",
+          "value": "6.905971929654713E-10",
           "units": "au/d^2",
+          "sigma": "2.636E-11",
+          "n": 3,
           "name": "A3",
-          "sigma": "2.636E-11"
+          "desc": "non-gravitational normal acceleration parameter"
         },
         {
-          "kind": "EST",
-          "units": "d",
           "name": "DT",
-          "sigma": "1.643",
-          "value": "-14.14793441438829",
           "desc": "non-gravitational perihelion-maximum offset",
+          "n": 4,
           "title": "non-grav. perihelion offset",
-          "n": 4
+          "kind": "EST",
+          "sigma": "1.643",
+          "units": "d",
+          "value": "-14.14793441438829"
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=46P&full-prec=true&cd-epoch=true"
@@ -1678,34 +1678,34 @@
       },
       "model_parameters": [
         {
-          "units": "au/d^2",
-          "desc": "non-gravitational radial acceleration parameter",
-          "kind": "EST",
           "sigma": "3.712E-11",
-          "title": "non-grav. radial accel.",
+          "units": "au/d^2",
           "name": "A1",
+          "kind": "EST",
+          "title": "non-grav. radial accel.",
+          "n": 1,
           "value": "6.544631766354118E-9",
-          "n": 1
+          "desc": "non-gravitational radial acceleration parameter"
         },
         {
-          "kind": "EST",
-          "sigma": "1.635E-11",
-          "units": "au/d^2",
           "desc": "non-gravitational transverse acceleration parameter",
+          "value": "4.832373496932443E-10",
           "title": "non-grav. transverse accel.",
           "n": 2,
-          "value": "4.832373496932443E-10",
-          "name": "A2"
+          "kind": "EST",
+          "name": "A2",
+          "units": "au/d^2",
+          "sigma": "1.635E-11"
         },
         {
+          "kind": "EST",
+          "units": "d",
           "name": "DT",
+          "sigma": ".3937",
+          "desc": "non-gravitational perihelion-maximum offset",
           "value": "-12.17581160807467",
           "n": 3,
-          "title": "non-grav. perihelion offset",
-          "desc": "non-gravitational perihelion-maximum offset",
-          "units": "d",
-          "sigma": ".3937",
-          "kind": "EST"
+          "title": "non-grav. perihelion offset"
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?des=73P-C&full-prec=true&cd-epoch=true"
@@ -1754,23 +1754,23 @@
       "model_parameters": [
         {
           "name": "A1",
-          "desc": "non-gravitational radial acceleration parameter",
-          "sigma": "5.811E-11",
           "value": "6.596751028860742E-9",
           "n": 1,
           "title": "non-grav. radial accel.",
           "units": "au/d^2",
-          "kind": "EST"
+          "desc": "non-gravitational radial acceleration parameter",
+          "kind": "EST",
+          "sigma": "5.811E-11"
         },
         {
-          "kind": "EST",
-          "value": "-2.075555677867367E-10",
-          "sigma": "7.672E-11",
-          "n": 2,
           "units": "au/d^2",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "sigma": "7.672E-11",
+          "kind": "EST",
           "title": "non-grav. transverse accel.",
           "name": "A2",
-          "desc": "non-gravitational transverse acceleration parameter"
+          "value": "-2.075555677867367E-10",
+          "n": 2
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=41P&full-prec=true&cd-epoch=true"
@@ -1862,24 +1862,24 @@
       },
       "model_parameters": [
         {
-          "name": "A1",
-          "desc": "non-gravitational radial acceleration parameter",
-          "value": "2.687692871249691E-8",
-          "sigma": "5.417E-10",
-          "n": 1,
           "title": "non-grav. radial accel.",
+          "n": 1,
+          "kind": "EST",
+          "sigma": "5.417E-10",
+          "name": "A1",
           "units": "au/d^2",
-          "kind": "EST"
+          "value": "2.687692871249691E-8",
+          "desc": "non-gravitational radial acceleration parameter"
         },
         {
-          "desc": "non-gravitational transverse acceleration parameter",
           "name": "A2",
-          "value": "6.515068724785845E-10",
           "sigma": "9.876E-11",
-          "n": 2,
           "title": "non-grav. transverse accel.",
+          "n": 2,
+          "kind": "EST",
+          "desc": "non-gravitational transverse acceleration parameter",
           "units": "au/d^2",
-          "kind": "EST"
+          "value": "6.515068724785845E-10"
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=C%2F1996+B2&full-prec=true&cd-epoch=true"
@@ -1971,24 +1971,24 @@
       },
       "model_parameters": [
         {
-          "sigma": "2.168E-9",
-          "units": "au/d^2",
           "name": "A1",
-          "kind": "EST",
+          "desc": "non-gravitational radial acceleration parameter",
           "n": 1,
           "title": "non-grav. radial accel.",
-          "value": "8.537814652708543E-8",
-          "desc": "non-gravitational radial acceleration parameter"
+          "kind": "EST",
+          "sigma": "2.168E-9",
+          "units": "au/d^2",
+          "value": "8.537814652708543E-8"
         },
         {
-          "sigma": "6.145E-10",
-          "units": "au/d^2",
-          "name": "A2",
-          "kind": "EST",
           "n": 2,
-          "title": "non-grav. transverse accel.",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "name": "A2",
           "value": "5.695189309362105E-9",
-          "desc": "non-gravitational transverse acceleration parameter"
+          "units": "au/d^2",
+          "sigma": "6.145E-10",
+          "kind": "EST",
+          "title": "non-grav. transverse accel."
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=C%2F2012+S1&full-prec=true&cd-epoch=true"
@@ -2125,33 +2125,33 @@
       "model_parameters": [
         {
           "desc": "non-gravitational radial acceleration parameter",
-          "value": "2.654248448328061E-10",
-          "units": "au/d^2",
           "name": "A1",
-          "sigma": "5.954E-11",
-          "kind": "EST",
           "n": 1,
-          "title": "non-grav. radial accel."
+          "title": "non-grav. radial accel.",
+          "kind": "EST",
+          "sigma": "5.954E-11",
+          "units": "au/d^2",
+          "value": "2.654248448328061E-10"
         },
         {
-          "sigma": "1.008E-13",
-          "name": "A2",
           "n": 2,
+          "desc": "non-gravitational transverse acceleration parameter",
+          "name": "A2",
           "kind": "EST",
           "title": "non-grav. transverse accel.",
-          "desc": "non-gravitational transverse acceleration parameter",
           "value": "-2.42749047255873E-12",
-          "units": "au/d^2"
+          "units": "au/d^2",
+          "sigma": "1.008E-13"
         },
         {
           "desc": "non-gravitational normal acceleration parameter",
-          "value": "1.031526233664028E-10",
-          "units": "au/d^2",
           "name": "A3",
-          "sigma": "7.158E-11",
-          "kind": "EST",
           "n": 3,
-          "title": "non-grav. normal accel."
+          "sigma": "7.158E-11",
+          "units": "au/d^2",
+          "value": "1.031526233664028E-10",
+          "title": "non-grav. normal accel.",
+          "kind": "EST"
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=96P&full-prec=true&cd-epoch=true"
@@ -2331,54 +2331,54 @@
       },
       "model_parameters": [
         {
-          "name": "A2",
-          "desc": "non-gravitational transverse acceleration parameter",
-          "n": 1,
+          "title": "non-grav. transverse accel.",
+          "kind": "EST",
           "sigma": "7.198E-15",
           "units": "au/d^2",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "n": 1,
           "value": "-2.855043652646294E-14",
-          "title": "non-grav. transverse accel.",
-          "kind": "EST"
+          "name": "A2"
         },
         {
-          "sigma": null,
-          "units": null,
-          "value": "1.",
           "title": "normalizing factor",
+          "sigma": null,
           "kind": "SET",
+          "units": null,
           "desc": "normalizing factor [default 0.1112620426]",
-          "name": "ALN",
-          "n": 0
+          "n": 0,
+          "value": "1.",
+          "name": "ALN"
         },
         {
+          "n": 0,
           "value": "0.",
-          "units": null,
-          "sigma": null,
+          "name": "NK",
           "kind": "SET",
-          "title": "non-grav. model exp. k",
-          "n": 0,
+          "sigma": null,
           "desc": "non-grav. model constant, exponent k [default 4.6142]",
-          "name": "NK"
+          "units": null,
+          "title": "non-grav. model exp. k"
         },
         {
-          "desc": "non-grav. model constant, exponent m [default 2.15]",
-          "name": "NM",
-          "n": 0,
           "title": "non-grav. model exp. m",
-          "kind": "SET",
           "sigma": null,
+          "kind": "SET",
           "units": null,
+          "desc": "non-grav. model constant, exponent m [default 2.15]",
+          "n": 0,
+          "name": "NM",
           "value": "2."
         },
         {
-          "desc": "normalizing distance, au [default 2.808 au]",
-          "name": "R0",
-          "n": 0,
+          "kind": "SET",
           "sigma": null,
           "units": "au",
-          "value": "1.",
+          "desc": "normalizing distance, au [default 2.808 au]",
           "title": "normalizing distance",
-          "kind": "SET"
+          "n": 0,
+          "name": "R0",
+          "value": "1."
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=25143&full-prec=true&cd-epoch=true"
@@ -2426,53 +2426,53 @@
       },
       "model_parameters": [
         {
-          "title": "non-grav. transverse accel.",
-          "n": 1,
+          "name": "A2",
           "value": "-2.487268497758912E-14",
+          "n": 1,
+          "units": "au/d^2",
           "desc": "non-gravitational transverse acceleration parameter",
           "sigma": "5.013E-15",
-          "units": "au/d^2",
-          "name": "A2",
-          "kind": "EST"
+          "kind": "EST",
+          "title": "non-grav. transverse accel."
         },
         {
-          "sigma": null,
+          "desc": "normalizing factor [default 0.1112620426]",
           "units": null,
-          "name": "ALN",
           "kind": "SET",
-          "n": 0,
+          "sigma": null,
           "title": "normalizing factor",
           "value": "1.",
-          "desc": "normalizing factor [default 0.1112620426]"
+          "name": "ALN",
+          "n": 0
         },
         {
+          "value": "0.",
+          "name": "NK",
           "n": 0,
           "title": "non-grav. model exp. k",
-          "value": "0.",
           "desc": "non-grav. model constant, exponent k [default 4.6142]",
-          "sigma": null,
-          "name": "NK",
           "units": null,
+          "sigma": null,
           "kind": "SET"
         },
         {
-          "sigma": null,
-          "units": null,
-          "name": "NM",
-          "kind": "SET",
           "title": "non-grav. model exp. m",
-          "n": 0,
+          "units": null,
           "desc": "non-grav. model constant, exponent m [default 2.15]",
-          "value": "2."
+          "kind": "SET",
+          "sigma": null,
+          "name": "NM",
+          "value": "2.",
+          "n": 0
         },
         {
-          "desc": "normalizing distance, au [default 2.808 au]",
-          "value": "1.",
-          "n": 0,
-          "title": "normalizing distance",
           "kind": "SET",
           "sigma": null,
           "units": "au",
+          "desc": "normalizing distance, au [default 2.808 au]",
+          "title": "normalizing distance",
+          "n": 0,
+          "value": "1.",
           "name": "R0"
         }
       ],
@@ -2521,24 +2521,24 @@
       },
       "model_parameters": [
         {
-          "value": "2.635943157E-6",
-          "sigma": "1.908E-7",
-          "units": "m^2/kg",
           "kind": "EST",
           "title": "area-to-mass ratio",
+          "value": "2.635943157E-6",
+          "units": "m^2/kg",
+          "sigma": "1.908E-7",
           "n": 2,
           "name": "AMRAT",
           "desc": "solar radiation pressure area-to-mass ratio"
         },
         {
-          "n": 1,
-          "name": "RHO",
           "desc": "bulk density",
-          "value": "1191.534909615045",
-          "sigma": ".892",
-          "units": "kg/m^3",
+          "name": "RHO",
+          "n": 1,
+          "title": "bulk density",
           "kind": "EST",
-          "title": "bulk density"
+          "units": "kg/m^3",
+          "sigma": ".892",
+          "value": "1191.534909615045"
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=101955&full-prec=true&cd-epoch=true"
@@ -2806,34 +2806,34 @@
       },
       "model_parameters": [
         {
+          "kind": "EST",
           "name": "A1",
           "desc": "non-gravitational radial acceleration parameter",
-          "n": 1,
+          "value": "3.468081872351553E-9",
           "sigma": "5.407E-11",
           "units": "au/d^2",
-          "value": "3.468081872351553E-9",
-          "title": "non-grav. radial accel.",
-          "kind": "EST"
+          "n": 1,
+          "title": "non-grav. radial accel."
         },
         {
-          "n": 2,
-          "desc": "non-gravitational transverse acceleration parameter",
-          "name": "A2",
           "kind": "EST",
-          "title": "non-grav. transverse accel.",
-          "value": "-1.542452930830789E-9",
+          "name": "A2",
+          "desc": "non-gravitational transverse acceleration parameter",
           "units": "au/d^2",
-          "sigma": "2.902E-12"
+          "n": 2,
+          "title": "non-grav. transverse accel.",
+          "sigma": "2.902E-12",
+          "value": "-1.542452930830789E-9"
         },
         {
+          "kind": "EST",
           "desc": "non-gravitational normal acceleration parameter",
           "name": "A3",
-          "n": 3,
-          "sigma": "3.868E-11",
           "units": "au/d^2",
-          "value": "-1.95156931364195E-9",
+          "n": 3,
           "title": "non-grav. normal accel.",
-          "kind": "EST"
+          "sigma": "3.868E-11",
+          "value": "-1.95156931364195E-9"
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=21P&full-prec=true&cd-epoch=true"
@@ -2881,34 +2881,34 @@
       },
       "model_parameters": [
         {
-          "name": "A1",
+          "kind": "EST",
           "desc": "non-gravitational radial acceleration parameter",
-          "units": "au/d^2",
-          "n": 1,
-          "title": "non-grav. radial accel.",
+          "name": "A1",
           "value": "4.887055280193953E-10",
           "sigma": "4.E-11",
+          "n": 1,
+          "units": "au/d^2",
+          "title": "non-grav. radial accel."
+        },
+        {
+          "name": "A2",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "value": "1.554720285182461E-10",
+          "sigma": "4.575E-15",
+          "units": "au/d^2",
+          "n": 2,
+          "title": "non-grav. transverse accel.",
           "kind": "EST"
         },
         {
           "kind": "EST",
-          "name": "A2",
-          "desc": "non-gravitational transverse acceleration parameter",
-          "title": "non-grav. transverse accel.",
-          "n": 2,
-          "units": "au/d^2",
-          "sigma": "4.575E-15",
-          "value": "1.554720285182461E-10"
-        },
-        {
-          "kind": "EST",
-          "name": "S0",
-          "desc": "offset between the center-of-light and center-of-mass",
+          "sigma": "27.33",
+          "value": "577.878759926215",
+          "units": "km",
           "n": 3,
           "title": "center-of-light/mass offset",
-          "units": "km",
-          "sigma": "27.33",
-          "value": "577.878759926215"
+          "desc": "offset between the center-of-light and center-of-mass",
+          "name": "S0"
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=1P&full-prec=true&cd-epoch=true"
@@ -2956,24 +2956,24 @@
       },
       "model_parameters": [
         {
-          "sigma": "9.978E-11",
+          "kind": "EST",
+          "title": "non-grav. radial accel.",
           "value": "3.142102933678076E-9",
           "units": "au/d^2",
+          "sigma": "9.978E-11",
           "n": 1,
-          "title": "non-grav. radial accel.",
-          "name": "A1",
           "desc": "non-gravitational radial acceleration parameter",
-          "kind": "EST"
+          "name": "A1"
         },
         {
-          "kind": "EST",
-          "desc": "non-gravitational transverse acceleration parameter",
-          "name": "A2",
-          "units": "au/d^2",
-          "n": 2,
-          "title": "non-grav. transverse accel.",
           "value": "-5.959532391892791E-10",
-          "sigma": "3.502E-11"
+          "units": "au/d^2",
+          "sigma": "3.502E-11",
+          "kind": "EST",
+          "title": "non-grav. transverse accel.",
+          "n": 2,
+          "name": "A2",
+          "desc": "non-gravitational transverse acceleration parameter"
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=19P&full-prec=true&cd-epoch=true"
@@ -3021,44 +3021,44 @@
       },
       "model_parameters": [
         {
-          "value": "2.756872987168991E-9",
-          "units": "au/d^2",
-          "sigma": "8.513E-11",
           "kind": "EST",
           "title": "non-grav. radial accel.",
+          "value": "2.756872987168991E-9",
+          "sigma": "8.513E-11",
+          "units": "au/d^2",
           "n": 1,
           "name": "A1",
           "desc": "non-gravitational radial acceleration parameter"
         },
         {
-          "units": "au/d^2",
-          "sigma": "2.485E-11",
-          "value": "3.070332808959724E-10",
+          "kind": "EST",
           "title": "non-grav. transverse accel.",
-          "kind": "EST",
-          "desc": "non-gravitational transverse acceleration parameter",
-          "name": "A2",
-          "n": 2
-        },
-        {
-          "n": 3,
-          "desc": "non-gravitational normal acceleration parameter",
-          "name": "A3",
-          "value": "-1.044902559601286E-9",
+          "value": "3.070332808959724E-10",
+          "sigma": "2.485E-11",
           "units": "au/d^2",
-          "sigma": "4.512E-11",
-          "kind": "EST",
-          "title": "non-grav. normal accel."
+          "n": 2,
+          "name": "A2",
+          "desc": "non-gravitational transverse acceleration parameter"
         },
         {
-          "desc": "non-gravitational perihelion-maximum offset",
-          "name": "DT",
-          "n": 4,
-          "title": "non-grav. perihelion offset",
+          "name": "A3",
+          "desc": "non-gravitational normal acceleration parameter",
+          "n": 3,
+          "title": "non-grav. normal accel.",
           "kind": "EST",
+          "sigma": "4.512E-11",
+          "units": "au/d^2",
+          "value": "-1.044902559601286E-9"
+        },
+        {
+          "name": "DT",
+          "desc": "non-gravitational perihelion-maximum offset",
+          "n": 4,
           "sigma": "3.176",
           "units": "d",
-          "value": "-127.4855221524886"
+          "value": "-127.4855221524886",
+          "title": "non-grav. perihelion offset",
+          "kind": "EST"
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=81P&full-prec=true&cd-epoch=true"
@@ -3106,23 +3106,23 @@
       },
       "model_parameters": [
         {
-          "n": 1,
-          "value": "1.80041343176761E-11",
-          "name": "A1",
           "sigma": "2.17E-11",
-          "kind": "EST",
-          "desc": "non-gravitational radial acceleration parameter",
           "units": "au/d^2",
-          "title": "non-grav. radial accel."
+          "name": "A1",
+          "kind": "EST",
+          "title": "non-grav. radial accel.",
+          "n": 1,
+          "desc": "non-gravitational radial acceleration parameter",
+          "value": "1.80041343176761E-11"
         },
         {
-          "units": "au/d^2",
-          "desc": "non-gravitational transverse acceleration parameter",
-          "sigma": "1.173E-12",
           "kind": "EST",
-          "title": "non-grav. transverse accel.",
+          "units": "au/d^2",
           "name": "A2",
+          "sigma": "1.173E-12",
+          "desc": "non-gravitational transverse acceleration parameter",
           "value": "1.179466662405115E-11",
+          "title": "non-grav. transverse accel.",
           "n": 2
         }
       ],
@@ -3171,44 +3171,44 @@
       },
       "model_parameters": [
         {
-          "sigma": "9.413E-12",
-          "value": "1.384525626808849E-9",
-          "title": "non-grav. radial accel.",
           "n": 1,
-          "units": "au/d^2",
+          "value": "1.384525626808849E-9",
           "name": "A1",
+          "sigma": "9.413E-12",
+          "kind": "EST",
+          "units": "au/d^2",
           "desc": "non-gravitational radial acceleration parameter",
-          "kind": "EST"
-        },
-        {
-          "desc": "non-gravitational transverse acceleration parameter",
-          "name": "A2",
-          "sigma": "2.06E-12",
-          "value": "1.464430870492432E-10",
-          "n": 2,
-          "title": "non-grav. transverse accel.",
-          "units": "au/d^2",
-          "kind": "EST"
-        },
-        {
-          "sigma": "8.672E-12",
-          "value": "1.812240220768521E-10",
-          "title": "non-grav. normal accel.",
-          "n": 3,
-          "units": "au/d^2",
-          "desc": "non-gravitational normal acceleration parameter",
-          "name": "A3",
-          "kind": "EST"
+          "title": "non-grav. radial accel."
         },
         {
           "kind": "EST",
-          "desc": "non-gravitational perihelion-maximum offset",
-          "name": "DT",
-          "sigma": ".2216",
+          "sigma": "2.06E-12",
+          "units": "au/d^2",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "title": "non-grav. transverse accel.",
+          "n": 2,
+          "name": "A2",
+          "value": "1.464430870492432E-10"
+        },
+        {
+          "n": 3,
+          "name": "A3",
+          "value": "1.812240220768521E-10",
+          "title": "non-grav. normal accel.",
+          "sigma": "8.672E-12",
+          "kind": "EST",
+          "units": "au/d^2",
+          "desc": "non-gravitational normal acceleration parameter"
+        },
+        {
           "value": "12.23373994658573",
-          "units": "d",
+          "name": "DT",
           "n": 4,
-          "title": "non-grav. perihelion offset"
+          "title": "non-grav. perihelion offset",
+          "units": "d",
+          "desc": "non-gravitational perihelion-maximum offset",
+          "sigma": ".2216",
+          "kind": "EST"
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=103P&full-prec=true&cd-epoch=true"
@@ -3256,44 +3256,44 @@
       },
       "model_parameters": [
         {
-          "n": 1,
-          "name": "A1",
           "value": "1.042562555200506E-9",
-          "kind": "EST",
           "sigma": "1.321E-11",
+          "title": "non-grav. radial accel.",
+          "n": 1,
+          "units": "au/d^2",
+          "name": "A1",
           "desc": "non-gravitational radial acceleration parameter",
-          "units": "au/d^2",
-          "title": "non-grav. radial accel."
+          "kind": "EST"
         },
         {
           "kind": "EST",
-          "sigma": "2.921E-12",
-          "units": "au/d^2",
           "desc": "non-gravitational transverse acceleration parameter",
-          "title": "non-grav. transverse accel.",
-          "n": 2,
-          "value": "-6.733588284934391E-11",
-          "name": "A2"
-        },
-        {
-          "name": "A3",
-          "value": "2.960397918052828E-10",
-          "n": 3,
-          "title": "non-grav. normal accel.",
+          "name": "A2",
           "units": "au/d^2",
-          "desc": "non-gravitational normal acceleration parameter",
-          "kind": "EST",
-          "sigma": "1.147E-11"
+          "n": 2,
+          "title": "non-grav. transverse accel.",
+          "value": "-6.733588284934391E-11",
+          "sigma": "2.921E-12"
         },
         {
-          "title": "non-grav. perihelion offset",
-          "units": "d",
-          "desc": "non-gravitational perihelion-maximum offset",
           "kind": "EST",
-          "sigma": "1.18",
+          "desc": "non-gravitational normal acceleration parameter",
+          "name": "A3",
+          "n": 3,
+          "units": "au/d^2",
+          "title": "non-grav. normal accel.",
+          "sigma": "1.147E-11",
+          "value": "2.960397918052828E-10"
+        },
+        {
+          "kind": "EST",
+          "desc": "non-gravitational perihelion-maximum offset",
           "name": "DT",
           "value": "45.66665437504378",
-          "n": 4
+          "sigma": "1.18",
+          "n": 4,
+          "units": "d",
+          "title": "non-grav. perihelion offset"
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=67P&full-prec=true&cd-epoch=true"
@@ -3341,64 +3341,64 @@
       },
       "model_parameters": [
         {
-          "title": "non-grav. radial accel.",
-          "n": 1,
-          "value": "5.E-13",
-          "desc": "non-gravitational radial acceleration parameter",
-          "units": "au/d^2",
           "name": "A1",
+          "desc": "non-gravitational radial acceleration parameter",
+          "n": 1,
+          "units": "au/d^2",
           "sigma": "4.892E-13",
+          "value": "5.E-13",
+          "title": "non-grav. radial accel.",
           "kind": "EST"
         },
         {
-          "kind": "EST",
-          "units": "au/d^2",
+          "n": 2,
           "name": "A2",
-          "sigma": "1.859E-16",
           "desc": "non-gravitational transverse acceleration parameter",
-          "value": "-2.901766637153165E-14",
+          "kind": "EST",
           "title": "non-grav. transverse accel.",
-          "n": 2
+          "value": "-2.901766637153165E-14",
+          "units": "au/d^2",
+          "sigma": "1.859E-16"
         },
         {
-          "units": null,
+          "n": 0,
+          "desc": "normalizing factor [default 0.1112620426]",
           "name": "ALN",
-          "sigma": null,
-          "kind": "SET",
-          "n": 0,
-          "title": "normalizing factor",
           "value": "1.",
-          "desc": "normalizing factor [default 0.1112620426]"
+          "units": null,
+          "sigma": null,
+          "kind": "SET",
+          "title": "normalizing factor"
         },
         {
-          "sigma": null,
-          "units": null,
           "name": "NK",
-          "kind": "SET",
-          "n": 0,
-          "title": "non-grav. model exp. k",
           "desc": "non-grav. model constant, exponent k [default 4.6142]",
-          "value": "0."
+          "n": 0,
+          "sigma": null,
+          "units": null,
+          "value": "0.",
+          "title": "non-grav. model exp. k",
+          "kind": "SET"
         },
         {
-          "kind": "SET",
-          "sigma": null,
-          "name": "NM",
-          "units": null,
-          "value": "2.",
           "desc": "non-grav. model constant, exponent m [default 2.15]",
+          "name": "NM",
+          "n": 0,
+          "units": null,
+          "sigma": null,
+          "value": "2.",
           "title": "non-grav. model exp. m",
-          "n": 0
+          "kind": "SET"
         },
         {
           "desc": "normalizing distance, au [default 2.808 au]",
+          "name": "R0",
+          "n": 0,
+          "units": "au",
+          "sigma": null,
           "value": "1.",
           "title": "normalizing distance",
-          "n": 0,
-          "kind": "SET",
-          "sigma": null,
-          "units": "au",
-          "name": "R0"
+          "kind": "SET"
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=99942&full-prec=true&cd-epoch=true"
@@ -3490,64 +3490,64 @@
       },
       "model_parameters": [
         {
-          "kind": "EST",
-          "name": "A2",
-          "desc": "non-gravitational transverse acceleration parameter",
+          "sigma": "3.631E-16",
           "units": "au/d^2",
-          "n": 1,
-          "title": "non-grav. transverse accel.",
           "value": "-6.133444935685334E-15",
-          "sigma": "3.631E-16"
+          "title": "non-grav. transverse accel.",
+          "kind": "EST",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "name": "A2",
+          "n": 1
         },
         {
-          "kind": "SET",
-          "sigma": null,
-          "value": "1.",
           "n": 0,
-          "units": null,
-          "title": "normalizing factor",
+          "desc": "normalizing factor [default 0.1112620426]",
           "name": "ALN",
-          "desc": "normalizing factor [default 0.1112620426]"
-        },
-        {
           "kind": "SET",
-          "n": 0,
+          "title": "normalizing factor",
+          "value": "1.",
           "units": null,
-          "title": "non-grav. model exp. k",
-          "sigma": null,
-          "value": "0.",
-          "desc": "non-grav. model constant, exponent k [default 4.6142]",
-          "name": "NK"
+          "sigma": null
         },
         {
+          "value": "0.",
+          "sigma": null,
+          "units": null,
           "kind": "SET",
+          "title": "non-grav. model exp. k",
+          "n": 0,
+          "name": "NK",
+          "desc": "non-grav. model constant, exponent k [default 4.6142]"
+        },
+        {
+          "n": 0,
           "name": "NM",
           "desc": "non-grav. model constant, exponent m [default 2.15]",
-          "n": 0,
+          "value": "2.",
           "units": null,
-          "title": "non-grav. model exp. m",
           "sigma": null,
-          "value": "2."
+          "kind": "SET",
+          "title": "non-grav. model exp. m"
         },
         {
           "kind": "SET",
-          "sigma": null,
-          "value": "0.",
-          "n": 0,
           "title": "non-grav. model exp. n",
+          "value": "0.",
+          "sigma": null,
           "units": null,
-          "desc": "non-grav. model constant, exponent n [default 5.093]",
-          "name": "NN"
+          "n": 0,
+          "name": "NN",
+          "desc": "non-grav. model constant, exponent n [default 5.093]"
         },
         {
-          "desc": "normalizing distance, au [default 2.808 au]",
-          "name": "R0",
-          "sigma": null,
           "value": "1.",
-          "n": 0,
           "units": "au",
+          "sigma": null,
+          "kind": "SET",
           "title": "normalizing distance",
-          "kind": "SET"
+          "n": 0,
+          "desc": "normalizing distance, au [default 2.808 au]",
+          "name": "R0"
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=3200&full-prec=true&cd-epoch=true"
@@ -5047,54 +5047,54 @@
       },
       "model_parameters": [
         {
-          "title": "non-grav. transverse accel.",
           "desc": "non-gravitational transverse acceleration parameter",
-          "units": "au/d^2",
-          "kind": "EST",
-          "sigma": "9.811E-15",
           "name": "A2",
+          "units": "au/d^2",
+          "n": 1,
+          "title": "non-grav. transverse accel.",
+          "sigma": "9.811E-15",
           "value": "-4.556229204935677E-14",
-          "n": 1
+          "kind": "EST"
         },
         {
+          "kind": "SET",
           "title": "normalizing factor",
-          "sigma": null,
-          "kind": "SET",
-          "units": null,
-          "desc": "normalizing factor [default 0.1112620426]",
           "n": 0,
-          "name": "ALN",
-          "value": "1."
-        },
-        {
           "units": null,
-          "desc": "non-grav. model constant, exponent k [default 4.6142]",
-          "kind": "SET",
-          "sigma": null,
-          "title": "non-grav. model exp. k",
-          "name": "NK",
-          "value": "0.",
-          "n": 0
-        },
-        {
-          "desc": "non-grav. model constant, exponent m [default 2.15]",
-          "units": null,
-          "sigma": null,
-          "kind": "SET",
-          "title": "non-grav. model exp. m",
-          "name": "NM",
-          "value": "2.",
-          "n": 0
-        },
-        {
-          "sigma": null,
-          "kind": "SET",
-          "units": "au",
-          "desc": "normalizing distance, au [default 2.808 au]",
-          "title": "normalizing distance",
-          "n": 0,
           "value": "1.",
-          "name": "R0"
+          "sigma": null,
+          "desc": "normalizing factor [default 0.1112620426]",
+          "name": "ALN"
+        },
+        {
+          "units": null,
+          "n": 0,
+          "title": "non-grav. model exp. k",
+          "sigma": null,
+          "value": "0.",
+          "name": "NK",
+          "desc": "non-grav. model constant, exponent k [default 4.6142]",
+          "kind": "SET"
+        },
+        {
+          "kind": "SET",
+          "desc": "non-grav. model constant, exponent m [default 2.15]",
+          "name": "NM",
+          "units": null,
+          "n": 0,
+          "title": "non-grav. model exp. m",
+          "value": "2.",
+          "sigma": null
+        },
+        {
+          "desc": "normalizing distance, au [default 2.808 au]",
+          "name": "R0",
+          "sigma": null,
+          "value": "1.",
+          "units": "au",
+          "n": 0,
+          "title": "normalizing distance",
+          "kind": "SET"
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=85770&full-prec=true&cd-epoch=true"
@@ -5142,54 +5142,54 @@
       },
       "model_parameters": [
         {
-          "kind": "EST",
-          "units": "au/d^2",
           "name": "A2",
-          "sigma": "1.771E-14",
           "value": "-1.341168313541087E-13",
-          "desc": "non-gravitational transverse acceleration parameter",
           "n": 1,
+          "units": "au/d^2",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "sigma": "1.771E-14",
+          "kind": "EST",
           "title": "non-grav. transverse accel."
         },
         {
           "n": 0,
-          "title": "normalizing factor",
           "value": "1.",
-          "desc": "normalizing factor [default 0.1112620426]",
-          "sigma": null,
           "name": "ALN",
+          "title": "normalizing factor",
+          "kind": "SET",
+          "sigma": null,
           "units": null,
-          "kind": "SET"
+          "desc": "normalizing factor [default 0.1112620426]"
         },
         {
           "name": "NK",
+          "value": "0.",
+          "n": 0,
+          "title": "non-grav. model exp. k",
+          "desc": "non-grav. model constant, exponent k [default 4.6142]",
           "units": null,
           "sigma": null,
-          "kind": "SET",
-          "title": "non-grav. model exp. k",
-          "n": 0,
-          "value": "0.",
-          "desc": "non-grav. model constant, exponent k [default 4.6142]"
+          "kind": "SET"
         },
         {
-          "units": null,
           "name": "NM",
+          "value": "2.",
+          "n": 0,
+          "units": null,
+          "desc": "non-grav. model constant, exponent m [default 2.15]",
           "sigma": null,
           "kind": "SET",
-          "n": 0,
-          "title": "non-grav. model exp. m",
-          "value": "2.",
-          "desc": "non-grav. model constant, exponent m [default 2.15]"
+          "title": "non-grav. model exp. m"
         },
         {
           "title": "normalizing distance",
-          "n": 0,
-          "desc": "normalizing distance, au [default 2.808 au]",
-          "value": "1.",
-          "sigma": null,
           "units": "au",
+          "desc": "normalizing distance, au [default 2.808 au]",
+          "kind": "SET",
+          "sigma": null,
+          "value": "1.",
           "name": "R0",
-          "kind": "SET"
+          "n": 0
         }
       ],
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=469219&full-prec=true&cd-epoch=true"
@@ -5287,8 +5287,8 @@
     {
       "entity_id": "comet:C1965S1",
       "name": "Ikeya–Seki",
-      "lookup": "1965 S1",
-      "error": "specified object was not found"
+      "lookup": "Ikeya-Seki",
+      "error": "HTTP Error 300: Multiple Choices"
     }
   ],
   "required": 87,
