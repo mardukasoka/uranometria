@@ -28,6 +28,20 @@ export const LOD0_OBJECTS = Object.freeze([
   {id:"mpc:2018VG18",designation:"2018 VG18",name:"Farout",population:"TNO"},
   {id:"mpc:2018AG37",designation:"2018 AG37",name:"Farfarout",population:"TNO"},
   {id:"mpc:541132",designation:"541132",name:"Leleākūhonua",population:"detached TNO",dynamicalClass:"sednoid",provisionalDesignation:"2015 TG387"},
+  // Named outer-system systems: identity-first catalogue. Orbital states remain separately gated.
+  {id:"mpc:225088",designation:"225088",name:"Gonggong",population:"TNO",physicalFacets:["binary"],metadata:{satellites:["Xiangliu"]}},
+  {id:"mpc:50000",designation:"50000",name:"Quaoar",population:"TNO",physicalFacets:["binary","ringed"],claims:[{claim:"two reported rings",status:"confirmed"}],metadata:{satellites:["Weywot"]}},
+  {id:"mpc:90482",designation:"90482",name:"Orcus",population:"resonant TNO",physicalFacets:["binary"],metadata:{satellites:["Vanth"]}},
+  {id:"mpc:120347",designation:"120347",name:"Salacia",population:"TNO",physicalFacets:["binary"],metadata:{satellites:["Actaea"]}},
+  {id:"mpc:174567",designation:"174567",name:"Varda",population:"TNO",physicalFacets:["binary"],metadata:{satellites:["Ilmarë"]}},
+  {id:"mpc:28978",designation:"28978",name:"Ixion",population:"resonant TNO"},
+  {id:"mpc:20000",designation:"20000",name:"Varuna",population:"TNO",physicalFacets:["fast-rotator"]},
+  {id:"mpc:19521",designation:"19521",name:"Chaos",population:"classical TNO"},
+  {id:"mpc:38628",designation:"38628",name:"Huya",population:"resonant TNO",physicalFacets:["binary"]},
+  {id:"mpc:229762",designation:"229762",name:"Gǃkúnǁʼhòmdímà",population:"TNO",physicalFacets:["binary"],metadata:{satellites:["Gǃòʼé ǃHú"]}},
+  {id:"mpc:15760",designation:"15760",name:"Albion",population:"classical TNO"},
+  {id:"mpc:486958",designation:"486958",name:"Arrokoth",population:"classical TNO",physicalFacets:["contact-binary"]},
+  {id:"mpc:47171",designation:"47171",name:"Lempo",population:"resonant TNO",resonance:"3:2 with Neptune",physicalFacets:["triple"],metadata:{satellites:["Hiisi","Paha"],system:"hierarchical triple"}}
 
   // Earth co-orbital validation group. Resonant state is not the MPC orbit class.
   {id:"mpc:3753",designation:"3753",name:"Cruithne",population:"Earth co-orbital",resonance:"horseshoe/compound"},
