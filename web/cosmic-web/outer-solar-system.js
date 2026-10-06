@@ -13,7 +13,7 @@ function draw(){ctx.fillStyle="#02040a";ctx.fillRect(0,0,innerWidth,innerHeight)
 function bind(id,fn){var el=document.getElementById(id);if(el)el.onclick=fn}
 bind("home",function(){mode="outer";zoom=1;status.textContent="Outer Solar System"});
 bind("inner",function(){mode="inner";zoom=1;status.textContent="Inner Solar System"});
-bind("coorbitals",function(){mode="coorbitals";zoom=1;status.textContent="Earth Co-orbitals · co-rotating heliocentric frame"});
+bind("coorbitals",function(){mode="coorbitals";zoom=18;status.textContent="Earth Co-orbitals · co-rotating heliocentric frame"});
 bind("nearsun",function(){mode="nearsun";zoom=3;status.textContent="Near-Sun · Atira / Vatira region"});
 canvas.onpointerdown=function(e){drag=[e.clientX,e.clientY]};
 canvas.onpointermove=function(e){if(!drag)return;yaw+=(e.clientX-drag[0])*.006;pitch+=(e.clientY-drag[1])*.006;drag=[e.clientX,e.clientY]};
