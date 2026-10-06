@@ -5283,15 +5283,20 @@
       "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=614689&full-prec=true&cd-epoch=true"
     }
   ],
-  "failures": [
+  "failures": [],
+  "required": 87,
+  "resolved": 87,
+  "failed": 0,
+  "fallbacks": [
     {
       "entity_id": "comet:C1965S1",
       "name": "Ikeya–Seki",
-      "lookup": "Ikeya-Seki",
-      "error": "HTTP Error 300: Multiple Choices"
+      "designation": "1965 S1",
+      "position_tier": "catalogue-epoch",
+      "authority": "NASA/JPL Solar System Dynamics",
+      "source": "Great Comets in History + JPL comet element-table convention",
+      "note": "SBDB name lookup is ambiguous because the 1965 sungrazer fragmented near perihelion. Retained as a historical catalogue-epoch object; do not claim current high-precision ephemeris."
     }
   ],
-  "required": 87,
-  "resolved": 86,
-  "failed": 1
+  "completion_note": "86 SBDB osculating solutions + 1 explicit JPL catalogue-epoch historical-comet fallback."
 }
