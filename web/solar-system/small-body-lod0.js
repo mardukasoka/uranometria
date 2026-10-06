@@ -4,6 +4,22 @@
 import { orbitalPositionAu, propagateTwoBody, populationChunk } from "./small-body-orbits.js";
 
 export const LOD0_OBJECTS = Object.freeze([
+  // Comet taxonomy anchors: dynamical family and solar-encounter behaviour are independent facets.
+  {id:"comet:2P",designation:"2P",name:"Encke",population:"Encke-type comet",orbitFacets:["sunskirter"],metadata:{cometClass:"ETc"}},
+  {id:"comet:55P",designation:"55P",name:"Tempel–Tuttle",population:"Halley-type comet",metadata:{cometClass:"HTC"}},
+  {id:"comet:109P",designation:"109P",name:"Swift–Tuttle",population:"Halley-type comet",metadata:{cometClass:"HTC"}},
+  {id:"comet:8P",designation:"8P",name:"Tuttle",population:"Halley-type comet",metadata:{cometClass:"HTC"}},
+  {id:"comet:46P",designation:"46P",name:"Wirtanen",population:"Jupiter-family comet",metadata:{cometClass:"JFC"}},
+  {id:"comet:73P",designation:"73P",name:"Schwassmann–Wachmann 3",population:"Jupiter-family comet",metadata:{cometClass:"JFC",phenomenon:"fragmenting"}},
+  {id:"comet:41P",designation:"41P",name:"Tuttle–Giacobini–Kresák",population:"Jupiter-family comet",metadata:{cometClass:"JFC"}},
+  {id:"comet:C1995O1",designation:"C/1995 O1",name:"Hale–Bopp",population:"long-period comet",metadata:{reservoir:"Oort cloud"}},
+  {id:"comet:C1996B2",designation:"C/1996 B2",name:"Hyakutake",population:"long-period comet",metadata:{reservoir:"Oort cloud"}},
+  {id:"comet:C2020F3",designation:"C/2020 F3",name:"NEOWISE",population:"long-period comet",metadata:{reservoir:"Oort cloud"}},
+  {id:"comet:C2012S1",designation:"C/2012 S1",name:"ISON",population:"long-period comet",orbitFacets:["sun-grazing","sundiver"],metadata:{group:"unaffiliated sungrazer",fate:"disrupted near perihelion"}},
+  {id:"comet:C2011W3",designation:"C/2011 W3",name:"Lovejoy",population:"Kreutz group comet",orbitFacets:["sun-grazing"],metadata:{group:"Kreutz",fate:"survived perihelion initially"}},
+  {id:"comet:C1965S1",designation:"C/1965 S1",name:"Ikeya–Seki",population:"Kreutz group comet",orbitFacets:["sun-grazing"],metadata:{group:"Kreutz"}},
+  {id:"comet:C1843D1",designation:"C/1843 D1",name:"Great March Comet",population:"Kreutz group comet",orbitFacets:["sun-grazing"],metadata:{group:"Kreutz"}},
+  {id:"comet:96P",designation:"96P",name:"Machholz 1",population:"near-Sun comet",orbitFacets:["sunskirter"],metadata:{complex:"Machholz complex"}},
   // Spacecraft-encountered small bodies: high-information observational anchors.
   {id:"mpc:253",designation:"253",name:"Mathilde",population:"Main Belt",physicalFacets:["spacecraft-visited"],metadata:{missions:["NEAR Shoemaker"],encounters:["flyby"]}},
   {id:"mpc:243",designation:"243",name:"Ida",population:"Main Belt",physicalFacets:["spacecraft-visited"],metadata:{missions:["Galileo"],encounters:["flyby"],satellites:["Dactyl"]}},
