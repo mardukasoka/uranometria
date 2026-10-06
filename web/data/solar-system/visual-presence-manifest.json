@@ -1,0 +1,624 @@
+{
+  "schema": "uranometria.solar-visual-presence-manifest.v0.1",
+  "status": "in-progress",
+  "generated_from": "web/solar-system/small-body-lod0.js",
+  "required_named_small_bodies": 87,
+  "completion_rule": "Every required_visual entity must resolve to a defensible best-position tier and be accepted by the renderer; identity-only records do not count as visually complete.",
+  "position_tiers": [
+    "ephemeris-state",
+    "osculating-propagated",
+    "catalogue-epoch",
+    "identity-only"
+  ],
+  "objects": [
+    {
+      "entity_id": "mpc:2013XY20",
+      "designation": "2013 XY20",
+      "name": "2013 XY20",
+      "population": "inner dark-comet candidate",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:2016GW221",
+      "designation": "2016 GW221",
+      "name": "2016 GW221",
+      "population": "inner dark-comet candidate",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:2006RH120",
+      "designation": "2006 RH120",
+      "name": "2006 RH120",
+      "population": "inner dark-comet candidate",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:2013BA74",
+      "designation": "2013 BA74",
+      "name": "2013 BA74",
+      "population": "inner dark-comet candidate",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:2010VL65",
+      "designation": "2010 VL65",
+      "name": "2010 VL65",
+      "population": "inner dark-comet candidate",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:2016NJ33",
+      "designation": "2016 NJ33",
+      "name": "2016 NJ33",
+      "population": "inner dark-comet candidate",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:1998KY26",
+      "designation": "1998 KY26",
+      "name": "1998 KY26",
+      "population": "inner dark-comet candidate",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:2010RF12",
+      "designation": "2010 RF12",
+      "name": "2010 RF12",
+      "population": "inner dark-comet candidate",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:2005VL1",
+      "designation": "2005 VL1",
+      "name": "2005 VL1",
+      "population": "inner dark-comet candidate",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:2012UR158",
+      "designation": "2012 UR158",
+      "name": "2012 UR158",
+      "population": "outer dark-comet candidate",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:1998FR11",
+      "designation": "1998 FR11",
+      "name": "1998 FR11",
+      "population": "outer dark-comet candidate",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:2005UY6",
+      "designation": "2005 UY6",
+      "name": "2005 UY6",
+      "population": "outer dark-comet candidate",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:2003RM",
+      "designation": "2003 RM",
+      "name": "2003 RM",
+      "population": "outer dark-comet candidate",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:139359",
+      "designation": "139359",
+      "name": "2001 ME1",
+      "population": "outer dark comet",
+      "required_visual": true
+    },
+    {
+      "entity_id": "comet:2P",
+      "designation": "2P",
+      "name": "Encke",
+      "population": "Encke-type comet",
+      "required_visual": true
+    },
+    {
+      "entity_id": "comet:55P",
+      "designation": "55P",
+      "name": "Tempel–Tuttle",
+      "population": "Halley-type comet",
+      "required_visual": true
+    },
+    {
+      "entity_id": "comet:109P",
+      "designation": "109P",
+      "name": "Swift–Tuttle",
+      "population": "Halley-type comet",
+      "required_visual": true
+    },
+    {
+      "entity_id": "comet:8P",
+      "designation": "8P",
+      "name": "Tuttle",
+      "population": "Halley-type comet",
+      "required_visual": true
+    },
+    {
+      "entity_id": "comet:46P",
+      "designation": "46P",
+      "name": "Wirtanen",
+      "population": "Jupiter-family comet",
+      "required_visual": true
+    },
+    {
+      "entity_id": "comet:73P",
+      "designation": "73P",
+      "name": "Schwassmann–Wachmann 3",
+      "population": "Jupiter-family comet",
+      "required_visual": true
+    },
+    {
+      "entity_id": "comet:41P",
+      "designation": "41P",
+      "name": "Tuttle–Giacobini–Kresák",
+      "population": "Jupiter-family comet",
+      "required_visual": true
+    },
+    {
+      "entity_id": "comet:C1995O1",
+      "designation": "C/1995 O1",
+      "name": "Hale–Bopp",
+      "population": "long-period comet",
+      "required_visual": true
+    },
+    {
+      "entity_id": "comet:C1996B2",
+      "designation": "C/1996 B2",
+      "name": "Hyakutake",
+      "population": "long-period comet",
+      "required_visual": true
+    },
+    {
+      "entity_id": "comet:C2020F3",
+      "designation": "C/2020 F3",
+      "name": "NEOWISE",
+      "population": "long-period comet",
+      "required_visual": true
+    },
+    {
+      "entity_id": "comet:C2012S1",
+      "designation": "C/2012 S1",
+      "name": "ISON",
+      "population": "long-period comet",
+      "required_visual": true
+    },
+    {
+      "entity_id": "comet:C2011W3",
+      "designation": "C/2011 W3",
+      "name": "Lovejoy",
+      "population": "Kreutz group comet",
+      "required_visual": true
+    },
+    {
+      "entity_id": "comet:C1965S1",
+      "designation": "C/1965 S1",
+      "name": "Ikeya–Seki",
+      "population": "Kreutz group comet",
+      "required_visual": true
+    },
+    {
+      "entity_id": "comet:C1843D1",
+      "designation": "C/1843 D1",
+      "name": "Great March Comet",
+      "population": "Kreutz group comet",
+      "required_visual": true
+    },
+    {
+      "entity_id": "comet:96P",
+      "designation": "96P",
+      "name": "Machholz 1",
+      "population": "near-Sun comet",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:253",
+      "designation": "253",
+      "name": "Mathilde",
+      "population": "Main Belt",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:243",
+      "designation": "243",
+      "name": "Ida",
+      "population": "Main Belt",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:9969",
+      "designation": "9969",
+      "name": "Braille",
+      "population": "Main Belt",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:25143",
+      "designation": "25143",
+      "name": "Itokawa",
+      "population": "NEO",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:162173",
+      "designation": "162173",
+      "name": "Ryugu",
+      "population": "Apollo",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:101955",
+      "designation": "101955",
+      "name": "Bennu",
+      "population": "Apollo",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:65803",
+      "designation": "65803",
+      "name": "Didymos",
+      "population": "Apollo",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:152830",
+      "designation": "152830",
+      "name": "Dinkinesh",
+      "population": "Main Belt",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:2867",
+      "designation": "2867",
+      "name": "Šteins",
+      "population": "Main Belt",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:21",
+      "designation": "21",
+      "name": "Lutetia",
+      "population": "Main Belt",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:5535",
+      "designation": "5535",
+      "name": "Annefrank",
+      "population": "Main Belt",
+      "required_visual": true
+    },
+    {
+      "entity_id": "comet:21P",
+      "designation": "21P",
+      "name": "Giacobini–Zinner",
+      "population": "comet",
+      "required_visual": true
+    },
+    {
+      "entity_id": "comet:1P",
+      "designation": "1P",
+      "name": "Halley",
+      "population": "comet",
+      "required_visual": true
+    },
+    {
+      "entity_id": "comet:19P",
+      "designation": "19P",
+      "name": "Borrelly",
+      "population": "comet",
+      "required_visual": true
+    },
+    {
+      "entity_id": "comet:81P",
+      "designation": "81P",
+      "name": "Wild 2",
+      "population": "comet",
+      "required_visual": true
+    },
+    {
+      "entity_id": "comet:9P",
+      "designation": "9P",
+      "name": "Tempel 1",
+      "population": "comet",
+      "required_visual": true
+    },
+    {
+      "entity_id": "comet:103P",
+      "designation": "103P",
+      "name": "Hartley 2",
+      "population": "comet",
+      "required_visual": true
+    },
+    {
+      "entity_id": "comet:67P",
+      "designation": "67P",
+      "name": "Churyumov–Gerasimenko",
+      "population": "comet",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:99942",
+      "designation": "99942",
+      "name": "Apophis",
+      "population": "Apollo",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:433",
+      "designation": "433",
+      "name": "Eros",
+      "population": "Amor",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:3200",
+      "designation": "3200",
+      "name": "Phaethon",
+      "population": "Apollo",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:2021PH27",
+      "designation": "2021 PH27",
+      "name": "2021 PH27",
+      "population": "Atira",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:2020AV2",
+      "designation": "2020 AV2",
+      "name": "2020 AV2",
+      "population": "Vatira",
+      "required_visual": true
+    },
+    {
+      "entity_id": "comet:322P",
+      "designation": "322P",
+      "name": "322P/SOHO",
+      "population": "near-Sun comet",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:1",
+      "designation": "1",
+      "name": "Ceres",
+      "population": "Main Belt",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:4",
+      "designation": "4",
+      "name": "Vesta",
+      "population": "Main Belt",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:2",
+      "designation": "2",
+      "name": "Pallas",
+      "population": "Main Belt",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:588",
+      "designation": "588",
+      "name": "Achilles",
+      "population": "Jupiter Trojan",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:2060",
+      "designation": "2060",
+      "name": "Chiron",
+      "population": "Centaur",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:5145",
+      "designation": "5145",
+      "name": "Pholus",
+      "population": "Centaur",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:10199",
+      "designation": "10199",
+      "name": "Chariklo",
+      "population": "Centaur",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:134340",
+      "designation": "134340",
+      "name": "Pluto",
+      "population": "TNO",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:136199",
+      "designation": "136199",
+      "name": "Eris",
+      "population": "detached TNO",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:136108",
+      "designation": "136108",
+      "name": "Haumea",
+      "population": "TNO",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:136472",
+      "designation": "136472",
+      "name": "Makemake",
+      "population": "TNO",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:90377",
+      "designation": "90377",
+      "name": "Sedna",
+      "population": "detached TNO",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:2018VG18",
+      "designation": "2018 VG18",
+      "name": "Farout",
+      "population": "TNO",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:2018AG37",
+      "designation": "2018 AG37",
+      "name": "Farfarout",
+      "population": "TNO",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:541132",
+      "designation": "541132",
+      "name": "Leleākūhonua",
+      "population": "detached TNO",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:225088",
+      "designation": "225088",
+      "name": "Gonggong",
+      "population": "TNO",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:50000",
+      "designation": "50000",
+      "name": "Quaoar",
+      "population": "TNO",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:90482",
+      "designation": "90482",
+      "name": "Orcus",
+      "population": "resonant TNO",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:120347",
+      "designation": "120347",
+      "name": "Salacia",
+      "population": "TNO",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:174567",
+      "designation": "174567",
+      "name": "Varda",
+      "population": "TNO",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:28978",
+      "designation": "28978",
+      "name": "Ixion",
+      "population": "resonant TNO",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:20000",
+      "designation": "20000",
+      "name": "Varuna",
+      "population": "TNO",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:19521",
+      "designation": "19521",
+      "name": "Chaos",
+      "population": "classical TNO",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:38628",
+      "designation": "38628",
+      "name": "Huya",
+      "population": "resonant TNO",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:229762",
+      "designation": "229762",
+      "name": "Gǃkúnǁʼhòmdímà",
+      "population": "TNO",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:15760",
+      "designation": "15760",
+      "name": "Albion",
+      "population": "classical TNO",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:486958",
+      "designation": "486958",
+      "name": "Arrokoth",
+      "population": "classical TNO",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:47171",
+      "designation": "47171",
+      "name": "Lempo",
+      "population": "resonant TNO",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:3753",
+      "designation": "3753",
+      "name": "Cruithne",
+      "population": "Earth co-orbital",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:2002AA29",
+      "designation": "2002 AA29",
+      "name": "2002 AA29",
+      "population": "Earth co-orbital",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:85770",
+      "designation": "85770",
+      "name": "1998 UP1",
+      "population": "Earth co-orbital",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:469219",
+      "designation": "469219",
+      "name": "Kamoʻoalewa",
+      "population": "Earth co-orbital",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:2010TK7",
+      "designation": "2010 TK7",
+      "name": "2010 TK7",
+      "population": "Earth co-orbital",
+      "required_visual": true
+    },
+    {
+      "entity_id": "mpc:614689",
+      "designation": "614689",
+      "name": "2020 XL5",
+      "population": "Earth co-orbital",
+      "required_visual": true
+    }
+  ]
+}
