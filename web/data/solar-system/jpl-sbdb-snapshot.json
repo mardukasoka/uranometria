@@ -1,0 +1,5302 @@
+{
+  "schema": "uranometria.jpl-sbdb-snapshot.v0.1",
+  "authority": "NASA/JPL SBDB",
+  "objects": [
+    {
+      "entity_id": "mpc:2013XY20",
+      "name": "2013 XY20",
+      "designation": "2013 XY20",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "24",
+      "condition_code": "2",
+      "solution_date": "2024-12-09 16:19:15",
+      "elements": {
+        "a": {
+          "value": "1.13418390061362",
+          "sigma": "3.5516E-7",
+          "units": "au"
+        },
+        "e": {
+          "value": ".1093322140987145",
+          "sigma": "1.2685E-7",
+          "units": null
+        },
+        "i": {
+          "value": "2.852646901565624",
+          "sigma": "6.6533E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "78.0824512513605",
+          "sigma": "3.5049E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "19.34285544771519",
+          "sigma": "6.8154E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "119.4266623188979",
+          "sigma": ".00021675",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "desc": "non-gravitational radial acceleration parameter",
+          "name": "A1",
+          "n": 1,
+          "title": "non-grav. radial accel.",
+          "kind": "EST",
+          "sigma": "6.376E-11",
+          "units": "au/d^2",
+          "value": "-1.507858660004565E-10"
+        },
+        {
+          "name": "A2",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "n": 2,
+          "title": "non-grav. transverse accel.",
+          "kind": "EST",
+          "units": "au/d^2",
+          "sigma": "3.38E-13",
+          "value": "5.656670616384763E-13"
+        },
+        {
+          "kind": "EST",
+          "title": "non-grav. normal accel.",
+          "value": "-9.216767541466917E-11",
+          "sigma": "9.207E-12",
+          "units": "au/d^2",
+          "n": 3,
+          "name": "A3",
+          "desc": "non-gravitational normal acceleration parameter"
+        },
+        {
+          "title": "normalizing factor",
+          "kind": "SET",
+          "units": null,
+          "sigma": null,
+          "value": "1.",
+          "desc": "normalizing factor [default 0.1112620426]",
+          "name": "ALN",
+          "n": 0
+        },
+        {
+          "title": "non-grav. model exp. k",
+          "kind": "SET",
+          "sigma": null,
+          "units": null,
+          "value": "0.",
+          "name": "NK",
+          "desc": "non-grav. model constant, exponent k [default 4.6142]",
+          "n": 0
+        },
+        {
+          "title": "non-grav. model exp. m",
+          "kind": "SET",
+          "sigma": null,
+          "units": null,
+          "value": "2.",
+          "name": "NM",
+          "desc": "non-grav. model constant, exponent m [default 2.15]",
+          "n": 0
+        },
+        {
+          "name": "R0",
+          "desc": "normalizing distance, au [default 2.808 au]",
+          "n": 0,
+          "title": "normalizing distance",
+          "kind": "SET",
+          "sigma": null,
+          "units": "au",
+          "value": "1."
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2013+XY20&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:2016GW221",
+      "name": "2016 GW221",
+      "designation": "2016 GW221",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "47",
+      "condition_code": "3",
+      "solution_date": "2025-07-18 05:47:02",
+      "elements": {
+        "a": {
+          "value": ".8280581688421442",
+          "sigma": "3.8036E-7",
+          "units": "au"
+        },
+        "e": {
+          "value": ".2667979401047085",
+          "sigma": "1.1623E-7",
+          "units": null
+        },
+        "i": {
+          "value": "3.760609109768254",
+          "sigma": "1.0056E-5",
+          "units": "deg"
+        },
+        "om": {
+          "value": "33.04976946959108",
+          "sigma": "7.0674E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "8.864368410261179",
+          "sigma": ".00010267",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "332.0687195108316",
+          "sigma": "5.9676E-5",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "name": "A1",
+          "desc": "non-gravitational radial acceleration parameter",
+          "n": 1,
+          "units": "au/d^2",
+          "sigma": "7.179E-11",
+          "value": "3.812772795208656E-11",
+          "title": "non-grav. radial accel.",
+          "kind": "EST"
+        },
+        {
+          "value": "-1.702054023944971E-13",
+          "units": "au/d^2",
+          "sigma": "1.764E-14",
+          "kind": "EST",
+          "title": "non-grav. transverse accel.",
+          "n": 2,
+          "desc": "non-gravitational transverse acceleration parameter",
+          "name": "A2"
+        },
+        {
+          "sigma": "6.633E-12",
+          "units": "au/d^2",
+          "value": "3.470103124427388E-11",
+          "title": "non-grav. normal accel.",
+          "kind": "EST",
+          "name": "A3",
+          "desc": "non-gravitational normal acceleration parameter",
+          "n": 3
+        },
+        {
+          "n": 0,
+          "name": "ALN",
+          "desc": "normalizing factor [default 0.1112620426]",
+          "kind": "SET",
+          "title": "normalizing factor",
+          "value": "1.",
+          "units": null,
+          "sigma": null
+        },
+        {
+          "title": "non-grav. model exp. k",
+          "kind": "SET",
+          "units": null,
+          "sigma": null,
+          "value": "0.",
+          "name": "NK",
+          "desc": "non-grav. model constant, exponent k [default 4.6142]",
+          "n": 0
+        },
+        {
+          "value": "2.",
+          "sigma": null,
+          "units": null,
+          "kind": "SET",
+          "title": "non-grav. model exp. m",
+          "n": 0,
+          "name": "NM",
+          "desc": "non-grav. model constant, exponent m [default 2.15]"
+        },
+        {
+          "desc": "normalizing distance, au [default 2.808 au]",
+          "name": "R0",
+          "n": 0,
+          "title": "normalizing distance",
+          "kind": "SET",
+          "units": "au",
+          "sigma": null,
+          "value": "1."
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2016+GW221&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:2006RH120",
+      "name": "2006 RH120",
+      "designation": "2006 RH120",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "55",
+      "condition_code": "2",
+      "solution_date": "2026-10-05 13:27:18",
+      "elements": {
+        "a": {
+          "value": "1.033232818800996",
+          "sigma": "5.293E-6",
+          "units": "au"
+        },
+        "e": {
+          "value": ".02449745482749494",
+          "sigma": "1.4857E-7",
+          "units": null
+        },
+        "i": {
+          "value": ".5943471837144731",
+          "sigma": "1.5222E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "51.21770220310715",
+          "sigma": ".00019838",
+          "units": "deg"
+        },
+        "w": {
+          "value": "9.951749071640322",
+          "sigma": ".00011191",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "233.8298072279429",
+          "sigma": ".025267",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "n": 1,
+          "title": "non-grav. radial accel.",
+          "desc": "non-gravitational radial acceleration parameter",
+          "value": "1.424887854561484E-10",
+          "sigma": "7.995E-12",
+          "units": "au/d^2",
+          "name": "A1",
+          "kind": "EST"
+        },
+        {
+          "kind": "EST",
+          "name": "A2",
+          "units": "au/d^2",
+          "sigma": "6.901E-12",
+          "value": "-4.616415596097852E-11",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "n": 2,
+          "title": "non-grav. transverse accel."
+        },
+        {
+          "n": 3,
+          "title": "non-grav. normal accel.",
+          "value": "-1.181462801710624E-11",
+          "desc": "non-gravitational normal acceleration parameter",
+          "sigma": "3.431E-12",
+          "name": "A3",
+          "units": "au/d^2",
+          "kind": "EST"
+        },
+        {
+          "desc": "normalizing factor [default 0.1112620426]",
+          "value": "1.",
+          "n": 0,
+          "title": "normalizing factor",
+          "kind": "SET",
+          "sigma": null,
+          "units": null,
+          "name": "ALN"
+        },
+        {
+          "title": "non-grav. model exp. k",
+          "n": 0,
+          "desc": "non-grav. model constant, exponent k [default 4.6142]",
+          "value": "0.",
+          "units": null,
+          "name": "NK",
+          "sigma": null,
+          "kind": "SET"
+        },
+        {
+          "value": "2.",
+          "desc": "non-grav. model constant, exponent m [default 2.15]",
+          "title": "non-grav. model exp. m",
+          "n": 0,
+          "kind": "SET",
+          "units": null,
+          "name": "NM",
+          "sigma": null
+        },
+        {
+          "sigma": null,
+          "units": null,
+          "name": "NN",
+          "kind": "SET",
+          "n": 0,
+          "title": "non-grav. model exp. n",
+          "desc": "non-grav. model constant, exponent n [default 5.093]",
+          "value": "0."
+        },
+        {
+          "desc": "normalizing distance, au [default 2.808 au]",
+          "value": "1.",
+          "n": 0,
+          "title": "normalizing distance",
+          "kind": "SET",
+          "sigma": null,
+          "units": "au",
+          "name": "R0"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2006+RH120&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:2013BA74",
+      "name": "2013 BA74",
+      "designation": "2013 BA74",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "26",
+      "condition_code": "4",
+      "solution_date": "2024-12-09 16:02:14",
+      "elements": {
+        "a": {
+          "value": "1.754557348253017",
+          "sigma": "1.031E-5",
+          "units": "au"
+        },
+        "e": {
+          "value": ".4447288151545136",
+          "sigma": "7.1709E-7",
+          "units": null
+        },
+        "i": {
+          "value": "5.222478240029403",
+          "sigma": "9.1909E-5",
+          "units": "deg"
+        },
+        "om": {
+          "value": "310.5409985576862",
+          "sigma": "8.6451E-6",
+          "units": "deg"
+        },
+        "w": {
+          "value": "203.4298949363977",
+          "sigma": "8.1018E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "255.514004375747",
+          "sigma": ".00029377",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "n": 1,
+          "name": "A1",
+          "value": "2.461350513587601E-10",
+          "title": "non-grav. radial accel.",
+          "sigma": "1.842E-9",
+          "kind": "EST",
+          "units": "au/d^2",
+          "desc": "non-gravitational radial acceleration parameter"
+        },
+        {
+          "n": 2,
+          "name": "A2",
+          "value": "3.645685115778328E-13",
+          "kind": "EST",
+          "sigma": "4.571E-13",
+          "units": "au/d^2",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "title": "non-grav. transverse accel."
+        },
+        {
+          "name": "A3",
+          "value": "1.916800638650594E-11",
+          "n": 3,
+          "title": "non-grav. normal accel.",
+          "units": "au/d^2",
+          "desc": "non-gravitational normal acceleration parameter",
+          "kind": "EST",
+          "sigma": "5.303E-12"
+        },
+        {
+          "units": null,
+          "desc": "normalizing factor [default 0.1112620426]",
+          "sigma": null,
+          "kind": "SET",
+          "title": "normalizing factor",
+          "value": "1.",
+          "name": "ALN",
+          "n": 0
+        },
+        {
+          "value": "0.",
+          "name": "NK",
+          "n": 0,
+          "units": null,
+          "desc": "non-grav. model constant, exponent k [default 4.6142]",
+          "kind": "SET",
+          "sigma": null,
+          "title": "non-grav. model exp. k"
+        },
+        {
+          "n": 0,
+          "name": "NM",
+          "value": "2.",
+          "title": "non-grav. model exp. m",
+          "sigma": null,
+          "kind": "SET",
+          "desc": "non-grav. model constant, exponent m [default 2.15]",
+          "units": null
+        },
+        {
+          "n": 0,
+          "value": "1.",
+          "name": "R0",
+          "title": "normalizing distance",
+          "kind": "SET",
+          "sigma": null,
+          "units": "au",
+          "desc": "normalizing distance, au [default 2.808 au]"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2013+BA74&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:2010VL65",
+      "name": "2010 VL65",
+      "designation": "2010 VL65",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "9",
+      "condition_code": "6",
+      "solution_date": "2022-08-28 05:57:51",
+      "elements": {
+        "a": {
+          "value": "1.071585328581235",
+          "sigma": ".0012447",
+          "units": "au"
+        },
+        "e": {
+          "value": ".1480431703988835",
+          "sigma": ".0012548",
+          "units": null
+        },
+        "i": {
+          "value": "4.229416422596898",
+          "sigma": ".18451",
+          "units": "deg"
+        },
+        "om": {
+          "value": "222.5302751158851",
+          "sigma": ".22518",
+          "units": "deg"
+        },
+        "w": {
+          "value": "252.699022035823",
+          "sigma": "1.0646",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "352.6081037646305",
+          "sigma": "2.3839",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2010+VL65&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:2016NJ33",
+      "name": "2016 NJ33",
+      "designation": "2016 NJ33",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "25",
+      "condition_code": "3",
+      "solution_date": "2022-12-20 14:41:05",
+      "elements": {
+        "a": {
+          "value": "1.314508350622172",
+          "sigma": "1.3245E-6",
+          "units": "au"
+        },
+        "e": {
+          "value": ".2099895743561496",
+          "sigma": "5.6243E-7",
+          "units": null
+        },
+        "i": {
+          "value": "6.619681269649745",
+          "sigma": "2.3589E-5",
+          "units": "deg"
+        },
+        "om": {
+          "value": "279.4307800820562",
+          "sigma": "1.3657E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "24.48275533347982",
+          "sigma": "4.962E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "203.6855140358769",
+          "sigma": "3.8317E-5",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "kind": "EST",
+          "sigma": "2.928E-10",
+          "units": "au/d^2",
+          "name": "A1",
+          "value": "9.475402454443151E-10",
+          "desc": "non-gravitational radial acceleration parameter",
+          "title": "non-grav. radial accel.",
+          "n": 1
+        },
+        {
+          "desc": "non-gravitational transverse acceleration parameter",
+          "value": "-5.486101259217607E-13",
+          "title": "non-grav. transverse accel.",
+          "n": 2,
+          "kind": "EST",
+          "units": "au/d^2",
+          "name": "A2",
+          "sigma": "1.909E-13"
+        },
+        {
+          "kind": "EST",
+          "units": "au/d^2",
+          "name": "A3",
+          "sigma": "1.621E-11",
+          "value": "8.484934726920783E-11",
+          "desc": "non-gravitational normal acceleration parameter",
+          "n": 3,
+          "title": "non-grav. normal accel."
+        },
+        {
+          "n": 0,
+          "title": "normalizing factor",
+          "desc": "normalizing factor [default 0.1112620426]",
+          "value": "1.",
+          "sigma": null,
+          "units": null,
+          "name": "ALN",
+          "kind": "SET"
+        },
+        {
+          "sigma": null,
+          "units": null,
+          "name": "NK",
+          "kind": "SET",
+          "title": "non-grav. model exp. k",
+          "n": 0,
+          "value": "0.",
+          "desc": "non-grav. model constant, exponent k [default 4.6142]"
+        },
+        {
+          "n": 0,
+          "title": "non-grav. model exp. m",
+          "desc": "non-grav. model constant, exponent m [default 2.15]",
+          "value": "2.",
+          "name": "NM",
+          "units": null,
+          "sigma": null,
+          "kind": "SET"
+        },
+        {
+          "n": 0,
+          "title": "non-grav. model exp. n",
+          "value": "0.",
+          "desc": "non-grav. model constant, exponent n [default 5.093]",
+          "sigma": null,
+          "units": null,
+          "name": "NN",
+          "kind": "SET"
+        },
+        {
+          "value": "1.",
+          "desc": "normalizing distance, au [default 2.808 au]",
+          "title": "normalizing distance",
+          "n": 0,
+          "kind": "SET",
+          "sigma": null,
+          "name": "R0",
+          "units": "au"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2016+NJ33&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:1998KY26",
+      "name": "1998 KY26",
+      "designation": "1998 KY26",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "36",
+      "condition_code": "2",
+      "solution_date": "2024-05-07 09:53:57",
+      "elements": {
+        "a": {
+          "value": "1.228859811859051",
+          "sigma": "1.5704E-7",
+          "units": "au"
+        },
+        "e": {
+          "value": ".2000498225862209",
+          "sigma": "6.73E-8",
+          "units": null
+        },
+        "i": {
+          "value": "1.491131387730072",
+          "sigma": "2.138E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "84.18217649998975",
+          "sigma": "5.7045E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "210.0032740505378",
+          "sigma": "7.7154E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "145.6930217309096",
+          "sigma": "1.1899E-5",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "kind": "EST",
+          "sigma": "3.867E-11",
+          "units": "au/d^2",
+          "name": "A1",
+          "desc": "non-gravitational radial acceleration parameter",
+          "value": "3.655395414270661E-11",
+          "n": 1,
+          "title": "non-grav. radial accel."
+        },
+        {
+          "title": "non-grav. transverse accel.",
+          "n": 2,
+          "desc": "non-gravitational transverse acceleration parameter",
+          "value": "-2.196384257496804E-13",
+          "sigma": "4.866E-14",
+          "units": "au/d^2",
+          "name": "A2",
+          "kind": "EST"
+        },
+        {
+          "value": "1.686333710048786E-12",
+          "desc": "non-gravitational normal acceleration parameter",
+          "title": "non-grav. normal accel.",
+          "n": 3,
+          "kind": "EST",
+          "units": "au/d^2",
+          "name": "A3",
+          "sigma": "1.121E-12"
+        },
+        {
+          "value": "1.",
+          "desc": "normalizing factor [default 0.1112620426]",
+          "n": 0,
+          "title": "normalizing factor",
+          "kind": "SET",
+          "sigma": null,
+          "units": null,
+          "name": "ALN"
+        },
+        {
+          "n": 0,
+          "title": "non-grav. model exp. k",
+          "value": "0.",
+          "desc": "non-grav. model constant, exponent k [default 4.6142]",
+          "units": null,
+          "name": "NK",
+          "sigma": null,
+          "kind": "SET"
+        },
+        {
+          "kind": "SET",
+          "sigma": null,
+          "name": "NM",
+          "units": null,
+          "value": "2.",
+          "desc": "non-grav. model constant, exponent m [default 2.15]",
+          "n": 0,
+          "title": "non-grav. model exp. m"
+        },
+        {
+          "kind": "SET",
+          "sigma": null,
+          "units": null,
+          "name": "NN",
+          "value": "0.",
+          "desc": "non-grav. model constant, exponent n [default 5.093]",
+          "n": 0,
+          "title": "non-grav. model exp. n"
+        },
+        {
+          "n": 0,
+          "title": "normalizing distance",
+          "desc": "normalizing distance, au [default 2.808 au]",
+          "value": "1.",
+          "sigma": null,
+          "units": "au",
+          "name": "R0",
+          "kind": "SET"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=1998+KY26&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:2010RF12",
+      "name": "2010 RF12",
+      "designation": "2010 RF12",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "25",
+      "condition_code": "2",
+      "solution_date": "2022-12-20 14:32:45",
+      "elements": {
+        "a": {
+          "value": "1.061430522809552",
+          "sigma": "2.2012E-7",
+          "units": "au"
+        },
+        "e": {
+          "value": ".188308686454983",
+          "sigma": "1.4461E-7",
+          "units": null
+        },
+        "i": {
+          "value": ".8827508322867568",
+          "sigma": "3.4332E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "163.6861833546806",
+          "sigma": ".00011441",
+          "units": "deg"
+        },
+        "w": {
+          "value": "267.4411553649549",
+          "sigma": ".00011886",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "86.31967335304343",
+          "sigma": ".00011398",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "kind": "EST",
+          "units": "au/d^2",
+          "n": 1,
+          "title": "non-grav. radial accel.",
+          "sigma": "5.822E-11",
+          "value": "3.410408812498951E-11",
+          "name": "A1",
+          "desc": "non-gravitational radial acceleration parameter"
+        },
+        {
+          "kind": "EST",
+          "n": 2,
+          "units": "au/d^2",
+          "title": "non-grav. transverse accel.",
+          "sigma": "2.125E-13",
+          "value": "-2.121587352247006E-13",
+          "name": "A2",
+          "desc": "non-gravitational transverse acceleration parameter"
+        },
+        {
+          "kind": "EST",
+          "desc": "non-gravitational normal acceleration parameter",
+          "name": "A3",
+          "value": "-1.507549026996071E-11",
+          "sigma": "1.415E-12",
+          "n": 3,
+          "title": "non-grav. normal accel.",
+          "units": "au/d^2"
+        },
+        {
+          "kind": "SET",
+          "value": "1.",
+          "sigma": null,
+          "units": null,
+          "n": 0,
+          "title": "normalizing factor",
+          "name": "ALN",
+          "desc": "normalizing factor [default 0.1112620426]"
+        },
+        {
+          "kind": "SET",
+          "value": "0.",
+          "sigma": null,
+          "title": "non-grav. model exp. k",
+          "n": 0,
+          "units": null,
+          "desc": "non-grav. model constant, exponent k [default 4.6142]",
+          "name": "NK"
+        },
+        {
+          "name": "NM",
+          "desc": "non-grav. model constant, exponent m [default 2.15]",
+          "title": "non-grav. model exp. m",
+          "n": 0,
+          "units": null,
+          "sigma": null,
+          "value": "2.",
+          "kind": "SET"
+        },
+        {
+          "kind": "SET",
+          "desc": "non-grav. model constant, exponent n [default 5.093]",
+          "name": "NN",
+          "value": "0.",
+          "sigma": null,
+          "n": 0,
+          "units": null,
+          "title": "non-grav. model exp. n"
+        },
+        {
+          "value": "1.",
+          "sigma": null,
+          "n": 0,
+          "title": "normalizing distance",
+          "units": "au",
+          "desc": "normalizing distance, au [default 2.808 au]",
+          "name": "R0",
+          "kind": "SET"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2010+RF12&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:2005VL1",
+      "name": "2005 VL1",
+      "designation": "2005 VL1",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "24",
+      "condition_code": "4",
+      "solution_date": "2022-12-20 14:27:33",
+      "elements": {
+        "a": {
+          "value": ".8911724522403802",
+          "sigma": "2.6497E-6",
+          "units": "au"
+        },
+        "e": {
+          "value": ".2246224084495054",
+          "sigma": "3.9185E-6",
+          "units": null
+        },
+        "i": {
+          "value": ".235612789151307",
+          "sigma": "3.8057E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "37.8779507443325",
+          "sigma": ".0016299",
+          "units": "deg"
+        },
+        "w": {
+          "value": "227.8003035717325",
+          "sigma": ".0019962",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "284.0395818122448",
+          "sigma": ".0020898",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "desc": "non-gravitational radial acceleration parameter",
+          "value": "-8.298571098423042E-10",
+          "units": "au/d^2",
+          "sigma": "7.589E-10",
+          "name": "A1",
+          "kind": "EST",
+          "n": 1,
+          "title": "non-grav. radial accel."
+        },
+        {
+          "units": "au/d^2",
+          "value": "-8.320601552689281E-13",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "title": "non-grav. transverse accel.",
+          "kind": "EST",
+          "n": 2,
+          "sigma": "5.612E-13",
+          "name": "A2"
+        },
+        {
+          "units": "au/d^2",
+          "value": "-2.41448873986245E-11",
+          "desc": "non-gravitational normal acceleration parameter",
+          "title": "non-grav. normal accel.",
+          "kind": "EST",
+          "n": 3,
+          "name": "A3",
+          "sigma": "3.947E-12"
+        },
+        {
+          "kind": "SET",
+          "n": 0,
+          "title": "normalizing factor",
+          "sigma": null,
+          "name": "ALN",
+          "value": "1.",
+          "units": null,
+          "desc": "normalizing factor [default 0.1112620426]"
+        },
+        {
+          "units": null,
+          "value": "0.",
+          "desc": "non-grav. model constant, exponent k [default 4.6142]",
+          "title": "non-grav. model exp. k",
+          "n": 0,
+          "kind": "SET",
+          "name": "NK",
+          "sigma": null
+        },
+        {
+          "title": "non-grav. model exp. m",
+          "n": 0,
+          "kind": "SET",
+          "name": "NM",
+          "sigma": null,
+          "units": null,
+          "value": "2.",
+          "desc": "non-grav. model constant, exponent m [default 2.15]"
+        },
+        {
+          "desc": "non-grav. model constant, exponent n [default 5.093]",
+          "value": "0.",
+          "units": null,
+          "name": "NN",
+          "sigma": null,
+          "kind": "SET",
+          "n": 0,
+          "title": "non-grav. model exp. n"
+        },
+        {
+          "sigma": null,
+          "name": "R0",
+          "kind": "SET",
+          "n": 0,
+          "title": "normalizing distance",
+          "desc": "normalizing distance, au [default 2.808 au]",
+          "value": "1.",
+          "units": "au"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2005+VL1&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:2012UR158",
+      "name": "2012 UR158",
+      "designation": "2012 UR158",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "34",
+      "condition_code": "0",
+      "solution_date": "2026-08-05 06:50:30",
+      "elements": {
+        "a": {
+          "value": "2.232371769193244",
+          "sigma": "6.6245E-8",
+          "units": "au"
+        },
+        "e": {
+          "value": ".8578302656570828",
+          "sigma": "2.5251E-8",
+          "units": null
+        },
+        "i": {
+          "value": "3.191831444979138",
+          "sigma": "5.0969E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "286.4290372783936",
+          "sigma": "8.6821E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "239.449638472669",
+          "sigma": "8.5999E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "9.37757221375977",
+          "sigma": "1.0925E-5",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "sigma": "6.06E-14",
+          "units": "au/d^2",
+          "name": "A2",
+          "kind": "EST",
+          "n": 1,
+          "title": "non-grav. transverse accel.",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "value": "-7.202400309280564E-12"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2012+UR158&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:1998FR11",
+      "name": "1998 FR11",
+      "designation": "1998 FR11",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "107",
+      "condition_code": "0",
+      "solution_date": "2026-08-31 06:25:23",
+      "elements": {
+        "a": {
+          "value": "2.806314581768268",
+          "sigma": "3.8458E-8",
+          "units": "au"
+        },
+        "e": {
+          "value": ".7077326296692875",
+          "sigma": "3.2907E-8",
+          "units": null
+        },
+        "i": {
+          "value": "6.682095853336361",
+          "sigma": "5.9542E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "129.8478478710275",
+          "sigma": "4.9925E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "158.6215162205811",
+          "sigma": "5.0658E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "334.5095246478721",
+          "sigma": "1.6756E-5",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "value": "2.599982121116447E-13",
+          "name": "A2",
+          "n": 1,
+          "title": "non-grav. transverse accel.",
+          "units": "au/d^2",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "sigma": "5.801E-14",
+          "kind": "EST"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=1998+FR11&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:2005UY6",
+      "name": "2005 UY6",
+      "designation": "2005 UY6",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "66",
+      "condition_code": "0",
+      "solution_date": "2026-08-08 06:21:44",
+      "elements": {
+        "a": {
+          "value": "2.248758764046847",
+          "sigma": "4.4757E-8",
+          "units": "au"
+        },
+        "e": {
+          "value": ".8728379282718522",
+          "sigma": "2.8808E-8",
+          "units": null
+        },
+        "i": {
+          "value": "12.21905224178176",
+          "sigma": "7.7559E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "343.5508413143991",
+          "sigma": "2.9604E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "180.9173908437998",
+          "sigma": "3.1255E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "2.964401341850615",
+          "sigma": "5.4092E-6",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "name": "A2",
+          "sigma": "4.775E-14",
+          "title": "non-grav. transverse accel.",
+          "n": 1,
+          "kind": "EST",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "units": "au/d^2",
+          "value": "-5.381352489049309E-13"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2005+UY6&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:2003RM",
+      "name": "2003 RM",
+      "designation": "2003 RM",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "75",
+      "condition_code": "0",
+      "solution_date": "2026-04-14 06:49:57",
+      "elements": {
+        "a": {
+          "value": "2.903605196362838",
+          "sigma": "1.2675E-8",
+          "units": "au"
+        },
+        "e": {
+          "value": ".6106030134649946",
+          "sigma": "2.8071E-8",
+          "units": null
+        },
+        "i": {
+          "value": "11.19164741242581",
+          "sigma": "3.335E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "335.0057542883181",
+          "sigma": "9.9305E-6",
+          "units": "deg"
+        },
+        "w": {
+          "value": "326.1956637828101",
+          "sigma": "1.0219E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "211.4590981189618",
+          "sigma": "2.7842E-6",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "n": 1,
+          "name": "A2",
+          "value": "3.286870537542536E-12",
+          "title": "non-grav. transverse accel.",
+          "sigma": "2.983E-14",
+          "kind": "EST",
+          "units": "au/d^2",
+          "desc": "non-gravitational transverse acceleration parameter"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2003+RM&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:139359",
+      "name": "2001 ME1",
+      "designation": "139359",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "136",
+      "condition_code": "0",
+      "solution_date": "2026-06-16 11:32:04",
+      "elements": {
+        "a": {
+          "value": "2.634650239411342",
+          "sigma": "3.5874E-8",
+          "units": "au"
+        },
+        "e": {
+          "value": ".8696747013569716",
+          "sigma": "1.5591E-8",
+          "units": null
+        },
+        "i": {
+          "value": "5.95480413405054",
+          "sigma": "5.0711E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "84.58332817941987",
+          "sigma": "3.088E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "302.3804834506502",
+          "sigma": "3.0877E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "277.1178590139854",
+          "sigma": "1.498E-5",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "title": "non-grav. transverse accel.",
+          "kind": "EST",
+          "sigma": "1.944E-14",
+          "units": "au/d^2",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "n": 1,
+          "name": "A2",
+          "value": "-2.375397559329012E-13"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=139359&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "comet:2P",
+      "name": "Encke",
+      "designation": "2P",
+      "epoch_jd_tdb": 2460147.5,
+      "equinox": "J2000",
+      "orbit_id": "K273/20",
+      "condition_code": "1",
+      "solution_date": "2026-10-01 15:11:48",
+      "elements": {
+        "a": {
+          "value": "2.218871117073451",
+          "sigma": "2.6238E-7",
+          "units": "au"
+        },
+        "e": {
+          "value": ".8469532425568865",
+          "sigma": "2.0595E-7",
+          "units": null
+        },
+        "i": {
+          "value": "11.33709697552753",
+          "sigma": "1.7383E-5",
+          "units": "deg"
+        },
+        "om": {
+          "value": "334.0240655739339",
+          "sigma": "5.4597E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "187.2820411908973",
+          "sigma": "5.4827E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "332.40865236365",
+          "sigma": "1.5659E-5",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "desc": "non-gravitational radial acceleration parameter",
+          "value": "2.041002161404434E-10",
+          "units": "au/d^2",
+          "sigma": "5.735E-11",
+          "name": "A1",
+          "kind": "EST",
+          "n": 1,
+          "title": "non-grav. radial accel."
+        },
+        {
+          "desc": "non-gravitational transverse acceleration parameter",
+          "value": "2.635817945270534E-12",
+          "units": "au/d^2",
+          "name": "A2",
+          "sigma": "5.255E-13",
+          "n": 2,
+          "kind": "EST",
+          "title": "non-grav. transverse accel."
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2P&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "comet:55P",
+      "name": "Tempel–Tuttle",
+      "designation": "55P",
+      "epoch_jd_tdb": 2451040.5,
+      "equinox": "J2000",
+      "orbit_id": "J985/69",
+      "condition_code": null,
+      "solution_date": "2002-01-03 16:05:39",
+      "elements": {
+        "a": {
+          "value": "10.3383382297577",
+          "sigma": "5.1724E-7",
+          "units": "au"
+        },
+        "e": {
+          "value": "0.905552720972412",
+          "sigma": "6.8031E-8",
+          "units": null
+        },
+        "i": {
+          "value": "162.486575379434",
+          "sigma": "1.9316E-5",
+          "units": "deg"
+        },
+        "om": {
+          "value": "235.270989149082",
+          "sigma": ".00010014",
+          "units": "deg"
+        },
+        "w": {
+          "value": "172.5002736828059",
+          "sigma": ".000146",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "4.97833968468816",
+          "sigma": "1.3565E-6",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "n": 1,
+          "title": "non-grav. radial accel.",
+          "units": "au/d^2",
+          "sigma": "3.486E-10",
+          "value": "1.580981480640338E-9",
+          "name": "A1",
+          "desc": "non-gravitational radial acceleration parameter",
+          "kind": "EST"
+        },
+        {
+          "name": "A2",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "title": "non-grav. transverse accel.",
+          "n": 2,
+          "units": "au/d^2",
+          "sigma": "1.974E-13",
+          "value": "9.186415654543854E-11",
+          "kind": "EST"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=55P&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "comet:109P",
+      "name": "Swift–Tuttle",
+      "designation": "109P",
+      "epoch_jd_tdb": 2450000.5,
+      "equinox": "J2000",
+      "orbit_id": "32",
+      "condition_code": "0",
+      "solution_date": "2001-10-09 15:34:49",
+      "elements": {
+        "a": {
+          "value": "26.0920694978266",
+          "sigma": "8.2048E-7",
+          "units": "au"
+        },
+        "e": {
+          "value": "0.963225755046038",
+          "sigma": "6.8344E-9",
+          "units": null
+        },
+        "i": {
+          "value": "113.453816997171",
+          "sigma": "2.1907E-5",
+          "units": "deg"
+        },
+        "om": {
+          "value": "139.3811920815948",
+          "sigma": "2.7841E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "152.9821676305871",
+          "sigma": "3.2865E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "7.631696167124212",
+          "sigma": "3.1321E-7",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=109P&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "comet:8P",
+      "name": "Tuttle",
+      "designation": "8P",
+      "epoch_jd_tdb": 2454701.5,
+      "equinox": "J2000",
+      "orbit_id": "K215/24",
+      "condition_code": "0",
+      "solution_date": "2022-05-02 08:47:13",
+      "elements": {
+        "a": {
+          "value": "5.700291361749948",
+          "sigma": "5.1768E-7",
+          "units": "au"
+        },
+        "e": {
+          "value": ".8197876162331501",
+          "sigma": "4.0927E-8",
+          "units": null
+        },
+        "i": {
+          "value": "54.98196882510133",
+          "sigma": "1.2242E-5",
+          "units": "deg"
+        },
+        "om": {
+          "value": "270.3421615706648",
+          "sigma": "3.0858E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "207.5115175085094",
+          "sigma": "2.8668E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "15.1344743300404",
+          "sigma": "7.8365E-7",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "desc": "non-gravitational radial acceleration parameter",
+          "value": "4.215027125368865E-10",
+          "units": "au/d^2",
+          "name": "A1",
+          "sigma": "4.261E-11",
+          "n": 1,
+          "kind": "EST",
+          "title": "non-grav. radial accel."
+        },
+        {
+          "name": "A2",
+          "sigma": "1.531E-11",
+          "kind": "EST",
+          "n": 2,
+          "title": "non-grav. transverse accel.",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "value": "-1.735480698418667E-11",
+          "units": "au/d^2"
+        },
+        {
+          "name": "A3",
+          "sigma": "6.555E-11",
+          "kind": "EST",
+          "n": 3,
+          "title": "non-grav. normal accel.",
+          "desc": "non-gravitational normal acceleration parameter",
+          "value": "-4.638590130371208E-11",
+          "units": "au/d^2"
+        },
+        {
+          "units": "d",
+          "value": "67.49843041665493",
+          "desc": "non-gravitational perihelion-maximum offset",
+          "title": "non-grav. perihelion offset",
+          "kind": "EST",
+          "n": 4,
+          "name": "DT",
+          "sigma": "12.83"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=8P&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "comet:46P",
+      "name": "Wirtanen",
+      "designation": "46P",
+      "epoch_jd_tdb": 2458465.5,
+      "equinox": "J2000",
+      "orbit_id": "K243/4",
+      "condition_code": "2",
+      "solution_date": "2024-02-21 09:51:41",
+      "elements": {
+        "a": {
+          "value": "3.092661874753647",
+          "sigma": "2.2324E-6",
+          "units": "au"
+        },
+        "e": {
+          "value": ".6587550054889648",
+          "sigma": "2.402E-7",
+          "units": null
+        },
+        "i": {
+          "value": "11.7475487582537",
+          "sigma": "2.6465E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "82.15763392494087",
+          "sigma": "4.0743E-6",
+          "units": "deg"
+        },
+        "w": {
+          "value": "356.341071857073",
+          "sigma": "7.7039E-6",
+          "units": "deg"
+        },
+        "ma": {
+          "value": ".01247351001231614",
+          "sigma": "1.3887E-6",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "value": "4.096574451232726E-9",
+          "units": "au/d^2",
+          "sigma": "4.624E-11",
+          "kind": "EST",
+          "title": "non-grav. radial accel.",
+          "n": 1,
+          "name": "A1",
+          "desc": "non-gravitational radial acceleration parameter"
+        },
+        {
+          "value": "-1.246898187648724E-9",
+          "units": "au/d^2",
+          "sigma": "3.526E-11",
+          "kind": "EST",
+          "title": "non-grav. transverse accel.",
+          "n": 2,
+          "name": "A2",
+          "desc": "non-gravitational transverse acceleration parameter"
+        },
+        {
+          "kind": "EST",
+          "title": "non-grav. normal accel.",
+          "value": "6.905971929654713E-10",
+          "units": "au/d^2",
+          "sigma": "2.636E-11",
+          "n": 3,
+          "name": "A3",
+          "desc": "non-gravitational normal acceleration parameter"
+        },
+        {
+          "name": "DT",
+          "desc": "non-gravitational perihelion-maximum offset",
+          "n": 4,
+          "title": "non-grav. perihelion offset",
+          "kind": "EST",
+          "sigma": "1.643",
+          "units": "d",
+          "value": "-14.14793441438829"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=46P&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "comet:73P",
+      "name": "Schwassmann–Wachmann 3",
+      "designation": "73P-C",
+      "epoch_jd_tdb": 2455980.5,
+      "equinox": "J2000",
+      "orbit_id": "K114/1",
+      "condition_code": "0",
+      "solution_date": "2012-02-22 16:52:19",
+      "elements": {
+        "a": {
+          "value": "3.063468722115394",
+          "sigma": "2.7904E-7",
+          "units": "au"
+        },
+        "e": {
+          "value": ".6922258013072282",
+          "sigma": "1.2472E-7",
+          "units": null
+        },
+        "i": {
+          "value": "11.37915705677313",
+          "sigma": "2.9524E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "69.84321690348189",
+          "sigma": "1.1269E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "198.8705914205202",
+          "sigma": "2.585E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "23.73073531906494",
+          "sigma": "1.9723E-5",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "sigma": "3.712E-11",
+          "units": "au/d^2",
+          "name": "A1",
+          "kind": "EST",
+          "title": "non-grav. radial accel.",
+          "n": 1,
+          "value": "6.544631766354118E-9",
+          "desc": "non-gravitational radial acceleration parameter"
+        },
+        {
+          "desc": "non-gravitational transverse acceleration parameter",
+          "value": "4.832373496932443E-10",
+          "title": "non-grav. transverse accel.",
+          "n": 2,
+          "kind": "EST",
+          "name": "A2",
+          "units": "au/d^2",
+          "sigma": "1.635E-11"
+        },
+        {
+          "kind": "EST",
+          "units": "d",
+          "name": "DT",
+          "sigma": ".3937",
+          "desc": "non-gravitational perihelion-maximum offset",
+          "value": "-12.17581160807467",
+          "n": 3,
+          "title": "non-grav. perihelion offset"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?des=73P-C&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "comet:41P",
+      "name": "Tuttle–Giacobini–Kresák",
+      "designation": "41P",
+      "epoch_jd_tdb": 2457857.5,
+      "equinox": "J2000",
+      "orbit_id": "K222/6",
+      "condition_code": "3",
+      "solution_date": "2023-09-29 16:16:14",
+      "elements": {
+        "a": {
+          "value": "3.085209301369051",
+          "sigma": "6.6056E-6",
+          "units": "au"
+        },
+        "e": {
+          "value": ".6612733030060237",
+          "sigma": "7.1059E-7",
+          "units": null
+        },
+        "i": {
+          "value": "9.228465743613803",
+          "sigma": "7.2833E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "141.0589723608447",
+          "sigma": "1.461E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "62.16674348896015",
+          "sigma": "2.1054E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": ".2268016883212529",
+          "sigma": "1.8868E-6",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "name": "A1",
+          "value": "6.596751028860742E-9",
+          "n": 1,
+          "title": "non-grav. radial accel.",
+          "units": "au/d^2",
+          "desc": "non-gravitational radial acceleration parameter",
+          "kind": "EST",
+          "sigma": "5.811E-11"
+        },
+        {
+          "units": "au/d^2",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "sigma": "7.672E-11",
+          "kind": "EST",
+          "title": "non-grav. transverse accel.",
+          "name": "A2",
+          "value": "-2.075555677867367E-10",
+          "n": 2
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=41P&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "comet:C1995O1",
+      "name": "Hale–Bopp",
+      "designation": "C/1995 O1",
+      "epoch_jd_tdb": 2459837.5,
+      "equinox": "J2000",
+      "orbit_id": "226",
+      "condition_code": null,
+      "solution_date": "2022-08-01 01:56:46",
+      "elements": {
+        "a": {
+          "value": "177.4333839117583",
+          "sigma": ".0082992",
+          "units": "au"
+        },
+        "e": {
+          "value": ".9949810027633206",
+          "sigma": "2.3273E-7",
+          "units": null
+        },
+        "i": {
+          "value": "89.28759424740302",
+          "sigma": "1.8909E-5",
+          "units": "deg"
+        },
+        "om": {
+          "value": "282.7334213961641",
+          "sigma": "4.1281E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "130.4146670659176",
+          "sigma": "4.2164E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "3.878386339423241",
+          "sigma": ".00027255",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=C%2F1995+O1&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "comet:C1996B2",
+      "name": "Hyakutake",
+      "designation": "C/1996 B2",
+      "epoch_jd_tdb": 2450157.5,
+      "equinox": "J2000",
+      "orbit_id": "73",
+      "condition_code": null,
+      "solution_date": "2021-04-15 23:29:47",
+      "elements": {
+        "a": {
+          "value": "2124.755444393889",
+          "sigma": "21.347",
+          "units": "au"
+        },
+        "e": {
+          "value": ".9998916470450123",
+          "sigma": "1.0882E-6",
+          "units": null
+        },
+        "i": {
+          "value": "124.9220493922234",
+          "sigma": "6.3816E-5",
+          "units": "deg"
+        },
+        "om": {
+          "value": "188.045131992156",
+          "sigma": "1.2303E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "130.1751209780967",
+          "sigma": ".00016116",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "359.9995230582502",
+          "sigma": "7.1879E-6",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "title": "non-grav. radial accel.",
+          "n": 1,
+          "kind": "EST",
+          "sigma": "5.417E-10",
+          "name": "A1",
+          "units": "au/d^2",
+          "value": "2.687692871249691E-8",
+          "desc": "non-gravitational radial acceleration parameter"
+        },
+        {
+          "name": "A2",
+          "sigma": "9.876E-11",
+          "title": "non-grav. transverse accel.",
+          "n": 2,
+          "kind": "EST",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "units": "au/d^2",
+          "value": "6.515068724785845E-10"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=C%2F1996+B2&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "comet:C2020F3",
+      "name": "NEOWISE",
+      "designation": "C/2020 F3",
+      "epoch_jd_tdb": 2459036.5,
+      "equinox": "J2000",
+      "orbit_id": "31",
+      "condition_code": null,
+      "solution_date": "2024-07-30 14:57:24",
+      "elements": {
+        "a": {
+          "value": "358.4679565529321",
+          "sigma": ".37136",
+          "units": "au"
+        },
+        "e": {
+          "value": ".9991780262531292",
+          "sigma": "8.5203E-7",
+          "units": null
+        },
+        "i": {
+          "value": "128.9375027594809",
+          "sigma": "2.755E-5",
+          "units": "deg"
+        },
+        "om": {
+          "value": "61.01042818536988",
+          "sigma": "4.2941E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "37.2786584481257",
+          "sigma": "3.0544E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": ".0003370720801246702",
+          "sigma": "5.2627E-7",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=C%2F2020+F3&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "comet:C2012S1",
+      "name": "ISON",
+      "designation": "C/2012 S1",
+      "epoch_jd_tdb": 2456413.5,
+      "equinox": "J2000",
+      "orbit_id": "57",
+      "condition_code": null,
+      "solution_date": "2025-11-21 13:42:48",
+      "elements": {
+        "a": {
+          "value": "-2446.893404476403",
+          "sigma": "7.7291",
+          "units": "au"
+        },
+        "e": {
+          "value": "1.00000509491957",
+          "sigma": "1.6087E-8",
+          "units": null
+        },
+        "i": {
+          "value": "62.16289620932959",
+          "sigma": ".00032658",
+          "units": "deg"
+        },
+        "om": {
+          "value": "295.6865414817095",
+          "sigma": "5.5497E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "345.5411966905318",
+          "sigma": "4.3515E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "-.001724386918191674",
+          "sigma": "8.1699E-6",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "name": "A1",
+          "desc": "non-gravitational radial acceleration parameter",
+          "n": 1,
+          "title": "non-grav. radial accel.",
+          "kind": "EST",
+          "sigma": "2.168E-9",
+          "units": "au/d^2",
+          "value": "8.537814652708543E-8"
+        },
+        {
+          "n": 2,
+          "desc": "non-gravitational transverse acceleration parameter",
+          "name": "A2",
+          "value": "5.695189309362105E-9",
+          "units": "au/d^2",
+          "sigma": "6.145E-10",
+          "kind": "EST",
+          "title": "non-grav. transverse accel."
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=C%2F2012+S1&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "comet:C2011W3",
+      "name": "Lovejoy",
+      "designation": "C/2011 W3",
+      "epoch_jd_tdb": 2455901.5,
+      "equinox": "J2000",
+      "orbit_id": "58",
+      "condition_code": "4",
+      "solution_date": "2012-06-04 12:31:54",
+      "elements": {
+        "a": {
+          "value": "78.68293963959538",
+          "sigma": ".24975",
+          "units": "au"
+        },
+        "e": {
+          "value": ".9999294152687143",
+          "sigma": "2.236E-7",
+          "units": null
+        },
+        "i": {
+          "value": "134.3558107377023",
+          "sigma": ".0018036",
+          "units": "deg"
+        },
+        "om": {
+          "value": "326.3691470244605",
+          "sigma": ".0041876",
+          "units": "deg"
+        },
+        "w": {
+          "value": "53.50921241435645",
+          "sigma": ".0030657",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "359.9858617465071",
+          "sigma": "6.7391E-5",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=C%2F2011+W3&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "comet:C1843D1",
+      "name": "Great March Comet",
+      "designation": "C/1843 D1",
+      "epoch_jd_tdb": 2394259.411,
+      "equinox": "J2000",
+      "orbit_id": "SAO_2008",
+      "condition_code": null,
+      "solution_date": null,
+      "elements": {
+        "a": {
+          "value": "64.2674419",
+          "sigma": null,
+          "units": "au"
+        },
+        "e": {
+          "value": "0.999914",
+          "sigma": null,
+          "units": null
+        },
+        "i": {
+          "value": "144.3548",
+          "sigma": null,
+          "units": "deg"
+        },
+        "om": {
+          "value": "3.5272",
+          "sigma": null,
+          "units": "deg"
+        },
+        "w": {
+          "value": "82.6390",
+          "sigma": null,
+          "units": "deg"
+        },
+        "ma": {
+          "value": "0.0",
+          "sigma": null,
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=C%2F1843+D1&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "comet:96P",
+      "name": "Machholz 1",
+      "designation": "96P",
+      "epoch_jd_tdb": 2457961.5,
+      "equinox": "J2000",
+      "orbit_id": "K233/8",
+      "condition_code": "0",
+      "solution_date": "2025-02-20 21:30:21",
+      "elements": {
+        "a": {
+          "value": "3.035068595409598",
+          "sigma": "1.6865E-7",
+          "units": "au"
+        },
+        "e": {
+          "value": ".9591608428638698",
+          "sigma": "5.3487E-8",
+          "units": null
+        },
+        "i": {
+          "value": "58.13790031260349",
+          "sigma": "4.3251E-5",
+          "units": "deg"
+        },
+        "om": {
+          "value": "94.25472309284206",
+          "sigma": "2.6393E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "14.7928448266822",
+          "sigma": "2.5943E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "342.6718948496791",
+          "sigma": "1.6036E-5",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "desc": "non-gravitational radial acceleration parameter",
+          "name": "A1",
+          "n": 1,
+          "title": "non-grav. radial accel.",
+          "kind": "EST",
+          "sigma": "5.954E-11",
+          "units": "au/d^2",
+          "value": "2.654248448328061E-10"
+        },
+        {
+          "n": 2,
+          "desc": "non-gravitational transverse acceleration parameter",
+          "name": "A2",
+          "kind": "EST",
+          "title": "non-grav. transverse accel.",
+          "value": "-2.42749047255873E-12",
+          "units": "au/d^2",
+          "sigma": "1.008E-13"
+        },
+        {
+          "desc": "non-gravitational normal acceleration parameter",
+          "name": "A3",
+          "n": 3,
+          "sigma": "7.158E-11",
+          "units": "au/d^2",
+          "value": "1.031526233664028E-10",
+          "title": "non-grav. normal accel.",
+          "kind": "EST"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=96P&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:253",
+      "name": "Mathilde",
+      "designation": "253",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "250",
+      "condition_code": "0",
+      "solution_date": "2026-06-05 03:21:10",
+      "elements": {
+        "a": {
+          "value": "2.646901224932316",
+          "sigma": "7.654E-10",
+          "units": "au"
+        },
+        "e": {
+          "value": ".2643478593847533",
+          "sigma": "9.2877E-10",
+          "units": null
+        },
+        "i": {
+          "value": "6.74046762132457",
+          "sigma": "4.9106E-8",
+          "units": "deg"
+        },
+        "om": {
+          "value": "179.4942079651114",
+          "sigma": "4.4462E-7",
+          "units": "deg"
+        },
+        "w": {
+          "value": "157.5640226350525",
+          "sigma": "5.0217E-7",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "273.5338756003301",
+          "sigma": "3.6143E-7",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=253&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:243",
+      "name": "Ida",
+      "designation": "243",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "191",
+      "condition_code": "0",
+      "solution_date": "2026-06-05 03:20:34",
+      "elements": {
+        "a": {
+          "value": "2.863348031699649",
+          "sigma": "1.7807E-9",
+          "units": "au"
+        },
+        "e": {
+          "value": ".04610962795708528",
+          "sigma": "1.0226E-9",
+          "units": null
+        },
+        "i": {
+          "value": "1.130363094271507",
+          "sigma": "6.2439E-8",
+          "units": "deg"
+        },
+        "om": {
+          "value": "323.5366609419851",
+          "sigma": "3.9529E-6",
+          "units": "deg"
+        },
+        "w": {
+          "value": "113.2571826848795",
+          "sigma": "4.3509E-6",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "49.64769088009876",
+          "sigma": "2.059E-6",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=243&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:9969",
+      "name": "Braille",
+      "designation": "9969",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "87",
+      "condition_code": "0",
+      "solution_date": "2026-03-12 07:35:53",
+      "elements": {
+        "a": {
+          "value": "2.339484343556827",
+          "sigma": "3.1811E-9",
+          "units": "au"
+        },
+        "e": {
+          "value": ".4340700166133246",
+          "sigma": "2.3089E-9",
+          "units": null
+        },
+        "i": {
+          "value": "29.02096189309999",
+          "sigma": "2.1676E-7",
+          "units": "deg"
+        },
+        "om": {
+          "value": "241.8990690138807",
+          "sigma": "7.8199E-7",
+          "units": "deg"
+        },
+        "w": {
+          "value": "356.1093437035709",
+          "sigma": "8.2518E-7",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "177.6926985712546",
+          "sigma": "2.1762E-6",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=9969&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:25143",
+      "name": "Itokawa",
+      "designation": "25143",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "237",
+      "condition_code": "0",
+      "solution_date": "2025-05-22 17:09:17",
+      "elements": {
+        "a": {
+          "value": "1.324052284342771",
+          "sigma": "4.1248E-9",
+          "units": "au"
+        },
+        "e": {
+          "value": ".2801776414987972",
+          "sigma": "2.0795E-9",
+          "units": null
+        },
+        "i": {
+          "value": "1.620940810523569",
+          "sigma": "2.6923E-7",
+          "units": "deg"
+        },
+        "om": {
+          "value": "69.07449749929083",
+          "sigma": "6.1561E-6",
+          "units": "deg"
+        },
+        "w": {
+          "value": "162.8409022415483",
+          "sigma": "6.1449E-6",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "170.653905937934",
+          "sigma": "7.4549E-6",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "title": "non-grav. transverse accel.",
+          "kind": "EST",
+          "sigma": "7.198E-15",
+          "units": "au/d^2",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "n": 1,
+          "value": "-2.855043652646294E-14",
+          "name": "A2"
+        },
+        {
+          "title": "normalizing factor",
+          "sigma": null,
+          "kind": "SET",
+          "units": null,
+          "desc": "normalizing factor [default 0.1112620426]",
+          "n": 0,
+          "value": "1.",
+          "name": "ALN"
+        },
+        {
+          "n": 0,
+          "value": "0.",
+          "name": "NK",
+          "kind": "SET",
+          "sigma": null,
+          "desc": "non-grav. model constant, exponent k [default 4.6142]",
+          "units": null,
+          "title": "non-grav. model exp. k"
+        },
+        {
+          "title": "non-grav. model exp. m",
+          "sigma": null,
+          "kind": "SET",
+          "units": null,
+          "desc": "non-grav. model constant, exponent m [default 2.15]",
+          "n": 0,
+          "name": "NM",
+          "value": "2."
+        },
+        {
+          "kind": "SET",
+          "sigma": null,
+          "units": "au",
+          "desc": "normalizing distance, au [default 2.808 au]",
+          "title": "normalizing distance",
+          "n": 0,
+          "name": "R0",
+          "value": "1."
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=25143&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:162173",
+      "name": "Ryugu",
+      "designation": "162173",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "270",
+      "condition_code": "0",
+      "solution_date": "2026-08-11 13:41:47",
+      "elements": {
+        "a": {
+          "value": "1.190918932702464",
+          "sigma": "2.2717E-9",
+          "units": "au"
+        },
+        "e": {
+          "value": ".1910730046480051",
+          "sigma": "8.1156E-9",
+          "units": null
+        },
+        "i": {
+          "value": "5.866442486408568",
+          "sigma": "4.199E-7",
+          "units": "deg"
+        },
+        "om": {
+          "value": "251.2897123995624",
+          "sigma": "2.6083E-6",
+          "units": "deg"
+        },
+        "w": {
+          "value": "211.608993811871",
+          "sigma": "2.9589E-6",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "62.34067409463987",
+          "sigma": "2.6185E-6",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "name": "A2",
+          "value": "-2.487268497758912E-14",
+          "n": 1,
+          "units": "au/d^2",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "sigma": "5.013E-15",
+          "kind": "EST",
+          "title": "non-grav. transverse accel."
+        },
+        {
+          "desc": "normalizing factor [default 0.1112620426]",
+          "units": null,
+          "kind": "SET",
+          "sigma": null,
+          "title": "normalizing factor",
+          "value": "1.",
+          "name": "ALN",
+          "n": 0
+        },
+        {
+          "value": "0.",
+          "name": "NK",
+          "n": 0,
+          "title": "non-grav. model exp. k",
+          "desc": "non-grav. model constant, exponent k [default 4.6142]",
+          "units": null,
+          "sigma": null,
+          "kind": "SET"
+        },
+        {
+          "title": "non-grav. model exp. m",
+          "units": null,
+          "desc": "non-grav. model constant, exponent m [default 2.15]",
+          "kind": "SET",
+          "sigma": null,
+          "name": "NM",
+          "value": "2.",
+          "n": 0
+        },
+        {
+          "kind": "SET",
+          "sigma": null,
+          "units": "au",
+          "desc": "normalizing distance, au [default 2.808 au]",
+          "title": "normalizing distance",
+          "n": 0,
+          "value": "1.",
+          "name": "R0"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=162173&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:101955",
+      "name": "Bennu",
+      "designation": "101955",
+      "epoch_jd_tdb": 2455562.5,
+      "equinox": "J2000",
+      "orbit_id": "118",
+      "condition_code": "0",
+      "solution_date": "2021-01-07 11:18:06",
+      "elements": {
+        "a": {
+          "value": "1.126391025894812",
+          "sigma": "1.9673E-10",
+          "units": "au"
+        },
+        "e": {
+          "value": ".2037450762416414",
+          "sigma": "6.9748E-11",
+          "units": null
+        },
+        "i": {
+          "value": "6.03494377024794",
+          "sigma": "6.8601E-9",
+          "units": "deg"
+        },
+        "om": {
+          "value": "2.06086619569642",
+          "sigma": "5.5577E-8",
+          "units": "deg"
+        },
+        "w": {
+          "value": "66.22306084084298",
+          "sigma": "6.4419E-8",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "101.703952002457",
+          "sigma": "4.2749E-8",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "kind": "EST",
+          "title": "area-to-mass ratio",
+          "value": "2.635943157E-6",
+          "units": "m^2/kg",
+          "sigma": "1.908E-7",
+          "n": 2,
+          "name": "AMRAT",
+          "desc": "solar radiation pressure area-to-mass ratio"
+        },
+        {
+          "desc": "bulk density",
+          "name": "RHO",
+          "n": 1,
+          "title": "bulk density",
+          "kind": "EST",
+          "units": "kg/m^3",
+          "sigma": ".892",
+          "value": "1191.534909615045"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=101955&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:65803",
+      "name": "Didymos",
+      "designation": "65803",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "240",
+      "condition_code": "0",
+      "solution_date": "2026-03-01 16:49:59",
+      "elements": {
+        "a": {
+          "value": "1.642709608529702",
+          "sigma": "9.9148E-11",
+          "units": "au"
+        },
+        "e": {
+          "value": ".3831233242624545",
+          "sigma": "1.0416E-10",
+          "units": null
+        },
+        "i": {
+          "value": "3.413876519313629",
+          "sigma": "1.482E-8",
+          "units": "deg"
+        },
+        "om": {
+          "value": "72.9858236207145",
+          "sigma": "1.9715E-7",
+          "units": "deg"
+        },
+        "w": {
+          "value": "319.5807001349104",
+          "sigma": "2.1543E-7",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "260.8612886320632",
+          "sigma": "7.0015E-8",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=65803&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:152830",
+      "name": "Dinkinesh",
+      "designation": "152830",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "23",
+      "condition_code": "0",
+      "solution_date": "2023-03-16 11:29:46",
+      "elements": {
+        "a": {
+          "value": "2.191768748791583",
+          "sigma": "6.882E-9",
+          "units": "au"
+        },
+        "e": {
+          "value": ".1126817135846694",
+          "sigma": "3.3552E-8",
+          "units": null
+        },
+        "i": {
+          "value": "2.093117265661373",
+          "sigma": "2.1517E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "21.35270512523402",
+          "sigma": "9.066E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "66.91637126596935",
+          "sigma": "9.3607E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "29.60751779009531",
+          "sigma": "1.7556E-5",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=152830&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:2867",
+      "name": "Šteins",
+      "designation": "2867",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "97",
+      "condition_code": "0",
+      "solution_date": "2026-06-05 07:00:44",
+      "elements": {
+        "a": {
+          "value": "2.363141776987294",
+          "sigma": "4.0676E-10",
+          "units": "au"
+        },
+        "e": {
+          "value": ".1467867767199327",
+          "sigma": "5.2161E-10",
+          "units": null
+        },
+        "i": {
+          "value": "9.9247485385748",
+          "sigma": "4.1969E-8",
+          "units": "deg"
+        },
+        "om": {
+          "value": "55.2936189517901",
+          "sigma": "2.1196E-7",
+          "units": "deg"
+        },
+        "w": {
+          "value": "251.4371219667194",
+          "sigma": "2.386E-7",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "275.4028858220599",
+          "sigma": "2.2169E-7",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2867&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:21",
+      "name": "Lutetia",
+      "designation": "21",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "146",
+      "condition_code": "0",
+      "solution_date": "2026-06-05 03:03:25",
+      "elements": {
+        "a": {
+          "value": "2.434430742712361",
+          "sigma": "1.3696E-9",
+          "units": "au"
+        },
+        "e": {
+          "value": ".1647703512177245",
+          "sigma": "2.0501E-9",
+          "units": null
+        },
+        "i": {
+          "value": "3.064452891064415",
+          "sigma": "2.2544E-7",
+          "units": "deg"
+        },
+        "om": {
+          "value": "80.83855721319993",
+          "sigma": "3.2721E-6",
+          "units": "deg"
+        },
+        "w": {
+          "value": "249.8802780888828",
+          "sigma": "3.3777E-6",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "298.7726414605465",
+          "sigma": "1.0716E-6",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=21&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:5535",
+      "name": "Annefrank",
+      "designation": "5535",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "150",
+      "condition_code": "0",
+      "solution_date": "2026-08-08 17:30:45",
+      "elements": {
+        "a": {
+          "value": "2.212362295339368",
+          "sigma": "4.0709E-10",
+          "units": "au"
+        },
+        "e": {
+          "value": ".06320477835864081",
+          "sigma": "5.1533E-10",
+          "units": null
+        },
+        "i": {
+          "value": "4.247441129212657",
+          "sigma": "4.3564E-8",
+          "units": "deg"
+        },
+        "om": {
+          "value": "120.5509750358684",
+          "sigma": "6.2079E-7",
+          "units": "deg"
+        },
+        "w": {
+          "value": "9.553711837707379",
+          "sigma": "7.6134E-7",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "260.8814202449275",
+          "sigma": "8.007E-7",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=5535&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "comet:21P",
+      "name": "Giacobini–Zinner",
+      "designation": "21P",
+      "epoch_jd_tdb": 2458070.5,
+      "equinox": "J2000",
+      "orbit_id": "K253/4",
+      "condition_code": "0",
+      "solution_date": "2025-11-23 22:20:59",
+      "elements": {
+        "a": {
+          "value": "3.500302848566958",
+          "sigma": "1.3706E-7",
+          "units": "au"
+        },
+        "e": {
+          "value": ".7104704806622195",
+          "sigma": "5.3044E-8",
+          "units": null
+        },
+        "i": {
+          "value": "32.00259232473697",
+          "sigma": "7.1517E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "195.4044801966894",
+          "sigma": "2.2114E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "172.8124824274951",
+          "sigma": "2.6223E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "314.6585273385604",
+          "sigma": "4.5234E-6",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "kind": "EST",
+          "name": "A1",
+          "desc": "non-gravitational radial acceleration parameter",
+          "value": "3.468081872351553E-9",
+          "sigma": "5.407E-11",
+          "units": "au/d^2",
+          "n": 1,
+          "title": "non-grav. radial accel."
+        },
+        {
+          "kind": "EST",
+          "name": "A2",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "units": "au/d^2",
+          "n": 2,
+          "title": "non-grav. transverse accel.",
+          "sigma": "2.902E-12",
+          "value": "-1.542452930830789E-9"
+        },
+        {
+          "kind": "EST",
+          "desc": "non-gravitational normal acceleration parameter",
+          "name": "A3",
+          "units": "au/d^2",
+          "n": 3,
+          "title": "non-grav. normal accel.",
+          "sigma": "3.868E-11",
+          "value": "-1.95156931364195E-9"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=21P&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "comet:1P",
+      "name": "Halley",
+      "designation": "1P",
+      "epoch_jd_tdb": 2439875.5,
+      "equinox": "J2000",
+      "orbit_id": "75",
+      "condition_code": "0",
+      "solution_date": "2025-11-21 15:57:34",
+      "elements": {
+        "a": {
+          "value": "17.92863504856923",
+          "sigma": "9.9587E-9",
+          "units": "au"
+        },
+        "e": {
+          "value": ".9679359956953211",
+          "sigma": "7.5527E-9",
+          "units": null
+        },
+        "i": {
+          "value": "162.1905300439129",
+          "sigma": "1.5093E-5",
+          "units": "deg"
+        },
+        "om": {
+          "value": "59.09894720612437",
+          "sigma": "1.9861E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "112.2414314637764",
+          "sigma": "2.0534E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "274.3823371366792",
+          "sigma": "1.2457E-7",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "kind": "EST",
+          "desc": "non-gravitational radial acceleration parameter",
+          "name": "A1",
+          "value": "4.887055280193953E-10",
+          "sigma": "4.E-11",
+          "n": 1,
+          "units": "au/d^2",
+          "title": "non-grav. radial accel."
+        },
+        {
+          "name": "A2",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "value": "1.554720285182461E-10",
+          "sigma": "4.575E-15",
+          "units": "au/d^2",
+          "n": 2,
+          "title": "non-grav. transverse accel.",
+          "kind": "EST"
+        },
+        {
+          "kind": "EST",
+          "sigma": "27.33",
+          "value": "577.878759926215",
+          "units": "km",
+          "n": 3,
+          "title": "center-of-light/mass offset",
+          "desc": "offset between the center-of-light and center-of-mass",
+          "name": "S0"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=1P&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "comet:19P",
+      "name": "Borrelly",
+      "designation": "19P",
+      "epoch_jd_tdb": 2459286.5,
+      "equinox": "J2000",
+      "orbit_id": "K283/1",
+      "condition_code": "0",
+      "solution_date": "2026-09-04 10:21:01",
+      "elements": {
+        "a": {
+          "value": "3.606961348253051",
+          "sigma": "2.8488E-7",
+          "units": "au"
+        },
+        "e": {
+          "value": ".637905167468658",
+          "sigma": "7.5916E-8",
+          "units": null
+        },
+        "i": {
+          "value": "29.31742259578772",
+          "sigma": "9.5822E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "74.29810325407669",
+          "sigma": "1.7929E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "351.8632567518044",
+          "sigma": "2.6853E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "313.1295527995831",
+          "sigma": "9.9453E-6",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "kind": "EST",
+          "title": "non-grav. radial accel.",
+          "value": "3.142102933678076E-9",
+          "units": "au/d^2",
+          "sigma": "9.978E-11",
+          "n": 1,
+          "desc": "non-gravitational radial acceleration parameter",
+          "name": "A1"
+        },
+        {
+          "value": "-5.959532391892791E-10",
+          "units": "au/d^2",
+          "sigma": "3.502E-11",
+          "kind": "EST",
+          "title": "non-grav. transverse accel.",
+          "n": 2,
+          "name": "A2",
+          "desc": "non-gravitational transverse acceleration parameter"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=19P&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "comet:81P",
+      "name": "Wild 2",
+      "designation": "81P",
+      "epoch_jd_tdb": 2458808.5,
+      "equinox": "J2000",
+      "orbit_id": "K222/37",
+      "condition_code": "0",
+      "solution_date": "2024-09-12 12:06:16",
+      "elements": {
+        "a": {
+          "value": "3.449745576963111",
+          "sigma": "7.5915E-8",
+          "units": "au"
+        },
+        "e": {
+          "value": ".5373989073846863",
+          "sigma": "7.8397E-8",
+          "units": null
+        },
+        "i": {
+          "value": "3.237004173608168",
+          "sigma": "8.4654E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "136.1102208500619",
+          "sigma": ".00017571",
+          "units": "deg"
+        },
+        "w": {
+          "value": "41.72523085114398",
+          "sigma": ".00017561",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "187.5966814232084",
+          "sigma": "1.2954E-5",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "kind": "EST",
+          "title": "non-grav. radial accel.",
+          "value": "2.756872987168991E-9",
+          "sigma": "8.513E-11",
+          "units": "au/d^2",
+          "n": 1,
+          "name": "A1",
+          "desc": "non-gravitational radial acceleration parameter"
+        },
+        {
+          "kind": "EST",
+          "title": "non-grav. transverse accel.",
+          "value": "3.070332808959724E-10",
+          "sigma": "2.485E-11",
+          "units": "au/d^2",
+          "n": 2,
+          "name": "A2",
+          "desc": "non-gravitational transverse acceleration parameter"
+        },
+        {
+          "name": "A3",
+          "desc": "non-gravitational normal acceleration parameter",
+          "n": 3,
+          "title": "non-grav. normal accel.",
+          "kind": "EST",
+          "sigma": "4.512E-11",
+          "units": "au/d^2",
+          "value": "-1.044902559601286E-9"
+        },
+        {
+          "name": "DT",
+          "desc": "non-gravitational perihelion-maximum offset",
+          "n": 4,
+          "sigma": "3.176",
+          "units": "d",
+          "value": "-127.4855221524886",
+          "title": "non-grav. perihelion offset",
+          "kind": "EST"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=81P&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "comet:9P",
+      "name": "Tempel 1",
+      "designation": "9P",
+      "epoch_jd_tdb": 2457470.5,
+      "equinox": "J2000",
+      "orbit_id": "K284/2",
+      "condition_code": "0",
+      "solution_date": "2025-12-29 09:30:51",
+      "elements": {
+        "a": {
+          "value": "3.146133758958915",
+          "sigma": "8.9632E-8",
+          "units": "au"
+        },
+        "e": {
+          "value": ".5097028326964878",
+          "sigma": "4.623E-8",
+          "units": null
+        },
+        "i": {
+          "value": "10.4734281543904",
+          "sigma": "4.1756E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "68.75357468050096",
+          "sigma": "3.6987E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "179.1972753698572",
+          "sigma": "3.8173E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "336.5854438553629",
+          "sigma": "5.8245E-6",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "sigma": "2.17E-11",
+          "units": "au/d^2",
+          "name": "A1",
+          "kind": "EST",
+          "title": "non-grav. radial accel.",
+          "n": 1,
+          "desc": "non-gravitational radial acceleration parameter",
+          "value": "1.80041343176761E-11"
+        },
+        {
+          "kind": "EST",
+          "units": "au/d^2",
+          "name": "A2",
+          "sigma": "1.173E-12",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "value": "1.179466662405115E-11",
+          "title": "non-grav. transverse accel.",
+          "n": 2
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=9P&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "comet:103P",
+      "name": "Hartley 2",
+      "designation": "103P",
+      "epoch_jd_tdb": 2457152.5,
+      "equinox": "J2000",
+      "orbit_id": "K233/5",
+      "condition_code": "0",
+      "solution_date": "2025-05-01 10:45:38",
+      "elements": {
+        "a": {
+          "value": "3.475652487146584",
+          "sigma": "2.114E-7",
+          "units": "au"
+        },
+        "e": {
+          "value": ".6935978573940613",
+          "sigma": "1.9437E-8",
+          "units": null
+        },
+        "i": {
+          "value": "13.59946797122405",
+          "sigma": "1.9866E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "219.7421743331336",
+          "sigma": "9.2179E-6",
+          "units": "deg"
+        },
+        "w": {
+          "value": "181.3218438419628",
+          "sigma": "9.5589E-6",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "251.7821727285582",
+          "sigma": "2.2794E-5",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "n": 1,
+          "value": "1.384525626808849E-9",
+          "name": "A1",
+          "sigma": "9.413E-12",
+          "kind": "EST",
+          "units": "au/d^2",
+          "desc": "non-gravitational radial acceleration parameter",
+          "title": "non-grav. radial accel."
+        },
+        {
+          "kind": "EST",
+          "sigma": "2.06E-12",
+          "units": "au/d^2",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "title": "non-grav. transverse accel.",
+          "n": 2,
+          "name": "A2",
+          "value": "1.464430870492432E-10"
+        },
+        {
+          "n": 3,
+          "name": "A3",
+          "value": "1.812240220768521E-10",
+          "title": "non-grav. normal accel.",
+          "sigma": "8.672E-12",
+          "kind": "EST",
+          "units": "au/d^2",
+          "desc": "non-gravitational normal acceleration parameter"
+        },
+        {
+          "value": "12.23373994658573",
+          "name": "DT",
+          "n": 4,
+          "title": "non-grav. perihelion offset",
+          "units": "d",
+          "desc": "non-gravitational perihelion-maximum offset",
+          "sigma": ".2216",
+          "kind": "EST"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=103P&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "comet:67P",
+      "name": "Churyumov–Gerasimenko",
+      "designation": "67P",
+      "epoch_jd_tdb": 2457305.5,
+      "equinox": "J2000",
+      "orbit_id": "K284/1",
+      "condition_code": "0",
+      "solution_date": "2026-09-04 10:25:07",
+      "elements": {
+        "a": {
+          "value": "3.462249490129549",
+          "sigma": "1.5491E-7",
+          "units": "au"
+        },
+        "e": {
+          "value": ".6409081308996354",
+          "sigma": "2.7482E-8",
+          "units": null
+        },
+        "i": {
+          "value": "7.040294937543767",
+          "sigma": "2.7139E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "50.13557377155012",
+          "sigma": "2.2797E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "12.79824970228189",
+          "sigma": "2.3022E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "8.859927425218402",
+          "sigma": "2.7815E-6",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "value": "1.042562555200506E-9",
+          "sigma": "1.321E-11",
+          "title": "non-grav. radial accel.",
+          "n": 1,
+          "units": "au/d^2",
+          "name": "A1",
+          "desc": "non-gravitational radial acceleration parameter",
+          "kind": "EST"
+        },
+        {
+          "kind": "EST",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "name": "A2",
+          "units": "au/d^2",
+          "n": 2,
+          "title": "non-grav. transverse accel.",
+          "value": "-6.733588284934391E-11",
+          "sigma": "2.921E-12"
+        },
+        {
+          "kind": "EST",
+          "desc": "non-gravitational normal acceleration parameter",
+          "name": "A3",
+          "n": 3,
+          "units": "au/d^2",
+          "title": "non-grav. normal accel.",
+          "sigma": "1.147E-11",
+          "value": "2.960397918052828E-10"
+        },
+        {
+          "kind": "EST",
+          "desc": "non-gravitational perihelion-maximum offset",
+          "name": "DT",
+          "value": "45.66665437504378",
+          "sigma": "1.18",
+          "n": 4,
+          "units": "d",
+          "title": "non-grav. perihelion offset"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=67P&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:99942",
+      "name": "Apophis",
+      "designation": "99942",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "220",
+      "condition_code": "0",
+      "solution_date": "2024-06-25 10:48:08",
+      "elements": {
+        "a": {
+          "value": ".9223592206975018",
+          "sigma": "1.5667E-9",
+          "units": "au"
+        },
+        "e": {
+          "value": ".1911492279663492",
+          "sigma": "1.8376E-9",
+          "units": null
+        },
+        "i": {
+          "value": "3.340996879880978",
+          "sigma": "9.903E-8",
+          "units": "deg"
+        },
+        "om": {
+          "value": "203.8936514240762",
+          "sigma": "3.0657E-6",
+          "units": "deg"
+        },
+        "w": {
+          "value": "126.6795706895841",
+          "sigma": "3.3086E-6",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "175.3304026592739",
+          "sigma": "5.2809E-7",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "name": "A1",
+          "desc": "non-gravitational radial acceleration parameter",
+          "n": 1,
+          "units": "au/d^2",
+          "sigma": "4.892E-13",
+          "value": "5.E-13",
+          "title": "non-grav. radial accel.",
+          "kind": "EST"
+        },
+        {
+          "n": 2,
+          "name": "A2",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "kind": "EST",
+          "title": "non-grav. transverse accel.",
+          "value": "-2.901766637153165E-14",
+          "units": "au/d^2",
+          "sigma": "1.859E-16"
+        },
+        {
+          "n": 0,
+          "desc": "normalizing factor [default 0.1112620426]",
+          "name": "ALN",
+          "value": "1.",
+          "units": null,
+          "sigma": null,
+          "kind": "SET",
+          "title": "normalizing factor"
+        },
+        {
+          "name": "NK",
+          "desc": "non-grav. model constant, exponent k [default 4.6142]",
+          "n": 0,
+          "sigma": null,
+          "units": null,
+          "value": "0.",
+          "title": "non-grav. model exp. k",
+          "kind": "SET"
+        },
+        {
+          "desc": "non-grav. model constant, exponent m [default 2.15]",
+          "name": "NM",
+          "n": 0,
+          "units": null,
+          "sigma": null,
+          "value": "2.",
+          "title": "non-grav. model exp. m",
+          "kind": "SET"
+        },
+        {
+          "desc": "normalizing distance, au [default 2.808 au]",
+          "name": "R0",
+          "n": 0,
+          "units": "au",
+          "sigma": null,
+          "value": "1.",
+          "title": "normalizing distance",
+          "kind": "SET"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=99942&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:433",
+      "name": "Eros",
+      "designation": "433",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "659",
+      "condition_code": "0",
+      "solution_date": "2021-05-24 17:55:05",
+      "elements": {
+        "a": {
+          "value": "1.458243716760167",
+          "sigma": "1.5185E-10",
+          "units": "au"
+        },
+        "e": {
+          "value": ".2228779627700761",
+          "sigma": "9.3902E-9",
+          "units": null
+        },
+        "i": {
+          "value": "10.82854410314273",
+          "sigma": "1.158E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "304.2679713350896",
+          "sigma": "3.5792E-6",
+          "units": "deg"
+        },
+        "w": {
+          "value": "178.9181319135911",
+          "sigma": "3.9825E-6",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "62.51145501986792",
+          "sigma": "1.4849E-6",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=433&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:3200",
+      "name": "Phaethon",
+      "designation": "3200",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "1007",
+      "condition_code": "0",
+      "solution_date": "2026-10-05 06:55:05",
+      "elements": {
+        "a": {
+          "value": "1.271464620939531",
+          "sigma": "7.6288E-10",
+          "units": "au"
+        },
+        "e": {
+          "value": ".8896722843659591",
+          "sigma": "4.6944E-10",
+          "units": null
+        },
+        "i": {
+          "value": "22.31052728018846",
+          "sigma": "9.403E-8",
+          "units": "deg"
+        },
+        "om": {
+          "value": "265.0988060463506",
+          "sigma": "1.7091E-7",
+          "units": "deg"
+        },
+        "w": {
+          "value": "322.3001684827472",
+          "sigma": "1.5111E-7",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "301.4858235455836",
+          "sigma": "1.341E-6",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "sigma": "3.631E-16",
+          "units": "au/d^2",
+          "value": "-6.133444935685334E-15",
+          "title": "non-grav. transverse accel.",
+          "kind": "EST",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "name": "A2",
+          "n": 1
+        },
+        {
+          "n": 0,
+          "desc": "normalizing factor [default 0.1112620426]",
+          "name": "ALN",
+          "kind": "SET",
+          "title": "normalizing factor",
+          "value": "1.",
+          "units": null,
+          "sigma": null
+        },
+        {
+          "value": "0.",
+          "sigma": null,
+          "units": null,
+          "kind": "SET",
+          "title": "non-grav. model exp. k",
+          "n": 0,
+          "name": "NK",
+          "desc": "non-grav. model constant, exponent k [default 4.6142]"
+        },
+        {
+          "n": 0,
+          "name": "NM",
+          "desc": "non-grav. model constant, exponent m [default 2.15]",
+          "value": "2.",
+          "units": null,
+          "sigma": null,
+          "kind": "SET",
+          "title": "non-grav. model exp. m"
+        },
+        {
+          "kind": "SET",
+          "title": "non-grav. model exp. n",
+          "value": "0.",
+          "sigma": null,
+          "units": null,
+          "n": 0,
+          "name": "NN",
+          "desc": "non-grav. model constant, exponent n [default 5.093]"
+        },
+        {
+          "value": "1.",
+          "units": "au",
+          "sigma": null,
+          "kind": "SET",
+          "title": "normalizing distance",
+          "n": 0,
+          "desc": "normalizing distance, au [default 2.808 au]",
+          "name": "R0"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=3200&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:2021PH27",
+      "name": "2021 PH27",
+      "designation": "2021 PH27",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "20",
+      "condition_code": "2",
+      "solution_date": "2025-05-05 06:20:13",
+      "elements": {
+        "a": {
+          "value": ".4617629210470229",
+          "sigma": "1.6035E-8",
+          "units": "au"
+        },
+        "e": {
+          "value": ".7115443089925902",
+          "sigma": "5.2783E-7",
+          "units": null
+        },
+        "i": {
+          "value": "31.93855483908925",
+          "sigma": "9.4169E-5",
+          "units": "deg"
+        },
+        "om": {
+          "value": "39.39419809326461",
+          "sigma": "3.579E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "8.583100072046056",
+          "sigma": "3.1669E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "316.6761498758718",
+          "sigma": ".00023886",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2021+PH27&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:2020AV2",
+      "name": "2020 AV2",
+      "designation": "2020 AV2",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "46",
+      "condition_code": "1",
+      "solution_date": "2025-12-01 05:27:48",
+      "elements": {
+        "a": {
+          "value": ".5552913383621794",
+          "sigma": "1.4058E-8",
+          "units": "au"
+        },
+        "e": {
+          "value": ".1773461889677603",
+          "sigma": "5.8594E-7",
+          "units": null
+        },
+        "i": {
+          "value": "15.86822558810007",
+          "sigma": "4.3241E-5",
+          "units": "deg"
+        },
+        "om": {
+          "value": "6.678381631839548",
+          "sigma": ".00014172",
+          "units": "deg"
+        },
+        "w": {
+          "value": "187.4006557972202",
+          "sigma": ".00021906",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "61.02552902668404",
+          "sigma": ".00028309",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2020+AV2&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "comet:322P",
+      "name": "322P/SOHO",
+      "designation": "322P",
+      "epoch_jd_tdb": 2457179.5,
+      "equinox": "J2000",
+      "orbit_id": "10",
+      "condition_code": "2",
+      "solution_date": "2016-10-27 11:29:40",
+      "elements": {
+        "a": {
+          "value": "2.51626146560583",
+          "sigma": "4.9743E-7",
+          "units": "au"
+        },
+        "e": {
+          "value": ".9786764762641811",
+          "sigma": "4.3971E-6",
+          "units": null
+        },
+        "i": {
+          "value": "12.58923564712983",
+          "sigma": ".0013887",
+          "units": "deg"
+        },
+        "om": {
+          "value": "359.5244877541514",
+          "sigma": ".018222",
+          "units": "deg"
+        },
+        "w": {
+          "value": "49.04947677107452",
+          "sigma": ".016821",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "337.760658834809",
+          "sigma": ".00021393",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=322P&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:1",
+      "name": "Ceres",
+      "designation": "1",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "48",
+      "condition_code": "0",
+      "solution_date": "2021-04-13 11:04:44",
+      "elements": {
+        "a": {
+          "value": "2.765552595034094",
+          "sigma": "1.0134E-11",
+          "units": "au"
+        },
+        "e": {
+          "value": ".07969229514816586",
+          "sigma": "4.7755E-12",
+          "units": null
+        },
+        "i": {
+          "value": "10.58802780183462",
+          "sigma": "4.6124E-9",
+          "units": "deg"
+        },
+        "om": {
+          "value": "80.24862682043221",
+          "sigma": "6.1807E-8",
+          "units": "deg"
+        },
+        "w": {
+          "value": "73.29421453021587",
+          "sigma": "6.6076E-8",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "274.4193463761342",
+          "sigma": "6.1728E-9",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=1&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:4",
+      "name": "Vesta",
+      "designation": "4",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "36",
+      "condition_code": "0",
+      "solution_date": "2021-04-13 11:15:57",
+      "elements": {
+        "a": {
+          "value": "2.361365965127599",
+          "sigma": "1.5328E-9",
+          "units": "au"
+        },
+        "e": {
+          "value": ".09020374382834395",
+          "sigma": "2.2909E-10",
+          "units": null
+        },
+        "i": {
+          "value": "7.143925545058711",
+          "sigma": "2.1704E-7",
+          "units": "deg"
+        },
+        "om": {
+          "value": "103.701293265032",
+          "sigma": "3.8827E-7",
+          "units": "deg"
+        },
+        "w": {
+          "value": "151.4686478221564",
+          "sigma": "1.8814E-7",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "81.19015607686903",
+          "sigma": "1.9021E-6",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=4&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:2",
+      "name": "Pallas",
+      "designation": "2",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "74",
+      "condition_code": "0",
+      "solution_date": "2026-06-05 03:03:25",
+      "elements": {
+        "a": {
+          "value": "2.769559010737709",
+          "sigma": "1.7736E-9",
+          "units": "au"
+        },
+        "e": {
+          "value": ".2307000995648547",
+          "sigma": "5.7536E-9",
+          "units": null
+        },
+        "i": {
+          "value": "34.93279321851542",
+          "sigma": "6.9364E-7",
+          "units": "deg"
+        },
+        "om": {
+          "value": "172.8866193357694",
+          "sigma": "1.2984E-6",
+          "units": "deg"
+        },
+        "w": {
+          "value": "310.9699161652136",
+          "sigma": "2.4001E-6",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "254.2496521742734",
+          "sigma": "2.4573E-6",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:588",
+      "name": "Achilles",
+      "designation": "588",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "117",
+      "condition_code": "0",
+      "solution_date": "2026-06-05 03:47:59",
+      "elements": {
+        "a": {
+          "value": "5.215906988352895",
+          "sigma": "2.724E-8",
+          "units": "au"
+        },
+        "e": {
+          "value": ".148117524873686",
+          "sigma": "5.2157E-9",
+          "units": null
+        },
+        "i": {
+          "value": "10.31507282705955",
+          "sigma": "7.6322E-8",
+          "units": "deg"
+        },
+        "om": {
+          "value": "316.5298906019931",
+          "sigma": "4.6395E-7",
+          "units": "deg"
+        },
+        "w": {
+          "value": "134.3146427558605",
+          "sigma": "1.4586E-6",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "93.31385566999712",
+          "sigma": "2.5147E-6",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=588&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:2060",
+      "name": "Chiron",
+      "designation": "2060",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "171",
+      "condition_code": "0",
+      "solution_date": "2026-06-05 06:09:00",
+      "elements": {
+        "a": {
+          "value": "13.68426760850124",
+          "sigma": "5.2989E-7",
+          "units": "au"
+        },
+        "e": {
+          "value": ".3797656311453571",
+          "sigma": "1.7864E-8",
+          "units": null
+        },
+        "i": {
+          "value": "6.930574468846328",
+          "sigma": "4.1006E-7",
+          "units": "deg"
+        },
+        "om": {
+          "value": "209.2961258613147",
+          "sigma": "2.3254E-6",
+          "units": "deg"
+        },
+        "w": {
+          "value": "339.2878326589729",
+          "sigma": "7.0476E-6",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "216.7198966018106",
+          "sigma": "1.6059E-5",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2060&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:5145",
+      "name": "Pholus",
+      "designation": "5145",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "24",
+      "condition_code": "1",
+      "solution_date": "2024-10-11 16:28:19",
+      "elements": {
+        "a": {
+          "value": "20.28965436859272",
+          "sigma": "4.6692E-5",
+          "units": "au"
+        },
+        "e": {
+          "value": ".574687297345862",
+          "sigma": "6.2553E-7",
+          "units": null
+        },
+        "i": {
+          "value": "24.76068786783861",
+          "sigma": "1.3353E-5",
+          "units": "deg"
+        },
+        "om": {
+          "value": "119.2863897155665",
+          "sigma": "2.9518E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "354.7809055877317",
+          "sigma": ".0001263",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "136.5004029381056",
+          "sigma": ".00049545",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=5145&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:10199",
+      "name": "Chariklo",
+      "designation": "10199",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "61",
+      "condition_code": "0",
+      "solution_date": "2025-11-06 06:24:01",
+      "elements": {
+        "a": {
+          "value": "15.73437332078415",
+          "sigma": "1.052E-6",
+          "units": "au"
+        },
+        "e": {
+          "value": ".1708195854003942",
+          "sigma": "3.8005E-8",
+          "units": null
+        },
+        "i": {
+          "value": "23.43190431353433",
+          "sigma": "3.1018E-7",
+          "units": "deg"
+        },
+        "om": {
+          "value": "300.4768909592962",
+          "sigma": "2.1789E-7",
+          "units": "deg"
+        },
+        "w": {
+          "value": "241.2066068296425",
+          "sigma": "1.5967E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "130.0890828375457",
+          "sigma": "2.3839E-5",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=10199&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:134340",
+      "name": "Pluto",
+      "designation": "134340",
+      "epoch_jd_tdb": 2457588.5,
+      "equinox": "J2000",
+      "orbit_id": "1",
+      "condition_code": null,
+      "solution_date": null,
+      "elements": {
+        "a": {
+          "value": "39.58862938517124",
+          "sigma": null,
+          "units": "au"
+        },
+        "e": {
+          "value": ".2518378778576892",
+          "sigma": null,
+          "units": null
+        },
+        "i": {
+          "value": "17.14771140999114",
+          "sigma": null,
+          "units": "deg"
+        },
+        "om": {
+          "value": "110.2923840543057",
+          "sigma": null,
+          "units": "deg"
+        },
+        "w": {
+          "value": "113.7090015158565",
+          "sigma": null,
+          "units": "deg"
+        },
+        "ma": {
+          "value": "38.68366347318184",
+          "sigma": null,
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=134340&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:136199",
+      "name": "Eris",
+      "designation": "136199",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "103",
+      "condition_code": "3",
+      "solution_date": "2026-06-06 21:06:42",
+      "elements": {
+        "a": {
+          "value": "67.93394687853566",
+          "sigma": ".0002545",
+          "units": "au"
+        },
+        "e": {
+          "value": ".4382385347971672",
+          "sigma": "3.4663E-6",
+          "units": null
+        },
+        "i": {
+          "value": "43.9258279471791",
+          "sigma": "3.1852E-5",
+          "units": "deg"
+        },
+        "om": {
+          "value": "36.00477044417249",
+          "sigma": "1.4831E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "150.7949235840312",
+          "sigma": ".0021022",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "211.774434275007",
+          "sigma": ".0048207",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=136199&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:136108",
+      "name": "Haumea",
+      "designation": "136108",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "132",
+      "condition_code": "1",
+      "solution_date": "2026-06-06 21:06:04",
+      "elements": {
+        "a": {
+          "value": "43.06029023650952",
+          "sigma": "4.0486E-5",
+          "units": "au"
+        },
+        "e": {
+          "value": ".1944430148898797",
+          "sigma": "1.1561E-6",
+          "units": null
+        },
+        "i": {
+          "value": "28.20847393040364",
+          "sigma": "1.1546E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "121.7860561329425",
+          "sigma": "1.8066E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "240.6905472508661",
+          "sigma": ".0006965",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "223.2104118812299",
+          "sigma": ".0010214",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=136108&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:136472",
+      "name": "Makemake",
+      "designation": "136472",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "130",
+      "condition_code": "1",
+      "solution_date": "2026-06-06 21:09:02",
+      "elements": {
+        "a": {
+          "value": "45.57093317300052",
+          "sigma": "5.3653E-5",
+          "units": "au"
+        },
+        "e": {
+          "value": ".1588889953992523",
+          "sigma": "1.185E-6",
+          "units": null
+        },
+        "i": {
+          "value": "29.02785603743067",
+          "sigma": "1.4175E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "79.2948338209406",
+          "sigma": "1.4106E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "297.0922733397207",
+          "sigma": ".00097128",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "169.9379962048232",
+          "sigma": ".001332",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=136472&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:90377",
+      "name": "Sedna",
+      "designation": "90377",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "51",
+      "condition_code": "1",
+      "solution_date": "2026-06-06 14:12:24",
+      "elements": {
+        "a": {
+          "value": "543.7195289104732",
+          "sigma": ".1459",
+          "units": "au"
+        },
+        "e": {
+          "value": ".8598824585187618",
+          "sigma": "3.7251E-5",
+          "units": null
+        },
+        "i": {
+          "value": "11.92527582847476",
+          "sigma": "3.3169E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "144.5061662673739",
+          "sigma": ".00026058",
+          "units": "deg"
+        },
+        "w": {
+          "value": "311.0987725939751",
+          "sigma": ".0019143",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "358.5956944005428",
+          "sigma": ".0005731",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=90377&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:2018VG18",
+      "name": "Farout",
+      "designation": "2018 VG18",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "8",
+      "condition_code": "6",
+      "solution_date": "2022-03-09 02:29:54",
+      "elements": {
+        "a": {
+          "value": "81.90720797654177",
+          "sigma": ".026871",
+          "units": "au"
+        },
+        "e": {
+          "value": ".5244822275778944",
+          "sigma": ".00039577",
+          "units": null
+        },
+        "i": {
+          "value": "24.17146148892078",
+          "sigma": ".0018314",
+          "units": "deg"
+        },
+        "om": {
+          "value": "245.2729813534031",
+          "sigma": ".00064438",
+          "units": "deg"
+        },
+        "w": {
+          "value": "16.86247974986922",
+          "sigma": ".1722",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "161.3294098759746",
+          "sigma": ".47648",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2018+VG18&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:2018AG37",
+      "name": "Farfarout",
+      "designation": "2018 AG37",
+      "epoch_jd_tdb": 2458539.5,
+      "equinox": "J2000",
+      "orbit_id": "6",
+      "condition_code": "9",
+      "solution_date": "2026-03-11 20:16:28",
+      "elements": {
+        "a": {
+          "value": "80.17822081868476",
+          "sigma": "4.7954",
+          "units": "au"
+        },
+        "e": {
+          "value": ".6554456568605362",
+          "sigma": ".023044",
+          "units": null
+        },
+        "i": {
+          "value": "18.6748970559512",
+          "sigma": ".12446",
+          "units": "deg"
+        },
+        "om": {
+          "value": "68.35649695206988",
+          "sigma": ".53155",
+          "units": "deg"
+        },
+        "w": {
+          "value": "231.7213808486059",
+          "sigma": "59.967",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "187.4250004482886",
+          "sigma": "219.28",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2018+AG37&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:541132",
+      "name": "Leleākūhonua",
+      "designation": "541132",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "7",
+      "condition_code": "2",
+      "solution_date": "2026-05-26 08:25:22",
+      "elements": {
+        "a": {
+          "value": "1345.9746784971",
+          "sigma": "10.094",
+          "units": "au"
+        },
+        "e": {
+          "value": ".9519448010157889",
+          "sigma": ".00035882",
+          "units": null
+        },
+        "i": {
+          "value": "11.67889561905244",
+          "sigma": ".00016023",
+          "units": "deg"
+        },
+        "om": {
+          "value": "301.1346719755806",
+          "sigma": ".0018761",
+          "units": "deg"
+        },
+        "w": {
+          "value": "118.2317322688105",
+          "sigma": ".009741",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "359.6190139698275",
+          "sigma": ".0043212",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=541132&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:225088",
+      "name": "Gonggong",
+      "designation": "225088",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "25",
+      "condition_code": "3",
+      "solution_date": "2026-08-27 09:12:03",
+      "elements": {
+        "a": {
+          "value": "66.86666567773766",
+          "sigma": ".002095",
+          "units": "au"
+        },
+        "e": {
+          "value": ".5042510000302973",
+          "sigma": "1.8857E-5",
+          "units": null
+        },
+        "i": {
+          "value": "30.89906721170288",
+          "sigma": ".00010916",
+          "units": "deg"
+        },
+        "om": {
+          "value": "336.8383156185827",
+          "sigma": "1.6187E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "206.6232839773693",
+          "sigma": ".0036934",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "111.664541568459",
+          "sigma": ".0094499",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=225088&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:50000",
+      "name": "Quaoar",
+      "designation": "50000",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "51",
+      "condition_code": "0",
+      "solution_date": "2026-06-06 04:23:41",
+      "elements": {
+        "a": {
+          "value": "43.15617648834794",
+          "sigma": "2.8661E-5",
+          "units": "au"
+        },
+        "e": {
+          "value": ".03520023677935285",
+          "sigma": "1.5997E-6",
+          "units": null
+        },
+        "i": {
+          "value": "7.991575801906905",
+          "sigma": "6.7595E-7",
+          "units": "deg"
+        },
+        "om": {
+          "value": "188.9191248447958",
+          "sigma": "2.8211E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "163.2090510089555",
+          "sigma": ".00089988",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "292.8487574745446",
+          "sigma": ".00083139",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=50000&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:90482",
+      "name": "Orcus",
+      "designation": "90482",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "61",
+      "condition_code": "1",
+      "solution_date": "2026-06-06 14:13:31",
+      "elements": {
+        "a": {
+          "value": "39.37686537914865",
+          "sigma": "2.1925E-5",
+          "units": "au"
+        },
+        "e": {
+          "value": ".2205240628250881",
+          "sigma": "4.9013E-7",
+          "units": null
+        },
+        "i": {
+          "value": "20.55681019612",
+          "sigma": "1.9955E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "268.4053519455824",
+          "sigma": "1.6821E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "73.56848606705262",
+          "sigma": ".00047316",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "189.0972913554275",
+          "sigma": ".0007176",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=90482&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:120347",
+      "name": "Salacia",
+      "designation": "120347",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "42",
+      "condition_code": "1",
+      "solution_date": "2025-11-07 12:48:45",
+      "elements": {
+        "a": {
+          "value": "42.05521225409177",
+          "sigma": "4.1114E-5",
+          "units": "au"
+        },
+        "e": {
+          "value": ".1046039838127425",
+          "sigma": "1.4838E-6",
+          "units": null
+        },
+        "i": {
+          "value": "23.92719899399624",
+          "sigma": "1.0286E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "280.254342318715",
+          "sigma": "1.3907E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "308.9773054038262",
+          "sigma": ".00083597",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "134.6779349662037",
+          "sigma": ".0010756",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=120347&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:174567",
+      "name": "Varda",
+      "designation": "174567",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "17",
+      "condition_code": "1",
+      "solution_date": "2024-10-11 19:47:55",
+      "elements": {
+        "a": {
+          "value": "45.553792965197",
+          "sigma": "4.6997E-5",
+          "units": "au"
+        },
+        "e": {
+          "value": ".1422792008234468",
+          "sigma": "3.0081E-6",
+          "units": null
+        },
+        "i": {
+          "value": "21.51272002644964",
+          "sigma": "1.3919E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "184.0761905128264",
+          "sigma": "1.4135E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "184.8433524049403",
+          "sigma": ".00044954",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "277.2915511778176",
+          "sigma": ".00079498",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=174567&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:28978",
+      "name": "Ixion",
+      "designation": "28978",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "22",
+      "condition_code": "0",
+      "solution_date": "2026-06-05 21:15:49",
+      "elements": {
+        "a": {
+          "value": "39.34646480522989",
+          "sigma": "3.219E-5",
+          "units": "au"
+        },
+        "e": {
+          "value": ".2435609285514542",
+          "sigma": "1.65E-6",
+          "units": null
+        },
+        "i": {
+          "value": "19.66251532313573",
+          "sigma": "4.3404E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "71.0808264000478",
+          "sigma": "3.376E-6",
+          "units": "deg"
+        },
+        "w": {
+          "value": "300.6223377684572",
+          "sigma": ".00012108",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "294.9676352498359",
+          "sigma": ".00027839",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=28978&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:20000",
+      "name": "Varuna",
+      "designation": "20000",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "65",
+      "condition_code": "0",
+      "solution_date": "2026-06-05 17:43:19",
+      "elements": {
+        "a": {
+          "value": "43.2000227503935",
+          "sigma": "2.2306E-5",
+          "units": "au"
+        },
+        "e": {
+          "value": ".05161543734827757",
+          "sigma": "1.2518E-6",
+          "units": null
+        },
+        "i": {
+          "value": "17.14054429876356",
+          "sigma": "2.5507E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "97.21583412147274",
+          "sigma": "3.5751E-6",
+          "units": "deg"
+        },
+        "w": {
+          "value": "273.3589746671601",
+          "sigma": ".00063298",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "115.6679071685554",
+          "sigma": ".00076037",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=20000&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:19521",
+      "name": "Chaos",
+      "designation": "19521",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "19",
+      "condition_code": "2",
+      "solution_date": "2026-03-12 15:04:52",
+      "elements": {
+        "a": {
+          "value": "46.09015370710931",
+          "sigma": ".0011878",
+          "units": "au"
+        },
+        "e": {
+          "value": ".1102858760155686",
+          "sigma": "1.6387E-5",
+          "units": null
+        },
+        "i": {
+          "value": "12.0250072555908",
+          "sigma": "2.4878E-5",
+          "units": "deg"
+        },
+        "om": {
+          "value": "49.93519022221457",
+          "sigma": "7.691E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "57.02449924863812",
+          "sigma": ".0046173",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "350.6526381614676",
+          "sigma": ".0039984",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=19521&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:38628",
+      "name": "Huya",
+      "designation": "38628",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "53",
+      "condition_code": "1",
+      "solution_date": "2025-09-17 00:41:10",
+      "elements": {
+        "a": {
+          "value": "39.25105618208629",
+          "sigma": ".0002659",
+          "units": "au"
+        },
+        "e": {
+          "value": ".27370027566519",
+          "sigma": "4.1702E-6",
+          "units": null
+        },
+        "i": {
+          "value": "15.47789111712463",
+          "sigma": "2.9546E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "169.2838480896274",
+          "sigma": "3.1949E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "67.47433728336112",
+          "sigma": ".00020561",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "16.8328068750597",
+          "sigma": ".0001969",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=38628&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:229762",
+      "name": "Gǃkúnǁʼhòmdímà",
+      "designation": "229762",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "42",
+      "condition_code": "1",
+      "solution_date": "2026-06-07 05:29:28",
+      "elements": {
+        "a": {
+          "value": "74.50819049288985",
+          "sigma": ".0017334",
+          "units": "au"
+        },
+        "e": {
+          "value": ".4957816282699332",
+          "sigma": "9.672E-6",
+          "units": null
+        },
+        "i": {
+          "value": "23.32953536634301",
+          "sigma": "1.0028E-5",
+          "units": "deg"
+        },
+        "om": {
+          "value": "131.2505901829532",
+          "sigma": "4.303E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "346.0576265153255",
+          "sigma": ".00077016",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "348.9992237037756",
+          "sigma": ".00056978",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=229762&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:15760",
+      "name": "Albion",
+      "designation": "15760",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "8",
+      "condition_code": "3",
+      "solution_date": "2023-02-09 19:36:46",
+      "elements": {
+        "a": {
+          "value": "44.13128015101105",
+          "sigma": ".002902",
+          "units": "au"
+        },
+        "e": {
+          "value": ".07115576064918994",
+          "sigma": "4.7186E-5",
+          "units": null
+        },
+        "i": {
+          "value": "2.187986421529304",
+          "sigma": "5.5056E-5",
+          "units": "deg"
+        },
+        "om": {
+          "value": "359.5024198402141",
+          "sigma": ".00085374",
+          "units": "deg"
+        },
+        "w": {
+          "value": "6.378968694221481",
+          "sigma": ".010485",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "36.25803194638895",
+          "sigma": ".011898",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=15760&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:486958",
+      "name": "Arrokoth",
+      "designation": "486958",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "3",
+      "condition_code": "4",
+      "solution_date": "2024-02-21 21:21:36",
+      "elements": {
+        "a": {
+          "value": "44.05257835991367",
+          "sigma": ".01006",
+          "units": "au"
+        },
+        "e": {
+          "value": ".03555717645015258",
+          "sigma": ".00033543",
+          "units": null
+        },
+        "i": {
+          "value": "2.450613924655929",
+          "sigma": ".00032721",
+          "units": "deg"
+        },
+        "om": {
+          "value": "159.0377267890618",
+          "sigma": ".010608",
+          "units": "deg"
+        },
+        "w": {
+          "value": "188.8507463365642",
+          "sigma": ".52967",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "310.9839309924138",
+          "sigma": ".47947",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=486958&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:47171",
+      "name": "Lempo",
+      "designation": "47171",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "57",
+      "condition_code": "1",
+      "solution_date": "2026-06-06 03:29:33",
+      "elements": {
+        "a": {
+          "value": "39.65642454418079",
+          "sigma": ".00033444",
+          "units": "au"
+        },
+        "e": {
+          "value": ".2285304287303842",
+          "sigma": "5.4594E-6",
+          "units": null
+        },
+        "i": {
+          "value": "8.404037172604895",
+          "sigma": "6.5761E-6",
+          "units": "deg"
+        },
+        "om": {
+          "value": "97.1624650655848",
+          "sigma": "6.6045E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "295.8317561632739",
+          "sigma": ".00027056",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "15.44324079682706",
+          "sigma": ".0002425",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=47171&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:3753",
+      "name": "Cruithne",
+      "designation": "3753",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "313",
+      "condition_code": "0",
+      "solution_date": "2026-09-29 06:18:41",
+      "elements": {
+        "a": {
+          "value": ".9977971735207362",
+          "sigma": "1.6613E-10",
+          "units": "au"
+        },
+        "e": {
+          "value": ".5149036012722364",
+          "sigma": "1.5134E-8",
+          "units": null
+        },
+        "i": {
+          "value": "19.80238133518091",
+          "sigma": "5.8314E-7",
+          "units": "deg"
+        },
+        "om": {
+          "value": "126.1886918392102",
+          "sigma": "1.2833E-6",
+          "units": "deg"
+        },
+        "w": {
+          "value": "43.8830157688886",
+          "sigma": "1.3707E-6",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "182.1324439405456",
+          "sigma": "2.9927E-6",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=3753&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:2002AA29",
+      "name": "2002 AA29",
+      "designation": "2002 AA29",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "23",
+      "condition_code": "0",
+      "solution_date": "2021-04-14 21:17:05",
+      "elements": {
+        "a": {
+          "value": ".9926139782760272",
+          "sigma": "2.2834E-8",
+          "units": "au"
+        },
+        "e": {
+          "value": ".01303747171665658",
+          "sigma": "2.0035E-7",
+          "units": null
+        },
+        "i": {
+          "value": "10.7481997991393",
+          "sigma": "5.5303E-5",
+          "units": "deg"
+        },
+        "om": {
+          "value": "106.348195051186",
+          "sigma": "2.1951E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "101.8673588334159",
+          "sigma": ".00043497",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "137.8021665494831",
+          "sigma": ".00074575",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2002+AA29&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:85770",
+      "name": "1998 UP1",
+      "designation": "85770",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "105",
+      "condition_code": "0",
+      "solution_date": "2025-10-20 06:53:42",
+      "elements": {
+        "a": {
+          "value": ".9976760608731493",
+          "sigma": "1.0406E-8",
+          "units": "au"
+        },
+        "e": {
+          "value": ".3451936138336726",
+          "sigma": "5.0051E-7",
+          "units": null
+        },
+        "i": {
+          "value": "33.17703972157087",
+          "sigma": "4.5265E-5",
+          "units": "deg"
+        },
+        "om": {
+          "value": "18.31454857354581",
+          "sigma": "7.6669E-6",
+          "units": "deg"
+        },
+        "w": {
+          "value": "234.2372625825293",
+          "sigma": "2.8662E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "350.5188791978004",
+          "sigma": "6.2167E-5",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "desc": "non-gravitational transverse acceleration parameter",
+          "name": "A2",
+          "units": "au/d^2",
+          "n": 1,
+          "title": "non-grav. transverse accel.",
+          "sigma": "9.811E-15",
+          "value": "-4.556229204935677E-14",
+          "kind": "EST"
+        },
+        {
+          "kind": "SET",
+          "title": "normalizing factor",
+          "n": 0,
+          "units": null,
+          "value": "1.",
+          "sigma": null,
+          "desc": "normalizing factor [default 0.1112620426]",
+          "name": "ALN"
+        },
+        {
+          "units": null,
+          "n": 0,
+          "title": "non-grav. model exp. k",
+          "sigma": null,
+          "value": "0.",
+          "name": "NK",
+          "desc": "non-grav. model constant, exponent k [default 4.6142]",
+          "kind": "SET"
+        },
+        {
+          "kind": "SET",
+          "desc": "non-grav. model constant, exponent m [default 2.15]",
+          "name": "NM",
+          "units": null,
+          "n": 0,
+          "title": "non-grav. model exp. m",
+          "value": "2.",
+          "sigma": null
+        },
+        {
+          "desc": "normalizing distance, au [default 2.808 au]",
+          "name": "R0",
+          "sigma": null,
+          "value": "1.",
+          "units": "au",
+          "n": 0,
+          "title": "normalizing distance",
+          "kind": "SET"
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=85770&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:469219",
+      "name": "Kamoʻoalewa",
+      "designation": "469219",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "37",
+      "condition_code": "0",
+      "solution_date": "2026-09-03 06:19:15",
+      "elements": {
+        "a": {
+          "value": "1.000810461656002",
+          "sigma": "8.5072E-9",
+          "units": "au"
+        },
+        "e": {
+          "value": ".1022388434937281",
+          "sigma": "2.2592E-7",
+          "units": null
+        },
+        "i": {
+          "value": "7.802614368816799",
+          "sigma": "1.5376E-5",
+          "units": "deg"
+        },
+        "om": {
+          "value": "65.59324199512295",
+          "sigma": "1.2191E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "304.3632127863176",
+          "sigma": "2.4796E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "243.3871442328605",
+          "sigma": "3.7357E-5",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [
+        {
+          "name": "A2",
+          "value": "-1.341168313541087E-13",
+          "n": 1,
+          "units": "au/d^2",
+          "desc": "non-gravitational transverse acceleration parameter",
+          "sigma": "1.771E-14",
+          "kind": "EST",
+          "title": "non-grav. transverse accel."
+        },
+        {
+          "n": 0,
+          "value": "1.",
+          "name": "ALN",
+          "title": "normalizing factor",
+          "kind": "SET",
+          "sigma": null,
+          "units": null,
+          "desc": "normalizing factor [default 0.1112620426]"
+        },
+        {
+          "name": "NK",
+          "value": "0.",
+          "n": 0,
+          "title": "non-grav. model exp. k",
+          "desc": "non-grav. model constant, exponent k [default 4.6142]",
+          "units": null,
+          "sigma": null,
+          "kind": "SET"
+        },
+        {
+          "name": "NM",
+          "value": "2.",
+          "n": 0,
+          "units": null,
+          "desc": "non-grav. model constant, exponent m [default 2.15]",
+          "sigma": null,
+          "kind": "SET",
+          "title": "non-grav. model exp. m"
+        },
+        {
+          "title": "normalizing distance",
+          "units": "au",
+          "desc": "normalizing distance, au [default 2.808 au]",
+          "kind": "SET",
+          "sigma": null,
+          "value": "1.",
+          "name": "R0",
+          "n": 0
+        }
+      ],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=469219&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:2010TK7",
+      "name": "2010 TK7",
+      "designation": "2010 TK7",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "25",
+      "condition_code": "0",
+      "solution_date": "2024-07-31 04:15:54",
+      "elements": {
+        "a": {
+          "value": ".9985079154055611",
+          "sigma": "5.7554E-9",
+          "units": "au"
+        },
+        "e": {
+          "value": ".1902680595539314",
+          "sigma": "2.8208E-7",
+          "units": null
+        },
+        "i": {
+          "value": "20.90571103737795",
+          "sigma": "2.9525E-5",
+          "units": "deg"
+        },
+        "om": {
+          "value": "96.41454259883588",
+          "sigma": "7.2857E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "46.06984972911918",
+          "sigma": "7.2142E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "144.4203265437717",
+          "sigma": "4.7594E-5",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=2010+TK7&full-prec=true&cd-epoch=true"
+    },
+    {
+      "entity_id": "mpc:614689",
+      "name": "2020 XL5",
+      "designation": "614689",
+      "epoch_jd_tdb": 2461200.5,
+      "equinox": "J2000",
+      "orbit_id": "9",
+      "condition_code": "0",
+      "solution_date": "2024-12-31 05:29:30",
+      "elements": {
+        "a": {
+          "value": "1.000690221197436",
+          "sigma": "4.4633E-9",
+          "units": "au"
+        },
+        "e": {
+          "value": ".3871883798100225",
+          "sigma": "2.7999E-7",
+          "units": null
+        },
+        "i": {
+          "value": "13.84760090639309",
+          "sigma": "1.0691E-5",
+          "units": "deg"
+        },
+        "om": {
+          "value": "153.5685612557013",
+          "sigma": "4.0439E-5",
+          "units": "deg"
+        },
+        "w": {
+          "value": "88.04223124613588",
+          "sigma": "4.3711E-5",
+          "units": "deg"
+        },
+        "ma": {
+          "value": "91.69908769862731",
+          "sigma": "2.8532E-5",
+          "units": "deg"
+        }
+      },
+      "model_parameters": [],
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=614689&full-prec=true&cd-epoch=true"
+    }
+  ],
+  "failures": [],
+  "required": 87,
+  "resolved": 87,
+  "failed": 0,
+  "fallbacks": [
+    {
+      "entity_id": "comet:C1965S1",
+      "name": "Ikeya–Seki",
+      "designation": "1965 S1",
+      "position_tier": "catalogue-epoch",
+      "authority": "NASA/JPL Solar System Dynamics",
+      "source": "Great Comets in History + JPL comet element-table convention",
+      "note": "SBDB name lookup is ambiguous because the 1965 sungrazer fragmented near perihelion. Retained as a historical catalogue-epoch object; do not claim current high-precision ephemeris."
+    }
+  ],
+  "completion_note": "86 SBDB osculating solutions + 1 explicit JPL catalogue-epoch historical-comet fallback."
+}
