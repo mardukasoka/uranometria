@@ -8,7 +8,7 @@ export const SOLAR_ENTITY_KINDS=Object.freeze([
 ]);
 
 export const ORIGIN_STATUS=Object.freeze(["native","confirmed-interstellar","capture-candidate","unknown"]);
-export const ORBIT_FACETS=Object.freeze(["prograde","retrograde","polar-high-i","hyperbolic","resonant","co-orbital","sun-grazing","perihelion-inside-mercury","mercury-interior"]);
+export const ORBIT_FACETS=Object.freeze(["prograde","retrograde","polar-high-i","hyperbolic","resonant","co-orbital","sun-grazing","sunskirter","sundiver","perihelion-inside-mercury","mercury-interior"]);
 export const PHYSICAL_FACETS=Object.freeze(["fast-rotator","contact-binary","binary","active-asteroid","ringed","metal-rich","spacecraft-visited","sample-return"]);
 
 export const PROPAGATION_AUTHORITIES=Object.freeze({
