@@ -544,5 +544,55 @@
     "identity_source": "JPL SBDB/MPC",
     "render_gate": "epoch-stamped validated orbital state required",
     "note": "Representative objects may exist in the catalogue without being rendered. This is intentional fail-closed behavior."
+  },
+  "earth_coorbitals": {
+    "frame": "heliocentric-ecliptic co-rotating with Earth",
+    "common_epoch_mjd_tt": 61200,
+    "source": "Minor Planet Center Earth co-orbitals tutorial",
+    "records": [
+      {
+        "id": "469219",
+        "label": "Kamoʻoalewa",
+        "class": "quasi-satellite",
+        "position_au": [
+          -0.471599,
+          -0.94387,
+          0.00555
+        ]
+      },
+      {
+        "id": "3753",
+        "label": "Cruithne",
+        "class": "horseshoe",
+        "position_au": [
+          1.441537,
+          -0.276973,
+          -0.36003
+        ]
+      },
+      {
+        "id": "614689",
+        "label": "2020 XL5",
+        "class": "L4 Trojan",
+        "position_au": [
+          1.106163,
+          0.248616,
+          -0.176201
+        ]
+      }
+    ],
+    "caveat": "Common-epoch positions are authoritative tutorial outputs; long-term resonance trails require N-body integration."
+  },
+  "near_sun": {
+    "filters": [
+      "Atira",
+      "Vatira",
+      "Vulcanoid region"
+    ],
+    "vulcanoid_region": {
+      "status": "no-confirmed-population-rendered",
+      "render": "region-only"
+    },
+    "note": "Do not classify perihelion-inside-Mercury objects as wholly Mercury-interior."
   }
 }
