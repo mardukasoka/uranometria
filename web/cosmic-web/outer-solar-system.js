@@ -5,6 +5,16 @@ function rotateZ(p,a){const c=Math.cos(a),s=Math.sin(a);return[c*p[0]-s*p[1],s*p
 function earthAtCoEpoch(){const e=data?.objects?.find(o=>o.id==="3"&&o.elements);return e?positionFromElements(e.elements,2400000.5+(data.earth_coorbitals?.common_epoch_mjd_tt??61200)):null}
 function resize(){const d=Math.min(devicePixelRatio||1,2);c.width=innerWidth*d;c.height=innerHeight*d;x.setTransform(d,0,0,d,0,0)}addEventListener("resize",resize);resize();
 function project(p){let[a,b,z]=p,cy=Math.cos(yaw),sy=Math.sin(yaw);[a,b]=[a*cy-b*sy,a*sy+b*cy];let cp=Math.cos(pitch),sp=Math.sin(pitch);[b,z]=[b*cp-z*sp,b*sp+z*cp];const base=(viewMode==="inner"||viewMode==="coorbitals")?Math.min(innerWidth,innerHeight)*.026:viewMode==="nearsun"?Math.min(innerWidth,innerHeight)*.22:Math.min(innerWidth,innerHeight)*.00125;const s=base*zoom;return[innerWidth/2+a*s,innerHeight/2-z*s]}
+function bindControls(){
+ const q=id=>document.getElementById(id);
+ q("home")?.addEventListener("click",()=>{yaw=.35;pitch=.42;zoom=1});
+ q("inner")?.addEventListener("click",()=>{viewMode="inner";zoom=1;q("status").textContent="Inner Solar System"});
+ q("coorbitals")?.addEventListener("click",()=>{viewMode="coorbitals";zoom=1;q("status").textContent="Earth Co-orbitals"});
+ q("nearsun")?.addEventListener("click",()=>{viewMode="nearsun";zoom=1;q("status").textContent="Near-Sun"});
+ q("orbits")?.addEventListener("click",e=>{showOrbits=!showOrbits;e.currentTarget.classList.toggle("on",showOrbits)});
+ q("labels")?.addEventListener("click",e=>{showLabels=!showLabels;e.currentTarget.classList.toggle("on",showLabels)});
+}
+bindControls();
 function draw(){requestAnimationFrame(draw);x.fillStyle="#02040a";x.fillRect(0,0,innerWidth,innerHeight);if(!data)return;const markers=viewMode==="inner"?(data.inner_scale_markers??[]):viewMode==="coorbitals"?[1]:viewMode==="nearsun"?[0.307,0.387,0.718,0.983]:data.scale_markers;for(const r of markers){x.strokeStyle=r>170?"#89a9d62e":"#ffffff18";x.lineWidth=.7;x.beginPath();for(let k=0;k<=128;k++){const t=k/128*Math.PI*2,q=project([r*Math.cos(t),r*Math.sin(t),0]);k?x.lineTo(...q):x.moveTo(...q)}x.stroke();const q=project([r,0,0]);x.fillStyle="#aebbd0";x.font="9px system-ui";x.fillText(Math.abs(r-LIGHT_DAY_AU)<1?"1 light-day":Math.abs(r-2*LIGHT_DAY_AU)<2?"2 light-days":Math.round(r)+" AU",q[0]+3,q[1])}
 const sun=project([0,0,0]);x.fillStyle="#fff";x.beginPath();x.arc(...sun,3,0,Math.PI*2);x.fill();if(showLabels){x.fillStyle="#fff";x.fillText("Sun",sun[0]+6,sun[1])}
 if(viewMode==="coorbitals"){const ep=earthAtCoEpoch();if(ep){const a=-Math.atan2(ep[1],ep[0]);for(const r of data.earth_coorbitals?.records??[]){const q=project(rotateZ(r.position_au,a));x.fillStyle="#e5edff";x.beginPath();x.arc(...q,2.5,0,Math.PI*2);x.fill();if(showLabels){x.fillStyle="#d9e5ff";x.font="10px system-ui";x.fillText(r.label+" · "+r.class,q[0]+5,q[1])}}const eq=project(rotateZ(ep,a));x.fillStyle="#fff";x.beginPath();x.arc(...eq,3,0,Math.PI*2);x.fill();if(showLabels)x.fillText("Earth",eq[0]+5,eq[1])}}
@@ -14,10 +24,4 @@ for(const o of data.objects.filter(o=>o.elements && viewMode!=="coorbitals" && (
 requestAnimationFrame(draw);
 fetch("../data/solar-system/p0-outer-solar-system.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{data=d;const ready=d.objects.filter(o=>o.elements).length;document.querySelector("#status").textContent=ready?ready+" epoch-stamped orbital solutions loaded":"Scale/provenance fixture loaded"}).catch(()=>document.querySelector("#status").textContent="Solar-System catalogue unavailable");
 c.onpointerdown=e=>{drag=[e.clientX,e.clientY];c.setPointerCapture(e.pointerId)};c.onpointermove=e=>{if(!drag)return;yaw+=(e.clientX-drag[0])*.006;pitch=Math.max(-1.4,Math.min(1.4,pitch+(e.clientY-drag[1])*.006));drag=[e.clientX,e.clientY]};c.onpointerup=()=>drag=null;c.onwheel=e=>zoom=Math.max(.3,Math.min(12,zoom*Math.exp(-e.deltaY*.001)));let pinch=null;c.addEventListener("touchmove",e=>{if(e.touches.length===2){const d=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);if(pinch)zoom=Math.max(.3,Math.min(12,zoom*d/pinch));pinch=d}},{passive:true});c.addEventListener("touchend",()=>pinch=null);
-document.querySelector("#home").onclick=()=>{yaw=.35;pitch=.42;zoom=1};
-function setView(mode,msg){viewMode=mode;zoom=1;document.querySelector("#status").textContent=msg;for(const id of ["inner","coorbitals","nearsun"])document.querySelector("#"+id)?.classList.toggle("on",id===mode)}
-document.querySelector("#inner").onclick=()=>setView("inner","Inner Solar System · JPL planetary visualization baseline");
-document.querySelector("#coorbitals").onclick=()=>setView("coorbitals","Earth Co-orbitals · heliocentric frame co-rotating with Earth · MPC common epoch");
-document.querySelector("#nearsun").onclick=()=>setView("nearsun","Near-Sun · Atira / Vatira / empty Vulcanoid search region");
-function setSize(k){sizeThresholdKm=sizeThresholdKm===k?0:k;for(const n of [1,5])document.querySelector("#size"+n)?.classList.toggle("on",sizeThresholdKm===n);document.querySelector("#status").textContent=sizeThresholdKm?`Inner non-belt asteroids · validated diameter ≥ ${sizeThresholdKm} km`:"Size filter off";}
-document.querySelector("#size1").onclick=()=>setSize(1);document.querySelector("#size5").onclick=()=>setSize(5);document.querySelector("#orbits").onclick=e=>{showOrbits=!showOrbits;e.currentTarget.classList.toggle("on",showOrbits)};document.querySelector("#labels").onclick=e=>{showLabels=!showLabels;e.currentTarget.classList.toggle("on",showLabels)};
+
