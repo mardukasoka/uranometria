@@ -2,10 +2,15 @@
 import json, pathlib, time, urllib.parse, urllib.request
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 manifest=json.loads((ROOT/"web/data/solar-system/visual-presence-manifest.json").read_text())
+EXACT_DES={
+    "comet:73P":"73P-C", # principal surviving remnant; parent 73P is fragmented/ambiguous
+    "comet:C1965S1":"1965 S1", # exact JPL primary designation, avoid fuzzy-name matches
+}
 out={"schema":"uranometria.jpl-sbdb-snapshot.v0.1","authority":"NASA/JPL SBDB","objects":[],"failures":[]}
 for idx,o in enumerate(manifest["objects"],1):
-    key=o.get("designation") or o["name"]
-    url="https://ssd-api.jpl.nasa.gov/sbdb.api?"+urllib.parse.urlencode({"sstr":key,"full-prec":"true","cd-epoch":"true"})
+    key=EXACT_DES.get(o["entity_id"],o.get("designation") or o["name"])
+    query_key="des" if o["entity_id"] in EXACT_DES else "sstr"
+    url="https://ssd-api.jpl.nasa.gov/sbdb.api?"+urllib.parse.urlencode({query_key:key,"full-prec":"true","cd-epoch":"true"})
     try:
         with urllib.request.urlopen(url,timeout=30) as r: d=json.load(r)
         if d.get("code")==300 or "orbit" not in d:
