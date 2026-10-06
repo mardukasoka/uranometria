@@ -379,5 +379,11 @@
     9.537,
     19.189,
     30.07
-  ]
+  ],
+  "render_policy": {
+    "missing_state": "do-not-render",
+    "uncertainty": "preserve-source-uncertainty",
+    "orbit_lines": "visualization-only unless backed by higher-fidelity propagation",
+    "principle": "Known identity does not imply a known render position."
+  }
 }
