@@ -5,6 +5,23 @@
   "rule": "Published/authoritative survey geometry only; approximate rectangles are not scientific footprints.",
   "layers": [
     {
+      "id": "gaia-qso-dr3",
+      "label": "Gaia DR3 QSO candidates",
+      "group": "all-sky-reference",
+      "coverage": "all-sky catalogue with spatially varying completeness/contamination",
+      "objects": 6649162,
+      "objects_with_redshift": 6375063,
+      "geometry_status": "HEALPix density map available",
+      "geometry": {
+        "type": "healpix_density",
+        "level": 6,
+        "coordinate_system": "Galactic"
+      },
+      "role": "comparison/reference layer",
+      "provenance": "Gaia DR3 integrated extragalactic qso_candidates",
+      "caveat": "Completeness-driven candidate table; not a pure quasar sample. Scanning law, Galactic plane extinction/crowding and Magellanic Clouds affect density."
+    },
+    {
       "id": "2mrs",
       "label": "2MRS",
       "group": "nearby",
