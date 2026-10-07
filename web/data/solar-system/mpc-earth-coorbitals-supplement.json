@@ -1,0 +1,101 @@
+{
+  "schema": "uranometria.solar-system.mpc-earth-coorbitals.v1",
+  "authority": "Minor Planet Center / literature cross-check",
+  "note": "Static supplement for Earth co-orbitals absent from the JPL snapshot. Elements are heliocentric J2000; epochs are retained per source and are not a common-epoch N-body solution.",
+  "objects": [
+    {
+      "id": "2003 YN107",
+      "label": "2003 YN107",
+      "class": "quasi-satellite / horseshoe transitional",
+      "epoch_jd": 2461000.5,
+      "elements": {
+        "a_au": 0.9888400291,
+        "e": 0.0139493608,
+        "i_deg": 4.3208945,
+        "node_deg": 264.36698,
+        "argp_deg": 87.55338,
+        "M_deg": 186.0344
+      }
+    },
+    {
+      "id": "2010 SO16",
+      "label": "2010 SO16",
+      "class": "horseshoe",
+      "epoch_jd": 2455400.5,
+      "elements": {
+        "a_au": 1.00039,
+        "e": 0.075188,
+        "i_deg": 14.536,
+        "node_deg": 40.523,
+        "argp_deg": 108.283,
+        "M_deg": 137.831
+      }
+    },
+    {
+      "id": "2015 SO2",
+      "label": "2015 SO2",
+      "class": "horseshoe / quasi-satellite transitional",
+      "epoch_jd": 2457600.5,
+      "elements": {
+        "a_au": 0.99892124,
+        "e": 0.108076,
+        "i_deg": 9.175,
+        "node_deg": 182.9293,
+        "argp_deg": 290.0678,
+        "M_deg": 208.3767
+      }
+    },
+    {
+      "id": "2004 GU9",
+      "label": "2004 GU9",
+      "class": "quasi-satellite",
+      "elements": {
+        "a_au": 1.001268128,
+        "e": 0.1362649,
+        "i_deg": 13.64835,
+        "node_deg": 38.67583,
+        "argp_deg": 280.33287,
+        "M_deg": 121.35365
+      }
+    },
+    {
+      "id": "2006 FV35",
+      "label": "2006 FV35",
+      "class": "quasi-satellite",
+      "elements": {
+        "a_au": 1.00127736,
+        "e": 0.377531,
+        "i_deg": 7.10162,
+        "node_deg": 179.54189,
+        "argp_deg": 170.8458,
+        "M_deg": 102.1358
+      }
+    },
+    {
+      "id": "2013 LX28",
+      "label": "2013 LX28",
+      "class": "quasi-satellite",
+      "elements": {
+        "a_au": 1.0015884,
+        "e": 0.452052,
+        "i_deg": 49.9761,
+        "node_deg": 76.681,
+        "argp_deg": 345.7818,
+        "M_deg": 28.1437
+      }
+    },
+    {
+      "id": "2014 OL339",
+      "label": "2014 OL339",
+      "class": "quasi-satellite",
+      "elements": {
+        "a_au": 0.999388,
+        "e": 0.46067,
+        "i_deg": 10.19065,
+        "node_deg": 252.2232,
+        "argp_deg": 289.6564,
+        "M_deg": 215.718
+      }
+    }
+  ]
+}
