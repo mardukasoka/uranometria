@@ -9,28 +9,69 @@
       "label": "2MRS",
       "group": "nearby",
       "coverage": "all-sky except Galactic zone of avoidance",
-      "geometry_status": "derive from catalogue/selection mask"
+      "geometry_status": "selection envelope available",
+      "area_deg2": 37539,
+      "geometry": {
+        "type": "selection",
+        "galactic_abs_b_min_deg": 5,
+        "bulge_abs_b_min_deg": 8
+      },
+      "provenance": "Huchra et al. 2012",
+      "caveat": "91% sky coverage; stricter |b|>=8 toward Galactic bulge must be applied with the release mask."
     },
     {
       "id": "6dfgs",
       "label": "6dFGS",
       "group": "redshift",
       "coverage": "southern sky",
-      "geometry_status": "footprint pending authoritative mask"
+      "geometry_status": "analytic footprint available",
+      "area_deg2": 17046,
+      "geometry": {
+        "type": "selection",
+        "dec_max_deg": 0,
+        "galactic_abs_b_min_deg": 10
+      },
+      "provenance": "Jones et al. 2004 / DR3"
     },
     {
       "id": "2dfgrs",
       "label": "2dFGRS",
       "group": "redshift",
       "coverage": "two principal strips plus random fields",
-      "geometry_status": "footprint pending authoritative mask"
+      "geometry_status": "published design envelopes available",
+      "area_deg2": 2000,
+      "geometry": {
+        "type": "design_envelopes",
+        "regions": [
+          {
+            "name": "SGP strip",
+            "center_ra_deg": 15,
+            "center_dec_deg": -30,
+            "width_ra_deg": 80,
+            "height_dec_deg": 15
+          },
+          {
+            "name": "NGP/equatorial strip",
+            "center_ra_deg": 187.5,
+            "center_dec_deg": 0,
+            "width_ra_deg": 75,
+            "height_dec_deg": 10
+          }
+        ],
+        "additional_fields": 99
+      },
+      "provenance": "Colless et al. 2001",
+      "caveat": "Strips are survey-design envelopes; exact tiling includes 99 additional southern fields."
     },
     {
       "id": "sdss",
       "label": "SDSS",
       "group": "redshift",
       "coverage": "wide optical imaging/spectroscopic footprint",
-      "geometry_status": "footprint pending release-specific mask"
+      "geometry_status": "DR7 release mask required",
+      "area_deg2": 8240,
+      "provenance": "SDSS DR7 coverage tables",
+      "caveat": "Legacy imaging: >7500 deg² NGC plus 740 deg² in three SGC stripes; render exact DR7 stripe/run tables rather than a bounding polygon."
     },
     {
       "id": "des",
