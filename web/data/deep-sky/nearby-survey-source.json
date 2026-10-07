@@ -1,0 +1,20 @@
+{
+  "schema": "uranometria.deep-sky.nearby-source.v1",
+  "layer": "2MRS",
+  "status": "source-linked",
+  "source_repository": "mardukasoka/universe",
+  "source_asset": "public/galaxies/2mrs.bin",
+  "source_loader": "src/galaxies.ts",
+  "source_generator": "scripts/generate-galaxies.mjs",
+  "records": 43533,
+  "record_bytes": 16,
+  "coordinates": "ICRS/J2000 RA, Dec",
+  "distance_model": "cz/H0 pure Hubble flow",
+  "h0_km_s_mpc": 70,
+  "notes": [
+    "Reuse the existing binary tile; do not duplicate the 696528-byte catalogue in Uranometria.",
+    "2MRS is the first Nearby/All-Sky layer and establishes observer-centred survey geometry.",
+    "Zone of avoidance is observational selection, not an empty cosmic region.",
+    "Future redshift layers must preserve survey footprint and selection metadata."
+  ]
+}
