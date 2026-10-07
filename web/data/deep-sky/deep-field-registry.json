@@ -1,0 +1,57 @@
+{
+  "schema": "uranometria.deep-sky.deep-fields.v1",
+  "coordinate_frame": "ICRS/J2000",
+  "fields": [
+    {
+      "id": "cdf-s",
+      "name": "Chandra Deep Field-South",
+      "facility": "Chandra",
+      "band": "X-ray",
+      "exposure": "7 Ms",
+      "area_arcmin2": 484.2,
+      "main_sources": 1008,
+      "supplementary_sources": 47,
+      "multiwavelength_counterparts": 992,
+      "redshifts": 986,
+      "catalog": "HEASARC CHANDFS7MS",
+      "rendering": "deep-field footprint + source layer",
+      "wavelength_visual": "blue/violet"
+    },
+    {
+      "id": "cdf-n",
+      "name": "Chandra Deep Field-North",
+      "facility": "Chandra",
+      "band": "X-ray",
+      "exposure": "2 Ms",
+      "area_arcmin2": 448,
+      "main_sources": 503,
+      "center": {
+        "ra": "12h 36m 55s",
+        "dec": "+62° 14′ 15″"
+      },
+      "catalog": "CDF-N 2 Ms source catalog",
+      "rendering": "deep-field footprint + source layer",
+      "wavelength_visual": "blue/violet"
+    },
+    {
+      "id": "e-cdf-s",
+      "name": "Extended Chandra Deep Field-South",
+      "facility": "Chandra",
+      "band": "X-ray",
+      "exposure": "~250 ks per flanking pointing",
+      "rendering": "extended footprint",
+      "wavelength_visual": "blue/violet"
+    }
+  ],
+  "interaction": {
+    "survey_identity": "independent toggle",
+    "crossmatch": "white highlight when same astrophysical object is present in >=2 enabled surveys",
+    "color_semantics": "wavelength only; X-ray blue/violet",
+    "geometry": "actual angular footprint; never decorative cone"
+  },
+  "notes": [
+    "CDF-S overlaps major optical/IR deep-field work and is a priority crossmatch anchor.",
+    "Keep Chandra source detections distinct from optical/IR survey membership.",
+    "No-detection must remain distinct from not-surveyed-to-depth."
+  ]
+}
