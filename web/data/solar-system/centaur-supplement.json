@@ -1,0 +1,62 @@
+{
+  "schema": "uranometria.centaur-supplement.v1",
+  "note": "Conservative named-Centaur expansion. Elements retain their cited source epoch; not propagated to the JPL snapshot epoch.",
+  "objects": [
+    {
+      "id": "7066",
+      "label": "Nessus",
+      "elements": {
+        "a_au": 24.639,
+        "e": 0.5189,
+        "i_deg": 15.663,
+        "node_deg": 31.183,
+        "argp_deg": 170.96,
+        "M_deg": 80.046
+      },
+      "epoch_jd_tdb": 2458600.5,
+      "source": "published orbital elements / JPL-classified Centaur"
+    },
+    {
+      "id": "31824",
+      "label": "Elatus",
+      "elements": {
+        "a_au": 11.811,
+        "e": 0.3799,
+        "i_deg": 5.2447,
+        "node_deg": 87.158,
+        "argp_deg": 281.62,
+        "M_deg": 170.74
+      },
+      "epoch_jd_tdb": 2458000.5,
+      "source": "published orbital elements / Centaur"
+    },
+    {
+      "id": "32532",
+      "label": "Thereus",
+      "elements": {
+        "a_au": 10.62374,
+        "e": 0.197946289,
+        "i_deg": 20.3794555,
+        "node_deg": 205.161551,
+        "argp_deg": 86.90537,
+        "M_deg": 266.178611
+      },
+      "epoch_jd_tdb": 2460600.5,
+      "source": "Lucky Star NIMAv2 / Centaur"
+    },
+    {
+      "id": "52872",
+      "label": "Okyrhoe",
+      "elements": {
+        "a_au": 8.3478,
+        "e": 0.3067,
+        "i_deg": 15.665,
+        "node_deg": 173.03,
+        "argp_deg": 337.79,
+        "M_deg": 118.92
+      },
+      "epoch_jd_tdb": 2457400.5,
+      "source": "published orbital elements / JPL-MPC-DES Centaur"
+    }
+  ]
+}
