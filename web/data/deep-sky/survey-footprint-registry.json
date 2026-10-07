@@ -1,0 +1,120 @@
+{
+  "schema": "uranometria.deep-sky.survey-footprints.v1",
+  "frame": "ICRS/J2000",
+  "projection": "Mollweide",
+  "rule": "Published/authoritative survey geometry only; approximate rectangles are not scientific footprints.",
+  "layers": [
+    {
+      "id": "2mrs",
+      "label": "2MRS",
+      "group": "nearby",
+      "coverage": "all-sky except Galactic zone of avoidance",
+      "geometry_status": "derive from catalogue/selection mask"
+    },
+    {
+      "id": "6dfgs",
+      "label": "6dFGS",
+      "group": "redshift",
+      "coverage": "southern sky",
+      "geometry_status": "footprint pending authoritative mask"
+    },
+    {
+      "id": "2dfgrs",
+      "label": "2dFGRS",
+      "group": "redshift",
+      "coverage": "two principal strips plus random fields",
+      "geometry_status": "footprint pending authoritative mask"
+    },
+    {
+      "id": "sdss",
+      "label": "SDSS",
+      "group": "redshift",
+      "coverage": "wide optical imaging/spectroscopic footprint",
+      "geometry_status": "footprint pending release-specific mask"
+    },
+    {
+      "id": "des",
+      "label": "DES",
+      "group": "wide",
+      "coverage": "southern high-Galactic-latitude footprint",
+      "geometry_status": "footprint pending authoritative mask"
+    },
+    {
+      "id": "desi",
+      "label": "DESI",
+      "group": "redshift",
+      "coverage": "wide northern and southern imaging/spectroscopic footprint",
+      "geometry_status": "footprint pending release-specific mask"
+    },
+    {
+      "id": "cdf-s",
+      "label": "CDF-S",
+      "group": "deep-field",
+      "coverage": "Chandra Deep Field South",
+      "geometry_status": "center/footprint registry"
+    },
+    {
+      "id": "cdf-n",
+      "label": "CDF-N",
+      "group": "deep-field",
+      "coverage": "Chandra Deep Field North",
+      "geometry_status": "center/footprint registry"
+    },
+    {
+      "id": "cosmos",
+      "label": "COSMOS",
+      "group": "deep-field",
+      "coverage": "COSMOS field",
+      "geometry_status": "footprint pending authoritative polygon"
+    },
+    {
+      "id": "goods-n",
+      "label": "GOODS-N",
+      "group": "deep-field",
+      "coverage": "GOODS North",
+      "geometry_status": "footprint pending authoritative polygon"
+    },
+    {
+      "id": "goods-s",
+      "label": "GOODS-S",
+      "group": "deep-field",
+      "coverage": "GOODS South",
+      "geometry_status": "footprint pending authoritative polygon"
+    },
+    {
+      "id": "jades",
+      "label": "JADES",
+      "group": "high-z",
+      "coverage": "JWST deep fields",
+      "geometry_status": "program footprints pending authoritative polygons"
+    },
+    {
+      "id": "ceers",
+      "label": "CEERS",
+      "group": "high-z",
+      "coverage": "Extended Groth Strip",
+      "geometry_status": "program footprint pending authoritative polygon"
+    },
+    {
+      "id": "primer",
+      "label": "PRIMER",
+      "group": "high-z",
+      "coverage": "COSMOS + UDS",
+      "geometry_status": "program footprints pending authoritative polygons"
+    },
+    {
+      "id": "uncover",
+      "label": "UNCOVER",
+      "group": "high-z",
+      "coverage": "Abell 2744 field",
+      "geometry_status": "program footprint pending authoritative polygon"
+    },
+    {
+      "id": "rubies",
+      "label": "RUBIES",
+      "group": "high-z",
+      "coverage": "JWST/NIRSpec survey fields",
+      "geometry_status": "program footprints pending authoritative polygons"
+    }
+  ]
+}
