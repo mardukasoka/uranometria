@@ -3,6 +3,32 @@
   "coordinate_frame": "ICRS/J2000",
   "fields": [
     {
+      "id": "hdf-n",
+      "name": "Hubble Deep Field North (1995)",
+      "facility": "HST",
+      "band": "optical",
+      "center": {
+        "ra_deg": 189.17746,
+        "dec_deg": 62.205
+      },
+      "source": "https://science.nasa.gov/mission/hubble/science/universe-uncovered/hubble-deep-fields/",
+      "geometry_status": "historical pointing centre; footprint not ingested",
+      "relation": "original HDF-N; distinct from GOODS-N and CDF-N"
+    },
+    {
+      "id": "hdf-s",
+      "name": "Hubble Deep Field South (1998)",
+      "facility": "HST",
+      "band": "optical",
+      "center": {
+        "ra_deg": 338.22917,
+        "dec_deg": -60.55278
+      },
+      "source": "https://science.nasa.gov/asset/hubble/hubble-deep-field-south-unveils-myriad-galaxies/",
+      "geometry_status": "historical pointing centre; footprint not ingested",
+      "relation": "original HDF-S in Tucana; not GOODS-S"
+    },
+    {
       "id": "cdf-s",
       "name": "Chandra Deep Field-South",
       "facility": "Chandra",
