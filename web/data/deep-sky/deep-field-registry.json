@@ -55,6 +55,73 @@
         "ra_deg": 53.1167,
         "dec_deg": -27.8083
       }
+    },
+    {
+      "id": "goods-s",
+      "name": "GOODS-S",
+      "facility": "HST",
+      "band": "optical/IR",
+      "center": {
+        "ra_deg": 53.1375,
+        "dec_deg": -27.8131
+      },
+      "relation": "parent field for HUDF/XDF and JADES GOODS-S",
+      "source": "https://jwst-docs.stsci.edu/jwst-near-infrared-spectrograph/nirspec-example-science-programs/nirspec-mos-deep-extragalactic-survey",
+      "geometry_status": "centre marker only; footprint not ingested"
+    },
+    {
+      "id": "goods-n",
+      "name": "GOODS-N",
+      "facility": "HST",
+      "band": "optical/IR",
+      "center": {
+        "ra_deg": 189.2291,
+        "dec_deg": 62.2375
+      },
+      "relation": "parent field for JADES GOODS-N",
+      "source": "https://www.stsci.edu/contents/media/images/2016/07/3710-Image",
+      "geometry_status": "centre marker only; footprint not ingested"
+    },
+    {
+      "id": "hudf",
+      "name": "HUDF / XDF",
+      "facility": "HST",
+      "band": "optical/IR",
+      "center": {
+        "ra_deg": 53.1583,
+        "dec_deg": -27.7914
+      },
+      "relation": "nested in GOODS-S; overlaps JADES GOODS-S observations",
+      "source": "https://archive.stsci.edu/prepds/hlf/",
+      "geometry_status": "approximate centre marker only; footprint not ingested"
+    },
+    {
+      "id": "jades-s",
+      "name": "JADES GOODS-S",
+      "facility": "JWST",
+      "band": "near-IR",
+      "parent": "goods-s",
+      "center": {
+        "ra_deg": 53.1375,
+        "dec_deg": -27.8131
+      },
+      "relation": "survey region within GOODS-S, not a single pointing",
+      "source": "https://archive.stsci.edu/hlsp/jades",
+      "geometry_status": "parent-region locator only; actual DR footprint pending"
+    },
+    {
+      "id": "jades-n",
+      "name": "JADES GOODS-N",
+      "facility": "JWST",
+      "band": "near-IR",
+      "parent": "goods-n",
+      "center": {
+        "ra_deg": 189.2291,
+        "dec_deg": 62.2375
+      },
+      "relation": "survey region within GOODS-N, not a single pointing",
+      "source": "https://archive.stsci.edu/hlsp/jades",
+      "geometry_status": "parent-region locator only; actual DR footprint pending"
     }
   ],
   "interaction": {
@@ -66,6 +133,7 @@
   "notes": [
     "CDF-S overlaps major optical/IR deep-field work and is a priority crossmatch anchor.",
     "Keep Chandra source detections distinct from optical/IR survey membership.",
-    "No-detection must remain distinct from not-surveyed-to-depth."
+    "No-detection must remain distinct from not-surveyed-to-depth.",
+    "Field centres and parent-region locators are not authoritative angular footprints; overlapping markers must not imply identical coverage."
   ]
 }
