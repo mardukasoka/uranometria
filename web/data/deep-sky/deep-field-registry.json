@@ -15,7 +15,13 @@
       "redshifts": 986,
       "catalog": "HEASARC CHANDFS7MS",
       "rendering": "deep-field footprint + source layer",
-      "wavelength_visual": "blue/violet"
+      "wavelength_visual": "blue/violet",
+      "center": {
+        "ra": "03h 32m 28s",
+        "dec": "−27° 48′ 30″",
+        "ra_deg": 53.1167,
+        "dec_deg": -27.8083
+      }
     },
     {
       "id": "cdf-n",
@@ -27,7 +33,9 @@
       "main_sources": 503,
       "center": {
         "ra": "12h 36m 55s",
-        "dec": "+62° 14′ 15″"
+        "dec": "+62° 14′ 15″",
+        "ra_deg": 189.2292,
+        "dec_deg": 62.2375
       },
       "catalog": "CDF-N 2 Ms source catalog",
       "rendering": "deep-field footprint + source layer",
@@ -40,7 +48,13 @@
       "band": "X-ray",
       "exposure": "~250 ks per flanking pointing",
       "rendering": "extended footprint",
-      "wavelength_visual": "blue/violet"
+      "wavelength_visual": "blue/violet",
+      "center": {
+        "ra": "03h 32m 28s",
+        "dec": "−27° 48′ 30″",
+        "ra_deg": 53.1167,
+        "dec_deg": -27.8083
+      }
     }
   ],
   "interaction": {
