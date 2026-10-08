@@ -1,0 +1,127 @@
+{
+  "version": "0.1.0",
+  "updated": "2026-10-01",
+  "note": "Curated review seed. Redshift is observational; display radius is normalized and is not a linear CF4 distance.",
+  "little_red_dots": [
+    {
+      "id": "CEERS-14448",
+      "z": 4.75,
+      "survey": "CEERS"
+    },
+    {
+      "id": "NGDEEP-4321",
+      "z": 8.92,
+      "survey": "NGDEEP"
+    },
+    {
+      "id": "PRIMER-COS-10539",
+      "z": 7.48,
+      "survey": "PRIMER"
+    },
+    {
+      "id": "CEERS-20320",
+      "z": 5.27,
+      "survey": "CEERS"
+    },
+    {
+      "id": "JADES-9186",
+      "z": 4.99,
+      "survey": "JADES"
+    },
+    {
+      "id": "PRIMER-UDS-17818",
+      "z": 6.4,
+      "survey": "PRIMER"
+    }
+  ],
+  "most_distant": [
+    {
+      "id": "MoM-z14",
+      "z": 14.44,
+      "ra_deg": 150.09333,
+      "dec_deg": 2.27316,
+      "status": "spectroscopically confirmed"
+    },
+    {
+      "id": "GS-z14-0",
+      "z": 14.179,
+      "ra_deg": 53.08294,
+      "dec_deg": -27.85563,
+      "status": "spectroscopically confirmed"
+    },
+    {
+      "id": "GS-z14-1",
+      "z": 14.044,
+      "ra_deg": 53.07427,
+      "dec_deg": -27.88592,
+      "status": "spectroscopically confirmed"
+    },
+    {
+      "id": "JADES-GS-z13-1-LA",
+      "z": 12.955,
+      "ra_deg": 53.06475,
+      "dec_deg": -27.89024,
+      "status": "spectroscopically confirmed"
+    },
+    {
+      "id": "GS-z13-0",
+      "z": 12.926,
+      "ra_deg": 53.14988,
+      "dec_deg": -27.7765,
+      "status": "spectroscopically confirmed"
+    },
+    {
+      "id": "UNCOVER-13077",
+      "z": 12.908,
+      "ra_deg": 3.57087,
+      "dec_deg": -30.40159,
+      "status": "spectroscopically confirmed"
+    },
+    {
+      "id": "GS-z12-0",
+      "z": 12.516,
+      "ra_deg": 53.16635,
+      "dec_deg": -27.82156,
+      "status": "spectroscopically confirmed"
+    },
+    {
+      "id": "UNCOVER-38766",
+      "z": 12.393,
+      "ra_deg": 3.51356,
+      "dec_deg": -30.3568,
+      "status": "spectroscopically confirmed"
+    },
+    {
+      "id": "CAPERS-EGS-65480",
+      "z": 12.344,
+      "ra_deg": 214.80717,
+      "dec_deg": 52.7902,
+      "status": "spectroscopically confirmed"
+    },
+    {
+      "id": "GHZ2/GLASS-z12",
+      "z": 12.338,
+      "ra_deg": 3.49898,
+      "dec_deg": -30.32475,
+      "status": "spectroscopically confirmed"
+    }
+  ],
+  "provenance": [
+    {
+      "source": "NASA Webb Early Universe",
+      "url": "https://science.nasa.gov/mission/webb/early-universe/"
+    },
+    {
+      "source": "NASA Little Red Dots NIRCam image",
+      "url": "https://science.nasa.gov/asset/webb/little-red-dots-nircam-image/"
+    },
+    {
+      "source": "NASA JADES-GS-z14-0 NIRSpec",
+      "url": "https://science.nasa.gov/asset/webb/galaxy-jades-gs-z14-0-spectrum-nirspec/"
+    },
+    {
+      "source": "MNRAS confirmed z>=10 compilation",
+      "url": "https://academic.oup.com/view-large/561987655"
+    }
+  ]
+}

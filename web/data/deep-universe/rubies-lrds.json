@@ -1,0 +1,442 @@
+{
+  "version": "0.1.0",
+  "classification": "RUBIES spectroscopic LRDs",
+  "count": 36,
+  "frame": "ICRS/J2000",
+  "source_catalog": "J/A+A/702/A57",
+  "source_paper": "Hviding et al. 2025, A&A 702 A57",
+  "objects": [
+    {
+      "id": "RUBIES-UDS-40579",
+      "field": "UDS",
+      "catalog_id": 40579,
+      "ra_deg": 34.2442,
+      "dec_deg": -5.245871,
+      "z": 3.11,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-UDS-144195",
+      "field": "UDS",
+      "catalog_id": 144195,
+      "ra_deg": 34.325156,
+      "dec_deg": -5.143685,
+      "z": 3.36,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-UDS-154183",
+      "field": "UDS",
+      "catalog_id": 154183,
+      "ra_deg": 34.410749,
+      "dec_deg": -5.129664,
+      "z": 3.55,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-UDS-23438",
+      "field": "UDS",
+      "catalog_id": 23438,
+      "ra_deg": 34.338271,
+      "dec_deg": -5.280895,
+      "z": 3.69,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-UDS-167741",
+      "field": "UDS",
+      "catalog_id": 167741,
+      "ra_deg": 34.334603,
+      "dec_deg": -5.110269,
+      "z": 4.12,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-UDS-31747",
+      "field": "UDS",
+      "catalog_id": 31747,
+      "ra_deg": 34.223757,
+      "dec_deg": -5.260245,
+      "z": 4.13,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-UDS-119957",
+      "field": "UDS",
+      "catalog_id": 119957,
+      "ra_deg": 34.268908,
+      "dec_deg": -5.176722,
+      "z": 4.15,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-EGS-28812",
+      "field": "EGS",
+      "catalog_id": 28812,
+      "ra_deg": 214.924149,
+      "dec_deg": 52.84905,
+      "z": 4.22,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-EGS-29489",
+      "field": "EGS",
+      "catalog_id": 29489,
+      "ra_deg": 215.022071,
+      "dec_deg": 52.920786,
+      "z": 4.54,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-UDS-182791",
+      "field": "UDS",
+      "catalog_id": 182791,
+      "ra_deg": 34.213813,
+      "dec_deg": -5.08705,
+      "z": 4.72,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-EGS-42232",
+      "field": "EGS",
+      "catalog_id": 42232,
+      "ra_deg": 214.886792,
+      "dec_deg": 52.855381,
+      "z": 4.95,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-EGS-61496",
+      "field": "EGS",
+      "catalog_id": 61496,
+      "ra_deg": 214.972441,
+      "dec_deg": 52.962192,
+      "z": 5.08,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-EGS-952625",
+      "field": "EGS",
+      "catalog_id": 952625,
+      "ra_deg": 214.975529,
+      "dec_deg": 52.925268,
+      "z": 5.11,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-UDS-830237",
+      "field": "UDS",
+      "catalog_id": 830237,
+      "ra_deg": 34.374852,
+      "dec_deg": -5.275529,
+      "z": 5.12,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-UDS-149298",
+      "field": "UDS",
+      "catalog_id": 149298,
+      "ra_deg": 34.424311,
+      "dec_deg": -5.136491,
+      "z": 5.15,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-UDS-53692",
+      "field": "UDS",
+      "catalog_id": 53692,
+      "ra_deg": 34.455376,
+      "dec_deg": -5.231814,
+      "z": 5.28,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-EGS-42046",
+      "field": "EGS",
+      "catalog_id": 42046,
+      "ra_deg": 214.795368,
+      "dec_deg": 52.788847,
+      "z": 5.28,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-UDS-970351",
+      "field": "UDS",
+      "catalog_id": 970351,
+      "ra_deg": 34.2619,
+      "dec_deg": -5.105205,
+      "z": 5.28,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-EGS-926125",
+      "field": "EGS",
+      "catalog_id": 926125,
+      "ra_deg": 215.137081,
+      "dec_deg": 52.988554,
+      "z": 5.28,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-UDS-29813",
+      "field": "UDS",
+      "catalog_id": 29813,
+      "ra_deg": 34.453355,
+      "dec_deg": -5.270717,
+      "z": 5.44,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-UDS-172350",
+      "field": "UDS",
+      "catalog_id": 172350,
+      "ra_deg": 34.368951,
+      "dec_deg": -5.103941,
+      "z": 5.58,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-EGS-37124",
+      "field": "EGS",
+      "catalog_id": 37124,
+      "ra_deg": 214.990977,
+      "dec_deg": 52.916524,
+      "z": 5.68,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-UDS-50716",
+      "field": "UDS",
+      "catalog_id": 50716,
+      "ra_deg": 34.313154,
+      "dec_deg": -5.226781,
+      "z": 6.17,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-UDS-57040",
+      "field": "UDS",
+      "catalog_id": 57040,
+      "ra_deg": 34.470042,
+      "dec_deg": -5.238069,
+      "z": 6.42,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-UDS-36171",
+      "field": "UDS",
+      "catalog_id": 36171,
+      "ra_deg": 34.345003,
+      "dec_deg": -5.260115,
+      "z": 6.47,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-UDS-967770",
+      "field": "UDS",
+      "catalog_id": 967770,
+      "ra_deg": 34.228526,
+      "dec_deg": -5.101526,
+      "z": 6.59,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-EGS-53254",
+      "field": "EGS",
+      "catalog_id": 53254,
+      "ra_deg": 214.797537,
+      "dec_deg": 52.818746,
+      "z": 6.62,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-UDS-33938",
+      "field": "UDS",
+      "catalog_id": 33938,
+      "ra_deg": 34.266442,
+      "dec_deg": -5.256391,
+      "z": 6.63,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-EGS-49140",
+      "field": "EGS",
+      "catalog_id": 49140,
+      "ra_deg": 214.892248,
+      "dec_deg": 52.87741,
+      "z": 6.68,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-EGS-948917",
+      "field": "EGS",
+      "catalog_id": 948917,
+      "ra_deg": 214.892479,
+      "dec_deg": 52.85689,
+      "z": 6.73,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-UDS-807469",
+      "field": "UDS",
+      "catalog_id": 807469,
+      "ra_deg": 34.376139,
+      "dec_deg": -5.310366,
+      "z": 6.78,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-EGS-927271",
+      "field": "EGS",
+      "catalog_id": 927271,
+      "ra_deg": 215.078259,
+      "dec_deg": 52.948497,
+      "z": 6.78,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-EGS-55604",
+      "field": "EGS",
+      "catalog_id": 55604,
+      "ra_deg": 214.983026,
+      "dec_deg": 52.956001,
+      "z": 6.98,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-UDS-848745",
+      "field": "UDS",
+      "catalog_id": 848745,
+      "ra_deg": 34.310575,
+      "dec_deg": -5.249898,
+      "z": 7.11,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-EGS-42803",
+      "field": "EGS",
+      "catalog_id": 42803,
+      "ra_deg": 214.929524,
+      "dec_deg": 52.887919,
+      "z": 7.15,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    },
+    {
+      "id": "RUBIES-EGS-966323",
+      "field": "EGS",
+      "catalog_id": 966323,
+      "ra_deg": 214.876149,
+      "dec_deg": 52.880831,
+      "z": 8.35,
+      "status": "spectroscopic LRD",
+      "external": {
+        "vizier_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/702/A57"
+      }
+    }
+  ]
+}

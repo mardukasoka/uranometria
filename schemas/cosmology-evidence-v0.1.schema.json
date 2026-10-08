@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://uranometria.local/schema/cosmology-evidence-v0.1.json",
+  "title": "Uranometria Cosmology Evidence Record v0.1",
+  "type": "object",
+  "required": ["id","domain","kind","frame","provenance","confidence"],
+  "properties": {
+    "id": {"type":"string"},
+    "domain": {"enum":["h0","jwst_early_universe","dipoles","bulk_flow","gravity","cosmic_web"]},
+    "kind": {"enum":["observation","catalogue","reconstruction","simulation","inference","paper_result"]},
+    "frame": {
+      "type":"object",
+      "properties":{
+        "coordinates":{"enum":["ICRS","galactic","supergalactic","comoving_cartesian","redshift"]},
+        "epoch":{"type":["string","number","null"]},
+        "redshift":{"type":["number","null"]},
+        "distance_mpc":{"type":["number","null"]}
+      },
+      "required":["coordinates"]
+    },
+    "observable":{"type":["object","array","number","string","null"]},
+    "model":{"type":["object","null"]},
+    "uncertainty":{"type":["object","null"]},
+    "provenance":{
+      "type":"object",
+      "required":["source_type","citation"],
+      "properties":{
+        "source_type":{"enum":["peer_reviewed","preprint","survey","catalogue","archive","derived"]},
+        "citation":{"type":"string"},
+        "doi":{"type":["string","null"]},
+        "arxiv":{"type":["string","null"]},
+        "dataset":{"type":["string","null"]},
+        "retrieved":{"type":["string","null"]}
+      }
+    },
+    "confidence":{
+      "type":"object",
+      "required":["level","basis"],
+      "properties":{
+        "level":{"enum":["high","moderate_high","moderate","low_moderate","low","preliminary"]},
+        "basis":{"type":"string"}
+      }
+    },
+    "alternatives":{"type":"array","items":{"type":"string"}},
+    "notes":{"type":"string"}
+  }
+}
