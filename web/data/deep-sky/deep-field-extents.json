@@ -1,0 +1,44 @@
+{
+  "schema": "uranometria.deep-field-extent.v0.1",
+  "cosmology": {
+    "H0_km_s_Mpc": 70,
+    "Omega_m": 0.3,
+    "Omega_lambda": 0.7,
+    "distance": "line-of-sight comoving Mpc; numerical flat LCDM integral"
+  },
+  "policy": {
+    "width": "actual footprint boundary only, never inferred from area",
+    "depth": "highest securely identified source within this named survey release, not telescope limit",
+    "unknown": "null means unverified; do not render a cap",
+    "overlap": "preserve programme identity and shared object IDs"
+  },
+  "fields": [
+    {
+      "id": "jades-s",
+      "footprint_polygon_icrs_deg": null,
+      "footprint_status": "pending authoritative MAST release polygon",
+      "farthest_verified": {
+        "name": "JADES-GS-z14-0",
+        "ra_deg": 53.1537083,
+        "dec_deg": -27.7803694,
+        "z": 14.32,
+        "z_type": "spectroscopic Lyman break",
+        "source": "https://science.nasa.gov/asset/webb/galaxy-jades-gs-z14-0-spectrum-nirspec/",
+        "verification_scope": "verified example, not certified farthest in latest release",
+        "date": "2024-05-30"
+      }
+    },
+    {
+      "id": "hudf",
+      "footprint_polygon_icrs_deg": null,
+      "footprint_status": "3 arcmin square Hubble image documented; exact sky-oriented boundary not yet ingested",
+      "farthest_verified": null
+    },
+    {
+      "id": "cdf-s",
+      "footprint_polygon_icrs_deg": null,
+      "footprint_status": "484.2 arcmin² survey area documented; exact polygon not yet ingested",
+      "farthest_verified": null
+    }
+  ]
+}
