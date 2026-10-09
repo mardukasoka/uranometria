@@ -1,0 +1,72 @@
+{
+  "schema": "uranometria.survey-simulation-comparison.v0.1",
+  "frame": "ICRS/J2000",
+  "distance_policy": "Explicit per-catalogue distance estimator; do not equate cz/H0 with LCDM comoving distance",
+  "comparison_policy": "No simulated galaxies displayed unless a real simulation output is loaded. No statistical agreement claims before selection matching.",
+  "pipeline": [
+    "simulation snapshot or lightcone",
+    "galaxy/halo assignment",
+    "observer placement and lightcone projection",
+    "survey angular mask",
+    "magnitude/redshift/completeness selection",
+    "matched observables",
+    "residuals with uncertainties"
+  ],
+  "surveys": [
+    {
+      "id": "2mrs",
+      "role": "observed",
+      "data": "../universe/public/galaxies/2mrs.bin",
+      "status": "viewer loaded",
+      "comparison_ready": false
+    },
+    {
+      "id": "sdss-dr17",
+      "role": "observed",
+      "status": "bounded 12000 galaxy sample; dec>0; nonrepresentative",
+      "comparison_ready": false
+    },
+    {
+      "id": "waves-deep",
+      "role": "design",
+      "geometry": "../data/deep-sky/waves-design-footprints.json",
+      "status": "design polygons only; not observed galaxy catalogue",
+      "comparison_ready": false
+    },
+    {
+      "id": "gama",
+      "role": "observed",
+      "status": "reference only; panchromatic luminosity-density measurements not ingested",
+      "comparison_ready": false
+    }
+  ],
+  "simulations": [
+    {
+      "id": "surfs",
+      "name": "SURFS",
+      "status": "reference only; no mock lightcone ingested",
+      "source": "https://academic.oup.com/mnras/article/475/4/5338/4797167"
+    },
+    {
+      "id": "genesis",
+      "name": "ASTRO 3D Genesis",
+      "status": "reference only; no catalogue ingested",
+      "source": "https://astro3d.org.au/"
+    },
+    {
+      "id": "swift",
+      "name": "SWIFT",
+      "status": "simulation engine; no run data ingested"
+    }
+  ],
+  "science_cases": [
+    {
+      "id": "gama-2015-eld",
+      "name": "Cosmic energy production decline",
+      "quantity": "cosmic spectral energy distribution / luminosity density versus redshift",
+      "note": "ICRAR 2015 reports local cosmic energy output approximately half its value 2 Gyr earlier; this is galaxy emission, not loss of conserved total universal energy.",
+      "source": "https://www.icrar.org/scientists-measure-slow-death-of-the-universe/",
+      "status": "published result; data tables not ingested"
+    }
+  ]
+}
