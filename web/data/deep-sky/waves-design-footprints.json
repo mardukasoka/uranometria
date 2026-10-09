@@ -1,0 +1,150 @@
+{
+  "schema": "uranometria.survey-design-footprints.v0.1",
+  "frame": "ICRS degrees (published RA/Dec)",
+  "source": "https://wavesurvey.org/surveys/",
+  "retrieved": "2026-10-10",
+  "geometry_type": "planned_AESOP_hexagon",
+  "warning": "Design geometry only; NOT observed coverage, complete sampling, or measured maximum galaxy depth. Published photometric target cut z_photo<0.8 is not a spectroscopic depth boundary.",
+  "fields": [
+    {
+      "id": "wd-01",
+      "name": "WAVES WD-01 (ELAIS-S1)",
+      "center_ra_deg": 9.5,
+      "center_dec_deg": -43.95,
+      "vertices_ra_dec_deg": [
+        [
+          9.5,
+          -42.68324
+        ],
+        [
+          11.007814,
+          -43.31662
+        ],
+        [
+          11.040298,
+          -44.58338
+        ],
+        [
+          9.5,
+          -45.21676
+        ],
+        [
+          7.959702,
+          -44.58338
+        ],
+        [
+          7.992186,
+          -43.31662
+        ]
+      ],
+      "target_photo_z_max": 0.8,
+      "observed_footprint": null,
+      "measured_redshift_max": null
+    },
+    {
+      "id": "wd-02",
+      "name": "WAVES WD-02 (XMM-LSS)",
+      "center_ra_deg": 35.875,
+      "center_dec_deg": -5.025,
+      "vertices_ra_dec_deg": [
+        [
+          35.240129,
+          -3.927954
+        ],
+        [
+          36.509871,
+          -3.927954
+        ],
+        [
+          37.146647,
+          -5.025
+        ],
+        [
+          36.512013,
+          -6.122046
+        ],
+        [
+          35.237987,
+          -6.122046
+        ],
+        [
+          34.603353,
+          -5.025
+        ]
+      ],
+      "target_photo_z_max": 0.8,
+      "observed_footprint": null,
+      "measured_redshift_max": null
+    },
+    {
+      "id": "wd-03",
+      "name": "WAVES WD-03 (ECDFS)",
+      "center_ra_deg": 53.125,
+      "center_dec_deg": -28.1,
+      "vertices_ra_dec_deg": [
+        [
+          52.414122,
+          -27.002954
+        ],
+        [
+          53.835877,
+          -27.002954
+        ],
+        [
+          54.561029,
+          -28.1
+        ],
+        [
+          53.850565,
+          -29.197046
+        ],
+        [
+          52.399435,
+          -29.197046
+        ],
+        [
+          51.688971,
+          -28.1
+        ]
+      ],
+      "target_photo_z_max": 0.8,
+      "observed_footprint": null,
+      "measured_redshift_max": null
+    },
+    {
+      "id": "wd-10",
+      "name": "WAVES WD-10 (COSMOS)",
+      "center_ra_deg": 150.125,
+      "center_dec_deg": 2.2,
+      "vertices_ra_dec_deg": [
+        [
+          149.49057,
+          3.297046
+        ],
+        [
+          150.75943,
+          3.297046
+        ],
+        [
+          151.392694,
+          2.2
+        ],
+        [
+          150.758497,
+          1.102954
+        ],
+        [
+          149.491503,
+          1.102954
+        ],
+        [
+          148.857306,
+          2.2
+        ]
+      ],
+      "target_photo_z_max": 0.8,
+      "observed_footprint": null,
+      "measured_redshift_max": null
+    }
+  ]
+}
