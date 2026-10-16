@@ -1,0 +1,32 @@
+name: Cosmic Compass validation
+on:
+  pull_request:
+    paths:
+      - 'web/cosmic-web/compass-coordinates.mjs'
+      - 'web/cosmic-web/compass-coordinates.test.mjs'
+      - 'web/cosmic-web/observatory-image-releases.json'
+      - 'web/cosmic-web/observatory-image-releases.test.mjs'
+      - '.github/workflows/cosmic-compass-validation.yml'
+  push:
+    branches: [main, feature/cosmic-compass-gc-uv]
+    paths:
+      - 'web/cosmic-web/compass-coordinates.mjs'
+      - 'web/cosmic-web/compass-coordinates.test.mjs'
+      - 'web/cosmic-web/observatory-image-releases.json'
+      - 'web/cosmic-web/observatory-image-releases.test.mjs'
+      - '.github/workflows/cosmic-compass-validation.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check Galactic/ICRS transforms
+        run: node web/cosmic-web/compass-coordinates.test.mjs
+      - name: Validate observatory image catalogue
+        run: node web/cosmic-web/observatory-image-releases.test.mjs
