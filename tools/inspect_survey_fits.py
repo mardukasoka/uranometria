@@ -28,7 +28,13 @@ def read_header(path: str | Path) -> dict:
                     return values
                 if card[8:10] != "= ":
                     continue
-                raw = card[10:].split("/", 1)[0].strip()
+                raw = card[10:].strip()
+                if raw.startswith("'"):
+                    # FITS quoted strings may contain a slash.
+                    end_quote = raw.find("'", 1)
+                    raw = raw[:end_quote + 1] if end_quote >= 0 else raw
+                else:
+                    raw = raw.split("/", 1)[0].strip()
                 if raw.startswith("'"):
                     value = raw.strip("'").strip()
                 elif raw in ("T", "F"):
