@@ -7,6 +7,10 @@ on:
       - 'web/cosmic-web/observatory-image-releases.json'
       - 'web/cosmic-web/observatory-image-releases.test.mjs'
       - '.github/workflows/cosmic-compass-validation.yml'
+      - 'web/cosmic-web/compass-pages.test.mjs'
+      - 'web/cosmic-web/cosmic-compass-gc-uv.html'
+      - 'web/cosmic-web/observatory-image-map.html'
+      - 'index.html'
   push:
     branches: [main, feature/cosmic-compass-gc-uv]
     paths:
@@ -15,6 +19,10 @@ on:
       - 'web/cosmic-web/observatory-image-releases.json'
       - 'web/cosmic-web/observatory-image-releases.test.mjs'
       - '.github/workflows/cosmic-compass-validation.yml'
+      - 'web/cosmic-web/compass-pages.test.mjs'
+      - 'web/cosmic-web/cosmic-compass-gc-uv.html'
+      - 'web/cosmic-web/observatory-image-map.html'
+      - 'index.html'
 permissions:
   contents: read
 jobs:
@@ -30,3 +38,5 @@ jobs:
         run: node web/cosmic-web/compass-coordinates.test.mjs
       - name: Validate observatory image catalogue
         run: node web/cosmic-web/observatory-image-releases.test.mjs
+      - name: Check mobile pages and navigation
+        run: node web/cosmic-web/compass-pages.test.mjs
