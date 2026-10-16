@@ -1,0 +1,20 @@
+{
+  "schema": "atlas.galactic-compact-object-sources.v1",
+  "coordinateFrame": "heliocentric-galactic",
+  "distanceUnit": "pc",
+  "sources": [
+    {"id":"atnf-psrcat","label":"ATNF Pulsar Catalogue","url":"https://www.atnf.csiro.au/research/pulsar/psrcat/","role":["pulsar","magnetar"],"fields":["JNAME","GL","GB","DIST","DIST_DM","P0","P1","BINARY"],"notes":"DIST is often model-derived. Do not treat as parallax; preserve reference and method."},
+    {"id":"blackcat","label":"BlackCAT","url":"https://www.sc.eso.org/~jcorral/BlackCAT/transients.php","role":["black-hole","black-hole-candidate","x-ray-binary"],"fields":["name","l","b","distance","orbital-period"],"notes":"Candidate and dynamically confirmed black holes must be distinguished; catalog source may omit distances."},
+    {"id":"hmxbcat2","label":"HEASARC HMXBCAT2","url":"https://heasarc.gsfc.nasa.gov/W3Browse/catalog/hmxbcat2.html","role":["x-ray-binary","neutron-star-candidate","black-hole-candidate"],"notes":"Dynamic Galactic high-mass X-ray binary catalogue. Accretor classification requires literature verification."}
+  ],
+  "rules": {
+    "noInventedDistances":true,
+    "noInventedMasses":true,
+    "microquasarIsTagNotExclusiveKind":true,
+    "requireHostGalaxy":"Milky Way",
+    "deduplicateBy":"curated-source-identity-and-cross-identifiers",
+    "render": "Only finite-distance objects have 3D positions; uncertain or missing-distance sources remain in a sky-only list. Screen-space glyphs are not physical radii.",
+    "scale": "Local system geometry uses physical km converted to parsecs. Black hole reference Schwarzschild radius assumes zero spin; neutron star radius is model dependent.",
+    "dataLifecycle":"Snapshot catalogue versions and attribution. Do not fetch massive catalogues from browser on every page load."
+  }
+}
