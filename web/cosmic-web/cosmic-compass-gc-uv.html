@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Uranometria · Galactic Centre UV</title>
+<style>:root{color-scheme:dark}body{margin:0;background:#080e1c;color:#e5efff;font:16px system-ui}main{max-width:740px;margin:auto;padding:18px}h1{font-size:1.5rem}label{display:block;margin:16px 0 6px}select,button,a.action{box-sizing:border-box;min-height:44px;background:#1d3046;color:white;border:1px solid #63839a;border-radius:10px;padding:10px;font:inherit}button,a.action{cursor:pointer}a{color:#9bd8ff}.actions{display:flex;gap:8px;flex-wrap:wrap}.actions>*{flex:1;text-align:center;text-decoration:none}.panel{background:#111d30;border:1px solid #34475d;border-radius:14px;padding:16px;margin:16px 0}.muted{color:#adbed2}.status{border-left:3px solid #e3bd67;padding-left:12px}code{overflow-wrap:anywhere}small{display:block;margin-top:8px}</style></head>
+<body><main><a href="../../index.html">← Uranometria</a><h1>Cosmic Compass · Galactic Centre</h1><p>Ultraviolet survey inspection · Galactic (l,b) = (0°,0°)</p>
+<div class="panel"><strong>Reference direction</strong><p>ICRS J2000 · RA 266.40499° · Dec −28.93617°</p><label for="band">Survey band</label><select id="band"><option value="GALEX Near UV">GALEX near UV</option><option value="GALEX Far UV">GALEX far UV</option></select>
+<label for="fov">Field of view</label><select id="fov"><option value="5">5°</option><option value="1">1°</option><option value="0.166667">10′</option><option value="0.016667">1′</option><option value="10">10°</option><option value="30">30°</option></select>
+<p class="status" id="status" role="status">Coverage not verified. An image query may return no data.</p>
+<div class="actions"><a class="action" id="skyview" target="_blank" rel="noopener noreferrer">Open NASA SkyView query</a><a class="action" id="sia" target="_blank" rel="noopener noreferrer">Query image metadata</a></div>
+<small>SkyView may reproject data. Inspect returned FITS headers and coverage before treating images as detections.</small></div>
+<div class="panel"><strong>Survey references</strong><p><a href="https://galex.stsci.edu/GR6/" target="_blank" rel="noopener noreferrer">GALEX GR6/GR7 archive</a> · <a href="https://skyview.gsfc.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA SkyView</a></p><p class="muted">The Galactic Centre is heavily UV-obscured. FUV and NUV coverage differ; missing pixels are not zero flux.</p></div>
+<script>
+const ra=266.40499,dec=-28.93617;
+const band=document.getElementById('band'),fov=document.getElementById('fov');
+function update(){
+ const survey=band.value,size=fov.value,pos=ra+','+dec;
+ document.getElementById('skyview').href='https://skyview.gsfc.nasa.gov/current/cgi/runquery.pl?Position='+encodeURIComponent(pos)+'&Survey='+encodeURIComponent(survey)+'&Coordinates=J2000&Return=JPEG&Size='+size+'&Pixels=512';
+ document.getElementById('sia').href='https://skyview.gsfc.nasa.gov/cgi-bin/vo/sia.pl?survey=galex&POS='+pos+'&SIZE='+size;
+ document.getElementById('status').textContent=survey+' · '+size+'° field · Coverage not verified; open source query to inspect.';
+}
+band.addEventListener('change',update);fov.addEventListener('change',update);update();
+</script></main></body></html>
