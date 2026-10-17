@@ -1,0 +1,32 @@
+name: SkyView live endpoint probe
+# Manual-only diagnostic: network reachability is NOT scientific coverage validation.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Probe official SkyView CGI without assuming survey coverage
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p diagnostic
+          URL='https://skyview.gsfc.nasa.gov/cgi-bin/images?Position=266.40499%2C-28.93617&Survey=GALEX+Near+UV&Coordinates=J2000&Size=1&Pixels=256&Projection=Tan&Return=JPEG&Quicklook=JPEG&NoFITS=1'
+          STATUS=$(curl --location --silent --show-error --max-time 90 --retry 1 --output diagnostic/response.bin --dump-header diagnostic/headers.txt --write-out '%{http_code}' "$URL") || STATUS='transport_error'
+          echo "HTTP status: $STATUS"
+          echo "Response bytes: $(wc -c < diagnostic/response.bin 2>/dev/null || echo 0)"
+          file diagnostic/response.bin || true
+          echo 'Response headers:'
+          sed -n '1,25p' diagnostic/headers.txt || true
+          echo 'Note: HTTP 200 or an image response does not prove GALEX GR7 coverage or scientifically valid WCS.'
+          echo 'Note: HTML response may contain a service error; do not classify it as an astronomical detection.'
+      - name: Upload diagnostic response
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: skyview-gc-nuv-diagnostic
+          path: diagnostic/
+          retention-days: 7
