@@ -53,7 +53,7 @@ def inspect(path: str | Path) -> dict:
     h = read_header(path)
     warnings = []
     required = ("CTYPE1", "CTYPE2", "CRVAL1", "CRVAL2", "CRPIX1", "CRPIX2")
-    missing = [key for key in required if key not in h]
+    missing = [key for key in required if not h.get(key) and h.get(key) != 0]
     if missing:
         warnings.append("Missing WCS keys: " + ", ".join(missing))
     has_cd = all(key in h for key in ("CD1_1", "CD1_2", "CD2_1", "CD2_2"))
