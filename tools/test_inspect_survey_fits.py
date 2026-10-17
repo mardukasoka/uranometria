@@ -41,7 +41,7 @@ class IntakeTests(unittest.TestCase):
     def test_missing_wcs_is_flagged(self):
         self.path.write_bytes(fixture(CTYPE1=""))
         report=inspect(self.path)
-        self.assertIn("Missing provenance/units: CTYPE1", report["warnings"])
+        self.assertIn("Missing WCS keys: CTYPE1", report["warnings"])
     def test_truncated_header_rejected(self):
         self.path.write_bytes(b"SIMPLE  = T")
         with self.assertRaises(ValueError):
