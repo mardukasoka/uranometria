@@ -11,6 +11,8 @@ on:
       - 'web/cosmic-web/cosmic-compass-gc-uv.html'
       - 'web/cosmic-web/observatory-image-map.html'
       - 'index.html'
+      - 'tools/inspect_survey_fits.py'
+      - 'tools/test_inspect_survey_fits.py'
   push:
     branches: [main, feature/cosmic-compass-gc-uv]
     paths:
@@ -23,6 +25,8 @@ on:
       - 'web/cosmic-web/cosmic-compass-gc-uv.html'
       - 'web/cosmic-web/observatory-image-map.html'
       - 'index.html'
+      - 'tools/inspect_survey_fits.py'
+      - 'tools/test_inspect_survey_fits.py'
 permissions:
   contents: read
 jobs:
@@ -40,3 +44,5 @@ jobs:
         run: node web/cosmic-web/observatory-image-releases.test.mjs
       - name: Check mobile pages and navigation
         run: node web/cosmic-web/compass-pages.test.mjs
+      - name: Validate FITS header intake with synthetic fixtures
+        run: python3 tools/test_inspect_survey_fits.py
