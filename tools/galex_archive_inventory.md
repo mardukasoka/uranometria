@@ -1,0 +1,3 @@
+# GALEX archive intake
+
+Query MAST GALEX observation metadata separately at Galactic (l,b)=(0,0), ICRS (266.40499,-28.93617), and Sgr A*, ICRS (266.41683,-29.00781). Record observation identifiers, per-band FUV/NUV filters, actual footprint, exposure-map product IDs, processing release, and FITS WCS. Query results alone are candidate records, not proof of coverage. Confirm strictly positive exposure at the target with the existing tools/validate_survey_wcs.py validator and inspect calibration provenance. A SkyView JPEG is not a GR7 exposure oracle. Until those gates pass, do not mark UV verified or deploy later compass stages.
