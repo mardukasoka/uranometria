@@ -22,8 +22,12 @@ export function icrsToGalactic(ra,dec){
 export const GALACTIC_DIRECTIONS=Object.freeze({
   centre:{l:0,b:0},anticentre:{l:180,b:0},north:{l:0,b:90},south:{l:0,b:-90}
 });
+// Vincenty great-circle formula: numerically stable at all separations
+// (acos of a dot product loses all precision below ~0.01 arcsec and near 180 deg).
 export function angularSeparation(a,b){
-  const u=[Math.cos(a.dec*rad)*Math.cos(a.ra*rad),Math.cos(a.dec*rad)*Math.sin(a.ra*rad),Math.sin(a.dec*rad)];
-  const v=[Math.cos(b.dec*rad)*Math.cos(b.ra*rad),Math.cos(b.dec*rad)*Math.sin(b.ra*rad),Math.sin(b.dec*rad)];
-  return Math.acos(Math.max(-1,Math.min(1,u.reduce((s,x,i)=>s+x*v[i],0))))/rad;
+  for(const p of [a,b])if(!p||!Number.isFinite(p.ra)||!Number.isFinite(p.dec)||Math.abs(p.dec)>90)throw Error('Invalid ICRS coordinates');
+  const d1=a.dec*rad,d2=b.dec*rad,dra=(b.ra-a.ra)*rad;
+  const y=Math.hypot(Math.cos(d2)*Math.sin(dra),Math.cos(d1)*Math.sin(d2)-Math.sin(d1)*Math.cos(d2)*Math.cos(dra));
+  const x=Math.sin(d1)*Math.sin(d2)+Math.cos(d1)*Math.cos(d2)*Math.cos(dra);
+  return Math.atan2(y,x)/rad;
 }
