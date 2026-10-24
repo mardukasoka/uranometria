@@ -1,0 +1,32 @@
+name: GALEX MAST candidate inventory (not coverage certification)
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature/cosmic-compass-gc-uv
+    paths:
+      - tools/galex_mast_inventory.py
+      - .github/workflows/galex-mast-candidates.yml
+permissions:
+  contents: read
+jobs:
+  query-mast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install archive query dependencies
+        run: python -m pip install 'astroquery>=0.4.8' 'astropy>=6,<8'
+      - name: Query bounded GALEX observation metadata (no downloads)
+        run: python tools/galex_mast_inventory.py --radius-arcmin 5 --max-observations 25 --output galex_candidates.json
+      - name: Preserve candidate report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: galex-mast-candidates
+          path: galex_candidates.json
+          if-no-files-found: warn
+          retention-days: 7
