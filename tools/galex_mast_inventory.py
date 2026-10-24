@@ -22,6 +22,20 @@ def classify(name):
         return None
     return (m["tile"].lower(), {"f": "FUV", "n": "NUV"}[m["band"].lower()], m["kind"].lower())
 
+def group_candidate_products(products):
+    """Group only within one MAST observation; names do not certify coverage."""
+    groups = {}
+    for product in products:
+        tile, band, kind = product["tile"], product["band"], product["kind"]
+        entry = groups.setdefault((tile, band), set())
+        entry.add(kind)
+    return [
+        dict(tile=tile, band=band, kinds=sorted(kinds),
+             complete_candidate_triplet={"int", "exp", "rr"}.issubset(kinds),
+             exposure_verified=False, wcs_verified=False)
+        for (tile, band), kinds in sorted(groups.items())
+    ]
+
 
 def scalar(value):
     if value is None or bool(getattr(value, "mask", False)):
@@ -60,6 +74,7 @@ def inventory(radius_arcmin=5.0, max_observations=25):
                 tile, band, kind = match
                 item["products"].append(dict(filename=name, tile=tile, band=band,
                                              kind=kind, dataURI=scalar(product["dataURI"]) if "dataURI" in products.colnames else None))
+            item["product_groups"] = group_candidate_products(item["products"])
             entry["observations"].append(item)
         report["targets"][label] = entry
     report["limitations"] = [
