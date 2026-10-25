@@ -14,7 +14,7 @@ const cases=[
  ['no physical proof overclaim',()=>assert.match(page,/Lean theorem alone does not establish empirical physics/)],
  ['simulation timeline linked',()=>assert.match(timeline,/href="\.\.\/theory-comparison\/"/)],
  ['simulation genealogy preserved',()=>['HACC','Aurora','MEGATRON'].forEach(s=>assert.ok(timeline.includes(s)))],
- ['provenance policy present',()=>assert.match(registry,/claim-level status/)],
+ ['provenance policy present',()=>assert.match(registry,/claim-level records/)],
  ['relative destinations exist',()=>{assert.ok(fs.existsSync(path.join(root,'README.md')));assert.ok(fs.existsSync(path.join(root,'../cosmology-simulations/index.html')))}]
 ];
 let failed=0;for(const [name,fn] of cases){try{fn();console.log('PASS',name)}catch(e){failed++;console.error('FAIL',name,e.message)}}if(failed)process.exitCode=1;
