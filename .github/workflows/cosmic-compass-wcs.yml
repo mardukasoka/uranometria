@@ -1,5 +1,14 @@
 name: Cosmic Compass FITS WCS offline tests
 on:
+  push:
+    branches:
+      - feature/cosmic-compass-gc-uv
+    paths:
+      - 'tools/validate_survey_wcs.py'
+      - 'tools/test_validate_survey_wcs.py'
+      - 'tools/validate_galex_triplet.py'
+      - 'tools/test_validate_galex_triplet.py'
+      - '.github/workflows/cosmic-compass-wcs.yml'
   pull_request:
     paths:
       - 'tools/validate_survey_wcs.py'
