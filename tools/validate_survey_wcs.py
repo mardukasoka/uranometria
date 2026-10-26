@@ -31,19 +31,24 @@ def validate(science, ra, dec, exposure=None):
                 try:
                     w = WCS(hdu.header).celestial
                     if not w.has_celestial:
+                        result["warnings"].append(f"HDU {i}: no celestial WCS")
                         continue
                     ny, nx = hdu.data.shape
                     if min(nx, ny) < 2:
+                        result["warnings"].append(f"HDU {i}: image smaller than 2 pixels on an axis")
                         continue
                     x, y = w.world_to_pixel(target)
                     if not (np.isfinite(x) and np.isfinite(y)):
+                        result["warnings"].append(f"HDU {i}: target maps to nonfinite pixel coordinates")
                         continue
                     inside = bool(-0.5 <= x < nx - 0.5 and -0.5 <= y < ny - 0.5)
                     if not inside:
+                        result["warnings"].append(f"HDU {i}: target outside footprint at pixel ({x}, {y})")
                         continue
                     back = w.pixel_to_world(x, y)
                     residual = float(target.separation(back).arcsec)
                     if not math.isfinite(residual) or residual > 0.1:
+                        result["warnings"].append(f"HDU {i}: WCS round-trip residual {residual} arcsec exceeds 0.1")
                         continue
                     # Do not load the entire array: sample only the target pixel.
                     value = float(hdu.data[int(round(y)), int(round(x))])
