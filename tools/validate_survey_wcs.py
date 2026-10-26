@@ -50,7 +50,8 @@ def validate(science, ra, dec, exposure=None):
                     return dict(hdu=i, x=float(x), y=float(y),
                                 residual_arcsec=residual, pixel=value,
                                 finite=bool(np.isfinite(value)))
-                except (ValueError, TypeError, IndexError, KeyError):
+                except (ValueError, TypeError, IndexError, KeyError) as exc:
+                    result["warnings"].append(f"HDU {i} rejected during WCS/pixel validation: {type(exc).__name__}: {exc}")
                     continue
         return None
 
