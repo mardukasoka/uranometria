@@ -36,7 +36,7 @@ class WcsGateTests(unittest.TestCase):
     def test_no_exposure_never_verifies_coverage(self):
         self.make_fits(self.science, 5)
         r = validate(self.science, 266.41683, -29.00781)
-        self.assertTrue(r["wcs_validated"])
+        self.assertTrue(r["wcs_validated"], r)
         self.assertTrue(r["footprint_contains_target"])
         self.assertFalse(r["exposure_verified"])
         self.assertFalse(r["detection_verified"])
@@ -45,7 +45,7 @@ class WcsGateTests(unittest.TestCase):
         self.make_fits(self.science, 5, extension=True)
         self.make_fits(self.exposure, 120, extension=True)
         r = validate(self.science, 266.41683, -29.00781, self.exposure)
-        self.assertTrue(r["exposure_verified"])
+        self.assertTrue(r["exposure_verified"], r)
         self.assertEqual(r["science_hdu"]["hdu"], 1)
         self.assertEqual(r["exposure_hdu"]["hdu"], 1)
         self.assertFalse(r["detection_verified"])
