@@ -51,7 +51,7 @@ def validate(science, ra, dec, exposure=None):
                         result["warnings"].append(f"HDU {i}: WCS round-trip residual {residual} arcsec exceeds 0.1")
                         continue
                     # Do not load the entire array: sample only the target pixel.
-                    value = float(hdu.data[int(round(y)), int(round(x))])
+                    value = float(hdu.data[int(np.rint(y).item()), int(np.rint(x).item())])
                     return dict(hdu=i, x=float(x), y=float(y),
                                 residual_arcsec=residual, pixel=value,
                                 finite=bool(np.isfinite(value)))
