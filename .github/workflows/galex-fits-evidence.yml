@@ -1,0 +1,36 @@
+name: GALEX authentic FITS WCS and exposure candidate gate
+# Candidate-only science check. No deployment or scientific detection certification.
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature/cosmic-compass-gc-uv
+    paths:
+      - tools/verify_galex_mast_fits.py
+      - tools/test_verify_galex_mast_fits.py
+      - .github/workflows/galex-fits-evidence.yml
+permissions:
+  contents: read
+jobs:
+  verify-nuv-candidate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install archive and FITS dependencies
+        run: python -m pip install 'astroquery>=0.4.8' 'astropy>=6,<8' 'numpy>=1.26,<3' 'requests>=2.31,<3'
+      - name: Test archive product safety selection
+        run: python -m unittest discover -s tools -p 'test_verify_galex_mast_fits.py' -v
+      - name: Download bounded real GALEX NUV FITS triplet and inspect two coordinates
+        run: python tools/verify_galex_mast_fits.py --obsid 5754 --tile MISGCEN_33205_0488 --band NUV --output galex_fits_evidence.json
+      - name: Preserve JSON evidence only (no FITS imagery)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: galex-fits-evidence
+          path: galex_fits_evidence.json
+          if-no-files-found: warn
+          retention-days: 7
