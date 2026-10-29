@@ -16,12 +16,13 @@
     "metadata_run": "https://github.com/mardukasoka/uranometria/actions/runs/40791975176",
     "fits_run": "https://github.com/mardukasoka/uranometria/actions/runs/40792457904",
     "authentic_fits_downloaded": true,
-    "sha256_verified_locally": true,
     "independent_astrometry_verified": false,
     "calibration_verified": false,
     "artifact_masks_verified": false,
     "source_detection_verified": false,
-    "live_deployment_verified": false
+    "live_deployment_verified": false,
+    "sha256_computed_on_download": true,
+    "archive_checksum_crosschecked": false
   },
   "products": {
     "int": {
