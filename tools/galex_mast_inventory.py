@@ -65,7 +65,7 @@ def inventory(radius_arcmin=5.0, max_observations=25):
             item = dict(obsid=obsid, obs_id=scalar(row["obs_id"]),
                         filters=scalar(row["filters"]), s_ra=scalar(row["s_ra"]),
                         s_dec=scalar(row["s_dec"]), products=[])
-            products = Observations.get_product_list(int(obsid))
+            products = Observations.get_product_list(str(obsid))
             for product in products:
                 name = scalar(product["productFilename"])
                 match = classify(name)
