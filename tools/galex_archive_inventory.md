@@ -1,3 +1,11 @@
 # GALEX archive intake
 
 Query MAST GALEX observation metadata separately at Galactic (l,b)=(0,0), ICRS (266.40499,-28.93617), and Sgr A*, ICRS (266.41683,-29.00781). Record observation identifiers, per-band FUV/NUV filters, actual footprint, exposure-map product IDs, processing release, and FITS WCS. Query results alone are candidate records, not proof of coverage. Confirm strictly positive exposure at the target with the existing tools/validate_survey_wcs.py validator and inspect calibration provenance. A SkyView JPEG is not a GR7 exposure oracle. Until those gates pass, do not mark UV verified or deploy later compass stages.
+
+## MAST CAOM candidate evidence — 2026-10-29 UTC
+
+The bounded five-arcminute cone queries at both the Galactic coordinate origin and Sagittarius A* succeeded in [Actions run 40791975176](https://github.com/mardukasoka/uranometria/actions/runs/40791975176). The archived `galex-mast-candidates` JSON artifact (seven-day retention) records **one GALEX observation candidate at each target**, referring to the **same** observation: MAST `obsid=5754`, `obs_id=3735421568281477120`, filter **NUV**, centre ICRS RA 266.309522156655°, Dec −28.9158111168837°. This is one observation, **not two independent pointings**.
+
+The candidate GR7 main-tile product group `MISGCEN_33205_0488` has NUV intensity (`-nd-int.fits.gz`), exposure (`-nd-exp.fits.gz`) and relative-response (`-nd-rr.fits.gz`) archive URIs. Two visit-level triplets (`_0001` and `_0002`) also exist, but must not be conflated with the main coadd. No FUV observation candidate appeared in these bounded queries; that does **not** prove FUV is absent in every archival product or alternative UV survey.
+
+**Status: candidate metadata only.** No pixel-level positive exposure, FITS/WCS target registration, independent astrometry, calibration or UV detection was established by the inventory. The bounded FITS check is tracked in [GALEX authentic FITS gate](https://github.com/mardukasoka/uranometria/actions/workflows/galex-fits-evidence.yml); even a positive internal pixel check must not be promoted to independent scientific certification. Do not merge, deploy or mark the UV viewer validated based on cone-search metadata alone.
