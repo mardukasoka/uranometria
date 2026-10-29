@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0",
+  "source": "MAST CAOM GALEX GR7 archive; primary coadd",
+  "query_utc": "2026-10-29T00:12:14Z",
+  "observation": {
+    "obsid": "5754",
+    "obs_id": "3735421568281477120",
+    "tile": "MISGCEN_33205_0488",
+    "band": "NUV",
+    "pointing_icrs_deg": [
+      266.309522156655,
+      -28.9158111168837
+    ]
+  },
+  "evidence": {
+    "metadata_run": "https://github.com/mardukasoka/uranometria/actions/runs/40791975176",
+    "fits_run": "https://github.com/mardukasoka/uranometria/actions/runs/40792457904",
+    "authentic_fits_downloaded": true,
+    "sha256_verified_locally": true,
+    "independent_astrometry_verified": false,
+    "calibration_verified": false,
+    "artifact_masks_verified": false,
+    "source_detection_verified": false,
+    "live_deployment_verified": false
+  },
+  "products": {
+    "int": {
+      "filename": "MISGCEN_33205_0488-nd-int.fits.gz",
+      "dataURI": "mast:GALEX/url/data/GR7/pipe/01-vsn/40631-MISGCEN_33205_0488/d/01-main/0007-img/07-try/MISGCEN_33205_0488-nd-int.fits.gz",
+      "bytes": 17968068,
+      "sha256": "31949a2d7521980c5317bd62750c7537d197ce5d5ab1c25c43ff871d63a94714"
+    },
+    "exp": {
+      "filename": "MISGCEN_33205_0488-nd-exp.fits.gz",
+      "dataURI": "mast:GALEX/url/data/GR7/pipe/01-vsn/40631-MISGCEN_33205_0488/d/01-main/0007-img/07-try/MISGCEN_33205_0488-nd-exp.fits.gz",
+      "bytes": 212228,
+      "sha256": "a76fd071a095d456e5f889c621d2f33ad1f08cfb67e08a28c96d7c4579a4e093"
+    },
+    "rr": {
+      "filename": "MISGCEN_33205_0488-nd-rr.fits.gz",
+      "dataURI": "mast:GALEX/url/data/GR7/pipe/01-vsn/40631-MISGCEN_33205_0488/d/01-main/0007-img/07-try/MISGCEN_33205_0488-nd-rr.fits.gz",
+      "bytes": 1421105,
+      "sha256": "dd6f34d7283f21f6707bf8a47a4359d96f4bb1ab0131aef049a03bf95de05b50"
+    }
+  },
+  "targets": {
+    "galactic_origin": {
+      "icrs_deg": [
+        266.40499,
+        -28.93617
+      ],
+      "intensity_pixel": 0.010011262260377407,
+      "exposure_pixel": 1261.0867919921875,
+      "response_pixel": 998.5523071289062,
+      "intensity_wcs_pixel": [
+        1737.1091080047056,
+        1873.1043851698653
+      ],
+      "exposure_wcs_pixel": [
+        433.90227700117646,
+        467.9010962924664
+      ],
+      "response_wcs_pixel": [
+        433.90227700117646,
+        467.9010962924664
+      ],
+      "internal_wcs_residual_arcsec": 1.6073746704591953e-10,
+      "finite_intensity": true,
+      "positive_exposure": true,
+      "positive_response": true
+    },
+    "sagittarius_a_star": {
+      "icrs_deg": [
+        266.41683,
+        -29.00781
+      ],
+      "intensity_pixel": 0.004980699624866247,
+      "exposure_pixel": 1261.0867919921875,
+      "response_pixel": 1004.9022216796875,
+      "intensity_wcs_pixel": [
+        1712.3837124471095,
+        1701.1485902653603
+      ],
+      "exposure_wcs_pixel": [
+        427.7209281117774,
+        424.9121475663402
+      ],
+      "response_wcs_pixel": [
+        427.7209281117774,
+        424.9121475663402
+      ],
+      "internal_wcs_residual_arcsec": 0,
+      "finite_intensity": true,
+      "positive_exposure": true,
+      "positive_response": true
+    }
+  },
+  "fuv_status": "No FUV observation candidate in the two bounded 5-arcminute MAST cone queries; not an all-archive absence certification.",
+  "interpretation": "Authentic NUV pixel-level exposure/response and internal FITS WCS checks pass at both coordinates. Raw pixel values retain unspecified native units. No independent astrometry, calibration, artifact rejection, source detection, FUV or Pages deployment certification."
+}
