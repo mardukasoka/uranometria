@@ -8,6 +8,7 @@ on:
     paths:
       - tools/verify_galex_mast_fits.py
       - tools/test_verify_galex_mast_fits.py
+      - tools/evidence/galex_gr7_misgcen_33205_0488_nuv_20261029.json
       - .github/workflows/galex-fits-evidence.yml
 permissions:
   contents: read
