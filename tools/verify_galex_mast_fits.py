@@ -40,6 +40,29 @@ def select_triplet(rows, tile, band):
     return matches
 
 
+
+def candidate_gate_passed(report):
+    """Fail closed unless both targets pass the *internal* FITS/WCS exposure gate.
+
+    This is not a claim of independent astrometry, calibration or UV detection.
+    A successful download with unusable target pixels must not produce green CI.
+    """
+    if report.get("errors") or report.get("candidate_pixels_usable_at_both_targets") is not True:
+        return False
+    products = report.get("products")
+    if not isinstance(products, dict) or set(products) != set(KINDS):
+        return False
+    targets = report.get("targets")
+    if not isinstance(targets, dict) or set(targets) != set(TARGETS):
+        return False
+    required = ("candidate_target_usable", "product_identity_consistent",
+                "wcs_target_self_consistent", "positive_exposure_at_target",
+                "positive_response_at_target")
+    return all(isinstance(targets[label], dict) and
+               all(targets[label].get(flag) is True for flag in required)
+               for label in TARGETS)
+
+
 def download_one(uri, path, remaining):
     import requests
     if not uri.startswith("mast:GALEX/"):
@@ -119,5 +142,6 @@ if __name__ == "__main__":
     a.output.write_text(json.dumps(result, indent=2, allow_nan=False) + "\n")
     print("Saved MAST FITS evidence; candidate usable:", result.get("candidate_pixels_usable_at_both_targets"),
           "; errors:", result["errors"])
-    if result["errors"]:
+    if not candidate_gate_passed(result):
+        print("FAIL: authentic GALEX candidate gate not satisfied; no coverage certification.")
         raise SystemExit(1)
