@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "description": "Published image centre positions; not verified FITS footprints",
+  "releases": [
+    {
+      "id": "webb-potm2509e",
+      "observatory": "JWST",
+      "target": "COSJ100013+023424",
+      "bands": [
+        "infrared"
+      ],
+      "ra_deg": 150.0557917,
+      "dec_deg": 2.5733194,
+      "release_date": "2025-09-30",
+      "source_url": "https://esawebb.org/images/potm2509e/",
+      "field_of_view": "0.33 × 0.33 arcmin",
+      "coordinate_basis": "ESA/Webb published image coordinates",
+      "coordinate_frame": "ICRS/J2000",
+      "position_type": "published image centre",
+      "footprint_verified": false
+    },
+    {
+      "id": "chandra-n79",
+      "observatory": "Chandra",
+      "target": "N79",
+      "bands": [
+        "xray",
+        "infrared"
+      ],
+      "ra_deg": 72.99,
+      "dec_deg": -69.3947278,
+      "release_date": "2025-07-23",
+      "source_url": "https://www.chandra.harvard.edu/photo/2025/cosmic/",
+      "field_of_view": "2.1 arcmin",
+      "coordinate_basis": "Chandra Fast Facts",
+      "coordinate_frame": "ICRS/J2000",
+      "position_type": "published image centre",
+      "footprint_verified": false
+    },
+    {
+      "id": "chandra-ngc2146",
+      "observatory": "Chandra",
+      "target": "NGC 2146",
+      "bands": [
+        "xray",
+        "optical",
+        "infrared"
+      ],
+      "ra_deg": 94.6570833,
+      "dec_deg": 78.3570278,
+      "release_date": "2025-07-23",
+      "source_url": "https://www.chandra.harvard.edu/photo/2025/cosmic/",
+      "field_of_view": "3 arcmin",
+      "coordinate_basis": "Chandra Fast Facts",
+      "coordinate_frame": "ICRS/J2000",
+      "position_type": "published image centre",
+      "footprint_verified": false
+    },
+    {
+      "id": "chandra-ic348",
+      "observatory": "Chandra",
+      "target": "IC 348",
+      "bands": [
+        "xray",
+        "infrared"
+      ],
+      "ra_deg": 56.1429167,
+      "dec_deg": 32.1619722,
+      "release_date": "2025-07-23",
+      "source_url": "https://www.chandra.harvard.edu/photo/2025/cosmic/",
+      "field_of_view": "1.9 arcmin",
+      "coordinate_basis": "Chandra Fast Facts",
+      "coordinate_frame": "ICRS/J2000",
+      "position_type": "published image centre",
+      "footprint_verified": false
+    },
+    {
+      "id": "chandra-m83",
+      "observatory": "Chandra",
+      "target": "M83",
+      "bands": [
+        "xray",
+        "optical"
+      ],
+      "ra_deg": 204.2533333,
+      "dec_deg": -29.8662778,
+      "release_date": "2025-07-23",
+      "source_url": "https://www.chandra.harvard.edu/photo/2025/cosmic/",
+      "field_of_view": "9.5 arcmin",
+      "coordinate_basis": "Chandra Fast Facts",
+      "coordinate_frame": "ICRS/J2000",
+      "position_type": "published image centre",
+      "footprint_verified": false
+    },
+    {
+      "id": "chandra-m82",
+      "observatory": "Chandra",
+      "target": "M82",
+      "bands": [
+        "xray",
+        "optical"
+      ],
+      "ra_deg": 148.96125,
+      "dec_deg": 69.6817222,
+      "release_date": "2025-07-23",
+      "source_url": "https://www.chandra.harvard.edu/photo/2025/cosmic/",
+      "field_of_view": "7.9 arcmin",
+      "coordinate_basis": "Chandra Fast Facts",
+      "coordinate_frame": "ICRS/J2000",
+      "position_type": "published image centre",
+      "footprint_verified": false
+    },
+    {
+      "id": "chandra-ngc1068",
+      "observatory": "Chandra",
+      "target": "NGC 1068",
+      "bands": [
+        "xray",
+        "radio",
+        "optical",
+        "infrared"
+      ],
+      "ra_deg": 40.6695833,
+      "dec_deg": -0.0134444,
+      "release_date": "2025-07-23",
+      "source_url": "https://www.chandra.harvard.edu/photo/2025/cosmic/",
+      "field_of_view": "2 arcmin",
+      "coordinate_basis": "Chandra Fast Facts",
+      "coordinate_frame": "ICRS/J2000",
+      "position_type": "published image centre",
+      "footprint_verified": false
+    },
+    {
+      "id": "chandra-ngc346",
+      "observatory": "Chandra",
+      "target": "NGC 346",
+      "bands": [
+        "xray",
+        "uv",
+        "optical",
+        "infrared"
+      ],
+      "ra_deg": 14.825,
+      "dec_deg": -72.18,
+      "release_date": "2025-07-23",
+      "source_url": "https://www.chandra.harvard.edu/photo/2025/cosmic/",
+      "field_of_view": "4.7 arcmin",
+      "coordinate_basis": "Chandra Fast Facts",
+      "coordinate_frame": "ICRS/J2000",
+      "position_type": "published image centre",
+      "footprint_verified": false
+    },
+    {
+      "id": "chandra-ic1623",
+      "observatory": "Chandra",
+      "target": "IC 1623",
+      "bands": [
+        "xray",
+        "infrared"
+      ],
+      "ra_deg": 16.9466667,
+      "dec_deg": -17.5054667,
+      "release_date": "2025-07-23",
+      "source_url": "https://www.chandra.harvard.edu/photo/2025/cosmic/",
+      "field_of_view": "1.8 arcmin",
+      "coordinate_basis": "Chandra Fast Facts",
+      "coordinate_frame": "ICRS/J2000",
+      "position_type": "published image centre",
+      "footprint_verified": false
+    },
+    {
+      "id": "chandra-westerlund1",
+      "observatory": "Chandra",
+      "target": "Westerlund 1",
+      "bands": [
+        "xray",
+        "optical",
+        "infrared"
+      ],
+      "ra_deg": 251.7666667,
+      "dec_deg": -45.8513611,
+      "release_date": "2025-07-23",
+      "source_url": "https://www.chandra.harvard.edu/photo/2025/cosmic/",
+      "field_of_view": "6.6 arcmin",
+      "coordinate_basis": "Chandra Fast Facts",
+      "coordinate_frame": "ICRS/J2000",
+      "position_type": "published image centre",
+      "footprint_verified": false
+    }
+  ]
+}
