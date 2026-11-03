@@ -1,6 +1,7 @@
 """Offline archive-selection safety checks; no network or coverage assertions."""
 import unittest
-from verify_galex_mast_fits import select_triplet, candidate_gate_passed, TARGETS, KINDS
+from verify_galex_mast_fits import (select_triplet, candidate_gate_passed,
+                                    recorded_evidence_matches, TARGETS, KINDS)
 
 
 class SelectTripletTests(unittest.TestCase):
@@ -68,6 +69,64 @@ class AuthenticCandidateGateTests(unittest.TestCase):
         report = self.valid_report()
         report["errors"].append("Archive unavailable")
         self.assertFalse(candidate_gate_passed(report))
+
+
+class PinnedProvenanceTests(unittest.TestCase):
+    def fixture(self):
+        report = {
+            "obsid": "5754", "tile": "MISGCEN_33205_0488", "band": "NUV",
+            "products": {}, "targets": {},
+        }
+        reference = {
+            "observation": {"obsid": "5754", "tile": "MISGCEN_33205_0488", "band": "NUV"},
+            "products": {}, "targets": {},
+        }
+        for kind in KINDS:
+            name = f"MISGCEN_33205_0488-nd-{kind}.fits.gz"
+            uri = f"mast:GALEX/data/{name}"
+            digest = "a" * 64
+            report["products"][kind] = {"filename": name, "uri": uri,
+                                        "bytes": 100, "sha256": digest}
+            reference["products"][kind] = {"filename": name, "dataURI": uri,
+                                           "bytes": 100, "sha256": digest}
+        for label, coords in TARGETS.items():
+            report["targets"][label] = {"target_icrs_deg": list(coords)}
+            reference["targets"][label] = {"icrs_deg": list(coords)}
+        return report, reference
+
+    def test_matching_pinned_products_and_coordinates(self):
+        report, reference = self.fixture()
+        self.assertTrue(recorded_evidence_matches(report, reference))
+
+    def test_checksum_or_size_drift_rejected(self):
+        for field, replacement in (("sha256", "b" * 64), ("bytes", 101)):
+            report, reference = self.fixture()
+            report["products"]["exp"][field] = replacement
+            self.assertFalse(recorded_evidence_matches(report, reference), field)
+
+    def test_uri_or_observation_mismatch_rejected(self):
+        report, reference = self.fixture()
+        report["products"]["rr"]["uri"] = "mast:GALEX/other"
+        self.assertFalse(recorded_evidence_matches(report, reference))
+        report, reference = self.fixture()
+        report["obsid"] = "9999"
+        self.assertFalse(recorded_evidence_matches(report, reference))
+
+    def test_coordinate_or_missing_product_rejected(self):
+        report, reference = self.fixture()
+        report["targets"]["sagittarius_a_star"]["target_icrs_deg"][0] += 0.1
+        self.assertFalse(recorded_evidence_matches(report, reference))
+        report, reference = self.fixture()
+        del report["products"]["int"]
+        self.assertFalse(recorded_evidence_matches(report, reference))
+
+    def test_pinned_evidence_is_required_when_configured(self):
+        report = AuthenticCandidateGateTests().valid_report()
+        report["recorded_evidence_required"] = True
+        report["recorded_evidence_consistent"] = False
+        self.assertFalse(candidate_gate_passed(report))
+        report["recorded_evidence_consistent"] = True
+        self.assertTrue(candidate_gate_passed(report))
 
 
 if __name__ == "__main__":
