@@ -26,7 +26,7 @@ jobs:
       - name: Test archive product safety selection
         run: python -m unittest discover -s tools -p 'test_verify_galex_mast_fits.py' -v
       - name: Download bounded real GALEX NUV FITS triplet and inspect two coordinates
-        run: python tools/verify_galex_mast_fits.py --obsid 5754 --tile MISGCEN_33205_0488 --band NUV --output galex_fits_evidence.json
+        run: python tools/verify_galex_mast_fits.py --obsid 5754 --tile MISGCEN_33205_0488 --band NUV --expected-evidence tools/evidence/galex_gr7_misgcen_33205_0488_nuv_20261029.json --output galex_fits_evidence.json
       - name: Preserve JSON evidence only (no FITS imagery)
         if: always()
         uses: actions/upload-artifact@v4
